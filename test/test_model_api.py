@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.model_api import ModelApi  # noqa: E501
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.api.model_api import ModelApi  # noqa: E501
+from mint_client.rest import ApiException
 
 
 class TestModelApi(unittest.TestCase):
     """ModelApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.model_api.ModelApi()  # noqa: E501
+        self.api = mint_client.api.model_api.ModelApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.models.cag import CAG  # noqa: E501
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.models.cag import CAG  # noqa: E501
+from mint_client.rest import ApiException
 
 
 class TestCAG(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestCAG(unittest.TestCase):
     def testCAG(self):
         """Test CAG"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.cag.CAG()  # noqa: E501
+        # model = mint_client.models.cag.CAG()  # noqa: E501
         pass
 
 
