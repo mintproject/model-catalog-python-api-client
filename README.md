@@ -130,6 +130,17 @@ Class | Method | HTTP request | Description
 
 - **Type**: HTTP basic authentication
 
+## Generate the client
+
+```bash
+OPENAPI_YAML=https://raw.githubusercontent.com/mintproject/MINT-ModelCatalogIngestionAPI/master/model-catalog-v0.0.2.yaml
+
+docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate \
+    -i $OPENAPI_YAML \
+    -g python \
+    -o MINT-ModelCatalogIngestionAPI-client
+
+```
 
 ## Author
 
