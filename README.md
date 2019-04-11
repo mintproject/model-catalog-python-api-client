@@ -17,13 +17,13 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/mintproject/MINT-ModelCatalogAPI-client.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/mintproject/MINT-ModelCatalogAPI-client.git`)
 
 Then import the package:
 ```python
-import openapi_client 
+import mint_client 
 ```
 
 ### Setuptools
@@ -37,7 +37,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import openapi_client
+import mint_client 
 ```
 
 ## Getting Started
@@ -47,18 +47,18 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client 
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
+configuration = mint_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = openapi_client.DatasetspecificationApi(openapi_client.ApiClient(configuration))
-dataset_specification = openapi_client.DatasetSpecification() # DatasetSpecification | A new `datasetspecification` to be created.
+api_instance = mint_client.DatasetspecificationApi(mint_client.ApiClient(configuration))
+dataset_specification = mint_client.DatasetSpecification() # DatasetSpecification | A new `datasetspecification` to be created.
 
 try:
     # Create a datasetspecification
