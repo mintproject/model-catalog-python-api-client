@@ -17,9 +17,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/mint-project/MINT-ModelCatalogIngestionAPI-client.git
+pip install git+https://github.com/mintproject/MINT-ModelCatalogAPI-client.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/mint-project/MINT-ModelCatalogIngestionAPI-client.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/mintproject/MINT-ModelCatalogAPI-client.git`)
 
 Then import the package:
 ```python
@@ -134,8 +134,4 @@ Class | Method | HTTP request | Description
 
 mosorio@isi.edu
 
-## Generated using OpenApiGenerator 
 
-```bash
-docker run -ti --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate     -i https://raw.githubusercontent.com/mintproject/MINT-ModelCatalogIngestionAPI/master/model-catalog-v0.0.2.yaml    -g python   -o /local/MINT-ModelCatalogIngestionAPI-client -c /local/MINT-ModelCatalogIngestionAPI-client/openapi-config.json --git-repo-id MINT-ModelCatalogIngestionAPI-client --git-user-id mint-project
-```

@@ -1,4 +1,5 @@
 {
     "packageName": "mint_client",
-    "projectName": "mint-api"
+    "projectName": "mint-api",
+    "modelPropertyNaming": "camelCase"
 }
