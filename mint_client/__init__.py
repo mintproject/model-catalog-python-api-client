@@ -28,6 +28,11 @@ from mint_client.api.user_api import UserApi
 # import ApiClient
 from mint_client.api_client import ApiClient
 from mint_client.configuration import Configuration
+from mint_client.exceptions import OpenApiException
+from mint_client.exceptions import ApiTypeError
+from mint_client.exceptions import ApiValueError
+from mint_client.exceptions import ApiKeyError
+from mint_client.exceptions import ApiException
 # import models into sdk package
 from mint_client.models.api_response import ApiResponse
 from mint_client.models.cag import CAG
@@ -41,3 +46,4 @@ from mint_client.models.time_interval import TimeInterval
 from mint_client.models.unit import Unit
 from mint_client.models.user import User
 from mint_client.models.variable_presentation import VariablePresentation
+

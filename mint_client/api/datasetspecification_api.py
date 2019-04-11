@@ -19,6 +19,10 @@ import re  # noqa: F401
 import six
 
 from mint_client.api_client import ApiClient
+from mint_client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class DatasetspecificationApi(object):
@@ -81,7 +85,7 @@ class DatasetspecificationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_data_set" % key
                 )
@@ -90,7 +94,7 @@ class DatasetspecificationApi(object):
         # verify the required parameter 'dataset_specification' is set
         if ('dataset_specification' not in local_var_params or
                 local_var_params['dataset_specification'] is None):
-            raise ValueError("Missing the required parameter `dataset_specification` when calling `create_data_set`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `dataset_specification` when calling `create_data_set`")  # noqa: E501
 
         collection_formats = {}
 
@@ -177,7 +181,7 @@ class DatasetspecificationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_data_sets" % key
                 )

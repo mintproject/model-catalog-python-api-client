@@ -1,4 +1,4 @@
-# openapi_client.ModelApi
+# mint_client.ModelApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
 
@@ -20,22 +20,20 @@ Creates a new instance of a `model`.
 
 ### Example
 
-* Basic Authentication (BearerAuth): 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
-
-# Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = openapi_client.ModelApi(openapi_client.ApiClient(configuration))
-model = openapi_client.Model() # Model | A new `model` to be created.
+api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
+model = mint_client.Model() # Model | A new `model` to be created.
 
 try:
     # Create a model
@@ -74,21 +72,19 @@ Deletes an existing `Model`.
 
 ### Example
 
-* Basic Authentication (BearerAuth): 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
-
-# Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = openapi_client.ModelApi(openapi_client.ApiClient(configuration))
+api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | A unique identifier for a `Model`.
 
 try:
@@ -127,15 +123,16 @@ Get a Model
 Gets the details of a single instance of a `Model`.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.ModelApi()
+api_instance = mint_client.ModelApi()
 id = 'id_example' # str | A unique identifier for a `Model`.
 username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
@@ -177,15 +174,16 @@ List All models
 Gets a list of all `model` entities.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.ModelApi()
+api_instance = mint_client.ModelApi()
 username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
@@ -226,23 +224,21 @@ Updates an existing `Model`.
 
 ### Example
 
-* Basic Authentication (BearerAuth): 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
-
-# Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = openapi_client.ModelApi(openapi_client.ApiClient(configuration))
+api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | A unique identifier for a `Model`.
-model = openapi_client.Model() # Model | Updated `Model` information.
+model = mint_client.Model() # Model | Updated `Model` information.
 
 try:
     # Update a Model

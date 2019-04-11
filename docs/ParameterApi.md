@@ -1,4 +1,4 @@
-# openapi_client.ParameterApi
+# mint_client.ParameterApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
 
@@ -17,22 +17,20 @@ Creates a new instance of a `Parameter`.
 
 ### Example
 
-* Basic Authentication (BearerAuth): 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
-
-# Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = openapi_client.ParameterApi(openapi_client.ApiClient(configuration))
-parameter = openapi_client.Parameter() # Parameter | A new `Parameter` to be created.
+api_instance = mint_client.ParameterApi(mint_client.ApiClient(configuration))
+parameter = mint_client.Parameter() # Parameter | A new `Parameter` to be created.
 
 try:
     # Create a Parameter
@@ -70,15 +68,16 @@ List All Parameters
 Gets a list of all `Parameter` entities.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.ParameterApi()
+api_instance = mint_client.ParameterApi()
 username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:

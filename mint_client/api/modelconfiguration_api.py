@@ -19,6 +19,10 @@ import re  # noqa: F401
 import six
 
 from mint_client.api_client import ApiClient
+from mint_client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class ModelconfigurationApi(object):
@@ -81,7 +85,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_inputs_by_modelconfiguration" % key
                 )
@@ -90,11 +94,11 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `create_inputs_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `create_inputs_by_modelconfiguration`")  # noqa: E501
         # verify the required parameter 'dataset_specification' is set
         if ('dataset_specification' not in local_var_params or
                 local_var_params['dataset_specification'] is None):
-            raise ValueError("Missing the required parameter `dataset_specification` when calling `create_inputs_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `dataset_specification` when calling `create_inputs_by_modelconfiguration`")  # noqa: E501
 
         collection_formats = {}
 
@@ -185,7 +189,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_model_configuration" % key
                 )
@@ -194,7 +198,7 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'model_configuration' is set
         if ('model_configuration' not in local_var_params or
                 local_var_params['model_configuration'] is None):
-            raise ValueError("Missing the required parameter `model_configuration` when calling `create_model_configuration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_configuration` when calling `create_model_configuration`")  # noqa: E501
 
         collection_formats = {}
 
@@ -285,7 +289,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_outputs_by_modelconfiguration" % key
                 )
@@ -294,11 +298,11 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `create_outputs_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `create_outputs_by_modelconfiguration`")  # noqa: E501
         # verify the required parameter 'dataset_specification' is set
         if ('dataset_specification' not in local_var_params or
                 local_var_params['dataset_specification'] is None):
-            raise ValueError("Missing the required parameter `dataset_specification` when calling `create_outputs_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `dataset_specification` when calling `create_outputs_by_modelconfiguration`")  # noqa: E501
 
         collection_formats = {}
 
@@ -393,7 +397,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_parameters_by_modelconfiguration" % key
                 )
@@ -402,11 +406,11 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `create_parameters_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `create_parameters_by_modelconfiguration`")  # noqa: E501
         # verify the required parameter 'parameter' is set
         if ('parameter' not in local_var_params or
                 local_var_params['parameter'] is None):
-            raise ValueError("Missing the required parameter `parameter` when calling `create_parameters_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `parameter` when calling `create_parameters_by_modelconfiguration`")  # noqa: E501
 
         collection_formats = {}
 
@@ -499,7 +503,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_model_configuration" % key
                 )
@@ -508,7 +512,7 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_model_configuration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_model_configuration`")  # noqa: E501
 
         collection_formats = {}
 
@@ -591,7 +595,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_inputs_by_modelconfiguration" % key
                 )
@@ -600,7 +604,7 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_inputs_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_inputs_by_modelconfiguration`")  # noqa: E501
 
         collection_formats = {}
 
@@ -687,7 +691,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_model_configurations" % key
                 )
@@ -781,7 +785,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_model_configuraton" % key
                 )
@@ -790,7 +794,7 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_model_configuraton`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_model_configuraton`")  # noqa: E501
 
         collection_formats = {}
 
@@ -879,7 +883,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_outputs_by_modelconfiguration" % key
                 )
@@ -888,7 +892,7 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_outputs_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_outputs_by_modelconfiguration`")  # noqa: E501
 
         collection_formats = {}
 
@@ -977,7 +981,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_parameters_by_modelconfiguration" % key
                 )
@@ -986,7 +990,7 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_parameters_by_modelconfiguration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_parameters_by_modelconfiguration`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1075,7 +1079,7 @@ class ModelconfigurationApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_model_configuration" % key
                 )
@@ -1084,11 +1088,11 @@ class ModelconfigurationApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_model_configuration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_model_configuration`")  # noqa: E501
         # verify the required parameter 'model_configuration' is set
         if ('model_configuration' not in local_var_params or
                 local_var_params['model_configuration'] is None):
-            raise ValueError("Missing the required parameter `model_configuration` when calling `update_model_configuration`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_configuration` when calling `update_model_configuration`")  # noqa: E501
 
         collection_formats = {}
 

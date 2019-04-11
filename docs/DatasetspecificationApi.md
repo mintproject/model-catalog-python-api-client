@@ -1,4 +1,4 @@
-# openapi_client.DatasetspecificationApi
+# mint_client.DatasetspecificationApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
 
@@ -17,22 +17,20 @@ Creates a new instance of a `datasetspecification`.
 
 ### Example
 
-* Basic Authentication (BearerAuth): 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
-
-# Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = openapi_client.DatasetspecificationApi(openapi_client.ApiClient(configuration))
-dataset_specification = openapi_client.DatasetSpecification() # DatasetSpecification | A new `datasetspecification` to be created.
+api_instance = mint_client.DatasetspecificationApi(mint_client.ApiClient(configuration))
+dataset_specification = mint_client.DatasetSpecification() # DatasetSpecification | A new `datasetspecification` to be created.
 
 try:
     # Create a datasetspecification
@@ -70,15 +68,16 @@ List All datasetspecifications
 Gets a list of all `datasetspecification` entities.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.DatasetspecificationApi()
+api_instance = mint_client.DatasetspecificationApi()
 username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:

@@ -19,6 +19,10 @@ import re  # noqa: F401
 import six
 
 from mint_client.api_client import ApiClient
+from mint_client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class ModelApi(object):
@@ -81,7 +85,7 @@ class ModelApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_model" % key
                 )
@@ -90,7 +94,7 @@ class ModelApi(object):
         # verify the required parameter 'model' is set
         if ('model' not in local_var_params or
                 local_var_params['model'] is None):
-            raise ValueError("Missing the required parameter `model` when calling `create_model`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model` when calling `create_model`")  # noqa: E501
 
         collection_formats = {}
 
@@ -177,7 +181,7 @@ class ModelApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_model" % key
                 )
@@ -186,7 +190,7 @@ class ModelApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_model`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_model`")  # noqa: E501
 
         collection_formats = {}
 
@@ -271,7 +275,7 @@ class ModelApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_model" % key
                 )
@@ -280,7 +284,7 @@ class ModelApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_model`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_model`")  # noqa: E501
 
         collection_formats = {}
 
@@ -369,7 +373,7 @@ class ModelApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_models" % key
                 )
@@ -463,7 +467,7 @@ class ModelApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_model" % key
                 )
@@ -472,11 +476,11 @@ class ModelApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_model`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_model`")  # noqa: E501
         # verify the required parameter 'model' is set
         if ('model' not in local_var_params or
                 local_var_params['model'] is None):
-            raise ValueError("Missing the required parameter `model` when calling `update_model`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model` when calling `update_model`")  # noqa: E501
 
         collection_formats = {}
 

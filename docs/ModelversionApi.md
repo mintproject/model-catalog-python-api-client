@@ -1,4 +1,4 @@
-# openapi_client.ModelversionApi
+# mint_client.ModelversionApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
 
@@ -20,22 +20,20 @@ Creates a new instance of a `ModelVersion`.
 
 ### Example
 
-* Basic Authentication (BearerAuth): 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
-
-# Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = openapi_client.ModelversionApi(openapi_client.ApiClient(configuration))
-model_version = openapi_client.ModelVersion() # ModelVersion | A new `ModelVersion` to be created.
+api_instance = mint_client.ModelversionApi(mint_client.ApiClient(configuration))
+model_version = mint_client.ModelVersion() # ModelVersion | A new `ModelVersion` to be created.
 
 try:
     # Create a ModelVersion
@@ -73,15 +71,16 @@ Delete a ModelVersion
 Deletes an existing `ModelVersion`.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.ModelversionApi()
+api_instance = mint_client.ModelversionApi()
 id = 'id_example' # str | A unique identifier for a `ModelVersion`.
 
 try:
@@ -120,15 +119,16 @@ Get a ModelVersion
 Gets the details of a single instance of a `ModelVersion`.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.ModelversionApi()
+api_instance = mint_client.ModelversionApi()
 id = 'id_example' # str | A unique identifier for a `ModelVersion`.
 username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
@@ -170,15 +170,16 @@ List All ModelVersions
 Gets a list of all `ModelVersion` entities.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.ModelversionApi()
+api_instance = mint_client.ModelversionApi()
 username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
@@ -219,23 +220,21 @@ Updates an existing `ModelVersion`.
 
 ### Example
 
-* Basic Authentication (BearerAuth): 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
-
-# Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = openapi_client.ModelversionApi(openapi_client.ApiClient(configuration))
+api_instance = mint_client.ModelversionApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | A unique identifier for a `ModelVersion`.
-model_version = openapi_client.ModelVersion() # ModelVersion | Updated `ModelVersion` information.
+model_version = mint_client.ModelVersion() # ModelVersion | Updated `ModelVersion` information.
 
 try:
     # Update a ModelVersion

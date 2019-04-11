@@ -1,4 +1,4 @@
-# openapi_client.UserApi
+# mint_client.UserApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
 
@@ -20,16 +20,17 @@ Create user
 This can only be done by the logged in user.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.UserApi()
-user = openapi_client.User() # User | Created user object
+api_instance = mint_client.UserApi()
+user = mint_client.User() # User | Created user object
 
 try:
     # Create user
@@ -67,15 +68,16 @@ Delete user
 This can only be done by the logged in user.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.UserApi()
+api_instance = mint_client.UserApi()
 username = 'username_example' # str | The name that needs to be deleted
 
 try:
@@ -112,15 +114,16 @@ No authorization required
 Get user by user name
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.UserApi()
+api_instance = mint_client.UserApi()
 username = 'username_example' # str | The name that needs to be fetched. Use user1 for testing.
 
 try:
@@ -158,15 +161,16 @@ No authorization required
 Logs user into the system
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.UserApi()
+api_instance = mint_client.UserApi()
 username = 'username_example' # str | The user name for login
 password = 'password_example' # str | The password for login in clear text
 
@@ -206,15 +210,16 @@ No authorization required
 Logs out current logged in user session
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = openapi_client.UserApi()
+api_instance = mint_client.UserApi()
 
 try:
     # Logs out current logged in user session
@@ -250,23 +255,21 @@ This can only be done by the logged in user.
 
 ### Example
 
-* Basic Authentication (BearerAuth): 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import mint_client
+from mint_client.rest import ApiException
 from pprint import pprint
-
-# Configure HTTP basic authorization: BearerAuth
-configuration = openapi_client.Configuration()
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = openapi_client.UserApi(openapi_client.ApiClient(configuration))
+api_instance = mint_client.UserApi(mint_client.ApiClient(configuration))
 username = 'username_example' # str | name that need to be updated
-user = openapi_client.User() # User | Updated user object
+user = mint_client.User() # User | Updated user object
 
 try:
     # Updated user

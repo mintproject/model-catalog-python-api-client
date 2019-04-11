@@ -19,6 +19,10 @@ import re  # noqa: F401
 import six
 
 from mint_client.api_client import ApiClient
+from mint_client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class ModelversionApi(object):
@@ -81,7 +85,7 @@ class ModelversionApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_model_version" % key
                 )
@@ -90,7 +94,7 @@ class ModelversionApi(object):
         # verify the required parameter 'model_version' is set
         if ('model_version' not in local_var_params or
                 local_var_params['model_version'] is None):
-            raise ValueError("Missing the required parameter `model_version` when calling `create_model_version`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_version` when calling `create_model_version`")  # noqa: E501
 
         collection_formats = {}
 
@@ -177,7 +181,7 @@ class ModelversionApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method delete_model_version" % key
                 )
@@ -186,7 +190,7 @@ class ModelversionApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_model_version`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_model_version`")  # noqa: E501
 
         collection_formats = {}
 
@@ -271,7 +275,7 @@ class ModelversionApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_model_version" % key
                 )
@@ -280,7 +284,7 @@ class ModelversionApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_model_version`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_model_version`")  # noqa: E501
 
         collection_formats = {}
 
@@ -369,7 +373,7 @@ class ModelversionApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_model_versions" % key
                 )
@@ -463,7 +467,7 @@ class ModelversionApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method update_model_version" % key
                 )
@@ -472,11 +476,11 @@ class ModelversionApi(object):
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_model_version`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_model_version`")  # noqa: E501
         # verify the required parameter 'model_version' is set
         if ('model_version' not in local_var_params or
                 local_var_params['model_version'] is None):
-            raise ValueError("Missing the required parameter `model_version` when calling `update_model_version`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_version` when calling `update_model_version`")  # noqa: E501
 
         collection_formats = {}
 

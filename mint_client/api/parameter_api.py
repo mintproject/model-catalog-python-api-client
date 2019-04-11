@@ -19,6 +19,10 @@ import re  # noqa: F401
 import six
 
 from mint_client.api_client import ApiClient
+from mint_client.exceptions import (
+    ApiTypeError,
+    ApiValueError
+)
 
 
 class ParameterApi(object):
@@ -81,7 +85,7 @@ class ParameterApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method create_parameter" % key
                 )
@@ -90,7 +94,7 @@ class ParameterApi(object):
         # verify the required parameter 'parameter' is set
         if ('parameter' not in local_var_params or
                 local_var_params['parameter'] is None):
-            raise ValueError("Missing the required parameter `parameter` when calling `create_parameter`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `parameter` when calling `create_parameter`")  # noqa: E501
 
         collection_formats = {}
 
@@ -177,7 +181,7 @@ class ParameterApi(object):
 
         for key, val in six.iteritems(local_var_params['kwargs']):
             if key not in all_params:
-                raise TypeError(
+                raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
                     " to method get_parameters" % key
                 )
