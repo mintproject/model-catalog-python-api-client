@@ -58,21 +58,21 @@ class Process(object):
         if type is not None:
             self.type = type
         else:
-            del self._type
-            del self.attribute_map['type']
-            del self.openapi_types['type']
+            if hasattr(self, '_type'): del self._type
+            if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
+            if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
         if label is not None:
             self.label = label
         else:
-            del self._label
-            del self.attribute_map['label']
-            del self.openapi_types['label']
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
         if influences is not None:
             self.influences = influences
         else:
-            del self._influences
-            del self.attribute_map['influences']
-            del self.openapi_types['influences']
+            if hasattr(self, '_influences'): del self._influences
+            if hasattr(self.attribute_map, 'influences'): del self.attribute_map['influences']
+            if hasattr(self.openapi_types, 'influences'): del self.openapi_types['influences']
 
     @property
     def id(self):
@@ -167,7 +167,10 @@ class Process(object):
         result = {}
 
         for attr, _ in six.iteritems(self.openapi_types):
-            value = getattr(self, attr)
+            if hasattr(self, attr):
+                value = getattr(self, attr)
+            else:
+                continue                
             if isinstance(value, list):
                 result[attr] = list(map(
                     lambda x: x.to_dict() if hasattr(x, "to_dict") else x,

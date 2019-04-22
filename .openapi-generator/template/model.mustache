@@ -68,9 +68,9 @@ class {{classname}}(object):
         if {{name}} is not None:
             self.{{name}} = {{name}}
         else:
-            del self._{{name}}
-            del self.attribute_map['{{name}}']
-            del self.openapi_types['{{name}}']
+            if hasattr(self, '_{{name}}'): del self._{{name}}
+            if hasattr(self.attribute_map, '{{name}}'): del self.attribute_map['{{name}}']
+            if hasattr(self.openapi_types, '{{name}}'): del self.openapi_types['{{name}}']
 {{/isNullable}}
 {{^isNullable}}
         if {{name}} is not None:
@@ -188,7 +188,10 @@ class {{classname}}(object):
         result = {}
 
         for attr, _ in six.iteritems(self.openapi_types):
-            value = getattr(self, attr)
+            if hasattr(self, attr):
+                value = getattr(self, attr)
+            else:
+                continue                
             if isinstance(value, list):
                 result[attr] = list(map(
                     lambda x: x.to_dict() if hasattr(x, "to_dict") else x,

@@ -64,29 +64,29 @@ class TimeInterval(object):
         if type is not None:
             self.type = type
         else:
-            del self._type
-            del self.attribute_map['type']
-            del self.openapi_types['type']
+            if hasattr(self, '_type'): del self._type
+            if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
+            if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
         if label is not None:
             self.label = label
         else:
-            del self._label
-            del self.attribute_map['label']
-            del self.openapi_types['label']
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
         if description is not None:
             self.description = description
         else:
-            del self._description
-            del self.attribute_map['description']
-            del self.openapi_types['description']
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if uses_unit is not None:
             self.uses_unit = uses_unit
         if has_value is not None:
             self.has_value = has_value
         else:
-            del self._has_value
-            del self.attribute_map['has_value']
-            del self.openapi_types['has_value']
+            if hasattr(self, '_has_value'): del self._has_value
+            if hasattr(self.attribute_map, 'has_value'): del self.attribute_map['has_value']
+            if hasattr(self.openapi_types, 'has_value'): del self.openapi_types['has_value']
 
     @property
     def id(self):
@@ -221,7 +221,10 @@ class TimeInterval(object):
         result = {}
 
         for attr, _ in six.iteritems(self.openapi_types):
-            value = getattr(self, attr)
+            if hasattr(self, attr):
+                value = getattr(self, attr)
+            else:
+                continue                
             if isinstance(value, list):
                 result[attr] = list(map(
                     lambda x: x.to_dict() if hasattr(x, "to_dict") else x,

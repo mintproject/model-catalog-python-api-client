@@ -64,33 +64,33 @@ class ModelVersion(object):
         if label is not None:
             self.label = label
         else:
-            del self._label
-            del self.attribute_map['label']
-            del self.openapi_types['label']
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
         if type is not None:
             self.type = type
         else:
-            del self._type
-            del self.attribute_map['type']
-            del self.openapi_types['type']
+            if hasattr(self, '_type'): del self._type
+            if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
+            if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
         if has_documentation is not None:
             self.has_documentation = has_documentation
         else:
-            del self._has_documentation
-            del self.attribute_map['has_documentation']
-            del self.openapi_types['has_documentation']
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if has_version_id is not None:
             self.has_version_id = has_version_id
         else:
-            del self._has_version_id
-            del self.attribute_map['has_version_id']
-            del self.openapi_types['has_version_id']
+            if hasattr(self, '_has_version_id'): del self._has_version_id
+            if hasattr(self.attribute_map, 'has_version_id'): del self.attribute_map['has_version_id']
+            if hasattr(self.openapi_types, 'has_version_id'): del self.openapi_types['has_version_id']
         if has_configuration is not None:
             self.has_configuration = has_configuration
         else:
-            del self._has_configuration
-            del self.attribute_map['has_configuration']
-            del self.openapi_types['has_configuration']
+            if hasattr(self, '_has_configuration'): del self._has_configuration
+            if hasattr(self.attribute_map, 'has_configuration'): del self.attribute_map['has_configuration']
+            if hasattr(self.openapi_types, 'has_configuration'): del self.openapi_types['has_configuration']
 
     @property
     def id(self):
@@ -225,7 +225,10 @@ class ModelVersion(object):
         result = {}
 
         for attr, _ in six.iteritems(self.openapi_types):
-            value = getattr(self, attr)
+            if hasattr(self, attr):
+                value = getattr(self, attr)
+            else:
+                continue                
             if isinstance(value, list):
                 result[attr] = list(map(
                     lambda x: x.to_dict() if hasattr(x, "to_dict") else x,
