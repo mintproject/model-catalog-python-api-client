@@ -65,32 +65,22 @@ class Model(object):
             self.label = label
         else:
             del self._label
-            del self.attribute_map['label']
-            del self.openapi_types['label']
         if type is not None:
             self.type = type
         else:
             del self._type
-            del self.attribute_map['type']
-            del self.openapi_types['type']
         if has_software_version is not None:
             self.has_software_version = has_software_version
         else:
             del self._has_software_version
-            del self.attribute_map['has_software_version']
-            del self.openapi_types['has_software_version']
         if has_model_category is not None:
             self.has_model_category = has_model_category
         else:
             del self._has_model_category
-            del self.attribute_map['has_model_category']
-            del self.openapi_types['has_model_category']
         if has_documentation is not None:
             self.has_documentation = has_documentation
         else:
             del self._has_documentation
-            del self.attribute_map['has_documentation']
-            del self.openapi_types['has_documentation']
 
     @property
     def id(self):

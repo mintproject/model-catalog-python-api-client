@@ -69,8 +69,6 @@ class {{classname}}(object):
             self.{{name}} = {{name}}
         else:
             del self._{{name}}
-            del self.attribute_map['{{name}}']
-            del self.openapi_types['{{name}}']
 {{/isNullable}}
 {{^isNullable}}
         if {{name}} is not None:

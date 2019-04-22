@@ -68,38 +68,26 @@ class Unit(object):
             self.type = type
         else:
             del self._type
-            del self.attribute_map['type']
-            del self.openapi_types['type']
         if description is not None:
             self.description = description
         else:
             del self._description
-            del self.attribute_map['description']
-            del self.openapi_types['description']
         if label is not None:
             self.label = label
         else:
             del self._label
-            del self.attribute_map['label']
-            del self.openapi_types['label']
         if ccut_has_part is not None:
             self.ccut_has_part = ccut_has_part
         else:
             del self._ccut_has_part
-            del self.attribute_map['ccut_has_part']
-            del self.openapi_types['ccut_has_part']
         if ccut_has_dimensionality is not None:
             self.ccut_has_dimensionality = ccut_has_dimensionality
         else:
             del self._ccut_has_dimensionality
-            del self.attribute_map['ccut_has_dimensionality']
-            del self.openapi_types['ccut_has_dimensionality']
         if abbreviation is not None:
             self.abbreviation = abbreviation
         else:
             del self._abbreviation
-            del self.attribute_map['abbreviation']
-            del self.openapi_types['abbreviation']
 
     @property
     def id(self):

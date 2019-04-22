@@ -67,38 +67,26 @@ class DatasetSpecification(object):
             self.label = label
         else:
             del self._label
-            del self.attribute_map['label']
-            del self.openapi_types['label']
         if has_format is not None:
             self.has_format = has_format
         else:
             del self._has_format
-            del self.attribute_map['has_format']
-            del self.openapi_types['has_format']
         if description is not None:
             self.description = description
         else:
             del self._description
-            del self.attribute_map['description']
-            del self.openapi_types['description']
         if has_dimensionality is not None:
             self.has_dimensionality = has_dimensionality
         else:
             del self._has_dimensionality
-            del self.attribute_map['has_dimensionality']
-            del self.openapi_types['has_dimensionality']
         if has_presentation is not None:
             self.has_presentation = has_presentation
         else:
             del self._has_presentation
-            del self.attribute_map['has_presentation']
-            del self.openapi_types['has_presentation']
         if type is not None:
             self.type = type
         else:
             del self._type
-            del self.attribute_map['type']
-            del self.openapi_types['type']
         self.id = id
 
     @property

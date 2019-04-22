@@ -59,20 +59,14 @@ class CAG(object):
             self.type = type
         else:
             del self._type
-            del self.attribute_map['type']
-            del self.openapi_types['type']
         if has_part is not None:
             self.has_part = has_part
         else:
             del self._has_part
-            del self.attribute_map['has_part']
-            del self.openapi_types['has_part']
         if label is not None:
             self.label = label
         else:
             del self._label
-            del self.attribute_map['label']
-            del self.openapi_types['label']
 
     @property
     def id(self):
