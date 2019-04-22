@@ -69,8 +69,7 @@ class ModelVersion(object):
             self.has_documentation = has_documentation
         if has_version_id is not None:
             self.has_version_id = has_version_id
-        if has_configuration is not None:
-            self.has_configuration = has_configuration
+        self.has_configuration = has_configuration
 
     @property
     def id(self):
