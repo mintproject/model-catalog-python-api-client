@@ -72,18 +72,46 @@ class VariablePresentation(object):
         self.id = id
         if type is not None:
             self.type = type
+        else:
+            del self._type
+            del self.attribute_map['type']
+            del self.openapi_types['type']
         if label is not None:
             self.label = label
+        else:
+            del self._label
+            del self.attribute_map['label']
+            del self.openapi_types['label']
         if description is not None:
             self.description = description
+        else:
+            del self._description
+            del self.attribute_map['description']
+            del self.openapi_types['description']
         if has_long_name is not None:
             self.has_long_name = has_long_name
+        else:
+            del self._has_long_name
+            del self.attribute_map['has_long_name']
+            del self.openapi_types['has_long_name']
         if has_short_name is not None:
             self.has_short_name = has_short_name
+        else:
+            del self._has_short_name
+            del self.attribute_map['has_short_name']
+            del self.openapi_types['has_short_name']
         if has_standard_variable is not None:
             self.has_standard_variable = has_standard_variable
+        else:
+            del self._has_standard_variable
+            del self.attribute_map['has_standard_variable']
+            del self.openapi_types['has_standard_variable']
         if has_relevance_level is not None:
             self.has_relevance_level = has_relevance_level
+        else:
+            del self._has_relevance_level
+            del self.attribute_map['has_relevance_level']
+            del self.openapi_types['has_relevance_level']
         if uses_unit is not None:
             self.uses_unit = uses_unit
 

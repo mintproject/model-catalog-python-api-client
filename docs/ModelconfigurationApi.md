@@ -38,7 +38,7 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 # create an instance of the API class
 api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | 
-dataset_specification = NULL # list[DatasetSpecification] | 
+dataset_specification = None # list[DatasetSpecification] | 
 
 try:
     # Creates a new instance of a `DatasetSpecification` related as Input.
@@ -140,7 +140,7 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 # create an instance of the API class
 api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | 
-dataset_specification = NULL # list[DatasetSpecification] | 
+dataset_specification = None # list[DatasetSpecification] | 
 
 try:
     # Create the output of a model configuration
@@ -194,7 +194,7 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 # create an instance of the API class
 api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | 
-parameter = NULL # list[Parameter] | 
+parameter = None # list[Parameter] | 
 
 try:
     # Create the inputs of a model configuration
