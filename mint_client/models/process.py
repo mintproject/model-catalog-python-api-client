@@ -58,21 +58,21 @@ class Process(object):
         if type is not None:
             self.type = type
         else:
-            if hasattr(self, type): del self._type
-            if hasattr(self, self.attribute_map['type']): del self.attribute_map['type']
-            if hasattr(self, self.openapi_types['type']): del self.openapi_types['type']
+            if hasattr(self, '_type'): del self._type
+            if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
+            if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
         if label is not None:
             self.label = label
         else:
-            if hasattr(self, label): del self._label
-            if hasattr(self, self.attribute_map['label']): del self.attribute_map['label']
-            if hasattr(self, self.openapi_types['label']): del self.openapi_types['label']
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
         if influences is not None:
             self.influences = influences
         else:
-            if hasattr(self, influences): del self._influences
-            if hasattr(self, self.attribute_map['influences']): del self.attribute_map['influences']
-            if hasattr(self, self.openapi_types['influences']): del self.openapi_types['influences']
+            if hasattr(self, '_influences'): del self._influences
+            if hasattr(self.attribute_map, 'influences'): del self.attribute_map['influences']
+            if hasattr(self.openapi_types, 'influences'): del self.openapi_types['influences']
 
     @property
     def id(self):

@@ -64,33 +64,33 @@ class Parameter(object):
         if type is not None:
             self.type = type
         else:
-            if hasattr(self, type): del self._type
-            if hasattr(self, self.attribute_map['type']): del self.attribute_map['type']
-            if hasattr(self, self.openapi_types['type']): del self.openapi_types['type']
+            if hasattr(self, '_type'): del self._type
+            if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
+            if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
         if label is not None:
             self.label = label
         else:
-            if hasattr(self, label): del self._label
-            if hasattr(self, self.attribute_map['label']): del self.attribute_map['label']
-            if hasattr(self, self.openapi_types['label']): del self.openapi_types['label']
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
         if description is not None:
             self.description = description
         else:
-            if hasattr(self, description): del self._description
-            if hasattr(self, self.attribute_map['description']): del self.attribute_map['description']
-            if hasattr(self, self.openapi_types['description']): del self.openapi_types['description']
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if has_default_value is not None:
             self.has_default_value = has_default_value
         else:
-            if hasattr(self, has_default_value): del self._has_default_value
-            if hasattr(self, self.attribute_map['has_default_value']): del self.attribute_map['has_default_value']
-            if hasattr(self, self.openapi_types['has_default_value']): del self.openapi_types['has_default_value']
+            if hasattr(self, '_has_default_value'): del self._has_default_value
+            if hasattr(self.attribute_map, 'has_default_value'): del self.attribute_map['has_default_value']
+            if hasattr(self.openapi_types, 'has_default_value'): del self.openapi_types['has_default_value']
         if has_data_type is not None:
             self.has_data_type = has_data_type
         else:
-            if hasattr(self, has_data_type): del self._has_data_type
-            if hasattr(self, self.attribute_map['has_data_type']): del self.attribute_map['has_data_type']
-            if hasattr(self, self.openapi_types['has_data_type']): del self.openapi_types['has_data_type']
+            if hasattr(self, '_has_data_type'): del self._has_data_type
+            if hasattr(self.attribute_map, 'has_data_type'): del self.attribute_map['has_data_type']
+            if hasattr(self.openapi_types, 'has_data_type'): del self.openapi_types['has_data_type']
 
     @property
     def id(self):

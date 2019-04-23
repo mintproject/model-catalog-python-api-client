@@ -67,39 +67,39 @@ class Unit(object):
         if type is not None:
             self.type = type
         else:
-            if hasattr(self, type): del self._type
-            if hasattr(self, self.attribute_map['type']): del self.attribute_map['type']
-            if hasattr(self, self.openapi_types['type']): del self.openapi_types['type']
+            if hasattr(self, '_type'): del self._type
+            if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
+            if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
         if description is not None:
             self.description = description
         else:
-            if hasattr(self, description): del self._description
-            if hasattr(self, self.attribute_map['description']): del self.attribute_map['description']
-            if hasattr(self, self.openapi_types['description']): del self.openapi_types['description']
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if label is not None:
             self.label = label
         else:
-            if hasattr(self, label): del self._label
-            if hasattr(self, self.attribute_map['label']): del self.attribute_map['label']
-            if hasattr(self, self.openapi_types['label']): del self.openapi_types['label']
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
         if ccut_has_part is not None:
             self.ccut_has_part = ccut_has_part
         else:
-            if hasattr(self, ccut_has_part): del self._ccut_has_part
-            if hasattr(self, self.attribute_map['ccut_has_part']): del self.attribute_map['ccut_has_part']
-            if hasattr(self, self.openapi_types['ccut_has_part']): del self.openapi_types['ccut_has_part']
+            if hasattr(self, '_ccut_has_part'): del self._ccut_has_part
+            if hasattr(self.attribute_map, 'ccut_has_part'): del self.attribute_map['ccut_has_part']
+            if hasattr(self.openapi_types, 'ccut_has_part'): del self.openapi_types['ccut_has_part']
         if ccut_has_dimensionality is not None:
             self.ccut_has_dimensionality = ccut_has_dimensionality
         else:
-            if hasattr(self, ccut_has_dimensionality): del self._ccut_has_dimensionality
-            if hasattr(self, self.attribute_map['ccut_has_dimensionality']): del self.attribute_map['ccut_has_dimensionality']
-            if hasattr(self, self.openapi_types['ccut_has_dimensionality']): del self.openapi_types['ccut_has_dimensionality']
+            if hasattr(self, '_ccut_has_dimensionality'): del self._ccut_has_dimensionality
+            if hasattr(self.attribute_map, 'ccut_has_dimensionality'): del self.attribute_map['ccut_has_dimensionality']
+            if hasattr(self.openapi_types, 'ccut_has_dimensionality'): del self.openapi_types['ccut_has_dimensionality']
         if abbreviation is not None:
             self.abbreviation = abbreviation
         else:
-            if hasattr(self, abbreviation): del self._abbreviation
-            if hasattr(self, self.attribute_map['abbreviation']): del self.attribute_map['abbreviation']
-            if hasattr(self, self.openapi_types['abbreviation']): del self.openapi_types['abbreviation']
+            if hasattr(self, '_abbreviation'): del self._abbreviation
+            if hasattr(self.attribute_map, 'abbreviation'): del self.attribute_map['abbreviation']
+            if hasattr(self.openapi_types, 'abbreviation'): del self.openapi_types['abbreviation']
 
     @property
     def id(self):

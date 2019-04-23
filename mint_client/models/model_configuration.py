@@ -88,81 +88,81 @@ class ModelConfiguration(object):
         if type is not None:
             self.type = type
         else:
-            if hasattr(self, type): del self._type
-            if hasattr(self, self.attribute_map['type']): del self.attribute_map['type']
-            if hasattr(self, self.openapi_types['type']): del self.openapi_types['type']
+            if hasattr(self, '_type'): del self._type
+            if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
+            if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
         if label is not None:
             self.label = label
         else:
-            if hasattr(self, label): del self._label
-            if hasattr(self, self.attribute_map['label']): del self.attribute_map['label']
-            if hasattr(self, self.openapi_types['label']): del self.openapi_types['label']
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
         if has_input is not None:
             self.has_input = has_input
         else:
-            if hasattr(self, has_input): del self._has_input
-            if hasattr(self, self.attribute_map['has_input']): del self.attribute_map['has_input']
-            if hasattr(self, self.openapi_types['has_input']): del self.openapi_types['has_input']
+            if hasattr(self, '_has_input'): del self._has_input
+            if hasattr(self.attribute_map, 'has_input'): del self.attribute_map['has_input']
+            if hasattr(self.openapi_types, 'has_input'): del self.openapi_types['has_input']
         if has_output is not None:
             self.has_output = has_output
         else:
-            if hasattr(self, has_output): del self._has_output
-            if hasattr(self, self.attribute_map['has_output']): del self.attribute_map['has_output']
-            if hasattr(self, self.openapi_types['has_output']): del self.openapi_types['has_output']
+            if hasattr(self, '_has_output'): del self._has_output
+            if hasattr(self.attribute_map, 'has_output'): del self.attribute_map['has_output']
+            if hasattr(self.openapi_types, 'has_output'): del self.openapi_types['has_output']
         if description is not None:
             self.description = description
         else:
-            if hasattr(self, description): del self._description
-            if hasattr(self, self.attribute_map['description']): del self.attribute_map['description']
-            if hasattr(self, self.openapi_types['description']): del self.openapi_types['description']
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if has_cag is not None:
             self.has_cag = has_cag
         else:
-            if hasattr(self, has_cag): del self._has_cag
-            if hasattr(self, self.attribute_map['has_cag']): del self.attribute_map['has_cag']
-            if hasattr(self, self.openapi_types['has_cag']): del self.openapi_types['has_cag']
+            if hasattr(self, '_has_cag'): del self._has_cag
+            if hasattr(self.attribute_map, 'has_cag'): del self.attribute_map['has_cag']
+            if hasattr(self.openapi_types, 'has_cag'): del self.openapi_types['has_cag']
         if has_process is not None:
             self.has_process = has_process
         else:
-            if hasattr(self, has_process): del self._has_process
-            if hasattr(self, self.attribute_map['has_process']): del self.attribute_map['has_process']
-            if hasattr(self, self.openapi_types['has_process']): del self.openapi_types['has_process']
+            if hasattr(self, '_has_process'): del self._has_process
+            if hasattr(self.attribute_map, 'has_process'): del self.attribute_map['has_process']
+            if hasattr(self.openapi_types, 'has_process'): del self.openapi_types['has_process']
         if has_time_interval is not None:
             self.has_time_interval = has_time_interval
         else:
-            if hasattr(self, has_time_interval): del self._has_time_interval
-            if hasattr(self, self.attribute_map['has_time_interval']): del self.attribute_map['has_time_interval']
-            if hasattr(self, self.openapi_types['has_time_interval']): del self.openapi_types['has_time_interval']
+            if hasattr(self, '_has_time_interval'): del self._has_time_interval
+            if hasattr(self.attribute_map, 'has_time_interval'): del self.attribute_map['has_time_interval']
+            if hasattr(self.openapi_types, 'has_time_interval'): del self.openapi_types['has_time_interval']
         if has_implementation_script_location is not None:
             self.has_implementation_script_location = has_implementation_script_location
         else:
-            if hasattr(self, has_implementation_script_location): del self._has_implementation_script_location
-            if hasattr(self, self.attribute_map['has_implementation_script_location']): del self.attribute_map['has_implementation_script_location']
-            if hasattr(self, self.openapi_types['has_implementation_script_location']): del self.openapi_types['has_implementation_script_location']
+            if hasattr(self, '_has_implementation_script_location'): del self._has_implementation_script_location
+            if hasattr(self.attribute_map, 'has_implementation_script_location'): del self.attribute_map['has_implementation_script_location']
+            if hasattr(self.openapi_types, 'has_implementation_script_location'): del self.openapi_types['has_implementation_script_location']
         if has_container is not None:
             self.has_container = has_container
         else:
-            if hasattr(self, has_container): del self._has_container
-            if hasattr(self, self.attribute_map['has_container']): del self.attribute_map['has_container']
-            if hasattr(self, self.openapi_types['has_container']): del self.openapi_types['has_container']
+            if hasattr(self, '_has_container'): del self._has_container
+            if hasattr(self.attribute_map, 'has_container'): del self.attribute_map['has_container']
+            if hasattr(self.openapi_types, 'has_container'): del self.openapi_types['has_container']
         if has_constraint is not None:
             self.has_constraint = has_constraint
         else:
-            if hasattr(self, has_constraint): del self._has_constraint
-            if hasattr(self, self.attribute_map['has_constraint']): del self.attribute_map['has_constraint']
-            if hasattr(self, self.openapi_types['has_constraint']): del self.openapi_types['has_constraint']
+            if hasattr(self, '_has_constraint'): del self._has_constraint
+            if hasattr(self.attribute_map, 'has_constraint'): del self.attribute_map['has_constraint']
+            if hasattr(self.openapi_types, 'has_constraint'): del self.openapi_types['has_constraint']
         if has_parameter is not None:
             self.has_parameter = has_parameter
         else:
-            if hasattr(self, has_parameter): del self._has_parameter
-            if hasattr(self, self.attribute_map['has_parameter']): del self.attribute_map['has_parameter']
-            if hasattr(self, self.openapi_types['has_parameter']): del self.openapi_types['has_parameter']
+            if hasattr(self, '_has_parameter'): del self._has_parameter
+            if hasattr(self.attribute_map, 'has_parameter'): del self.attribute_map['has_parameter']
+            if hasattr(self.openapi_types, 'has_parameter'): del self.openapi_types['has_parameter']
         if has_component_location is not None:
             self.has_component_location = has_component_location
         else:
-            if hasattr(self, has_component_location): del self._has_component_location
-            if hasattr(self, self.attribute_map['has_component_location']): del self.attribute_map['has_component_location']
-            if hasattr(self, self.openapi_types['has_component_location']): del self.openapi_types['has_component_location']
+            if hasattr(self, '_has_component_location'): del self._has_component_location
+            if hasattr(self.attribute_map, 'has_component_location'): del self.attribute_map['has_component_location']
+            if hasattr(self.openapi_types, 'has_component_location'): del self.openapi_types['has_component_location']
 
     @property
     def id(self):
