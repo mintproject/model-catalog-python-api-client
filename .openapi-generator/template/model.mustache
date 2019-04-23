@@ -68,9 +68,9 @@ class {{classname}}(object):
         if {{name}} is not None:
             self.{{name}} = {{name}}
         else:
-            del self._{{name}}
-            del self.attribute_map['{{name}}']
-            del self.openapi_types['{{name}}']
+            if hasattr(self, {{name}}): del self._{{name}}
+            if hasattr(self, self.attribute_map['{{name}}']): del self.attribute_map['{{name}}']
+            if hasattr(self, self.openapi_types['{{name}}']): del self.openapi_types['{{name}}']
 {{/isNullable}}
 {{^isNullable}}
         if {{name}} is not None:
