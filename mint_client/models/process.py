@@ -59,14 +59,20 @@ class Process(object):
             self.type = type
         else:
             del self._type
+            del self.attribute_map['type']
+            del self.openapi_types['type']
         if label is not None:
             self.label = label
         else:
             del self._label
+            del self.attribute_map['label']
+            del self.openapi_types['label']
         if influences is not None:
             self.influences = influences
         else:
             del self._influences
+            del self.attribute_map['influences']
+            del self.openapi_types['influences']
 
     @property
     def id(self):
