@@ -14,7 +14,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "mint-api"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 # To install the library, run the following
 #
 # python setup.py install
@@ -29,7 +29,7 @@ setup(
     version=VERSION,
     description="Model Catalog",
     author_email="mosorio@isi.edu",
-    url="",
+    url="https://pypi.org/project/mint-api/",
     keywords=["OpenAPI", "OpenAPI-Generator", "Model Catalog"],
     install_requires=REQUIRES,
     packages=find_packages(),
