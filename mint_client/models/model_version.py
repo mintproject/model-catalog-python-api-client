@@ -37,7 +37,8 @@ class ModelVersion(object):
         'type': 'list[str]',
         'has_documentation': 'list[str]',
         'has_version_id': 'str',
-        'has_configuration': 'list[ModelConfiguration]'
+        'has_configuration': 'list[ModelConfiguration]',
+        'description': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class ModelVersion(object):
         'type': 'type',
         'has_documentation': 'hasDocumentation',
         'has_version_id': 'hasVersionId',
-        'has_configuration': 'hasConfiguration'
+        'has_configuration': 'hasConfiguration',
+        'description': 'description'
     }
 
-    def __init__(self, id=None, label=None, type=None, has_documentation=None, has_version_id=None, has_configuration=None):  # noqa: E501
+    def __init__(self, id=None, label=None, type=None, has_documentation=None, has_version_id=None, has_configuration=None, description=None):  # noqa: E501
         """ModelVersion - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -58,6 +60,7 @@ class ModelVersion(object):
         self._has_documentation = None
         self._has_version_id = None
         self._has_configuration = None
+        self._description = None
         self.discriminator = None
 
         self.id = id
@@ -91,6 +94,12 @@ class ModelVersion(object):
             if hasattr(self, '_has_configuration'): del self._has_configuration
             if hasattr(self.attribute_map, 'has_configuration'): del self.attribute_map['has_configuration']
             if hasattr(self.openapi_types, 'has_configuration'): del self.openapi_types['has_configuration']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
 
     @property
     def id(self):
@@ -219,6 +228,27 @@ class ModelVersion(object):
         """
 
         self._has_configuration = has_configuration
+
+    @property
+    def description(self):
+        """Gets the description of this ModelVersion.  # noqa: E501
+
+
+        :return: The description of this ModelVersion.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this ModelVersion.
+
+
+        :param description: The description of this ModelVersion.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

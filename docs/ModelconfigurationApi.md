@@ -278,7 +278,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_inputs_by_modelconfiguration**
-> list[ApiResponse] get_inputs_by_modelconfiguration(id, username=username)
+> list[DatasetSpecification] get_inputs_by_modelconfiguration(id, username=username)
 
 Get the inputs of a model configuration
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ApiResponse]**](ApiResponse.md)
+[**list[DatasetSpecification]**](DatasetSpecification.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_outputs_by_modelconfiguration**
-> list[ApiResponse] get_outputs_by_modelconfiguration(id, username=username)
+> list[DatasetSpecification] get_outputs_by_modelconfiguration(id, username=username)
 
 Get the outputs of a model configuration
 
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ApiResponse]**](ApiResponse.md)
+[**list[DatasetSpecification]**](DatasetSpecification.md)
 
 ### Authorization
 
@@ -474,7 +474,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_parameters_by_modelconfiguration**
-> list[ApiResponse] get_parameters_by_modelconfiguration(id, username=username)
+> list[Parameter] get_parameters_by_modelconfiguration(id, username=username)
 
 Get the parameters of a model configuration
 
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[ApiResponse]**](ApiResponse.md)
+[**list[Parameter]**](Parameter.md)
 
 ### Authorization
 

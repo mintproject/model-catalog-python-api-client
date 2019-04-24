@@ -36,6 +36,7 @@ class Model(object):
         'label': 'str',
         'type': 'list[str]',
         'has_software_version': 'list[object]',
+        'description': 'str',
         'has_model_category': 'list[str]',
         'has_documentation': 'list[str]'
     }
@@ -45,17 +46,19 @@ class Model(object):
         'label': 'label',
         'type': 'type',
         'has_software_version': 'hasSoftwareVersion',
+        'description': 'description',
         'has_model_category': 'hasModelCategory',
         'has_documentation': 'hasDocumentation'
     }
 
-    def __init__(self, id=None, label=None, type=None, has_software_version=None, has_model_category=None, has_documentation=None):  # noqa: E501
+    def __init__(self, id=None, label=None, type=None, has_software_version=None, description=None, has_model_category=None, has_documentation=None):  # noqa: E501
         """Model - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._label = None
         self._type = None
         self._has_software_version = None
+        self._description = None
         self._has_model_category = None
         self._has_documentation = None
         self.discriminator = None
@@ -79,6 +82,12 @@ class Model(object):
             if hasattr(self, '_has_software_version'): del self._has_software_version
             if hasattr(self.attribute_map, 'has_software_version'): del self.attribute_map['has_software_version']
             if hasattr(self.openapi_types, 'has_software_version'): del self.openapi_types['has_software_version']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if has_model_category is not None:
             self.has_model_category = has_model_category
         else:
@@ -177,6 +186,27 @@ class Model(object):
         """
 
         self._has_software_version = has_software_version
+
+    @property
+    def description(self):
+        """Gets the description of this Model.  # noqa: E501
+
+
+        :return: The description of this Model.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Model.
+
+
+        :param description: The description of this Model.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def has_model_category(self):

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **label** | **str** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **has_software_version** | **list[object]** |  | [optional] 
+**description** | **str** |  | [optional] 
 **has_model_category** | **list[str]** |  | [optional] 
 **has_documentation** | **list[str]** |  | [optional] 
 

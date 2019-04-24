@@ -35,23 +35,26 @@ class Process(object):
         'id': 'str',
         'type': 'list[str]',
         'label': 'str',
-        'influences': 'list[Process]'
+        'influences': 'list[Process]',
+        'description': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'type': 'type',
         'label': 'label',
-        'influences': 'influences'
+        'influences': 'influences',
+        'description': 'description'
     }
 
-    def __init__(self, id=None, type=None, label=None, influences=None):  # noqa: E501
+    def __init__(self, id=None, type=None, label=None, influences=None, description=None):  # noqa: E501
         """Process - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._type = None
         self._label = None
         self._influences = None
+        self._description = None
         self.discriminator = None
 
         self.id = id
@@ -73,6 +76,12 @@ class Process(object):
             if hasattr(self, '_influences'): del self._influences
             if hasattr(self.attribute_map, 'influences'): del self.attribute_map['influences']
             if hasattr(self.openapi_types, 'influences'): del self.openapi_types['influences']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
 
     @property
     def id(self):
@@ -161,6 +170,27 @@ class Process(object):
         """
 
         self._influences = influences
+
+    @property
+    def description(self):
+        """Gets the description of this Process.  # noqa: E501
+
+
+        :return: The description of this Process.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Process.
+
+
+        :param description: The description of this Process.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

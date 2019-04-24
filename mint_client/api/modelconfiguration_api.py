@@ -558,7 +558,7 @@ class ModelconfigurationApi(object):
         :param async_req bool
         :param str id: The name of the resource  (required)
         :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
-        :return: list[ApiResponse]
+        :return: list[DatasetSpecification]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -580,7 +580,7 @@ class ModelconfigurationApi(object):
         :param async_req bool
         :param str id: The name of the resource  (required)
         :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
-        :return: list[ApiResponse]
+        :return: list[DatasetSpecification]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -637,7 +637,7 @@ class ModelconfigurationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[ApiResponse]',  # noqa: E501
+            response_type='list[DatasetSpecification]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -846,7 +846,7 @@ class ModelconfigurationApi(object):
         :param async_req bool
         :param str id: The name of the resource  (required)
         :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
-        :return: list[ApiResponse]
+        :return: list[DatasetSpecification]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -868,7 +868,7 @@ class ModelconfigurationApi(object):
         :param async_req bool
         :param str id: The name of the resource  (required)
         :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
-        :return: list[ApiResponse]
+        :return: list[DatasetSpecification]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -925,7 +925,7 @@ class ModelconfigurationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[ApiResponse]',  # noqa: E501
+            response_type='list[DatasetSpecification]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -944,7 +944,7 @@ class ModelconfigurationApi(object):
         :param async_req bool
         :param str id: The name of the resource  (required)
         :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
-        :return: list[ApiResponse]
+        :return: list[Parameter]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -966,7 +966,7 @@ class ModelconfigurationApi(object):
         :param async_req bool
         :param str id: The name of the resource  (required)
         :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
-        :return: list[ApiResponse]
+        :return: list[Parameter]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1023,7 +1023,7 @@ class ModelconfigurationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[ApiResponse]',  # noqa: E501
+            response_type='list[Parameter]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
