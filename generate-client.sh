@@ -1,9 +1,12 @@
 dir=${PWD}
 parentdir="$(dirname "$dir")"
 
+branch=${1:-master}
+version=${1:-v0.0.2}
+
 docker run -ti --rm -v ${PWD}:/local openapitools/openapi-generator-cli \
      generate  \
-     -i https://raw.githubusercontent.com/mintproject/MINT-ModelCatalogIngestionAPI/master/model-catalog-v0.0.2.yaml \
+     -i https://raw.githubusercontent.com/mintproject/MINT-ModelCatalogIngestionAPI/$branch/model-catalog-$version.yaml \
      -g python  \
      -o /local/ \
      -c /local/openapi-config.json \
