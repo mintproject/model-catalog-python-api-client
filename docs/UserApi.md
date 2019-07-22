@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_user**
-> delete_user(username)
+> delete_user(username, username2=username2)
 
 Delete user
 
@@ -79,10 +79,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = mint_client.UserApi()
 username = 'username_example' # str | The name that needs to be deleted
+username2 = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
     # Delete user
-    api_instance.delete_user(username)
+    api_instance.delete_user(username, username2=username2)
 except ApiException as e:
     print("Exception when calling UserApi->delete_user: %s\n" % e)
 ```
@@ -92,6 +93,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**| The name that needs to be deleted | 
+ **username2** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
 
 ### Return type
 

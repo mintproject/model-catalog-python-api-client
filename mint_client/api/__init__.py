@@ -9,3 +9,4 @@ from mint_client.api.modelconfiguration_api import ModelconfigurationApi
 from mint_client.api.modelversion_api import ModelversionApi
 from mint_client.api.parameter_api import ParameterApi
 from mint_client.api.user_api import UserApi
+from mint_client.api.variablespresentations_api import VariablespresentationsApi

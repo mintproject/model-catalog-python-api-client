@@ -144,6 +144,7 @@ class ModelversionApi(object):
 
         :param async_req bool
         :param str id: A unique identifier for a `ModelVersion`. (required)
+        :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -166,6 +167,7 @@ class ModelversionApi(object):
 
         :param async_req bool
         :param str id: A unique identifier for a `ModelVersion`. (required)
+        :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -173,7 +175,7 @@ class ModelversionApi(object):
 
         local_var_params = locals()
 
-        all_params = ['id']  # noqa: E501
+        all_params = ['id', 'username']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -199,6 +201,8 @@ class ModelversionApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
+        if 'username' in local_var_params:
+            query_params.append(('username', local_var_params['username']))  # noqa: E501
 
         header_params = {}
 
@@ -429,6 +433,7 @@ class ModelversionApi(object):
         :param async_req bool
         :param str id: A unique identifier for a `ModelVersion`. (required)
         :param ModelVersion model_version: Updated `ModelVersion` information. (required)
+        :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -452,6 +457,7 @@ class ModelversionApi(object):
         :param async_req bool
         :param str id: A unique identifier for a `ModelVersion`. (required)
         :param ModelVersion model_version: Updated `ModelVersion` information. (required)
+        :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -459,7 +465,7 @@ class ModelversionApi(object):
 
         local_var_params = locals()
 
-        all_params = ['id', 'model_version']  # noqa: E501
+        all_params = ['id', 'model_version', 'username']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -489,6 +495,8 @@ class ModelversionApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
+        if 'username' in local_var_params:
+            query_params.append(('username', local_var_params['username']))  # noqa: E501
 
         header_params = {}
 

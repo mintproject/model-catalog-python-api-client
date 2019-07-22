@@ -144,6 +144,7 @@ class UserApi(object):
 
         :param async_req bool
         :param str username: The name that needs to be deleted (required)
+        :param str username2: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -166,6 +167,7 @@ class UserApi(object):
 
         :param async_req bool
         :param str username: The name that needs to be deleted (required)
+        :param str username2: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -173,7 +175,7 @@ class UserApi(object):
 
         local_var_params = locals()
 
-        all_params = ['username']  # noqa: E501
+        all_params = ['username', 'username2']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -199,6 +201,8 @@ class UserApi(object):
             path_params['username'] = local_var_params['username']  # noqa: E501
 
         query_params = []
+        if 'username2' in local_var_params:
+            query_params.append(('username', local_var_params['username2']))  # noqa: E501
 
         header_params = {}
 

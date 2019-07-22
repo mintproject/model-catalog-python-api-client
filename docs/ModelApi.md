@@ -64,7 +64,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_model**
-> delete_model(id)
+> delete_model(id, username=username)
 
 Delete a Model
 
@@ -86,10 +86,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 # create an instance of the API class
 api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | A unique identifier for a `Model`.
+username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
     # Delete a Model
-    api_instance.delete_model(id)
+    api_instance.delete_model(id, username=username)
 except ApiException as e:
     print("Exception when calling ModelApi->delete_model: %s\n" % e)
 ```
@@ -99,6 +100,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| A unique identifier for a &#x60;Model&#x60;. | 
+ **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
 
 ### Return type
 
@@ -216,7 +218,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_model**
-> update_model(id, model)
+> update_model(id, model, username=username)
 
 Update a Model
 
@@ -239,10 +241,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | A unique identifier for a `Model`.
 model = mint_client.Model() # Model | Updated `Model` information.
+username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
     # Update a Model
-    api_instance.update_model(id, model)
+    api_instance.update_model(id, model, username=username)
 except ApiException as e:
     print("Exception when calling ModelApi->update_model: %s\n" % e)
 ```
@@ -253,6 +256,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| A unique identifier for a &#x60;Model&#x60;. | 
  **model** | [**Model**](Model.md)| Updated &#x60;Model&#x60; information. | 
+ **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
 
 ### Return type
 

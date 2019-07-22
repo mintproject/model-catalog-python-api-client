@@ -24,6 +24,7 @@ from mint_client.api.modelconfiguration_api import ModelconfigurationApi
 from mint_client.api.modelversion_api import ModelversionApi
 from mint_client.api.parameter_api import ParameterApi
 from mint_client.api.user_api import UserApi
+from mint_client.api.variablespresentations_api import VariablespresentationsApi
 
 # import ApiClient
 from mint_client.api_client import ApiClient
@@ -42,6 +43,7 @@ from mint_client.models.model_configuration import ModelConfiguration
 from mint_client.models.model_version import ModelVersion
 from mint_client.models.parameter import Parameter
 from mint_client.models.process import Process
+from mint_client.models.standard_variable import StandardVariable
 from mint_client.models.time_interval import TimeInterval
 from mint_client.models.unit import Unit
 from mint_client.models.user import User

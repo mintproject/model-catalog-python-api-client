@@ -17,9 +17,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install mint-api
+pip install git+https://github.com/mintproject/MINT-ModelCatalogAPI-client.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install mint-api`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/mintproject/MINT-ModelCatalogAPI-client.git`)
 
 Then import the package:
 ```python
@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *UserApi* | [**login_user**](docs/UserApi.md#login_user) | **GET** /user/login | Logs user into the system
 *UserApi* | [**logout_user**](docs/UserApi.md#logout_user) | **GET** /user/logout | Logs out current logged in user session
 *UserApi* | [**update_user**](docs/UserApi.md#update_user) | **PUT** /user/{username} | Updated user
+*VariablespresentationsApi* | [**datasetspecification_id_variablepresentations_get**](docs/VariablespresentationsApi.md#datasetspecification_id_variablepresentations_get) | **GET** /datasetspecification/{id}/variablepresentations | List variable presentations related with a datasetspecification
 
 
 ## Documentation For Models
@@ -116,6 +117,7 @@ Class | Method | HTTP request | Description
  - [ModelVersion](docs/ModelVersion.md)
  - [Parameter](docs/Parameter.md)
  - [Process](docs/Process.md)
+ - [StandardVariable](docs/StandardVariable.md)
  - [TimeInterval](docs/TimeInterval.md)
  - [Unit](docs/Unit.md)
  - [User](docs/User.md)

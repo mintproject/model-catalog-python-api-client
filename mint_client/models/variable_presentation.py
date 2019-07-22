@@ -32,153 +32,213 @@ class VariablePresentation(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'id': 'str',
-        'type': 'list[str]',
-        'label': 'str',
+        'has_default_value': 'list[float]',
+        'has_standard_variable': 'list[StandardVariable]',
+        'has_maximum_accepted_value': 'list[float]',
+        'has_constraint': 'list[str]',
         'description': 'str',
-        'has_long_name': 'str',
-        'has_short_name': 'str',
-        'has_standard_variable': 'list[DatasetSpecification]',
-        'has_relevance_level': 'int',
-        'uses_unit': 'Unit'
+        'label': 'str',
+        'type': 'list[str]',
+        'has_long_name': 'list[str]',
+        'has_relevance_level': 'list[float]',
+        'has_short_name': 'list[str]',
+        'has_minimum_accepted_value': 'list[float]',
+        'has_dataset': 'list[DatasetSpecification]',
+        'id': 'str',
+        'uses_unit': 'list[Unit]'
     }
 
     attribute_map = {
-        'id': 'id',
-        'type': 'type',
-        'label': 'label',
-        'description': 'description',
-        'has_long_name': 'hasLongName',
-        'has_short_name': 'hasShortName',
+        'has_default_value': 'hasDefaultValue',
         'has_standard_variable': 'hasStandardVariable',
+        'has_maximum_accepted_value': 'hasMaximumAcceptedValue',
+        'has_constraint': 'hasConstraint',
+        'description': 'description',
+        'label': 'label',
+        'type': 'type',
+        'has_long_name': 'hasLongName',
         'has_relevance_level': 'hasRelevanceLevel',
+        'has_short_name': 'hasShortName',
+        'has_minimum_accepted_value': 'hasMinimumAcceptedValue',
+        'has_dataset': 'hasDataset',
+        'id': 'id',
         'uses_unit': 'usesUnit'
     }
 
-    def __init__(self, id=None, type=None, label=None, description=None, has_long_name=None, has_short_name=None, has_standard_variable=None, has_relevance_level=None, uses_unit=None):  # noqa: E501
+    def __init__(self, has_default_value=None, has_standard_variable=None, has_maximum_accepted_value=None, has_constraint=None, description=None, label=None, type=None, has_long_name=None, has_relevance_level=None, has_short_name=None, has_minimum_accepted_value=None, has_dataset=None, id=None, uses_unit=None):  # noqa: E501
         """VariablePresentation - a model defined in OpenAPI"""  # noqa: E501
 
-        self._id = None
-        self._type = None
-        self._label = None
-        self._description = None
-        self._has_long_name = None
-        self._has_short_name = None
+        self._has_default_value = None
         self._has_standard_variable = None
+        self._has_maximum_accepted_value = None
+        self._has_constraint = None
+        self._description = None
+        self._label = None
+        self._type = None
+        self._has_long_name = None
         self._has_relevance_level = None
+        self._has_short_name = None
+        self._has_minimum_accepted_value = None
+        self._has_dataset = None
+        self._id = None
         self._uses_unit = None
         self.discriminator = None
 
-        self.id = id
-        if type is not None:
-            self.type = type
+        if has_default_value is not None:
+            self.has_default_value = has_default_value
         else:
-            if hasattr(self, '_type'): del self._type
-            if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
-            if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
-        if label is not None:
-            self.label = label
-        else:
-            if hasattr(self, '_label'): del self._label
-            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
-            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
-        if description is not None:
-            self.description = description
-        else:
-            if hasattr(self, '_description'): del self._description
-            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
-            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
-        if has_long_name is not None:
-            self.has_long_name = has_long_name
-        else:
-            if hasattr(self, '_has_long_name'): del self._has_long_name
-            if hasattr(self.attribute_map, 'has_long_name'): del self.attribute_map['has_long_name']
-            if hasattr(self.openapi_types, 'has_long_name'): del self.openapi_types['has_long_name']
-        if has_short_name is not None:
-            self.has_short_name = has_short_name
-        else:
-            if hasattr(self, '_has_short_name'): del self._has_short_name
-            if hasattr(self.attribute_map, 'has_short_name'): del self.attribute_map['has_short_name']
-            if hasattr(self.openapi_types, 'has_short_name'): del self.openapi_types['has_short_name']
+            if hasattr(self, '_has_default_value'): del self._has_default_value
+            if hasattr(self.attribute_map, 'has_default_value'): del self.attribute_map['has_default_value']
+            if hasattr(self.openapi_types, 'has_default_value'): del self.openapi_types['has_default_value']
         if has_standard_variable is not None:
             self.has_standard_variable = has_standard_variable
         else:
             if hasattr(self, '_has_standard_variable'): del self._has_standard_variable
             if hasattr(self.attribute_map, 'has_standard_variable'): del self.attribute_map['has_standard_variable']
             if hasattr(self.openapi_types, 'has_standard_variable'): del self.openapi_types['has_standard_variable']
+        if has_maximum_accepted_value is not None:
+            self.has_maximum_accepted_value = has_maximum_accepted_value
+        else:
+            if hasattr(self, '_has_maximum_accepted_value'): del self._has_maximum_accepted_value
+            if hasattr(self.attribute_map, 'has_maximum_accepted_value'): del self.attribute_map['has_maximum_accepted_value']
+            if hasattr(self.openapi_types, 'has_maximum_accepted_value'): del self.openapi_types['has_maximum_accepted_value']
+        if has_constraint is not None:
+            self.has_constraint = has_constraint
+        else:
+            if hasattr(self, '_has_constraint'): del self._has_constraint
+            if hasattr(self.attribute_map, 'has_constraint'): del self.attribute_map['has_constraint']
+            if hasattr(self.openapi_types, 'has_constraint'): del self.openapi_types['has_constraint']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
+        if label is not None:
+            self.label = label
+        else:
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
+        self.type = type
+        if has_long_name is not None:
+            self.has_long_name = has_long_name
+        else:
+            if hasattr(self, '_has_long_name'): del self._has_long_name
+            if hasattr(self.attribute_map, 'has_long_name'): del self.attribute_map['has_long_name']
+            if hasattr(self.openapi_types, 'has_long_name'): del self.openapi_types['has_long_name']
         if has_relevance_level is not None:
             self.has_relevance_level = has_relevance_level
         else:
             if hasattr(self, '_has_relevance_level'): del self._has_relevance_level
             if hasattr(self.attribute_map, 'has_relevance_level'): del self.attribute_map['has_relevance_level']
             if hasattr(self.openapi_types, 'has_relevance_level'): del self.openapi_types['has_relevance_level']
+        if has_short_name is not None:
+            self.has_short_name = has_short_name
+        else:
+            if hasattr(self, '_has_short_name'): del self._has_short_name
+            if hasattr(self.attribute_map, 'has_short_name'): del self.attribute_map['has_short_name']
+            if hasattr(self.openapi_types, 'has_short_name'): del self.openapi_types['has_short_name']
+        if has_minimum_accepted_value is not None:
+            self.has_minimum_accepted_value = has_minimum_accepted_value
+        else:
+            if hasattr(self, '_has_minimum_accepted_value'): del self._has_minimum_accepted_value
+            if hasattr(self.attribute_map, 'has_minimum_accepted_value'): del self.attribute_map['has_minimum_accepted_value']
+            if hasattr(self.openapi_types, 'has_minimum_accepted_value'): del self.openapi_types['has_minimum_accepted_value']
+        if has_dataset is not None:
+            self.has_dataset = has_dataset
+        if id is not None:
+            self.id = id
         if uses_unit is not None:
             self.uses_unit = uses_unit
+        else:
+            if hasattr(self, '_uses_unit'): del self._uses_unit
+            if hasattr(self.attribute_map, 'uses_unit'): del self.attribute_map['uses_unit']
+            if hasattr(self.openapi_types, 'uses_unit'): del self.openapi_types['uses_unit']
 
     @property
-    def id(self):
-        """Gets the id of this VariablePresentation.  # noqa: E501
+    def has_default_value(self):
+        """Gets the has_default_value of this VariablePresentation.  # noqa: E501
 
 
-        :return: The id of this VariablePresentation.  # noqa: E501
-        :rtype: str
+        :return: The has_default_value of this VariablePresentation.  # noqa: E501
+        :rtype: list[float]
         """
-        return self._id
+        return self._has_default_value
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this VariablePresentation.
+    @has_default_value.setter
+    def has_default_value(self, has_default_value):
+        """Sets the has_default_value of this VariablePresentation.
 
 
-        :param id: The id of this VariablePresentation.  # noqa: E501
-        :type: str
+        :param has_default_value: The has_default_value of this VariablePresentation.  # noqa: E501
+        :type: list[float]
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
-        self._id = id
+        self._has_default_value = has_default_value
 
     @property
-    def type(self):
-        """Gets the type of this VariablePresentation.  # noqa: E501
+    def has_standard_variable(self):
+        """Gets the has_standard_variable of this VariablePresentation.  # noqa: E501
 
 
-        :return: The type of this VariablePresentation.  # noqa: E501
+        :return: The has_standard_variable of this VariablePresentation.  # noqa: E501
+        :rtype: list[StandardVariable]
+        """
+        return self._has_standard_variable
+
+    @has_standard_variable.setter
+    def has_standard_variable(self, has_standard_variable):
+        """Sets the has_standard_variable of this VariablePresentation.
+
+
+        :param has_standard_variable: The has_standard_variable of this VariablePresentation.  # noqa: E501
+        :type: list[StandardVariable]
+        """
+
+        self._has_standard_variable = has_standard_variable
+
+    @property
+    def has_maximum_accepted_value(self):
+        """Gets the has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
+
+
+        :return: The has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._has_maximum_accepted_value
+
+    @has_maximum_accepted_value.setter
+    def has_maximum_accepted_value(self, has_maximum_accepted_value):
+        """Sets the has_maximum_accepted_value of this VariablePresentation.
+
+
+        :param has_maximum_accepted_value: The has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._has_maximum_accepted_value = has_maximum_accepted_value
+
+    @property
+    def has_constraint(self):
+        """Gets the has_constraint of this VariablePresentation.  # noqa: E501
+
+
+        :return: The has_constraint of this VariablePresentation.  # noqa: E501
         :rtype: list[str]
         """
-        return self._type
+        return self._has_constraint
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this VariablePresentation.
+    @has_constraint.setter
+    def has_constraint(self, has_constraint):
+        """Sets the has_constraint of this VariablePresentation.
 
 
-        :param type: The type of this VariablePresentation.  # noqa: E501
+        :param has_constraint: The has_constraint of this VariablePresentation.  # noqa: E501
         :type: list[str]
         """
 
-        self._type = type
-
-    @property
-    def label(self):
-        """Gets the label of this VariablePresentation.  # noqa: E501
-
-
-        :return: The label of this VariablePresentation.  # noqa: E501
-        :rtype: str
-        """
-        return self._label
-
-    @label.setter
-    def label(self, label):
-        """Sets the label of this VariablePresentation.
-
-
-        :param label: The label of this VariablePresentation.  # noqa: E501
-        :type: str
-        """
-
-        self._label = label
+        self._has_constraint = has_constraint
 
     @property
     def description(self):
@@ -202,12 +262,54 @@ class VariablePresentation(object):
         self._description = description
 
     @property
+    def label(self):
+        """Gets the label of this VariablePresentation.  # noqa: E501
+
+
+        :return: The label of this VariablePresentation.  # noqa: E501
+        :rtype: str
+        """
+        return self._label
+
+    @label.setter
+    def label(self, label):
+        """Sets the label of this VariablePresentation.
+
+
+        :param label: The label of this VariablePresentation.  # noqa: E501
+        :type: str
+        """
+
+        self._label = label
+
+    @property
+    def type(self):
+        """Gets the type of this VariablePresentation.  # noqa: E501
+
+
+        :return: The type of this VariablePresentation.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this VariablePresentation.
+
+
+        :param type: The type of this VariablePresentation.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._type = type
+
+    @property
     def has_long_name(self):
         """Gets the has_long_name of this VariablePresentation.  # noqa: E501
 
 
         :return: The has_long_name of this VariablePresentation.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._has_long_name
 
@@ -217,52 +319,10 @@ class VariablePresentation(object):
 
 
         :param has_long_name: The has_long_name of this VariablePresentation.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._has_long_name = has_long_name
-
-    @property
-    def has_short_name(self):
-        """Gets the has_short_name of this VariablePresentation.  # noqa: E501
-
-
-        :return: The has_short_name of this VariablePresentation.  # noqa: E501
-        :rtype: str
-        """
-        return self._has_short_name
-
-    @has_short_name.setter
-    def has_short_name(self, has_short_name):
-        """Sets the has_short_name of this VariablePresentation.
-
-
-        :param has_short_name: The has_short_name of this VariablePresentation.  # noqa: E501
-        :type: str
-        """
-
-        self._has_short_name = has_short_name
-
-    @property
-    def has_standard_variable(self):
-        """Gets the has_standard_variable of this VariablePresentation.  # noqa: E501
-
-
-        :return: The has_standard_variable of this VariablePresentation.  # noqa: E501
-        :rtype: list[DatasetSpecification]
-        """
-        return self._has_standard_variable
-
-    @has_standard_variable.setter
-    def has_standard_variable(self, has_standard_variable):
-        """Sets the has_standard_variable of this VariablePresentation.
-
-
-        :param has_standard_variable: The has_standard_variable of this VariablePresentation.  # noqa: E501
-        :type: list[DatasetSpecification]
-        """
-
-        self._has_standard_variable = has_standard_variable
 
     @property
     def has_relevance_level(self):
@@ -270,7 +330,7 @@ class VariablePresentation(object):
 
 
         :return: The has_relevance_level of this VariablePresentation.  # noqa: E501
-        :rtype: int
+        :rtype: list[float]
         """
         return self._has_relevance_level
 
@@ -280,10 +340,94 @@ class VariablePresentation(object):
 
 
         :param has_relevance_level: The has_relevance_level of this VariablePresentation.  # noqa: E501
-        :type: int
+        :type: list[float]
         """
 
         self._has_relevance_level = has_relevance_level
+
+    @property
+    def has_short_name(self):
+        """Gets the has_short_name of this VariablePresentation.  # noqa: E501
+
+
+        :return: The has_short_name of this VariablePresentation.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_short_name
+
+    @has_short_name.setter
+    def has_short_name(self, has_short_name):
+        """Sets the has_short_name of this VariablePresentation.
+
+
+        :param has_short_name: The has_short_name of this VariablePresentation.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_short_name = has_short_name
+
+    @property
+    def has_minimum_accepted_value(self):
+        """Gets the has_minimum_accepted_value of this VariablePresentation.  # noqa: E501
+
+
+        :return: The has_minimum_accepted_value of this VariablePresentation.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._has_minimum_accepted_value
+
+    @has_minimum_accepted_value.setter
+    def has_minimum_accepted_value(self, has_minimum_accepted_value):
+        """Sets the has_minimum_accepted_value of this VariablePresentation.
+
+
+        :param has_minimum_accepted_value: The has_minimum_accepted_value of this VariablePresentation.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._has_minimum_accepted_value = has_minimum_accepted_value
+
+    @property
+    def has_dataset(self):
+        """Gets the has_dataset of this VariablePresentation.  # noqa: E501
+
+
+        :return: The has_dataset of this VariablePresentation.  # noqa: E501
+        :rtype: list[DatasetSpecification]
+        """
+        return self._has_dataset
+
+    @has_dataset.setter
+    def has_dataset(self, has_dataset):
+        """Sets the has_dataset of this VariablePresentation.
+
+
+        :param has_dataset: The has_dataset of this VariablePresentation.  # noqa: E501
+        :type: list[DatasetSpecification]
+        """
+
+        self._has_dataset = has_dataset
+
+    @property
+    def id(self):
+        """Gets the id of this VariablePresentation.  # noqa: E501
+
+
+        :return: The id of this VariablePresentation.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this VariablePresentation.
+
+
+        :param id: The id of this VariablePresentation.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def uses_unit(self):
@@ -291,7 +435,7 @@ class VariablePresentation(object):
 
 
         :return: The uses_unit of this VariablePresentation.  # noqa: E501
-        :rtype: Unit
+        :rtype: list[Unit]
         """
         return self._uses_unit
 
@@ -301,7 +445,7 @@ class VariablePresentation(object):
 
 
         :param uses_unit: The uses_unit of this VariablePresentation.  # noqa: E501
-        :type: Unit
+        :type: list[Unit]
         """
 
         self._uses_unit = uses_unit

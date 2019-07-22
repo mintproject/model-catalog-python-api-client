@@ -64,7 +64,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_model_version**
-> delete_model_version(id)
+> delete_model_version(id, username=username)
 
 Delete a ModelVersion
 
@@ -82,10 +82,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = mint_client.ModelversionApi()
 id = 'id_example' # str | A unique identifier for a `ModelVersion`.
+username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
     # Delete a ModelVersion
-    api_instance.delete_model_version(id)
+    api_instance.delete_model_version(id, username=username)
 except ApiException as e:
     print("Exception when calling ModelversionApi->delete_model_version: %s\n" % e)
 ```
@@ -95,6 +96,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| A unique identifier for a &#x60;ModelVersion&#x60;. | 
+ **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
 
 ### Return type
 
@@ -212,7 +214,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_model_version**
-> update_model_version(id, model_version)
+> update_model_version(id, model_version, username=username)
 
 Update a ModelVersion
 
@@ -235,10 +237,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 api_instance = mint_client.ModelversionApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | A unique identifier for a `ModelVersion`.
 model_version = mint_client.ModelVersion() # ModelVersion | Updated `ModelVersion` information.
+username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
     # Update a ModelVersion
-    api_instance.update_model_version(id, model_version)
+    api_instance.update_model_version(id, model_version, username=username)
 except ApiException as e:
     print("Exception when calling ModelversionApi->update_model_version: %s\n" % e)
 ```
@@ -249,6 +252,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| A unique identifier for a &#x60;ModelVersion&#x60;. | 
  **model_version** | [**ModelVersion**](ModelVersion.md)| Updated &#x60;ModelVersion&#x60; information. | 
+ **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
 
 ### Return type
 

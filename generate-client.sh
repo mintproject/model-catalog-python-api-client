@@ -2,7 +2,7 @@ dir=${PWD}
 parentdir="$(dirname "$dir")"
 
 branch=${1:-master}
-version=${1:-v0.0.2}
+version=${2:-v0.0.2}
 
 docker run -ti --rm -v ${PWD}:/local openapitools/openapi-generator-cli \
      generate  \

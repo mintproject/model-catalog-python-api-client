@@ -38,7 +38,7 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 # create an instance of the API class
 api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | 
-dataset_specification = None # list[DatasetSpecification] | 
+dataset_specification = [mint_client.DatasetSpecification()] # list[DatasetSpecification] | 
 
 try:
     # Creates a new instance of a `DatasetSpecification` related as Input.
@@ -52,7 +52,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **dataset_specification** | [**list[DatasetSpecification]**](list.md)|  | 
+ **dataset_specification** | [**list[DatasetSpecification]**](DatasetSpecification.md)|  | 
 
 ### Return type
 
@@ -140,7 +140,7 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 # create an instance of the API class
 api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | 
-dataset_specification = None # list[DatasetSpecification] | 
+dataset_specification = [mint_client.DatasetSpecification()] # list[DatasetSpecification] | 
 
 try:
     # Create the output of a model configuration
@@ -154,7 +154,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **dataset_specification** | [**list[DatasetSpecification]**](list.md)|  | 
+ **dataset_specification** | [**list[DatasetSpecification]**](DatasetSpecification.md)|  | 
 
 ### Return type
 
@@ -194,7 +194,7 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 # create an instance of the API class
 api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | 
-parameter = None # list[Parameter] | 
+parameter = [mint_client.Parameter()] # list[Parameter] | 
 
 try:
     # Create the inputs of a model configuration
@@ -208,7 +208,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **parameter** | [**list[Parameter]**](list.md)|  | 
+ **parameter** | [**list[Parameter]**](Parameter.md)|  | 
 
 ### Return type
 
@@ -226,7 +226,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_model_configuration**
-> delete_model_configuration(id)
+> delete_model_configuration(id, username=username)
 
 Delete a ModelConfiguration
 
@@ -248,10 +248,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 # create an instance of the API class
 api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | A unique identifier for a `ModelConfiguration`.
+username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
     # Delete a ModelConfiguration
-    api_instance.delete_model_configuration(id)
+    api_instance.delete_model_configuration(id, username=username)
 except ApiException as e:
     print("Exception when calling ModelconfigurationApi->delete_model_configuration: %s\n" % e)
 ```
@@ -261,6 +262,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| A unique identifier for a &#x60;ModelConfiguration&#x60;. | 
+ **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
 
 ### Return type
 
@@ -523,7 +525,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_model_configuration**
-> update_model_configuration(id, model_configuration)
+> update_model_configuration(id, model_configuration, username=username)
 
 Update model configuration
 
@@ -544,10 +546,11 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
 id = 'id_example' # str | A unique identifier for a `ModelConfiguration`.
 model_configuration = mint_client.ModelConfiguration() # ModelConfiguration | 
+username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
 
 try:
     # Update model configuration
-    api_instance.update_model_configuration(id, model_configuration)
+    api_instance.update_model_configuration(id, model_configuration, username=username)
 except ApiException as e:
     print("Exception when calling ModelconfigurationApi->update_model_configuration: %s\n" % e)
 ```
@@ -558,6 +561,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| A unique identifier for a &#x60;ModelConfiguration&#x60;. | 
  **model_configuration** | [**ModelConfiguration**](ModelConfiguration.md)|  | 
+ **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
 
 ### Return type
 
