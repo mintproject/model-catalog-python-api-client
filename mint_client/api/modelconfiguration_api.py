@@ -645,6 +645,106 @@ class ModelconfigurationApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_model_configuration(self, id, **kwargs):  # noqa: E501
+        """Get modelconfiguration  # noqa: E501
+
+        Gets the details of a single instance of a `ModelConfiguration`.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_configuration(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: A unique identifier for a `ModelConfiguration`. (required)
+        :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
+        :return: ModelConfiguration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_model_configuration_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_model_configuration_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def get_model_configuration_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Get modelconfiguration  # noqa: E501
+
+        Gets the details of a single instance of a `ModelConfiguration`.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_configuration_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: A unique identifier for a `ModelConfiguration`. (required)
+        :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
+        :return: ModelConfiguration
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['id', 'username']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_configuration" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ApiValueError("Missing the required parameter `id` when calling `get_model_configuration`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+        if 'username' in local_var_params:
+            query_params.append(('username', local_var_params['username']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/modelconfiguration/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ModelConfiguration',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_model_configurations(self, **kwargs):  # noqa: E501
         """List modelconfiguration  # noqa: E501
 
@@ -728,106 +828,6 @@ class ModelconfigurationApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[ModelConfiguration]',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_model_configuraton(self, id, **kwargs):  # noqa: E501
-        """Get modelconfiguration  # noqa: E501
-
-        Gets the details of a single instance of a `ModelConfiguration`.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_model_configuraton(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str id: A unique identifier for a `ModelConfiguration`. (required)
-        :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
-        :return: ModelConfiguration
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_model_configuraton_with_http_info(id, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_model_configuraton_with_http_info(id, **kwargs)  # noqa: E501
-            return data
-
-    def get_model_configuraton_with_http_info(self, id, **kwargs):  # noqa: E501
-        """Get modelconfiguration  # noqa: E501
-
-        Gets the details of a single instance of a `ModelConfiguration`.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_model_configuraton_with_http_info(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str id: A unique identifier for a `ModelConfiguration`. (required)
-        :param str username: To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username
-        :return: ModelConfiguration
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['id', 'username']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_model_configuraton" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
-            raise ApiValueError("Missing the required parameter `id` when calling `get_model_configuraton`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-
-        query_params = []
-        if 'username' in local_var_params:
-            query_params.append(('username', local_var_params['username']))  # noqa: E501
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = []  # noqa: E501
-
-        return self.api_client.call_api(
-            '/modelconfiguration/{id}', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='ModelConfiguration',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
