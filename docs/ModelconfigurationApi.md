@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**create_parameters_by_modelconfiguration**](ModelconfigurationApi.md#create_parameters_by_modelconfiguration) | **POST** /modelconfiguration/{id}/parameters | Create the inputs of a model configuration
 [**delete_model_configuration**](ModelconfigurationApi.md#delete_model_configuration) | **DELETE** /modelconfiguration/{id} | Delete a ModelConfiguration
 [**get_inputs_by_modelconfiguration**](ModelconfigurationApi.md#get_inputs_by_modelconfiguration) | **GET** /modelconfiguration/{id}/inputs | Get the inputs of a model configuration
+[**get_model_configuration**](ModelconfigurationApi.md#get_model_configuration) | **GET** /modelconfiguration/{id} | Get modelconfiguration
 [**get_model_configurations**](ModelconfigurationApi.md#get_model_configurations) | **GET** /modelconfigurations | List modelconfiguration
-[**get_model_configuraton**](ModelconfigurationApi.md#get_model_configuraton) | **GET** /modelconfiguration/{id} | Get modelconfiguration
 [**get_outputs_by_modelconfiguration**](ModelconfigurationApi.md#get_outputs_by_modelconfiguration) | **GET** /modelconfiguration/{id}/outputs | Get the outputs of a model configuration
 [**get_parameters_by_modelconfiguration**](ModelconfigurationApi.md#get_parameters_by_modelconfiguration) | **GET** /modelconfiguration/{id}/parameters | Get the parameters of a model configuration
 [**update_model_configuration**](ModelconfigurationApi.md#update_model_configuration) | **PUT** /modelconfiguration/{id} | Update model configuration
@@ -326,6 +326,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_model_configuration**
+> ModelConfiguration get_model_configuration(id, username=username)
+
+Get modelconfiguration
+
+Gets the details of a single instance of a `ModelConfiguration`.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = mint_client.ModelconfigurationApi()
+id = 'id_example' # str | A unique identifier for a `ModelConfiguration`.
+username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
+
+try:
+    # Get modelconfiguration
+    api_response = api_instance.get_model_configuration(id, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ModelconfigurationApi->get_model_configuration: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| A unique identifier for a &#x60;ModelConfiguration&#x60;. | 
+ **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
+
+### Return type
+
+[**ModelConfiguration**](ModelConfiguration.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_model_configurations**
 > list[ModelConfiguration] get_model_configurations(username=username)
 
@@ -361,57 +412,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[ModelConfiguration]**](ModelConfiguration.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_model_configuraton**
-> ModelConfiguration get_model_configuraton(id, username=username)
-
-Get modelconfiguration
-
-Gets the details of a single instance of a `ModelConfiguration`.
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi()
-id = 'id_example' # str | A unique identifier for a `ModelConfiguration`.
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
-
-try:
-    # Get modelconfiguration
-    api_response = api_instance.get_model_configuraton(id, username=username)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->get_model_configuraton: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| A unique identifier for a &#x60;ModelConfiguration&#x60;. | 
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
-
-### Return type
-
-[**ModelConfiguration**](ModelConfiguration.md)
 
 ### Authorization
 

@@ -15,7 +15,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.0.1"
+__version__ = "1.0.3"
 
 # import apis into sdk package
 from mint_client.api.datasetspecification_api import DatasetspecificationApi
