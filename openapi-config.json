@@ -1,7 +1,7 @@
 {
-    "packageName": "mint_client",
-    "projectName": "mint-api",
+    "packageName": "modelcatalog",
+    "projectName": "modelcatalog-api",
     "modelPropertyNaming": "camelCase",
     "packageVersion": "1.1.0",
-    "packageUrl": "https://pypi.org/project/mint-api/" 
+    "packageUrl": "https://pypi.org/project/modelcatalog-api/" 
 }
