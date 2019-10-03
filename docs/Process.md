@@ -3,11 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | 
-**type** | **list[str]** |  | [optional] 
+**id** | **str** |  | [optional] 
 **label** | **str** |  | [optional] 
-**influences** | [**list[Process]**](Process.md) | Property that describe the causal relationship between two processes, two variables, a process and a variable or a variable and a process | [optional] 
-**description** | **str** |  | [optional] 
+**type** | **list[str]** |  | [optional] 
+**influences** | [**list[Process]**](Process.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

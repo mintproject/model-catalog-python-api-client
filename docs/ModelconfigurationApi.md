@@ -1,286 +1,22 @@
-# mint_client.ModelconfigurationApi
+# mint_client.ModelConfigurationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_inputs_by_modelconfiguration**](ModelconfigurationApi.md#create_inputs_by_modelconfiguration) | **POST** /modelconfiguration/{id}/inputs | Creates a new instance of a &#x60;DatasetSpecification&#x60; related as Input.
-[**create_model_configuration**](ModelconfigurationApi.md#create_model_configuration) | **POST** /modelconfigurations | Create a model configuration
-[**create_outputs_by_modelconfiguration**](ModelconfigurationApi.md#create_outputs_by_modelconfiguration) | **POST** /modelconfiguration/{id}/outputs | Create the output of a model configuration
-[**create_parameters_by_modelconfiguration**](ModelconfigurationApi.md#create_parameters_by_modelconfiguration) | **POST** /modelconfiguration/{id}/parameters | Create the inputs of a model configuration
-[**delete_model_configuration**](ModelconfigurationApi.md#delete_model_configuration) | **DELETE** /modelconfiguration/{id} | Delete a ModelConfiguration
-[**get_inputs_by_modelconfiguration**](ModelconfigurationApi.md#get_inputs_by_modelconfiguration) | **GET** /modelconfiguration/{id}/inputs | Get the inputs of a model configuration
-[**get_model_configuration**](ModelconfigurationApi.md#get_model_configuration) | **GET** /modelconfiguration/{id} | Get modelconfiguration
-[**get_model_configurations**](ModelconfigurationApi.md#get_model_configurations) | **GET** /modelconfigurations | List modelconfiguration
-[**get_outputs_by_modelconfiguration**](ModelconfigurationApi.md#get_outputs_by_modelconfiguration) | **GET** /modelconfiguration/{id}/outputs | Get the outputs of a model configuration
-[**get_parameters_by_modelconfiguration**](ModelconfigurationApi.md#get_parameters_by_modelconfiguration) | **GET** /modelconfiguration/{id}/parameters | Get the parameters of a model configuration
-[**update_model_configuration**](ModelconfigurationApi.md#update_model_configuration) | **PUT** /modelconfiguration/{id} | Update model configuration
+[**modelconfigurations_get**](ModelConfigurationApi.md#modelconfigurations_get) | **GET** /modelconfigurations | List all ModelConfiguration entities
+[**modelconfigurations_id_delete**](ModelConfigurationApi.md#modelconfigurations_id_delete) | **DELETE** /modelconfigurations/{id} | Delete a ModelConfiguration
+[**modelconfigurations_id_get**](ModelConfigurationApi.md#modelconfigurations_id_get) | **GET** /modelconfigurations/{id} | Get a ModelConfiguration
+[**modelconfigurations_id_put**](ModelConfigurationApi.md#modelconfigurations_id_put) | **PUT** /modelconfigurations/{id} | Update a ModelConfiguration
+[**modelconfigurations_post**](ModelConfigurationApi.md#modelconfigurations_post) | **POST** /modelconfigurations | Create a ModelConfiguration
 
 
-# **create_inputs_by_modelconfiguration**
-> create_inputs_by_modelconfiguration(id, dataset_specification)
+# **modelconfigurations_get**
+> list[ModelConfiguration] modelconfigurations_get(username=username)
 
-Creates a new instance of a `DatasetSpecification` related as Input.
+List all ModelConfiguration entities
 
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-configuration = mint_client.Configuration()
-# Configure Bearer authorization (JWT): BearerAuth
-configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
-id = 'id_example' # str | 
-dataset_specification = [mint_client.DatasetSpecification()] # list[DatasetSpecification] | 
-
-try:
-    # Creates a new instance of a `DatasetSpecification` related as Input.
-    api_instance.create_inputs_by_modelconfiguration(id, dataset_specification)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->create_inputs_by_modelconfiguration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
- **dataset_specification** | [**list[DatasetSpecification]**](DatasetSpecification.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_model_configuration**
-> create_model_configuration(model_configuration)
-
-Create a model configuration
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-configuration = mint_client.Configuration()
-# Configure Bearer authorization (JWT): BearerAuth
-configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
-model_configuration = mint_client.ModelConfiguration() # ModelConfiguration | 
-
-try:
-    # Create a model configuration
-    api_instance.create_model_configuration(model_configuration)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->create_model_configuration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **model_configuration** | [**ModelConfiguration**](ModelConfiguration.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_outputs_by_modelconfiguration**
-> create_outputs_by_modelconfiguration(id, dataset_specification)
-
-Create the output of a model configuration
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-configuration = mint_client.Configuration()
-# Configure Bearer authorization (JWT): BearerAuth
-configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
-id = 'id_example' # str | 
-dataset_specification = [mint_client.DatasetSpecification()] # list[DatasetSpecification] | 
-
-try:
-    # Create the output of a model configuration
-    api_instance.create_outputs_by_modelconfiguration(id, dataset_specification)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->create_outputs_by_modelconfiguration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
- **dataset_specification** | [**list[DatasetSpecification]**](DatasetSpecification.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_parameters_by_modelconfiguration**
-> create_parameters_by_modelconfiguration(id, parameter)
-
-Create the inputs of a model configuration
-
-Creates a new instance of a `DatasetSpecification` and it related with the `ModelConfiguration`.
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-configuration = mint_client.Configuration()
-# Configure Bearer authorization (JWT): BearerAuth
-configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
-id = 'id_example' # str | 
-parameter = [mint_client.Parameter()] # list[Parameter] | 
-
-try:
-    # Create the inputs of a model configuration
-    api_instance.create_parameters_by_modelconfiguration(id, parameter)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->create_parameters_by_modelconfiguration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
- **parameter** | [**list[Parameter]**](Parameter.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_model_configuration**
-> delete_model_configuration(id)
-
-Delete a ModelConfiguration
-
-Deletes an existing `ModelConfiguration`.
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-configuration = mint_client.Configuration()
-# Configure Bearer authorization (JWT): BearerAuth
-configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
-id = 'id_example' # str | A unique identifier for a `ModelConfiguration`.
-
-try:
-    # Delete a ModelConfiguration
-    api_instance.delete_model_configuration(id)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->delete_model_configuration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| A unique identifier for a &#x60;ModelConfiguration&#x60;. | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_inputs_by_modelconfiguration**
-> list[DatasetSpecification] get_inputs_by_modelconfiguration(id, username=username)
-
-Get the inputs of a model configuration
+Gets a list of all ModelConfiguration entities
 
 ### Example
 
@@ -292,122 +28,22 @@ from mint_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi()
-id = 'id_example' # str | The name of the resource 
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
+api_instance = mint_client.ModelConfigurationApi()
+username = 'username_example' # str | Username to query (optional)
 
 try:
-    # Get the inputs of a model configuration
-    api_response = api_instance.get_inputs_by_modelconfiguration(id, username=username)
+    # List all ModelConfiguration entities
+    api_response = api_instance.modelconfigurations_get(username=username)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->get_inputs_by_modelconfiguration: %s\n" % e)
+    print("Exception when calling ModelConfigurationApi->modelconfigurations_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The name of the resource  | 
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
-
-### Return type
-
-[**list[DatasetSpecification]**](DatasetSpecification.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_model_configuration**
-> ModelConfiguration get_model_configuration(id, username=username)
-
-Get modelconfiguration
-
-Gets the details of a single instance of a `ModelConfiguration`.
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi()
-id = 'id_example' # str | A unique identifier for a `ModelConfiguration`.
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
-
-try:
-    # Get modelconfiguration
-    api_response = api_instance.get_model_configuration(id, username=username)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->get_model_configuration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| A unique identifier for a &#x60;ModelConfiguration&#x60;. | 
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
-
-### Return type
-
-[**ModelConfiguration**](ModelConfiguration.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_model_configurations**
-> list[ModelConfiguration] get_model_configurations(username=username)
-
-List modelconfiguration
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi()
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
-
-try:
-    # List modelconfiguration
-    api_response = api_instance.get_model_configurations(username=username)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->get_model_configurations: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
+ **username** | **str**| Username to query | [optional] 
 
 ### Return type
 
@@ -424,108 +60,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_outputs_by_modelconfiguration**
-> list[DatasetSpecification] get_outputs_by_modelconfiguration(id, username=username)
+# **modelconfigurations_id_delete**
+> modelconfigurations_id_delete(id, user)
 
-Get the outputs of a model configuration
+Delete a ModelConfiguration
 
-### Example
-
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi()
-id = 'id_example' # str | The name of the resource 
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
-
-try:
-    # Get the outputs of a model configuration
-    api_response = api_instance.get_outputs_by_modelconfiguration(id, username=username)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->get_outputs_by_modelconfiguration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| The name of the resource  | 
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
-
-### Return type
-
-[**list[DatasetSpecification]**](DatasetSpecification.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_parameters_by_modelconfiguration**
-> list[Parameter] get_parameters_by_modelconfiguration(id, username=username)
-
-Get the parameters of a model configuration
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi()
-id = 'id_example' # str | The name of the resource 
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
-
-try:
-    # Get the parameters of a model configuration
-    api_response = api_instance.get_parameters_by_modelconfiguration(id, username=username)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->get_parameters_by_modelconfiguration: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| The name of the resource  | 
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
-
-### Return type
-
-[**list[Parameter]**](Parameter.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_model_configuration**
-> update_model_configuration(id, model_configuration)
-
-Update model configuration
+Delete an existing ModelConfiguration
 
 ### Example
 
@@ -541,23 +81,184 @@ configuration = mint_client.Configuration()
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.ModelconfigurationApi(mint_client.ApiClient(configuration))
-id = 'id_example' # str | A unique identifier for a `ModelConfiguration`.
-model_configuration = mint_client.ModelConfiguration() # ModelConfiguration | 
+api_instance = mint_client.ModelConfigurationApi(mint_client.ApiClient(configuration))
+id = 'id_example' # str | The ID of the resource
+user = 'user_example' # str | Username
 
 try:
-    # Update model configuration
-    api_instance.update_model_configuration(id, model_configuration)
+    # Delete a ModelConfiguration
+    api_instance.modelconfigurations_id_delete(id, user)
 except ApiException as e:
-    print("Exception when calling ModelconfigurationApi->update_model_configuration: %s\n" % e)
+    print("Exception when calling ModelConfigurationApi->modelconfigurations_id_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| A unique identifier for a &#x60;ModelConfiguration&#x60;. | 
- **model_configuration** | [**ModelConfiguration**](ModelConfiguration.md)|  | 
+ **id** | **str**| The ID of the resource | 
+ **user** | **str**| Username | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **modelconfigurations_id_get**
+> ModelConfiguration modelconfigurations_id_get(id, username=username)
+
+Get a ModelConfiguration
+
+Gets the details of a single instance of a ModelConfiguration
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = mint_client.ModelConfigurationApi()
+id = 'id_example' # str | The ID of the resource
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Get a ModelConfiguration
+    api_response = api_instance.modelconfigurations_id_get(id, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ModelConfigurationApi->modelconfigurations_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**ModelConfiguration**](ModelConfiguration.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **modelconfigurations_id_put**
+> modelconfigurations_id_put(id, user, model_configuration=model_configuration)
+
+Update a ModelConfiguration
+
+Updates an existing ModelConfiguration
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# create an instance of the API class
+api_instance = mint_client.ModelConfigurationApi(mint_client.ApiClient(configuration))
+id = 'id_example' # str | The ID of the resource
+user = 'user_example' # str | Username
+model_configuration = mint_client.ModelConfiguration() # ModelConfiguration | An old ModelConfigurationto be updated (optional)
+
+try:
+    # Update a ModelConfiguration
+    api_instance.modelconfigurations_id_put(id, user, model_configuration=model_configuration)
+except ApiException as e:
+    print("Exception when calling ModelConfigurationApi->modelconfigurations_id_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **user** | **str**| Username | 
+ **model_configuration** | [**ModelConfiguration**](ModelConfiguration.md)| An old ModelConfigurationto be updated | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **modelconfigurations_post**
+> modelconfigurations_post(user, model_configuration=model_configuration)
+
+Create a ModelConfiguration
+
+Create a new instance of a ModelConfiguration
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# create an instance of the API class
+api_instance = mint_client.ModelConfigurationApi(mint_client.ApiClient(configuration))
+user = 'user_example' # str | Username
+model_configuration = mint_client.ModelConfiguration() # ModelConfiguration | A new ModelConfigurationto be created (optional)
+
+try:
+    # Create a ModelConfiguration
+    api_instance.modelconfigurations_post(user, model_configuration=model_configuration)
+except ApiException as e:
+    print("Exception when calling ModelConfigurationApi->modelconfigurations_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user** | **str**| Username | 
+ **model_configuration** | [**ModelConfiguration**](ModelConfiguration.md)| A new ModelConfigurationto be created | [optional] 
 
 ### Return type
 

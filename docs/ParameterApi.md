@@ -1,19 +1,71 @@
 # mint_client.ParameterApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_parameter**](ParameterApi.md#create_parameter) | **POST** /parameters | Create a Parameter
-[**get_parameters**](ParameterApi.md#get_parameters) | **GET** /parameters | List All Parameters
+[**parameters_get**](ParameterApi.md#parameters_get) | **GET** /parameters | List all Parameter entities
+[**parameters_id_delete**](ParameterApi.md#parameters_id_delete) | **DELETE** /parameters/{id} | Delete a Parameter
+[**parameters_id_get**](ParameterApi.md#parameters_id_get) | **GET** /parameters/{id} | Get a Parameter
+[**parameters_id_put**](ParameterApi.md#parameters_id_put) | **PUT** /parameters/{id} | Update a Parameter
+[**parameters_post**](ParameterApi.md#parameters_post) | **POST** /parameters | Create a Parameter
 
 
-# **create_parameter**
-> create_parameter(parameter)
+# **parameters_get**
+> list[Parameter] parameters_get(username=username)
 
-Create a Parameter
+List all Parameter entities
 
-Creates a new instance of a `Parameter`.
+Gets a list of all Parameter entities
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = mint_client.ParameterApi()
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # List all Parameter entities
+    api_response = api_instance.parameters_get(username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ParameterApi->parameters_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**list[Parameter]**](Parameter.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **parameters_id_delete**
+> parameters_id_delete(id, user)
+
+Delete a Parameter
+
+Delete an existing Parameter
 
 ### Example
 
@@ -30,20 +82,129 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
 api_instance = mint_client.ParameterApi(mint_client.ApiClient(configuration))
-parameter = mint_client.Parameter() # Parameter | A new `Parameter` to be created.
+id = 'id_example' # str | The ID of the resource
+user = 'user_example' # str | Username
 
 try:
-    # Create a Parameter
-    api_instance.create_parameter(parameter)
+    # Delete a Parameter
+    api_instance.parameters_id_delete(id, user)
 except ApiException as e:
-    print("Exception when calling ParameterApi->create_parameter: %s\n" % e)
+    print("Exception when calling ParameterApi->parameters_id_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parameter** | [**Parameter**](Parameter.md)| A new &#x60;Parameter&#x60; to be created. | 
+ **id** | **str**| The ID of the resource | 
+ **user** | **str**| Username | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **parameters_id_get**
+> Parameter parameters_id_get(id, username=username)
+
+Get a Parameter
+
+Gets the details of a single instance of a Parameter
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = mint_client.ParameterApi()
+id = 'id_example' # str | The ID of the resource
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Get a Parameter
+    api_response = api_instance.parameters_id_get(id, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ParameterApi->parameters_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**Parameter**](Parameter.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **parameters_id_put**
+> parameters_id_put(id, user, parameter=parameter)
+
+Update a Parameter
+
+Updates an existing Parameter
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# create an instance of the API class
+api_instance = mint_client.ParameterApi(mint_client.ApiClient(configuration))
+id = 'id_example' # str | The ID of the resource
+user = 'user_example' # str | Username
+parameter = mint_client.Parameter() # Parameter | An old Parameterto be updated (optional)
+
+try:
+    # Update a Parameter
+    api_instance.parameters_id_put(id, user, parameter=parameter)
+except ApiException as e:
+    print("Exception when calling ParameterApi->parameters_id_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **user** | **str**| Username | 
+ **parameter** | [**Parameter**](Parameter.md)| An old Parameterto be updated | [optional] 
 
 ### Return type
 
@@ -60,52 +221,57 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_parameters**
-> list[Parameter] get_parameters(username=username)
+# **parameters_post**
+> parameters_post(user, parameter=parameter)
 
-List All Parameters
+Create a Parameter
 
-Gets a list of all `Parameter` entities.
+Create a new instance of a Parameter
 
 ### Example
 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
 import mint_client
 from mint_client.rest import ApiException
 from pprint import pprint
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.ParameterApi()
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
+api_instance = mint_client.ParameterApi(mint_client.ApiClient(configuration))
+user = 'user_example' # str | Username
+parameter = mint_client.Parameter() # Parameter | A new Parameterto be created (optional)
 
 try:
-    # List All Parameters
-    api_response = api_instance.get_parameters(username=username)
-    pprint(api_response)
+    # Create a Parameter
+    api_instance.parameters_post(user, parameter=parameter)
 except ApiException as e:
-    print("Exception when calling ParameterApi->get_parameters: %s\n" % e)
+    print("Exception when calling ParameterApi->parameters_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
+ **user** | **str**| Username | 
+ **parameter** | [**Parameter**](Parameter.md)| A new Parameterto be created | [optional] 
 
 ### Return type
 
-[**list[Parameter]**](Parameter.md)
+void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
