@@ -2,6 +2,6 @@
     "packageName": "mint_client",
     "projectName": "mint-api",
     "modelPropertyNaming": "camelCase",
-    "packageVersion": "1.0.3",
+    "packageVersion": "1.1.0",
     "packageUrl": "https://pypi.org/project/mint-api/" 
 }

@@ -1,126 +1,22 @@
 # mint_client.ModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_model**](ModelApi.md#create_model) | **POST** /models | Create a model
-[**delete_model**](ModelApi.md#delete_model) | **DELETE** /model/{id} | Delete a Model
-[**get_model**](ModelApi.md#get_model) | **GET** /model/{id} | Get a Model
-[**get_models**](ModelApi.md#get_models) | **GET** /models | List All models
-[**update_model**](ModelApi.md#update_model) | **PUT** /model/{id} | Update a Model
+[**models_get**](ModelApi.md#models_get) | **GET** /models | List all Model entities
+[**models_id_delete**](ModelApi.md#models_id_delete) | **DELETE** /models/{id} | Delete a Model
+[**models_id_get**](ModelApi.md#models_id_get) | **GET** /models/{id} | Get a Model
+[**models_id_put**](ModelApi.md#models_id_put) | **PUT** /models/{id} | Update a Model
+[**models_post**](ModelApi.md#models_post) | **POST** /models | Create a Model
 
 
-# **create_model**
-> create_model(model)
+# **models_get**
+> list[Model] models_get(username=username)
 
-Create a model
+List all Model entities
 
-Creates a new instance of a `model`.
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-configuration = mint_client.Configuration()
-# Configure Bearer authorization (JWT): BearerAuth
-configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# create an instance of the API class
-api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
-model = mint_client.Model() # Model | A new `model` to be created.
-
-try:
-    # Create a model
-    api_instance.create_model(model)
-except ApiException as e:
-    print("Exception when calling ModelApi->create_model: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **model** | [**Model**](Model.md)| A new &#x60;model&#x60; to be created. | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_model**
-> delete_model(id)
-
-Delete a Model
-
-Deletes an existing `Model`.
-
-### Example
-
-* Bearer (JWT) Authentication (BearerAuth):
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-configuration = mint_client.Configuration()
-# Configure Bearer authorization (JWT): BearerAuth
-configuration.access_token = 'YOUR_BEARER_TOKEN'
-
-# create an instance of the API class
-api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
-id = 'id_example' # str | A unique identifier for a `Model`.
-
-try:
-    # Delete a Model
-    api_instance.delete_model(id)
-except ApiException as e:
-    print("Exception when calling ModelApi->delete_model: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **str**| A unique identifier for a &#x60;Model&#x60;. | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_model**
-> Model get_model(id, username=username)
-
-Get a Model
-
-Gets the details of a single instance of a `Model`.
+Gets a list of all Model entities
 
 ### Example
 
@@ -133,72 +29,21 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = mint_client.ModelApi()
-id = 'id_example' # str | A unique identifier for a `Model`.
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
+username = 'username_example' # str | Username to query (optional)
 
 try:
-    # Get a Model
-    api_response = api_instance.get_model(id, username=username)
+    # List all Model entities
+    api_response = api_instance.models_get(username=username)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ModelApi->get_model: %s\n" % e)
+    print("Exception when calling ModelApi->models_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| A unique identifier for a &#x60;Model&#x60;. | 
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
-
-### Return type
-
-[**Model**](Model.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_models**
-> list[Model] get_models(username=username)
-
-List All models
-
-Gets a list of all `model` entities.
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import mint_client
-from mint_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = mint_client.ModelApi()
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
-
-try:
-    # List All models
-    api_response = api_instance.get_models(username=username)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ModelApi->get_models: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
+ **username** | **str**| Username to query | [optional] 
 
 ### Return type
 
@@ -215,12 +60,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_model**
-> update_model(id, model)
+# **models_id_delete**
+> models_id_delete(id, user)
 
-Update a Model
+Delete a Model
 
-Updates an existing `Model`.
+Delete an existing Model
 
 ### Example
 
@@ -237,22 +82,183 @@ configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
 api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
-id = 'id_example' # str | A unique identifier for a `Model`.
-model = mint_client.Model() # Model | Updated `Model` information.
+id = 'id_example' # str | The ID of the resource
+user = 'user_example' # str | Username
 
 try:
-    # Update a Model
-    api_instance.update_model(id, model)
+    # Delete a Model
+    api_instance.models_id_delete(id, user)
 except ApiException as e:
-    print("Exception when calling ModelApi->update_model: %s\n" % e)
+    print("Exception when calling ModelApi->models_id_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| A unique identifier for a &#x60;Model&#x60;. | 
- **model** | [**Model**](Model.md)| Updated &#x60;Model&#x60; information. | 
+ **id** | **str**| The ID of the resource | 
+ **user** | **str**| Username | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **models_id_get**
+> Model models_id_get(id, username=username)
+
+Get a Model
+
+Gets the details of a single instance of a Model
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = mint_client.ModelApi()
+id = 'id_example' # str | The ID of the resource
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Get a Model
+    api_response = api_instance.models_id_get(id, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ModelApi->models_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **models_id_put**
+> models_id_put(id, user, model=model)
+
+Update a Model
+
+Updates an existing Model
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# create an instance of the API class
+api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
+id = 'id_example' # str | The ID of the resource
+user = 'user_example' # str | Username
+model = mint_client.Model() # Model | An old Modelto be updated (optional)
+
+try:
+    # Update a Model
+    api_instance.models_id_put(id, user, model=model)
+except ApiException as e:
+    print("Exception when calling ModelApi->models_id_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **user** | **str**| Username | 
+ **model** | [**Model**](Model.md)| An old Modelto be updated | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **models_post**
+> models_post(user, model=model)
+
+Create a Model
+
+Create a new instance of a Model
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# create an instance of the API class
+api_instance = mint_client.ModelApi(mint_client.ApiClient(configuration))
+user = 'user_example' # str | Username
+model = mint_client.Model() # Model | A new Modelto be created (optional)
+
+try:
+    # Create a Model
+    api_instance.models_post(user, model=model)
+except ApiException as e:
+    print("Exception when calling ModelApi->models_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user** | **str**| Username | 
+ **model** | [**Model**](Model.md)| A new Modelto be created | [optional] 
 
 ### Return type
 

@@ -1,19 +1,71 @@
-# mint_client.DatasetspecificationApi
+# mint_client.DatasetSpecificationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v0.0.2*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_data_set**](DatasetspecificationApi.md#create_data_set) | **POST** /datasetspecifications | Create a datasetspecification
-[**get_data_sets**](DatasetspecificationApi.md#get_data_sets) | **GET** /datasetspecifications | List All datasetspecifications
+[**datasetspecifications_get**](DatasetSpecificationApi.md#datasetspecifications_get) | **GET** /datasetspecifications | List all DatasetSpecification entities
+[**datasetspecifications_id_delete**](DatasetSpecificationApi.md#datasetspecifications_id_delete) | **DELETE** /datasetspecifications/{id} | Delete a DatasetSpecification
+[**datasetspecifications_id_get**](DatasetSpecificationApi.md#datasetspecifications_id_get) | **GET** /datasetspecifications/{id} | Get a DatasetSpecification
+[**datasetspecifications_id_put**](DatasetSpecificationApi.md#datasetspecifications_id_put) | **PUT** /datasetspecifications/{id} | Update a DatasetSpecification
+[**datasetspecifications_post**](DatasetSpecificationApi.md#datasetspecifications_post) | **POST** /datasetspecifications | Create a DatasetSpecification
 
 
-# **create_data_set**
-> create_data_set(dataset_specification)
+# **datasetspecifications_get**
+> list[DatasetSpecification] datasetspecifications_get(username=username)
 
-Create a datasetspecification
+List all DatasetSpecification entities
 
-Creates a new instance of a `datasetspecification`.
+Gets a list of all DatasetSpecification entities
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = mint_client.DatasetSpecificationApi()
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # List all DatasetSpecification entities
+    api_response = api_instance.datasetspecifications_get(username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DatasetSpecificationApi->datasetspecifications_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**list[DatasetSpecification]**](DatasetSpecification.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **datasetspecifications_id_delete**
+> datasetspecifications_id_delete(id, user)
+
+Delete a DatasetSpecification
+
+Delete an existing DatasetSpecification
 
 ### Example
 
@@ -29,21 +81,130 @@ configuration = mint_client.Configuration()
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.DatasetspecificationApi(mint_client.ApiClient(configuration))
-dataset_specification = mint_client.DatasetSpecification() # DatasetSpecification | A new `datasetspecification` to be created.
+api_instance = mint_client.DatasetSpecificationApi(mint_client.ApiClient(configuration))
+id = 'id_example' # str | The ID of the resource
+user = 'user_example' # str | Username
 
 try:
-    # Create a datasetspecification
-    api_instance.create_data_set(dataset_specification)
+    # Delete a DatasetSpecification
+    api_instance.datasetspecifications_id_delete(id, user)
 except ApiException as e:
-    print("Exception when calling DatasetspecificationApi->create_data_set: %s\n" % e)
+    print("Exception when calling DatasetSpecificationApi->datasetspecifications_id_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dataset_specification** | [**DatasetSpecification**](DatasetSpecification.md)| A new &#x60;datasetspecification&#x60; to be created. | 
+ **id** | **str**| The ID of the resource | 
+ **user** | **str**| Username | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **datasetspecifications_id_get**
+> DatasetSpecification datasetspecifications_id_get(id, username=username)
+
+Get a DatasetSpecification
+
+Gets the details of a single instance of a DatasetSpecification
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = mint_client.DatasetSpecificationApi()
+id = 'id_example' # str | The ID of the resource
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Get a DatasetSpecification
+    api_response = api_instance.datasetspecifications_id_get(id, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DatasetSpecificationApi->datasetspecifications_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**DatasetSpecification**](DatasetSpecification.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **datasetspecifications_id_put**
+> datasetspecifications_id_put(id, user, dataset_specification=dataset_specification)
+
+Update a DatasetSpecification
+
+Updates an existing DatasetSpecification
+
+### Example
+
+* Bearer (JWT) Authentication (BearerAuth):
+```python
+from __future__ import print_function
+import time
+import mint_client
+from mint_client.rest import ApiException
+from pprint import pprint
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
+
+# create an instance of the API class
+api_instance = mint_client.DatasetSpecificationApi(mint_client.ApiClient(configuration))
+id = 'id_example' # str | The ID of the resource
+user = 'user_example' # str | Username
+dataset_specification = mint_client.DatasetSpecification() # DatasetSpecification | An old DatasetSpecificationto be updated (optional)
+
+try:
+    # Update a DatasetSpecification
+    api_instance.datasetspecifications_id_put(id, user, dataset_specification=dataset_specification)
+except ApiException as e:
+    print("Exception when calling DatasetSpecificationApi->datasetspecifications_id_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **user** | **str**| Username | 
+ **dataset_specification** | [**DatasetSpecification**](DatasetSpecification.md)| An old DatasetSpecificationto be updated | [optional] 
 
 ### Return type
 
@@ -60,52 +221,57 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_data_sets**
-> list[DatasetSpecification] get_data_sets(username=username)
+# **datasetspecifications_post**
+> datasetspecifications_post(user, dataset_specification=dataset_specification)
 
-List All datasetspecifications
+Create a DatasetSpecification
 
-Gets a list of all `datasetspecification` entities.
+Create a new instance of a DatasetSpecification
 
 ### Example
 
+* Bearer (JWT) Authentication (BearerAuth):
 ```python
 from __future__ import print_function
 import time
 import mint_client
 from mint_client.rest import ApiException
 from pprint import pprint
+configuration = mint_client.Configuration()
+# Configure Bearer authorization (JWT): BearerAuth
+configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.DatasetspecificationApi()
-username = 'username_example' # str | To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username (optional)
+api_instance = mint_client.DatasetSpecificationApi(mint_client.ApiClient(configuration))
+user = 'user_example' # str | Username
+dataset_specification = mint_client.DatasetSpecification() # DatasetSpecification | A new DatasetSpecificationto be created (optional)
 
 try:
-    # List All datasetspecifications
-    api_response = api_instance.get_data_sets(username=username)
-    pprint(api_response)
+    # Create a DatasetSpecification
+    api_instance.datasetspecifications_post(user, dataset_specification=dataset_specification)
 except ApiException as e:
-    print("Exception when calling DatasetspecificationApi->get_data_sets: %s\n" % e)
+    print("Exception when calling DatasetSpecificationApi->datasetspecifications_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| To obtain the results maintained by the MINT project, you must not set up the variable. If you want the results of a user, you must set up the variable with the username | [optional] 
+ **user** | **str**| Username | 
+ **dataset_specification** | [**DatasetSpecification**](DatasetSpecification.md)| A new DatasetSpecificationto be created | [optional] 
 
 ### Return type
 
-[**list[DatasetSpecification]**](DatasetSpecification.md)
+void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
