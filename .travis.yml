@@ -1,14 +1,15 @@
-# ref: https://docs.travis-ci.com/user/languages/python
 language: python
 python:
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  #- "3.5-dev" # 3.5 development branch
-  #- "nightly" # points to the latest development branch e.g. 3.6-dev
-# command to install dependencies
-install: "pip install -r requirements.txt"
-# command to run tests
+- '3.5'
+- '3.7'
+install: pip install -r requirements.txt
 script: nosetests
+deploy:
+  provider: pypi
+  user: mosorio
+  password:
+    secure: OZFmb93BxCuDj9UMXkmRHIGMxh0VHhc3Q+T7jc5R8l44XgpVVbePvUSsZZ2N8PWoxVPeqxTgaIIAvgcDSAPdBPI7iPAfhPDB71rMjeoYJYRtsASalHYbr5ZW3vMi2V3EIckIJL47JJdVMU9MKJPlI+EscmhqpWYE9VbAHEJCxH1LnpQ4dF9LMmtig6rdJ0mFV6dyfiVujZNWbmY2kkasdWMbfFLZiq9t575xEPcMSA0RmkceeOueW89563ueJM29dfAevLIGY//Une1jvb3ikPjuxXTGCiYpF/YKuMrYhqsCWxW0nJ52jMex3hjZDJVDiIkeegDaAgzLm9R2imqfS2juGU/pEPHSyJ6MRA6vi+byx07qU37RBEVUxdfO5a/E62ctqHsh/qei2PfZA8rBUfpumiHrChmi3dBY/Ufw8xJPtOG4OH2Ww3GyHw3FgPc7bbm9/Xk+McL1pjOaMyTBo0hWQb1SfO/fa7BSK/HAxN3mwISyJ68Dm5WWhrxvIu6jTDbMRd9YJMEJIwrjATbaocOfTjJUTMjGcn8r/GXxxdqF0sKwtCL0nw1mSt9jEfVbH/mWF/PwrK731ZKPR4h2Jrtt80/m+sjdTWTRj5EpdcH+XvxVcSXCMX3cpaBC9DZCFrIkY01PZq7v2JIibaVh52xS9UsCla8KiyVLu+tE8AQ=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: mintproject/MINT-ModelCatalogAPI-client
