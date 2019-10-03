@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.spatially_distributed_grid_api import SpatiallyDistributedGridApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.spatially_distributed_grid_api import SpatiallyDistributedGridApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestSpatiallyDistributedGridApi(unittest.TestCase):
     """SpatiallyDistributedGridApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.spatially_distributed_grid_api.SpatiallyDistributedGridApi()  # noqa: E501
+        self.api = modelcatalog.api.spatially_distributed_grid_api.SpatiallyDistributedGridApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.region_api import RegionApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.region_api import RegionApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestRegionApi(unittest.TestCase):
     """RegionApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.region_api.RegionApi()  # noqa: E501
+        self.api = modelcatalog.api.region_api.RegionApi()  # noqa: E501
 
     def tearDown(self):
         pass

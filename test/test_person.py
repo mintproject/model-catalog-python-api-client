@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.person import Person  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.person import Person  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestPerson(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPerson(unittest.TestCase):
     def testPerson(self):
         """Test Person"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.person.Person()  # noqa: E501
+        # model = modelcatalog.models.person.Person()  # noqa: E501
         pass
 
 

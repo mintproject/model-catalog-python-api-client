@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.spatially_distributed_grid import SpatiallyDistributedGrid  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.spatially_distributed_grid import SpatiallyDistributedGrid  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestSpatiallyDistributedGrid(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSpatiallyDistributedGrid(unittest.TestCase):
     def testSpatiallyDistributedGrid(self):
         """Test SpatiallyDistributedGrid"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.spatially_distributed_grid.SpatiallyDistributedGrid()  # noqa: E501
+        # model = modelcatalog.models.spatially_distributed_grid.SpatiallyDistributedGrid()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.svo_variable import SVOVariable  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.svo_variable import SVOVariable  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestSVOVariable(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSVOVariable(unittest.TestCase):
     def testSVOVariable(self):
         """Test SVOVariable"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.svo_variable.SVOVariable()  # noqa: E501
+        # model = modelcatalog.models.svo_variable.SVOVariable()  # noqa: E501
         pass
 
 

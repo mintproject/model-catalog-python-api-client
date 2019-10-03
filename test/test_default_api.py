@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.default_api import DefaultApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.default_api import DefaultApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestDefaultApi(unittest.TestCase):
     """DefaultApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.default_api.DefaultApi()  # noqa: E501
+        self.api = modelcatalog.api.default_api.DefaultApi()  # noqa: E501
 
     def tearDown(self):
         pass

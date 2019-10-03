@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.causal_diagram import CausalDiagram  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.causal_diagram import CausalDiagram  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestCausalDiagram(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestCausalDiagram(unittest.TestCase):
     def testCausalDiagram(self):
         """Test CausalDiagram"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.causal_diagram.CausalDiagram()  # noqa: E501
+        # model = modelcatalog.models.causal_diagram.CausalDiagram()  # noqa: E501
         pass
 
 

@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.spatial_resolution_api import SpatialResolutionApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.spatial_resolution_api import SpatialResolutionApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestSpatialResolutionApi(unittest.TestCase):
     """SpatialResolutionApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.spatial_resolution_api.SpatialResolutionApi()  # noqa: E501
+        self.api = modelcatalog.api.spatial_resolution_api.SpatialResolutionApi()  # noqa: E501
 
     def tearDown(self):
         pass

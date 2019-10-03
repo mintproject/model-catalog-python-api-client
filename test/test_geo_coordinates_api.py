@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.geo_coordinates_api import GeoCoordinatesApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.geo_coordinates_api import GeoCoordinatesApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestGeoCoordinatesApi(unittest.TestCase):
     """GeoCoordinatesApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.geo_coordinates_api.GeoCoordinatesApi()  # noqa: E501
+        self.api = modelcatalog.api.geo_coordinates_api.GeoCoordinatesApi()  # noqa: E501
 
     def tearDown(self):
         pass

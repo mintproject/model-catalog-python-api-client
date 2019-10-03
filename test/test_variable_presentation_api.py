@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.variable_presentation_api import VariablePresentationApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.variable_presentation_api import VariablePresentationApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestVariablePresentationApi(unittest.TestCase):
     """VariablePresentationApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.variable_presentation_api.VariablePresentationApi()  # noqa: E501
+        self.api = modelcatalog.api.variable_presentation_api.VariablePresentationApi()  # noqa: E501
 
     def tearDown(self):
         pass
