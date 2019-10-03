@@ -1,4 +1,4 @@
-# mint_client.SpatiallyDistributedGridApi
+# modelcatalog.SpatiallyDistributedGridApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
@@ -23,12 +23,12 @@ Gets a list of all SpatiallyDistributedGrid entities
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.SpatiallyDistributedGridApi()
+api_instance = modelcatalog.SpatiallyDistributedGridApi()
 username = 'username_example' # str | Username to query (optional)
 
 try:
@@ -73,15 +73,15 @@ Delete an existing SpatiallyDistributedGrid
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.SpatiallyDistributedGridApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.SpatiallyDistributedGridApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
 
@@ -126,12 +126,12 @@ Gets the details of a single instance of a SpatiallyDistributedGrid
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.SpatiallyDistributedGridApi()
+api_instance = modelcatalog.SpatiallyDistributedGridApi()
 id = 'id_example' # str | The ID of the resource
 username = 'username_example' # str | Username to query (optional)
 
@@ -178,18 +178,18 @@ Updates an existing SpatiallyDistributedGrid
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.SpatiallyDistributedGridApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.SpatiallyDistributedGridApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
-spatially_distributed_grid = mint_client.SpatiallyDistributedGrid() # SpatiallyDistributedGrid | An old SpatiallyDistributedGridto be updated (optional)
+spatially_distributed_grid = modelcatalog.SpatiallyDistributedGrid() # SpatiallyDistributedGrid | An old SpatiallyDistributedGridto be updated (optional)
 
 try:
     # Update a SpatiallyDistributedGrid
@@ -234,17 +234,17 @@ Create a new instance of a SpatiallyDistributedGrid
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.SpatiallyDistributedGridApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.SpatiallyDistributedGridApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-spatially_distributed_grid = mint_client.SpatiallyDistributedGrid() # SpatiallyDistributedGrid | A new SpatiallyDistributedGridto be created (optional)
+spatially_distributed_grid = modelcatalog.SpatiallyDistributedGrid() # SpatiallyDistributedGrid | A new SpatiallyDistributedGridto be created (optional)
 
 try:
     # Create a SpatiallyDistributedGrid

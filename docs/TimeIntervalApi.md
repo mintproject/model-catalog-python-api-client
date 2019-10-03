@@ -1,4 +1,4 @@
-# mint_client.TimeIntervalApi
+# modelcatalog.TimeIntervalApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
@@ -23,12 +23,12 @@ Gets a list of all TimeInterval entities
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.TimeIntervalApi()
+api_instance = modelcatalog.TimeIntervalApi()
 username = 'username_example' # str | Username to query (optional)
 
 try:
@@ -73,15 +73,15 @@ Delete an existing TimeInterval
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.TimeIntervalApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.TimeIntervalApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
 
@@ -126,12 +126,12 @@ Gets the details of a single instance of a TimeInterval
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.TimeIntervalApi()
+api_instance = modelcatalog.TimeIntervalApi()
 id = 'id_example' # str | The ID of the resource
 username = 'username_example' # str | Username to query (optional)
 
@@ -178,18 +178,18 @@ Updates an existing TimeInterval
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.TimeIntervalApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.TimeIntervalApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
-time_interval = mint_client.TimeInterval() # TimeInterval | An old TimeIntervalto be updated (optional)
+time_interval = modelcatalog.TimeInterval() # TimeInterval | An old TimeIntervalto be updated (optional)
 
 try:
     # Update a TimeInterval
@@ -234,17 +234,17 @@ Create a new instance of a TimeInterval
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.TimeIntervalApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.TimeIntervalApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-time_interval = mint_client.TimeInterval() # TimeInterval | A new TimeIntervalto be created (optional)
+time_interval = modelcatalog.TimeInterval() # TimeInterval | A new TimeIntervalto be created (optional)
 
 try:
     # Create a TimeInterval

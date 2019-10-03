@@ -1,4 +1,4 @@
-# mint_client.EmpiricalModelApi
+# modelcatalog.EmpiricalModelApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
@@ -23,12 +23,12 @@ Gets a list of all EmpiricalModel entities
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.EmpiricalModelApi()
+api_instance = modelcatalog.EmpiricalModelApi()
 username = 'username_example' # str | Username to query (optional)
 
 try:
@@ -73,15 +73,15 @@ Delete an existing EmpiricalModel
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.EmpiricalModelApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.EmpiricalModelApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
 
@@ -126,12 +126,12 @@ Gets the details of a single instance of a EmpiricalModel
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.EmpiricalModelApi()
+api_instance = modelcatalog.EmpiricalModelApi()
 id = 'id_example' # str | The ID of the resource
 username = 'username_example' # str | Username to query (optional)
 
@@ -178,18 +178,18 @@ Updates an existing EmpiricalModel
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.EmpiricalModelApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.EmpiricalModelApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
-empirical_model = mint_client.EmpiricalModel() # EmpiricalModel | An old EmpiricalModelto be updated (optional)
+empirical_model = modelcatalog.EmpiricalModel() # EmpiricalModel | An old EmpiricalModelto be updated (optional)
 
 try:
     # Update a EmpiricalModel
@@ -234,17 +234,17 @@ Create a new instance of a EmpiricalModel
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.EmpiricalModelApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.EmpiricalModelApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-empirical_model = mint_client.EmpiricalModel() # EmpiricalModel | A new EmpiricalModelto be created (optional)
+empirical_model = modelcatalog.EmpiricalModel() # EmpiricalModel | A new EmpiricalModelto be created (optional)
 
 try:
     # Create a EmpiricalModel

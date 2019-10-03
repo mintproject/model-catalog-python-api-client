@@ -12,7 +12,7 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "mint-api"
+NAME = "modelcatalog-api"
 VERSION = "1.1.0"
 # To install the library, run the following
 #
@@ -28,7 +28,7 @@ setup(
     version=VERSION,
     description="Model Catalog",
     author_email="",
-    url="https://pypi.org/project/mint-api/",
+    url="https://pypi.org/project/modelcatalog-api/",
     keywords=["OpenAPI", "OpenAPI-Generator", "Model Catalog"],
     install_requires=REQUIRES,
     packages=find_packages(),

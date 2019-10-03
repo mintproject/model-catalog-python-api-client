@@ -1,4 +1,4 @@
-# mint_client.DefaultApi
+# modelcatalog.DefaultApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
@@ -19,12 +19,12 @@ Login the user
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.DefaultApi()
+api_instance = modelcatalog.DefaultApi()
 username = 'username_example' # str | The user name for login
 password = 'password_example' # str | The password for login in clear text
 

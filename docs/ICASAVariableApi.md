@@ -1,4 +1,4 @@
-# mint_client.ICASAVariableApi
+# modelcatalog.ICASAVariableApi
 
 All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
 
@@ -23,12 +23,12 @@ Gets a list of all ICASAVariable entities
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.ICASAVariableApi()
+api_instance = modelcatalog.ICASAVariableApi()
 username = 'username_example' # str | Username to query (optional)
 
 try:
@@ -73,15 +73,15 @@ Delete an existing ICASAVariable
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.ICASAVariableApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.ICASAVariableApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
 
@@ -126,12 +126,12 @@ Gets the details of a single instance of a ICASAVariable
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mint_client.ICASAVariableApi()
+api_instance = modelcatalog.ICASAVariableApi()
 id = 'id_example' # str | The ID of the resource
 username = 'username_example' # str | Username to query (optional)
 
@@ -178,18 +178,18 @@ Updates an existing ICASAVariable
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.ICASAVariableApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.ICASAVariableApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
-icasa_variable = mint_client.ICASAVariable() # ICASAVariable | An old ICASAVariableto be updated (optional)
+icasa_variable = modelcatalog.ICASAVariable() # ICASAVariable | An old ICASAVariableto be updated (optional)
 
 try:
     # Update a ICASAVariable
@@ -234,17 +234,17 @@ Create a new instance of a ICASAVariable
 ```python
 from __future__ import print_function
 import time
-import mint_client
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.rest import ApiException
 from pprint import pprint
-configuration = mint_client.Configuration()
+configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
 # create an instance of the API class
-api_instance = mint_client.ICASAVariableApi(mint_client.ApiClient(configuration))
+api_instance = modelcatalog.ICASAVariableApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-icasa_variable = mint_client.ICASAVariable() # ICASAVariable | A new ICASAVariableto be created (optional)
+icasa_variable = modelcatalog.ICASAVariable() # ICASAVariable | A new ICASAVariableto be created (optional)
 
 try:
     # Create a ICASAVariable
