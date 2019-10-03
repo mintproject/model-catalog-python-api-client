@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.region import Region  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.region import Region  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestRegion(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestRegion(unittest.TestCase):
     def testRegion(self):
         """Test Region"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.region.Region()  # noqa: E501
+        # model = modelcatalog.models.region.Region()  # noqa: E501
         pass
 
 

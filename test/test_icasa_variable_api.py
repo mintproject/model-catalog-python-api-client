@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.icasa_variable_api import ICASAVariableApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.icasa_variable_api import ICASAVariableApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestICASAVariableApi(unittest.TestCase):
     """ICASAVariableApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.icasa_variable_api.ICASAVariableApi()  # noqa: E501
+        self.api = modelcatalog.api.icasa_variable_api.ICASAVariableApi()  # noqa: E501
 
     def tearDown(self):
         pass

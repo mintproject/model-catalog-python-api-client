@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.organization import Organization  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.organization import Organization  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestOrganization(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestOrganization(unittest.TestCase):
     def testOrganization(self):
         """Test Organization"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.organization.Organization()  # noqa: E501
+        # model = modelcatalog.models.organization.Organization()  # noqa: E501
         pass
 
 

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.spatial_resolution import SpatialResolution  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.spatial_resolution import SpatialResolution  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestSpatialResolution(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSpatialResolution(unittest.TestCase):
     def testSpatialResolution(self):
         """Test SpatialResolution"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.spatial_resolution.SpatialResolution()  # noqa: E501
+        # model = modelcatalog.models.spatial_resolution.SpatialResolution()  # noqa: E501
         pass
 
 

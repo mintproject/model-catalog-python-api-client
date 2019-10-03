@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.source_code import SourceCode  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.source_code import SourceCode  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestSourceCode(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSourceCode(unittest.TestCase):
     def testSourceCode(self):
         """Test SourceCode"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.source_code.SourceCode()  # noqa: E501
+        # model = modelcatalog.models.source_code.SourceCode()  # noqa: E501
         pass
 
 

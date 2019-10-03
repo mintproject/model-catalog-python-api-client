@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.grid_api import GridApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.grid_api import GridApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestGridApi(unittest.TestCase):
     """GridApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.grid_api.GridApi()  # noqa: E501
+        self.api = modelcatalog.api.grid_api.GridApi()  # noqa: E501
 
     def tearDown(self):
         pass

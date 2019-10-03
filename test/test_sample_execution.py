@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.sample_execution import SampleExecution  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.sample_execution import SampleExecution  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestSampleExecution(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSampleExecution(unittest.TestCase):
     def testSampleExecution(self):
         """Test SampleExecution"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.sample_execution.SampleExecution()  # noqa: E501
+        # model = modelcatalog.models.sample_execution.SampleExecution()  # noqa: E501
         pass
 
 

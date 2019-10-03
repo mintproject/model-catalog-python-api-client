@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.icasa_variable import ICASAVariable  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.icasa_variable import ICASAVariable  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestICASAVariable(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestICASAVariable(unittest.TestCase):
     def testICASAVariable(self):
         """Test ICASAVariable"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.icasa_variable.ICASAVariable()  # noqa: E501
+        # model = modelcatalog.models.icasa_variable.ICASAVariable()  # noqa: E501
         pass
 
 

@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.api.software_image_api import SoftwareImageApi  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.api.software_image_api import SoftwareImageApi  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestSoftwareImageApi(unittest.TestCase):
     """SoftwareImageApi unit test stubs"""
 
     def setUp(self):
-        self.api = mint_client.api.software_image_api.SoftwareImageApi()  # noqa: E501
+        self.api = modelcatalog.api.software_image_api.SoftwareImageApi()  # noqa: E501
 
     def tearDown(self):
         pass

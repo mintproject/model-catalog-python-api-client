@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import mint_client
-from mint_client.models.grid import Grid  # noqa: E501
-from mint_client.rest import ApiException
+import modelcatalog
+from modelcatalog.models.grid import Grid  # noqa: E501
+from modelcatalog.rest import ApiException
 
 
 class TestGrid(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestGrid(unittest.TestCase):
     def testGrid(self):
         """Test Grid"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mint_client.models.grid.Grid()  # noqa: E501
+        # model = modelcatalog.models.grid.Grid()  # noqa: E501
         pass
 
 
