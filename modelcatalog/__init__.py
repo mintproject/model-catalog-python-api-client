@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.1.1-dev"
+__version__ = "1.2.0"
 
 # import apis into sdk package
 from modelcatalog.api.causal_diagram_api import CausalDiagramApi
