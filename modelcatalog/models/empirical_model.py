@@ -31,75 +31,396 @@ class EmpiricalModel(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'keywords': 'list[str]',
+        'has_documentation': 'list[str]',
         'has_grid': 'list[Grid]',
-        'has_explanation_diagram': 'list[object]',
-        'has_equation': 'list[Equation]',
-        'id': 'str',
-        'label': 'str',
+        'software_requirements': 'list[str]',
+        'has_version': 'list[object]',
+        'has_typical_data_source': 'list[str]',
+        'has_download_url': 'list[str]',
+        'description': 'list[str]',
+        'reference_publication': 'list[str]',
+        'screenshot': 'list[object]',
         'type': 'list[str]',
-        'has_model_category': 'list[str]'
+        'has_installation_instructions': 'list[str]',
+        'has_model_category': 'list[str]',
+        'date_created': 'list[str]',
+        'contributor': 'list[object]',
+        'has_faq': 'list[str]',
+        'logo': 'list[object]',
+        'has_contact_person': 'list[object]',
+        'has_purpose': 'list[str]',
+        'id': 'str',
+        'has_sample_visualization': 'list[object]',
+        'memory_requirements': 'list[str]',
+        'identifier': 'list[str]',
+        'website': 'list[str]',
+        'citation': 'list[str]',
+        'author': 'list[object]',
+        'processor_requirements': 'list[str]',
+        'short_description': 'list[str]',
+        'label': 'list[str]',
+        'has_assumption': 'list[str]',
+        'date_published': 'list[str]',
+        'operating_systems': 'list[str]',
+        'license': 'list[str]',
+        'has_source_code': 'list[object]',
+        'has_explanation_diagram': 'list[object]',
+        'publisher': 'list[object]',
+        'has_equation': 'list[Equation]',
+        'funding_source': 'list[object]'
     }
 
     attribute_map = {
+        'keywords': 'keywords',
+        'has_documentation': 'hasDocumentation',
         'has_grid': 'hasGrid',
-        'has_explanation_diagram': 'hasExplanationDiagram',
-        'has_equation': 'hasEquation',
-        'id': 'id',
-        'label': 'label',
+        'software_requirements': 'softwareRequirements',
+        'has_version': 'hasVersion',
+        'has_typical_data_source': 'hasTypicalDataSource',
+        'has_download_url': 'hasDownloadURL',
+        'description': 'description',
+        'reference_publication': 'referencePublication',
+        'screenshot': 'screenshot',
         'type': 'type',
-        'has_model_category': 'hasModelCategory'
+        'has_installation_instructions': 'hasInstallationInstructions',
+        'has_model_category': 'hasModelCategory',
+        'date_created': 'dateCreated',
+        'contributor': 'contributor',
+        'has_faq': 'hasFAQ',
+        'logo': 'logo',
+        'has_contact_person': 'hasContactPerson',
+        'has_purpose': 'hasPurpose',
+        'id': 'id',
+        'has_sample_visualization': 'hasSampleVisualization',
+        'memory_requirements': 'memoryRequirements',
+        'identifier': 'identifier',
+        'website': 'website',
+        'citation': 'citation',
+        'author': 'author',
+        'processor_requirements': 'processorRequirements',
+        'short_description': 'shortDescription',
+        'label': 'label',
+        'has_assumption': 'hasAssumption',
+        'date_published': 'datePublished',
+        'operating_systems': 'operatingSystems',
+        'license': 'license',
+        'has_source_code': 'hasSourceCode',
+        'has_explanation_diagram': 'hasExplanationDiagram',
+        'publisher': 'publisher',
+        'has_equation': 'hasEquation',
+        'funding_source': 'fundingSource'
     }
 
-    def __init__(self, has_grid=None, has_explanation_diagram=None, has_equation=None, id=None, label=None, type=None, has_model_category=None):  # noqa: E501
+    def __init__(self, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, date_created=None, contributor=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_explanation_diagram=None, publisher=None, has_equation=None, funding_source=None):  # noqa: E501
         """EmpiricalModel - a model defined in OpenAPI"""  # noqa: E501
 
+        self._keywords = None
+        self._has_documentation = None
         self._has_grid = None
-        self._has_explanation_diagram = None
-        self._has_equation = None
-        self._id = None
-        self._label = None
+        self._software_requirements = None
+        self._has_version = None
+        self._has_typical_data_source = None
+        self._has_download_url = None
+        self._description = None
+        self._reference_publication = None
+        self._screenshot = None
         self._type = None
+        self._has_installation_instructions = None
         self._has_model_category = None
+        self._date_created = None
+        self._contributor = None
+        self._has_faq = None
+        self._logo = None
+        self._has_contact_person = None
+        self._has_purpose = None
+        self._id = None
+        self._has_sample_visualization = None
+        self._memory_requirements = None
+        self._identifier = None
+        self._website = None
+        self._citation = None
+        self._author = None
+        self._processor_requirements = None
+        self._short_description = None
+        self._label = None
+        self._has_assumption = None
+        self._date_published = None
+        self._operating_systems = None
+        self._license = None
+        self._has_source_code = None
+        self._has_explanation_diagram = None
+        self._publisher = None
+        self._has_equation = None
+        self._funding_source = None
         self.discriminator = None
 
+        if keywords is not None:
+            self.keywords = keywords
+        else:
+            if hasattr(self, '_keywords'): del self._keywords
+            if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
+            if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
+        if has_documentation is not None:
+            self.has_documentation = has_documentation
+        else:
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if has_grid is not None:
             self.has_grid = has_grid
         else:
             if hasattr(self, '_has_grid'): del self._has_grid
             if hasattr(self.attribute_map, 'has_grid'): del self.attribute_map['has_grid']
             if hasattr(self.openapi_types, 'has_grid'): del self.openapi_types['has_grid']
-        if has_explanation_diagram is not None:
-            self.has_explanation_diagram = has_explanation_diagram
+        if software_requirements is not None:
+            self.software_requirements = software_requirements
         else:
-            if hasattr(self, '_has_explanation_diagram'): del self._has_explanation_diagram
-            if hasattr(self.attribute_map, 'has_explanation_diagram'): del self.attribute_map['has_explanation_diagram']
-            if hasattr(self.openapi_types, 'has_explanation_diagram'): del self.openapi_types['has_explanation_diagram']
-        if has_equation is not None:
-            self.has_equation = has_equation
+            if hasattr(self, '_software_requirements'): del self._software_requirements
+            if hasattr(self.attribute_map, 'software_requirements'): del self.attribute_map['software_requirements']
+            if hasattr(self.openapi_types, 'software_requirements'): del self.openapi_types['software_requirements']
+        if has_version is not None:
+            self.has_version = has_version
         else:
-            if hasattr(self, '_has_equation'): del self._has_equation
-            if hasattr(self.attribute_map, 'has_equation'): del self.attribute_map['has_equation']
-            if hasattr(self.openapi_types, 'has_equation'): del self.openapi_types['has_equation']
-        if id is not None:
-            self.id = id
-        if label is not None:
-            self.label = label
+            if hasattr(self, '_has_version'): del self._has_version
+            if hasattr(self.attribute_map, 'has_version'): del self.attribute_map['has_version']
+            if hasattr(self.openapi_types, 'has_version'): del self.openapi_types['has_version']
+        if has_typical_data_source is not None:
+            self.has_typical_data_source = has_typical_data_source
         else:
-            if hasattr(self, '_label'): del self._label
-            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
-            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
+            if hasattr(self, '_has_typical_data_source'): del self._has_typical_data_source
+            if hasattr(self.attribute_map, 'has_typical_data_source'): del self.attribute_map['has_typical_data_source']
+            if hasattr(self.openapi_types, 'has_typical_data_source'): del self.openapi_types['has_typical_data_source']
+        if has_download_url is not None:
+            self.has_download_url = has_download_url
+        else:
+            if hasattr(self, '_has_download_url'): del self._has_download_url
+            if hasattr(self.attribute_map, 'has_download_url'): del self.attribute_map['has_download_url']
+            if hasattr(self.openapi_types, 'has_download_url'): del self.openapi_types['has_download_url']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
+        if reference_publication is not None:
+            self.reference_publication = reference_publication
+        else:
+            if hasattr(self, '_reference_publication'): del self._reference_publication
+            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
+            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
+        if screenshot is not None:
+            self.screenshot = screenshot
+        else:
+            if hasattr(self, '_screenshot'): del self._screenshot
+            if hasattr(self.attribute_map, 'screenshot'): del self.attribute_map['screenshot']
+            if hasattr(self.openapi_types, 'screenshot'): del self.openapi_types['screenshot']
         if type is not None:
             self.type = type
         else:
             if hasattr(self, '_type'): del self._type
             if hasattr(self.attribute_map, 'type'): del self.attribute_map['type']
             if hasattr(self.openapi_types, 'type'): del self.openapi_types['type']
+        if has_installation_instructions is not None:
+            self.has_installation_instructions = has_installation_instructions
+        else:
+            if hasattr(self, '_has_installation_instructions'): del self._has_installation_instructions
+            if hasattr(self.attribute_map, 'has_installation_instructions'): del self.attribute_map['has_installation_instructions']
+            if hasattr(self.openapi_types, 'has_installation_instructions'): del self.openapi_types['has_installation_instructions']
         if has_model_category is not None:
             self.has_model_category = has_model_category
         else:
             if hasattr(self, '_has_model_category'): del self._has_model_category
             if hasattr(self.attribute_map, 'has_model_category'): del self.attribute_map['has_model_category']
             if hasattr(self.openapi_types, 'has_model_category'): del self.openapi_types['has_model_category']
+        if date_created is not None:
+            self.date_created = date_created
+        else:
+            if hasattr(self, '_date_created'): del self._date_created
+            if hasattr(self.attribute_map, 'date_created'): del self.attribute_map['date_created']
+            if hasattr(self.openapi_types, 'date_created'): del self.openapi_types['date_created']
+        if contributor is not None:
+            self.contributor = contributor
+        else:
+            if hasattr(self, '_contributor'): del self._contributor
+            if hasattr(self.attribute_map, 'contributor'): del self.attribute_map['contributor']
+            if hasattr(self.openapi_types, 'contributor'): del self.openapi_types['contributor']
+        if has_faq is not None:
+            self.has_faq = has_faq
+        else:
+            if hasattr(self, '_has_faq'): del self._has_faq
+            if hasattr(self.attribute_map, 'has_faq'): del self.attribute_map['has_faq']
+            if hasattr(self.openapi_types, 'has_faq'): del self.openapi_types['has_faq']
+        if logo is not None:
+            self.logo = logo
+        else:
+            if hasattr(self, '_logo'): del self._logo
+            if hasattr(self.attribute_map, 'logo'): del self.attribute_map['logo']
+            if hasattr(self.openapi_types, 'logo'): del self.openapi_types['logo']
+        if has_contact_person is not None:
+            self.has_contact_person = has_contact_person
+        else:
+            if hasattr(self, '_has_contact_person'): del self._has_contact_person
+            if hasattr(self.attribute_map, 'has_contact_person'): del self.attribute_map['has_contact_person']
+            if hasattr(self.openapi_types, 'has_contact_person'): del self.openapi_types['has_contact_person']
+        if has_purpose is not None:
+            self.has_purpose = has_purpose
+        else:
+            if hasattr(self, '_has_purpose'): del self._has_purpose
+            if hasattr(self.attribute_map, 'has_purpose'): del self.attribute_map['has_purpose']
+            if hasattr(self.openapi_types, 'has_purpose'): del self.openapi_types['has_purpose']
+        if id is not None:
+            self.id = id
+        if has_sample_visualization is not None:
+            self.has_sample_visualization = has_sample_visualization
+        else:
+            if hasattr(self, '_has_sample_visualization'): del self._has_sample_visualization
+            if hasattr(self.attribute_map, 'has_sample_visualization'): del self.attribute_map['has_sample_visualization']
+            if hasattr(self.openapi_types, 'has_sample_visualization'): del self.openapi_types['has_sample_visualization']
+        if memory_requirements is not None:
+            self.memory_requirements = memory_requirements
+        else:
+            if hasattr(self, '_memory_requirements'): del self._memory_requirements
+            if hasattr(self.attribute_map, 'memory_requirements'): del self.attribute_map['memory_requirements']
+            if hasattr(self.openapi_types, 'memory_requirements'): del self.openapi_types['memory_requirements']
+        if identifier is not None:
+            self.identifier = identifier
+        else:
+            if hasattr(self, '_identifier'): del self._identifier
+            if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
+            if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
+        if website is not None:
+            self.website = website
+        else:
+            if hasattr(self, '_website'): del self._website
+            if hasattr(self.attribute_map, 'website'): del self.attribute_map['website']
+            if hasattr(self.openapi_types, 'website'): del self.openapi_types['website']
+        if citation is not None:
+            self.citation = citation
+        else:
+            if hasattr(self, '_citation'): del self._citation
+            if hasattr(self.attribute_map, 'citation'): del self.attribute_map['citation']
+            if hasattr(self.openapi_types, 'citation'): del self.openapi_types['citation']
+        if author is not None:
+            self.author = author
+        else:
+            if hasattr(self, '_author'): del self._author
+            if hasattr(self.attribute_map, 'author'): del self.attribute_map['author']
+            if hasattr(self.openapi_types, 'author'): del self.openapi_types['author']
+        if processor_requirements is not None:
+            self.processor_requirements = processor_requirements
+        else:
+            if hasattr(self, '_processor_requirements'): del self._processor_requirements
+            if hasattr(self.attribute_map, 'processor_requirements'): del self.attribute_map['processor_requirements']
+            if hasattr(self.openapi_types, 'processor_requirements'): del self.openapi_types['processor_requirements']
+        if short_description is not None:
+            self.short_description = short_description
+        else:
+            if hasattr(self, '_short_description'): del self._short_description
+            if hasattr(self.attribute_map, 'short_description'): del self.attribute_map['short_description']
+            if hasattr(self.openapi_types, 'short_description'): del self.openapi_types['short_description']
+        if label is not None:
+            self.label = label
+        else:
+            if hasattr(self, '_label'): del self._label
+            if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
+            if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
+        if has_assumption is not None:
+            self.has_assumption = has_assumption
+        else:
+            if hasattr(self, '_has_assumption'): del self._has_assumption
+            if hasattr(self.attribute_map, 'has_assumption'): del self.attribute_map['has_assumption']
+            if hasattr(self.openapi_types, 'has_assumption'): del self.openapi_types['has_assumption']
+        if date_published is not None:
+            self.date_published = date_published
+        else:
+            if hasattr(self, '_date_published'): del self._date_published
+            if hasattr(self.attribute_map, 'date_published'): del self.attribute_map['date_published']
+            if hasattr(self.openapi_types, 'date_published'): del self.openapi_types['date_published']
+        if operating_systems is not None:
+            self.operating_systems = operating_systems
+        else:
+            if hasattr(self, '_operating_systems'): del self._operating_systems
+            if hasattr(self.attribute_map, 'operating_systems'): del self.attribute_map['operating_systems']
+            if hasattr(self.openapi_types, 'operating_systems'): del self.openapi_types['operating_systems']
+        if license is not None:
+            self.license = license
+        else:
+            if hasattr(self, '_license'): del self._license
+            if hasattr(self.attribute_map, 'license'): del self.attribute_map['license']
+            if hasattr(self.openapi_types, 'license'): del self.openapi_types['license']
+        if has_source_code is not None:
+            self.has_source_code = has_source_code
+        else:
+            if hasattr(self, '_has_source_code'): del self._has_source_code
+            if hasattr(self.attribute_map, 'has_source_code'): del self.attribute_map['has_source_code']
+            if hasattr(self.openapi_types, 'has_source_code'): del self.openapi_types['has_source_code']
+        if has_explanation_diagram is not None:
+            self.has_explanation_diagram = has_explanation_diagram
+        else:
+            if hasattr(self, '_has_explanation_diagram'): del self._has_explanation_diagram
+            if hasattr(self.attribute_map, 'has_explanation_diagram'): del self.attribute_map['has_explanation_diagram']
+            if hasattr(self.openapi_types, 'has_explanation_diagram'): del self.openapi_types['has_explanation_diagram']
+        if publisher is not None:
+            self.publisher = publisher
+        else:
+            if hasattr(self, '_publisher'): del self._publisher
+            if hasattr(self.attribute_map, 'publisher'): del self.attribute_map['publisher']
+            if hasattr(self.openapi_types, 'publisher'): del self.openapi_types['publisher']
+        if has_equation is not None:
+            self.has_equation = has_equation
+        else:
+            if hasattr(self, '_has_equation'): del self._has_equation
+            if hasattr(self.attribute_map, 'has_equation'): del self.attribute_map['has_equation']
+            if hasattr(self.openapi_types, 'has_equation'): del self.openapi_types['has_equation']
+        if funding_source is not None:
+            self.funding_source = funding_source
+        else:
+            if hasattr(self, '_funding_source'): del self._funding_source
+            if hasattr(self.attribute_map, 'funding_source'): del self.attribute_map['funding_source']
+            if hasattr(self.openapi_types, 'funding_source'): del self.openapi_types['funding_source']
+
+    @property
+    def keywords(self):
+        """Gets the keywords of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The keywords of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._keywords
+
+    @keywords.setter
+    def keywords(self, keywords):
+        """Sets the keywords of this EmpiricalModel.
+
+
+        :param keywords: The keywords of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._keywords = keywords
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_documentation of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this EmpiricalModel.
+
+
+        :param has_documentation: The has_documentation of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def has_grid(self):
@@ -123,88 +444,151 @@ class EmpiricalModel(object):
         self._has_grid = has_grid
 
     @property
-    def has_explanation_diagram(self):
-        """Gets the has_explanation_diagram of this EmpiricalModel.  # noqa: E501
+    def software_requirements(self):
+        """Gets the software_requirements of this EmpiricalModel.  # noqa: E501
 
 
-        :return: The has_explanation_diagram of this EmpiricalModel.  # noqa: E501
+        :return: The software_requirements of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._software_requirements
+
+    @software_requirements.setter
+    def software_requirements(self, software_requirements):
+        """Sets the software_requirements of this EmpiricalModel.
+
+
+        :param software_requirements: The software_requirements of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._software_requirements = software_requirements
+
+    @property
+    def has_version(self):
+        """Gets the has_version of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_version of this EmpiricalModel.  # noqa: E501
         :rtype: list[object]
         """
-        return self._has_explanation_diagram
+        return self._has_version
 
-    @has_explanation_diagram.setter
-    def has_explanation_diagram(self, has_explanation_diagram):
-        """Sets the has_explanation_diagram of this EmpiricalModel.
+    @has_version.setter
+    def has_version(self, has_version):
+        """Sets the has_version of this EmpiricalModel.
 
 
-        :param has_explanation_diagram: The has_explanation_diagram of this EmpiricalModel.  # noqa: E501
+        :param has_version: The has_version of this EmpiricalModel.  # noqa: E501
         :type: list[object]
         """
 
-        self._has_explanation_diagram = has_explanation_diagram
+        self._has_version = has_version
 
     @property
-    def has_equation(self):
-        """Gets the has_equation of this EmpiricalModel.  # noqa: E501
+    def has_typical_data_source(self):
+        """Gets the has_typical_data_source of this EmpiricalModel.  # noqa: E501
 
 
-        :return: The has_equation of this EmpiricalModel.  # noqa: E501
-        :rtype: list[Equation]
+        :return: The has_typical_data_source of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._has_equation
+        return self._has_typical_data_source
 
-    @has_equation.setter
-    def has_equation(self, has_equation):
-        """Sets the has_equation of this EmpiricalModel.
+    @has_typical_data_source.setter
+    def has_typical_data_source(self, has_typical_data_source):
+        """Sets the has_typical_data_source of this EmpiricalModel.
 
 
-        :param has_equation: The has_equation of this EmpiricalModel.  # noqa: E501
-        :type: list[Equation]
+        :param has_typical_data_source: The has_typical_data_source of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
         """
 
-        self._has_equation = has_equation
+        self._has_typical_data_source = has_typical_data_source
 
     @property
-    def id(self):
-        """Gets the id of this EmpiricalModel.  # noqa: E501
+    def has_download_url(self):
+        """Gets the has_download_url of this EmpiricalModel.  # noqa: E501
 
 
-        :return: The id of this EmpiricalModel.  # noqa: E501
-        :rtype: str
+        :return: The has_download_url of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._id
+        return self._has_download_url
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this EmpiricalModel.
+    @has_download_url.setter
+    def has_download_url(self, has_download_url):
+        """Sets the has_download_url of this EmpiricalModel.
 
 
-        :param id: The id of this EmpiricalModel.  # noqa: E501
-        :type: str
+        :param has_download_url: The has_download_url of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
         """
 
-        self._id = id
+        self._has_download_url = has_download_url
 
     @property
-    def label(self):
-        """Gets the label of this EmpiricalModel.  # noqa: E501
+    def description(self):
+        """Gets the description of this EmpiricalModel.  # noqa: E501
 
 
-        :return: The label of this EmpiricalModel.  # noqa: E501
-        :rtype: str
+        :return: The description of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._label
+        return self._description
 
-    @label.setter
-    def label(self, label):
-        """Sets the label of this EmpiricalModel.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this EmpiricalModel.
 
 
-        :param label: The label of this EmpiricalModel.  # noqa: E501
-        :type: str
+        :param description: The description of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
         """
 
-        self._label = label
+        self._description = description
+
+    @property
+    def reference_publication(self):
+        """Gets the reference_publication of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The reference_publication of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reference_publication
+
+    @reference_publication.setter
+    def reference_publication(self, reference_publication):
+        """Sets the reference_publication of this EmpiricalModel.
+
+
+        :param reference_publication: The reference_publication of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reference_publication = reference_publication
+
+    @property
+    def screenshot(self):
+        """Gets the screenshot of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The screenshot of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._screenshot
+
+    @screenshot.setter
+    def screenshot(self, screenshot):
+        """Sets the screenshot of this EmpiricalModel.
+
+
+        :param screenshot: The screenshot of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._screenshot = screenshot
 
     @property
     def type(self):
@@ -228,6 +612,27 @@ class EmpiricalModel(object):
         self._type = type
 
     @property
+    def has_installation_instructions(self):
+        """Gets the has_installation_instructions of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_installation_instructions of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_installation_instructions
+
+    @has_installation_instructions.setter
+    def has_installation_instructions(self, has_installation_instructions):
+        """Sets the has_installation_instructions of this EmpiricalModel.
+
+
+        :param has_installation_instructions: The has_installation_instructions of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_installation_instructions = has_installation_instructions
+
+    @property
     def has_model_category(self):
         """Gets the has_model_category of this EmpiricalModel.  # noqa: E501
 
@@ -247,6 +652,531 @@ class EmpiricalModel(object):
         """
 
         self._has_model_category = has_model_category
+
+    @property
+    def date_created(self):
+        """Gets the date_created of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The date_created of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._date_created
+
+    @date_created.setter
+    def date_created(self, date_created):
+        """Sets the date_created of this EmpiricalModel.
+
+
+        :param date_created: The date_created of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._date_created = date_created
+
+    @property
+    def contributor(self):
+        """Gets the contributor of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The contributor of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._contributor
+
+    @contributor.setter
+    def contributor(self, contributor):
+        """Sets the contributor of this EmpiricalModel.
+
+
+        :param contributor: The contributor of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._contributor = contributor
+
+    @property
+    def has_faq(self):
+        """Gets the has_faq of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_faq of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_faq
+
+    @has_faq.setter
+    def has_faq(self, has_faq):
+        """Sets the has_faq of this EmpiricalModel.
+
+
+        :param has_faq: The has_faq of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_faq = has_faq
+
+    @property
+    def logo(self):
+        """Gets the logo of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The logo of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._logo
+
+    @logo.setter
+    def logo(self, logo):
+        """Sets the logo of this EmpiricalModel.
+
+
+        :param logo: The logo of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._logo = logo
+
+    @property
+    def has_contact_person(self):
+        """Gets the has_contact_person of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_contact_person of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_contact_person
+
+    @has_contact_person.setter
+    def has_contact_person(self, has_contact_person):
+        """Sets the has_contact_person of this EmpiricalModel.
+
+
+        :param has_contact_person: The has_contact_person of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_contact_person = has_contact_person
+
+    @property
+    def has_purpose(self):
+        """Gets the has_purpose of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_purpose of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_purpose
+
+    @has_purpose.setter
+    def has_purpose(self, has_purpose):
+        """Sets the has_purpose of this EmpiricalModel.
+
+
+        :param has_purpose: The has_purpose of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_purpose = has_purpose
+
+    @property
+    def id(self):
+        """Gets the id of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The id of this EmpiricalModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this EmpiricalModel.
+
+
+        :param id: The id of this EmpiricalModel.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
+
+    @property
+    def has_sample_visualization(self):
+        """Gets the has_sample_visualization of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_sample_visualization of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_sample_visualization
+
+    @has_sample_visualization.setter
+    def has_sample_visualization(self, has_sample_visualization):
+        """Sets the has_sample_visualization of this EmpiricalModel.
+
+
+        :param has_sample_visualization: The has_sample_visualization of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_sample_visualization = has_sample_visualization
+
+    @property
+    def memory_requirements(self):
+        """Gets the memory_requirements of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The memory_requirements of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._memory_requirements
+
+    @memory_requirements.setter
+    def memory_requirements(self, memory_requirements):
+        """Sets the memory_requirements of this EmpiricalModel.
+
+
+        :param memory_requirements: The memory_requirements of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._memory_requirements = memory_requirements
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The identifier of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this EmpiricalModel.
+
+
+        :param identifier: The identifier of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._identifier = identifier
+
+    @property
+    def website(self):
+        """Gets the website of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The website of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._website
+
+    @website.setter
+    def website(self, website):
+        """Sets the website of this EmpiricalModel.
+
+
+        :param website: The website of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._website = website
+
+    @property
+    def citation(self):
+        """Gets the citation of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The citation of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._citation
+
+    @citation.setter
+    def citation(self, citation):
+        """Sets the citation of this EmpiricalModel.
+
+
+        :param citation: The citation of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._citation = citation
+
+    @property
+    def author(self):
+        """Gets the author of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The author of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._author
+
+    @author.setter
+    def author(self, author):
+        """Sets the author of this EmpiricalModel.
+
+
+        :param author: The author of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._author = author
+
+    @property
+    def processor_requirements(self):
+        """Gets the processor_requirements of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The processor_requirements of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._processor_requirements
+
+    @processor_requirements.setter
+    def processor_requirements(self, processor_requirements):
+        """Sets the processor_requirements of this EmpiricalModel.
+
+
+        :param processor_requirements: The processor_requirements of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._processor_requirements = processor_requirements
+
+    @property
+    def short_description(self):
+        """Gets the short_description of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The short_description of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._short_description
+
+    @short_description.setter
+    def short_description(self, short_description):
+        """Sets the short_description of this EmpiricalModel.
+
+
+        :param short_description: The short_description of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._short_description = short_description
+
+    @property
+    def label(self):
+        """Gets the label of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The label of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._label
+
+    @label.setter
+    def label(self, label):
+        """Sets the label of this EmpiricalModel.
+
+
+        :param label: The label of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._label = label
+
+    @property
+    def has_assumption(self):
+        """Gets the has_assumption of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_assumption of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_assumption
+
+    @has_assumption.setter
+    def has_assumption(self, has_assumption):
+        """Sets the has_assumption of this EmpiricalModel.
+
+
+        :param has_assumption: The has_assumption of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_assumption = has_assumption
+
+    @property
+    def date_published(self):
+        """Gets the date_published of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The date_published of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._date_published
+
+    @date_published.setter
+    def date_published(self, date_published):
+        """Sets the date_published of this EmpiricalModel.
+
+
+        :param date_published: The date_published of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._date_published = date_published
+
+    @property
+    def operating_systems(self):
+        """Gets the operating_systems of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The operating_systems of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._operating_systems
+
+    @operating_systems.setter
+    def operating_systems(self, operating_systems):
+        """Sets the operating_systems of this EmpiricalModel.
+
+
+        :param operating_systems: The operating_systems of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._operating_systems = operating_systems
+
+    @property
+    def license(self):
+        """Gets the license of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The license of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._license
+
+    @license.setter
+    def license(self, license):
+        """Sets the license of this EmpiricalModel.
+
+
+        :param license: The license of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._license = license
+
+    @property
+    def has_source_code(self):
+        """Gets the has_source_code of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_source_code of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_source_code
+
+    @has_source_code.setter
+    def has_source_code(self, has_source_code):
+        """Sets the has_source_code of this EmpiricalModel.
+
+
+        :param has_source_code: The has_source_code of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_source_code = has_source_code
+
+    @property
+    def has_explanation_diagram(self):
+        """Gets the has_explanation_diagram of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_explanation_diagram of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_explanation_diagram
+
+    @has_explanation_diagram.setter
+    def has_explanation_diagram(self, has_explanation_diagram):
+        """Sets the has_explanation_diagram of this EmpiricalModel.
+
+
+        :param has_explanation_diagram: The has_explanation_diagram of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_explanation_diagram = has_explanation_diagram
+
+    @property
+    def publisher(self):
+        """Gets the publisher of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The publisher of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._publisher
+
+    @publisher.setter
+    def publisher(self, publisher):
+        """Sets the publisher of this EmpiricalModel.
+
+
+        :param publisher: The publisher of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._publisher = publisher
+
+    @property
+    def has_equation(self):
+        """Gets the has_equation of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_equation of this EmpiricalModel.  # noqa: E501
+        :rtype: list[Equation]
+        """
+        return self._has_equation
+
+    @has_equation.setter
+    def has_equation(self, has_equation):
+        """Sets the has_equation of this EmpiricalModel.
+
+
+        :param has_equation: The has_equation of this EmpiricalModel.  # noqa: E501
+        :type: list[Equation]
+        """
+
+        self._has_equation = has_equation
+
+    @property
+    def funding_source(self):
+        """Gets the funding_source of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The funding_source of this EmpiricalModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._funding_source
+
+    @funding_source.setter
+    def funding_source(self, funding_source):
+        """Sets the funding_source of this EmpiricalModel.
+
+
+        :param funding_source: The funding_source of this EmpiricalModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._funding_source = funding_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

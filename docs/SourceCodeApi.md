@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **sourcecodes_get**
-> list[SourceCode] sourcecodes_get(username=username)
+> list[SourceCode] sourcecodes_get(username=username, label=label)
 
 List all SourceCode entities
 
@@ -30,10 +30,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = modelcatalog.SourceCodeApi()
 username = 'username_example' # str | Username to query (optional)
+label = 'label_example' # str | Filter by label (optional)
 
 try:
     # List all SourceCode entities
-    api_response = api_instance.sourcecodes_get(username=username)
+    api_response = api_instance.sourcecodes_get(username=username, label=label)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourceCodeApi->sourcecodes_get: %s\n" % e)
@@ -44,6 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**| Username to query | [optional] 
+ **label** | **str**| Filter by label | [optional] 
 
 ### Return type
 

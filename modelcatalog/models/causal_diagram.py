@@ -32,7 +32,7 @@ class CausalDiagram(object):
     """
     openapi_types = {
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]',
         'has_part': 'list[object]'
     }
@@ -101,7 +101,7 @@ class CausalDiagram(object):
 
 
         :return: The label of this CausalDiagram.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -111,7 +111,7 @@ class CausalDiagram(object):
 
 
         :param label: The label of this CausalDiagram.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

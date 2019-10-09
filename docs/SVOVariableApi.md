@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **svovariables_get**
-> list[SVOVariable] svovariables_get(username=username)
+> list[SVOVariable] svovariables_get(username=username, label=label)
 
 List all SVOVariable entities
 
@@ -30,10 +30,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = modelcatalog.SVOVariableApi()
 username = 'username_example' # str | Username to query (optional)
+label = 'label_example' # str | Filter by label (optional)
 
 try:
     # List all SVOVariable entities
-    api_response = api_instance.svovariables_get(username=username)
+    api_response = api_instance.svovariables_get(username=username, label=label)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SVOVariableApi->svovariables_get: %s\n" % e)
@@ -44,6 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**| Username to query | [optional] 
+ **label** | **str**| Filter by label | [optional] 
 
 ### Return type
 

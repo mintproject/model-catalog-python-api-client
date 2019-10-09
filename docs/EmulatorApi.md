@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **emulators_get**
-> list[Emulator] emulators_get(username=username)
+> list[Emulator] emulators_get(username=username, label=label)
 
 List all Emulator entities
 
@@ -30,10 +30,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = modelcatalog.EmulatorApi()
 username = 'username_example' # str | Username to query (optional)
+label = 'label_example' # str | Filter by label (optional)
 
 try:
     # List all Emulator entities
-    api_response = api_instance.emulators_get(username=username)
+    api_response = api_instance.emulators_get(username=username, label=label)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmulatorApi->emulators_get: %s\n" % e)
@@ -44,6 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**| Username to query | [optional] 
+ **label** | **str**| Filter by label | [optional] 
 
 ### Return type
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **images_get**
-> list[Image] images_get(username=username)
+> list[Image] images_get(username=username, label=label)
 
 List all Image entities
 
@@ -30,10 +30,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = modelcatalog.ImageApi()
 username = 'username_example' # str | Username to query (optional)
+label = 'label_example' # str | Filter by label (optional)
 
 try:
     # List all Image entities
-    api_response = api_instance.images_get(username=username)
+    api_response = api_instance.images_get(username=username, label=label)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ImageApi->images_get: %s\n" % e)
@@ -44,6 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**| Username to query | [optional] 
+ **label** | **str**| Filter by label | [optional] 
 
 ### Return type
 

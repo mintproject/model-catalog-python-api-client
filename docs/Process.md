@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**label** | **str** |  | [optional] 
+**label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **influences** | [**list[Process]**](Process.md) |  | [optional] 
 

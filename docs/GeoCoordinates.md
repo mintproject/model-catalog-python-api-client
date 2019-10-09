@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **elevation** | **list[str]** |  | [optional] 
 **latitude** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
-**label** | **str** |  | [optional] 
+**label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **longitude** | **list[str]** |  | [optional] 
 

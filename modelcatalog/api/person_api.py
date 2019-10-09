@@ -47,6 +47,7 @@ class PersonApi(object):
 
         :param async_req bool
         :param str username: Username to query
+        :param str label: Filter by label
         :return: list[Person]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -69,6 +70,7 @@ class PersonApi(object):
 
         :param async_req bool
         :param str username: Username to query
+        :param str label: Filter by label
         :return: list[Person]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -76,7 +78,7 @@ class PersonApi(object):
 
         local_var_params = locals()
 
-        all_params = ['username']  # noqa: E501
+        all_params = ['username', 'label']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -98,6 +100,8 @@ class PersonApi(object):
         query_params = []
         if 'username' in local_var_params:
             query_params.append(('username', local_var_params['username']))  # noqa: E501
+        if 'label' in local_var_params:
+            query_params.append(('label', local_var_params['label']))  # noqa: E501
 
         header_params = {}
 

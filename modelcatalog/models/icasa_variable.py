@@ -32,7 +32,7 @@ class ICASAVariable(object):
     """
     openapi_types = {
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]'
     }
 
@@ -92,7 +92,7 @@ class ICASAVariable(object):
 
 
         :return: The label of this ICASAVariable.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -102,7 +102,7 @@ class ICASAVariable(object):
 
 
         :param label: The label of this ICASAVariable.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

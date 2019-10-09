@@ -37,7 +37,7 @@ class DatasetSpecification(object):
         'has_presentation': 'list[VariablePresentation]',
         'position': 'list[float]',
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]',
         'has_fixed_resource': 'list[SampleResource]'
     }
@@ -251,7 +251,7 @@ class DatasetSpecification(object):
 
 
         :return: The label of this DatasetSpecification.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -261,7 +261,7 @@ class DatasetSpecification(object):
 
 
         :param label: The label of this DatasetSpecification.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

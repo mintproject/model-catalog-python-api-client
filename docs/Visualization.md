@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **has_format** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
-**label** | **str** |  | [optional] 
+**label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **was_derived_from_software** | [**list[Software]**](Software.md) |  | [optional] 
 

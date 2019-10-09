@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **has_maximum_accepted_value** | **list[object]** |  | [optional] 
 **has_constraint** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
-**label** | **str** |  | [optional] 
+**label** | **list[str]** |  | [optional] 
 **part_of_dataset** | [**list[DatasetSpecification]**](DatasetSpecification.md) |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **uses_unit** | **list[object]** |  | [optional] 

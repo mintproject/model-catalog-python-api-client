@@ -34,7 +34,7 @@ class Organization(object):
         'identifier': 'list[str]',
         'website': 'list[str]',
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]'
     }
 
@@ -152,7 +152,7 @@ class Organization(object):
 
 
         :return: The label of this Organization.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -162,7 +162,7 @@ class Organization(object):
 
 
         :param label: The label of this Organization.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

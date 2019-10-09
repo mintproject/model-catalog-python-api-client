@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **latitude** | **list[str]** |  | [optional] 
 **box** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
-**label** | **str** |  | [optional] 
+**label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **longitude** | **list[str]** |  | [optional] 
 

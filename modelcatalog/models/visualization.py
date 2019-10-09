@@ -33,7 +33,7 @@ class Visualization(object):
     openapi_types = {
         'has_format': 'list[str]',
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]',
         'was_derived_from_software': 'list[Software]'
     }
@@ -131,7 +131,7 @@ class Visualization(object):
 
 
         :return: The label of this Visualization.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -141,7 +141,7 @@ class Visualization(object):
 
 
         :param label: The label of this Visualization.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

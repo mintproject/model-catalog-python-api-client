@@ -31,139 +31,238 @@ class ModelConfiguration(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'parameter_assignment_method': 'list[str]',
-        'has_component_location': 'list[str]',
+        'keywords': 'list[str]',
+        'has_documentation': 'list[str]',
         'has_grid': 'list[Grid]',
-        'has_process': 'list[Process]',
+        'software_requirements': 'list[str]',
         'has_implementation_script_location': 'list[str]',
+        'has_download_url': 'list[str]',
         'type': 'list[str]',
         'calibrated_variable': 'list[object]',
-        'has_model_category': 'list[str]',
-        'has_software_image': 'list[object]',
+        'has_installation_instructions': 'list[str]',
         'compatible_visualization_software': 'list[object]',
         'calibration_method': 'list[str]',
         'has_region': 'list[Region]',
-        'has_model_result_table': 'list[str]',
-        'calibration_target_variable': 'list[object]',
+        'has_faq': 'list[str]',
+        'logo': 'list[object]',
+        'has_contact_person': 'list[object]',
         'id': 'str',
-        'has_expert_tuned_model': 'list[ModelConfiguration]',
-        'has_calibration': 'list[ModelConfiguration]',
-        'has_causal_diagram': 'list[CausalDiagram]',
+        'identifier': 'list[str]',
         'has_sample_execution': 'list[object]',
         'has_sample_result': 'list[object]',
+        'author': 'list[object]',
         'has_constraint': 'list[str]',
-        'adjustable_parameter': 'list[object]',
-        'has_support_script_location': 'list[str]',
-        'label': 'str',
+        'short_description': 'list[str]',
         'has_execution_command': 'list[str]',
-        'has_parameter': 'list[object]',
+        'date_published': 'list[str]',
+        'license': 'list[str]',
+        'has_source_code': 'list[object]',
         'has_explanation_diagram': 'list[object]',
-        'has_equation': 'list[Equation]',
+        'publisher': 'list[object]',
         'has_output': 'list[object]',
         'has_output_time_interval': 'list[TimeInterval]',
+        'funding_source': 'list[object]',
+        'parameter_assignment_method': 'list[str]',
+        'has_component_location': 'list[str]',
+        'has_process': 'list[Process]',
+        'has_version': 'list[object]',
+        'has_typical_data_source': 'list[str]',
+        'description': 'list[str]',
+        'reference_publication': 'list[str]',
+        'screenshot': 'list[object]',
+        'has_model_category': 'list[str]',
+        'has_software_image': 'list[object]',
+        'date_created': 'list[str]',
+        'contributor': 'list[object]',
+        'has_model_result_table': 'list[str]',
+        'calibration_target_variable': 'list[object]',
+        'has_purpose': 'list[str]',
+        'has_expert_tuned_model': 'list[ModelConfiguration]',
+        'has_sample_visualization': 'list[object]',
+        'has_calibration': 'list[ModelConfiguration]',
+        'has_causal_diagram': 'list[CausalDiagram]',
+        'memory_requirements': 'list[str]',
+        'website': 'list[str]',
+        'citation': 'list[str]',
+        'processor_requirements': 'list[str]',
+        'adjustable_parameter': 'list[object]',
+        'has_support_script_location': 'list[str]',
+        'label': 'list[str]',
+        'has_assumption': 'list[str]',
+        'has_parameter': 'list[object]',
+        'operating_systems': 'list[str]',
+        'has_equation': 'list[Equation]',
         'has_input': 'list[object]'
     }
 
     attribute_map = {
-        'parameter_assignment_method': 'parameterAssignmentMethod',
-        'has_component_location': 'hasComponentLocation',
+        'keywords': 'keywords',
+        'has_documentation': 'hasDocumentation',
         'has_grid': 'hasGrid',
-        'has_process': 'hasProcess',
+        'software_requirements': 'softwareRequirements',
         'has_implementation_script_location': 'hasImplementationScriptLocation',
+        'has_download_url': 'hasDownloadURL',
         'type': 'type',
         'calibrated_variable': 'calibratedVariable',
-        'has_model_category': 'hasModelCategory',
-        'has_software_image': 'hasSoftwareImage',
+        'has_installation_instructions': 'hasInstallationInstructions',
         'compatible_visualization_software': 'compatibleVisualizationSoftware',
         'calibration_method': 'calibrationMethod',
         'has_region': 'hasRegion',
-        'has_model_result_table': 'hasModelResultTable',
-        'calibration_target_variable': 'calibrationTargetVariable',
+        'has_faq': 'hasFAQ',
+        'logo': 'logo',
+        'has_contact_person': 'hasContactPerson',
         'id': 'id',
-        'has_expert_tuned_model': 'hasExpertTunedModel',
-        'has_calibration': 'hasCalibration',
-        'has_causal_diagram': 'hasCausalDiagram',
+        'identifier': 'identifier',
         'has_sample_execution': 'hasSampleExecution',
         'has_sample_result': 'hasSampleResult',
+        'author': 'author',
         'has_constraint': 'hasConstraint',
+        'short_description': 'shortDescription',
+        'has_execution_command': 'hasExecutionCommand',
+        'date_published': 'datePublished',
+        'license': 'license',
+        'has_source_code': 'hasSourceCode',
+        'has_explanation_diagram': 'hasExplanationDiagram',
+        'publisher': 'publisher',
+        'has_output': 'hasOutput',
+        'has_output_time_interval': 'hasOutputTimeInterval',
+        'funding_source': 'fundingSource',
+        'parameter_assignment_method': 'parameterAssignmentMethod',
+        'has_component_location': 'hasComponentLocation',
+        'has_process': 'hasProcess',
+        'has_version': 'hasVersion',
+        'has_typical_data_source': 'hasTypicalDataSource',
+        'description': 'description',
+        'reference_publication': 'referencePublication',
+        'screenshot': 'screenshot',
+        'has_model_category': 'hasModelCategory',
+        'has_software_image': 'hasSoftwareImage',
+        'date_created': 'dateCreated',
+        'contributor': 'contributor',
+        'has_model_result_table': 'hasModelResultTable',
+        'calibration_target_variable': 'calibrationTargetVariable',
+        'has_purpose': 'hasPurpose',
+        'has_expert_tuned_model': 'hasExpertTunedModel',
+        'has_sample_visualization': 'hasSampleVisualization',
+        'has_calibration': 'hasCalibration',
+        'has_causal_diagram': 'hasCausalDiagram',
+        'memory_requirements': 'memoryRequirements',
+        'website': 'website',
+        'citation': 'citation',
+        'processor_requirements': 'processorRequirements',
         'adjustable_parameter': 'adjustableParameter',
         'has_support_script_location': 'hasSupportScriptLocation',
         'label': 'label',
-        'has_execution_command': 'hasExecutionCommand',
+        'has_assumption': 'hasAssumption',
         'has_parameter': 'hasParameter',
-        'has_explanation_diagram': 'hasExplanationDiagram',
+        'operating_systems': 'operatingSystems',
         'has_equation': 'hasEquation',
-        'has_output': 'hasOutput',
-        'has_output_time_interval': 'hasOutputTimeInterval',
         'has_input': 'hasInput'
     }
 
-    def __init__(self, parameter_assignment_method=None, has_component_location=None, has_grid=None, has_process=None, has_implementation_script_location=None, type=None, calibrated_variable=None, has_model_category=None, has_software_image=None, compatible_visualization_software=None, calibration_method=None, has_region=None, has_model_result_table=None, calibration_target_variable=None, id=None, has_expert_tuned_model=None, has_calibration=None, has_causal_diagram=None, has_sample_execution=None, has_sample_result=None, has_constraint=None, adjustable_parameter=None, has_support_script_location=None, label=None, has_execution_command=None, has_parameter=None, has_explanation_diagram=None, has_equation=None, has_output=None, has_output_time_interval=None, has_input=None):  # noqa: E501
+    def __init__(self, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, has_implementation_script_location=None, has_download_url=None, type=None, calibrated_variable=None, has_installation_instructions=None, compatible_visualization_software=None, calibration_method=None, has_region=None, has_faq=None, logo=None, has_contact_person=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_explanation_diagram=None, publisher=None, has_output=None, has_output_time_interval=None, funding_source=None, parameter_assignment_method=None, has_component_location=None, has_process=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, has_model_category=None, has_software_image=None, date_created=None, contributor=None, has_model_result_table=None, calibration_target_variable=None, has_purpose=None, has_expert_tuned_model=None, has_sample_visualization=None, has_calibration=None, has_causal_diagram=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_equation=None, has_input=None):  # noqa: E501
         """ModelConfiguration - a model defined in OpenAPI"""  # noqa: E501
 
-        self._parameter_assignment_method = None
-        self._has_component_location = None
+        self._keywords = None
+        self._has_documentation = None
         self._has_grid = None
-        self._has_process = None
+        self._software_requirements = None
         self._has_implementation_script_location = None
+        self._has_download_url = None
         self._type = None
         self._calibrated_variable = None
-        self._has_model_category = None
-        self._has_software_image = None
+        self._has_installation_instructions = None
         self._compatible_visualization_software = None
         self._calibration_method = None
         self._has_region = None
-        self._has_model_result_table = None
-        self._calibration_target_variable = None
+        self._has_faq = None
+        self._logo = None
+        self._has_contact_person = None
         self._id = None
-        self._has_expert_tuned_model = None
-        self._has_calibration = None
-        self._has_causal_diagram = None
+        self._identifier = None
         self._has_sample_execution = None
         self._has_sample_result = None
+        self._author = None
         self._has_constraint = None
+        self._short_description = None
+        self._has_execution_command = None
+        self._date_published = None
+        self._license = None
+        self._has_source_code = None
+        self._has_explanation_diagram = None
+        self._publisher = None
+        self._has_output = None
+        self._has_output_time_interval = None
+        self._funding_source = None
+        self._parameter_assignment_method = None
+        self._has_component_location = None
+        self._has_process = None
+        self._has_version = None
+        self._has_typical_data_source = None
+        self._description = None
+        self._reference_publication = None
+        self._screenshot = None
+        self._has_model_category = None
+        self._has_software_image = None
+        self._date_created = None
+        self._contributor = None
+        self._has_model_result_table = None
+        self._calibration_target_variable = None
+        self._has_purpose = None
+        self._has_expert_tuned_model = None
+        self._has_sample_visualization = None
+        self._has_calibration = None
+        self._has_causal_diagram = None
+        self._memory_requirements = None
+        self._website = None
+        self._citation = None
+        self._processor_requirements = None
         self._adjustable_parameter = None
         self._has_support_script_location = None
         self._label = None
-        self._has_execution_command = None
+        self._has_assumption = None
         self._has_parameter = None
-        self._has_explanation_diagram = None
+        self._operating_systems = None
         self._has_equation = None
-        self._has_output = None
-        self._has_output_time_interval = None
         self._has_input = None
         self.discriminator = None
 
-        if parameter_assignment_method is not None:
-            self.parameter_assignment_method = parameter_assignment_method
+        if keywords is not None:
+            self.keywords = keywords
         else:
-            if hasattr(self, '_parameter_assignment_method'): del self._parameter_assignment_method
-            if hasattr(self.attribute_map, 'parameter_assignment_method'): del self.attribute_map['parameter_assignment_method']
-            if hasattr(self.openapi_types, 'parameter_assignment_method'): del self.openapi_types['parameter_assignment_method']
-        if has_component_location is not None:
-            self.has_component_location = has_component_location
+            if hasattr(self, '_keywords'): del self._keywords
+            if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
+            if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
+        if has_documentation is not None:
+            self.has_documentation = has_documentation
         else:
-            if hasattr(self, '_has_component_location'): del self._has_component_location
-            if hasattr(self.attribute_map, 'has_component_location'): del self.attribute_map['has_component_location']
-            if hasattr(self.openapi_types, 'has_component_location'): del self.openapi_types['has_component_location']
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if has_grid is not None:
             self.has_grid = has_grid
         else:
             if hasattr(self, '_has_grid'): del self._has_grid
             if hasattr(self.attribute_map, 'has_grid'): del self.attribute_map['has_grid']
             if hasattr(self.openapi_types, 'has_grid'): del self.openapi_types['has_grid']
-        if has_process is not None:
-            self.has_process = has_process
+        if software_requirements is not None:
+            self.software_requirements = software_requirements
         else:
-            if hasattr(self, '_has_process'): del self._has_process
-            if hasattr(self.attribute_map, 'has_process'): del self.attribute_map['has_process']
-            if hasattr(self.openapi_types, 'has_process'): del self.openapi_types['has_process']
+            if hasattr(self, '_software_requirements'): del self._software_requirements
+            if hasattr(self.attribute_map, 'software_requirements'): del self.attribute_map['software_requirements']
+            if hasattr(self.openapi_types, 'software_requirements'): del self.openapi_types['software_requirements']
         if has_implementation_script_location is not None:
             self.has_implementation_script_location = has_implementation_script_location
         else:
             if hasattr(self, '_has_implementation_script_location'): del self._has_implementation_script_location
             if hasattr(self.attribute_map, 'has_implementation_script_location'): del self.attribute_map['has_implementation_script_location']
             if hasattr(self.openapi_types, 'has_implementation_script_location'): del self.openapi_types['has_implementation_script_location']
+        if has_download_url is not None:
+            self.has_download_url = has_download_url
+        else:
+            if hasattr(self, '_has_download_url'): del self._has_download_url
+            if hasattr(self.attribute_map, 'has_download_url'): del self.attribute_map['has_download_url']
+            if hasattr(self.openapi_types, 'has_download_url'): del self.openapi_types['has_download_url']
         if type is not None:
             self.type = type
         else:
@@ -176,18 +275,12 @@ class ModelConfiguration(object):
             if hasattr(self, '_calibrated_variable'): del self._calibrated_variable
             if hasattr(self.attribute_map, 'calibrated_variable'): del self.attribute_map['calibrated_variable']
             if hasattr(self.openapi_types, 'calibrated_variable'): del self.openapi_types['calibrated_variable']
-        if has_model_category is not None:
-            self.has_model_category = has_model_category
+        if has_installation_instructions is not None:
+            self.has_installation_instructions = has_installation_instructions
         else:
-            if hasattr(self, '_has_model_category'): del self._has_model_category
-            if hasattr(self.attribute_map, 'has_model_category'): del self.attribute_map['has_model_category']
-            if hasattr(self.openapi_types, 'has_model_category'): del self.openapi_types['has_model_category']
-        if has_software_image is not None:
-            self.has_software_image = has_software_image
-        else:
-            if hasattr(self, '_has_software_image'): del self._has_software_image
-            if hasattr(self.attribute_map, 'has_software_image'): del self.attribute_map['has_software_image']
-            if hasattr(self.openapi_types, 'has_software_image'): del self.openapi_types['has_software_image']
+            if hasattr(self, '_has_installation_instructions'): del self._has_installation_instructions
+            if hasattr(self.attribute_map, 'has_installation_instructions'): del self.attribute_map['has_installation_instructions']
+            if hasattr(self.openapi_types, 'has_installation_instructions'): del self.openapi_types['has_installation_instructions']
         if compatible_visualization_software is not None:
             self.compatible_visualization_software = compatible_visualization_software
         else:
@@ -206,38 +299,32 @@ class ModelConfiguration(object):
             if hasattr(self, '_has_region'): del self._has_region
             if hasattr(self.attribute_map, 'has_region'): del self.attribute_map['has_region']
             if hasattr(self.openapi_types, 'has_region'): del self.openapi_types['has_region']
-        if has_model_result_table is not None:
-            self.has_model_result_table = has_model_result_table
+        if has_faq is not None:
+            self.has_faq = has_faq
         else:
-            if hasattr(self, '_has_model_result_table'): del self._has_model_result_table
-            if hasattr(self.attribute_map, 'has_model_result_table'): del self.attribute_map['has_model_result_table']
-            if hasattr(self.openapi_types, 'has_model_result_table'): del self.openapi_types['has_model_result_table']
-        if calibration_target_variable is not None:
-            self.calibration_target_variable = calibration_target_variable
+            if hasattr(self, '_has_faq'): del self._has_faq
+            if hasattr(self.attribute_map, 'has_faq'): del self.attribute_map['has_faq']
+            if hasattr(self.openapi_types, 'has_faq'): del self.openapi_types['has_faq']
+        if logo is not None:
+            self.logo = logo
         else:
-            if hasattr(self, '_calibration_target_variable'): del self._calibration_target_variable
-            if hasattr(self.attribute_map, 'calibration_target_variable'): del self.attribute_map['calibration_target_variable']
-            if hasattr(self.openapi_types, 'calibration_target_variable'): del self.openapi_types['calibration_target_variable']
+            if hasattr(self, '_logo'): del self._logo
+            if hasattr(self.attribute_map, 'logo'): del self.attribute_map['logo']
+            if hasattr(self.openapi_types, 'logo'): del self.openapi_types['logo']
+        if has_contact_person is not None:
+            self.has_contact_person = has_contact_person
+        else:
+            if hasattr(self, '_has_contact_person'): del self._has_contact_person
+            if hasattr(self.attribute_map, 'has_contact_person'): del self.attribute_map['has_contact_person']
+            if hasattr(self.openapi_types, 'has_contact_person'): del self.openapi_types['has_contact_person']
         if id is not None:
             self.id = id
-        if has_expert_tuned_model is not None:
-            self.has_expert_tuned_model = has_expert_tuned_model
+        if identifier is not None:
+            self.identifier = identifier
         else:
-            if hasattr(self, '_has_expert_tuned_model'): del self._has_expert_tuned_model
-            if hasattr(self.attribute_map, 'has_expert_tuned_model'): del self.attribute_map['has_expert_tuned_model']
-            if hasattr(self.openapi_types, 'has_expert_tuned_model'): del self.openapi_types['has_expert_tuned_model']
-        if has_calibration is not None:
-            self.has_calibration = has_calibration
-        else:
-            if hasattr(self, '_has_calibration'): del self._has_calibration
-            if hasattr(self.attribute_map, 'has_calibration'): del self.attribute_map['has_calibration']
-            if hasattr(self.openapi_types, 'has_calibration'): del self.openapi_types['has_calibration']
-        if has_causal_diagram is not None:
-            self.has_causal_diagram = has_causal_diagram
-        else:
-            if hasattr(self, '_has_causal_diagram'): del self._has_causal_diagram
-            if hasattr(self.attribute_map, 'has_causal_diagram'): del self.attribute_map['has_causal_diagram']
-            if hasattr(self.openapi_types, 'has_causal_diagram'): del self.openapi_types['has_causal_diagram']
+            if hasattr(self, '_identifier'): del self._identifier
+            if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
+            if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
         if has_sample_execution is not None:
             self.has_sample_execution = has_sample_execution
         else:
@@ -250,12 +337,216 @@ class ModelConfiguration(object):
             if hasattr(self, '_has_sample_result'): del self._has_sample_result
             if hasattr(self.attribute_map, 'has_sample_result'): del self.attribute_map['has_sample_result']
             if hasattr(self.openapi_types, 'has_sample_result'): del self.openapi_types['has_sample_result']
+        if author is not None:
+            self.author = author
+        else:
+            if hasattr(self, '_author'): del self._author
+            if hasattr(self.attribute_map, 'author'): del self.attribute_map['author']
+            if hasattr(self.openapi_types, 'author'): del self.openapi_types['author']
         if has_constraint is not None:
             self.has_constraint = has_constraint
         else:
             if hasattr(self, '_has_constraint'): del self._has_constraint
             if hasattr(self.attribute_map, 'has_constraint'): del self.attribute_map['has_constraint']
             if hasattr(self.openapi_types, 'has_constraint'): del self.openapi_types['has_constraint']
+        if short_description is not None:
+            self.short_description = short_description
+        else:
+            if hasattr(self, '_short_description'): del self._short_description
+            if hasattr(self.attribute_map, 'short_description'): del self.attribute_map['short_description']
+            if hasattr(self.openapi_types, 'short_description'): del self.openapi_types['short_description']
+        if has_execution_command is not None:
+            self.has_execution_command = has_execution_command
+        else:
+            if hasattr(self, '_has_execution_command'): del self._has_execution_command
+            if hasattr(self.attribute_map, 'has_execution_command'): del self.attribute_map['has_execution_command']
+            if hasattr(self.openapi_types, 'has_execution_command'): del self.openapi_types['has_execution_command']
+        if date_published is not None:
+            self.date_published = date_published
+        else:
+            if hasattr(self, '_date_published'): del self._date_published
+            if hasattr(self.attribute_map, 'date_published'): del self.attribute_map['date_published']
+            if hasattr(self.openapi_types, 'date_published'): del self.openapi_types['date_published']
+        if license is not None:
+            self.license = license
+        else:
+            if hasattr(self, '_license'): del self._license
+            if hasattr(self.attribute_map, 'license'): del self.attribute_map['license']
+            if hasattr(self.openapi_types, 'license'): del self.openapi_types['license']
+        if has_source_code is not None:
+            self.has_source_code = has_source_code
+        else:
+            if hasattr(self, '_has_source_code'): del self._has_source_code
+            if hasattr(self.attribute_map, 'has_source_code'): del self.attribute_map['has_source_code']
+            if hasattr(self.openapi_types, 'has_source_code'): del self.openapi_types['has_source_code']
+        if has_explanation_diagram is not None:
+            self.has_explanation_diagram = has_explanation_diagram
+        else:
+            if hasattr(self, '_has_explanation_diagram'): del self._has_explanation_diagram
+            if hasattr(self.attribute_map, 'has_explanation_diagram'): del self.attribute_map['has_explanation_diagram']
+            if hasattr(self.openapi_types, 'has_explanation_diagram'): del self.openapi_types['has_explanation_diagram']
+        if publisher is not None:
+            self.publisher = publisher
+        else:
+            if hasattr(self, '_publisher'): del self._publisher
+            if hasattr(self.attribute_map, 'publisher'): del self.attribute_map['publisher']
+            if hasattr(self.openapi_types, 'publisher'): del self.openapi_types['publisher']
+        if has_output is not None:
+            self.has_output = has_output
+        else:
+            if hasattr(self, '_has_output'): del self._has_output
+            if hasattr(self.attribute_map, 'has_output'): del self.attribute_map['has_output']
+            if hasattr(self.openapi_types, 'has_output'): del self.openapi_types['has_output']
+        if has_output_time_interval is not None:
+            self.has_output_time_interval = has_output_time_interval
+        else:
+            if hasattr(self, '_has_output_time_interval'): del self._has_output_time_interval
+            if hasattr(self.attribute_map, 'has_output_time_interval'): del self.attribute_map['has_output_time_interval']
+            if hasattr(self.openapi_types, 'has_output_time_interval'): del self.openapi_types['has_output_time_interval']
+        if funding_source is not None:
+            self.funding_source = funding_source
+        else:
+            if hasattr(self, '_funding_source'): del self._funding_source
+            if hasattr(self.attribute_map, 'funding_source'): del self.attribute_map['funding_source']
+            if hasattr(self.openapi_types, 'funding_source'): del self.openapi_types['funding_source']
+        if parameter_assignment_method is not None:
+            self.parameter_assignment_method = parameter_assignment_method
+        else:
+            if hasattr(self, '_parameter_assignment_method'): del self._parameter_assignment_method
+            if hasattr(self.attribute_map, 'parameter_assignment_method'): del self.attribute_map['parameter_assignment_method']
+            if hasattr(self.openapi_types, 'parameter_assignment_method'): del self.openapi_types['parameter_assignment_method']
+        if has_component_location is not None:
+            self.has_component_location = has_component_location
+        else:
+            if hasattr(self, '_has_component_location'): del self._has_component_location
+            if hasattr(self.attribute_map, 'has_component_location'): del self.attribute_map['has_component_location']
+            if hasattr(self.openapi_types, 'has_component_location'): del self.openapi_types['has_component_location']
+        if has_process is not None:
+            self.has_process = has_process
+        else:
+            if hasattr(self, '_has_process'): del self._has_process
+            if hasattr(self.attribute_map, 'has_process'): del self.attribute_map['has_process']
+            if hasattr(self.openapi_types, 'has_process'): del self.openapi_types['has_process']
+        if has_version is not None:
+            self.has_version = has_version
+        else:
+            if hasattr(self, '_has_version'): del self._has_version
+            if hasattr(self.attribute_map, 'has_version'): del self.attribute_map['has_version']
+            if hasattr(self.openapi_types, 'has_version'): del self.openapi_types['has_version']
+        if has_typical_data_source is not None:
+            self.has_typical_data_source = has_typical_data_source
+        else:
+            if hasattr(self, '_has_typical_data_source'): del self._has_typical_data_source
+            if hasattr(self.attribute_map, 'has_typical_data_source'): del self.attribute_map['has_typical_data_source']
+            if hasattr(self.openapi_types, 'has_typical_data_source'): del self.openapi_types['has_typical_data_source']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
+        if reference_publication is not None:
+            self.reference_publication = reference_publication
+        else:
+            if hasattr(self, '_reference_publication'): del self._reference_publication
+            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
+            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
+        if screenshot is not None:
+            self.screenshot = screenshot
+        else:
+            if hasattr(self, '_screenshot'): del self._screenshot
+            if hasattr(self.attribute_map, 'screenshot'): del self.attribute_map['screenshot']
+            if hasattr(self.openapi_types, 'screenshot'): del self.openapi_types['screenshot']
+        if has_model_category is not None:
+            self.has_model_category = has_model_category
+        else:
+            if hasattr(self, '_has_model_category'): del self._has_model_category
+            if hasattr(self.attribute_map, 'has_model_category'): del self.attribute_map['has_model_category']
+            if hasattr(self.openapi_types, 'has_model_category'): del self.openapi_types['has_model_category']
+        if has_software_image is not None:
+            self.has_software_image = has_software_image
+        else:
+            if hasattr(self, '_has_software_image'): del self._has_software_image
+            if hasattr(self.attribute_map, 'has_software_image'): del self.attribute_map['has_software_image']
+            if hasattr(self.openapi_types, 'has_software_image'): del self.openapi_types['has_software_image']
+        if date_created is not None:
+            self.date_created = date_created
+        else:
+            if hasattr(self, '_date_created'): del self._date_created
+            if hasattr(self.attribute_map, 'date_created'): del self.attribute_map['date_created']
+            if hasattr(self.openapi_types, 'date_created'): del self.openapi_types['date_created']
+        if contributor is not None:
+            self.contributor = contributor
+        else:
+            if hasattr(self, '_contributor'): del self._contributor
+            if hasattr(self.attribute_map, 'contributor'): del self.attribute_map['contributor']
+            if hasattr(self.openapi_types, 'contributor'): del self.openapi_types['contributor']
+        if has_model_result_table is not None:
+            self.has_model_result_table = has_model_result_table
+        else:
+            if hasattr(self, '_has_model_result_table'): del self._has_model_result_table
+            if hasattr(self.attribute_map, 'has_model_result_table'): del self.attribute_map['has_model_result_table']
+            if hasattr(self.openapi_types, 'has_model_result_table'): del self.openapi_types['has_model_result_table']
+        if calibration_target_variable is not None:
+            self.calibration_target_variable = calibration_target_variable
+        else:
+            if hasattr(self, '_calibration_target_variable'): del self._calibration_target_variable
+            if hasattr(self.attribute_map, 'calibration_target_variable'): del self.attribute_map['calibration_target_variable']
+            if hasattr(self.openapi_types, 'calibration_target_variable'): del self.openapi_types['calibration_target_variable']
+        if has_purpose is not None:
+            self.has_purpose = has_purpose
+        else:
+            if hasattr(self, '_has_purpose'): del self._has_purpose
+            if hasattr(self.attribute_map, 'has_purpose'): del self.attribute_map['has_purpose']
+            if hasattr(self.openapi_types, 'has_purpose'): del self.openapi_types['has_purpose']
+        if has_expert_tuned_model is not None:
+            self.has_expert_tuned_model = has_expert_tuned_model
+        else:
+            if hasattr(self, '_has_expert_tuned_model'): del self._has_expert_tuned_model
+            if hasattr(self.attribute_map, 'has_expert_tuned_model'): del self.attribute_map['has_expert_tuned_model']
+            if hasattr(self.openapi_types, 'has_expert_tuned_model'): del self.openapi_types['has_expert_tuned_model']
+        if has_sample_visualization is not None:
+            self.has_sample_visualization = has_sample_visualization
+        else:
+            if hasattr(self, '_has_sample_visualization'): del self._has_sample_visualization
+            if hasattr(self.attribute_map, 'has_sample_visualization'): del self.attribute_map['has_sample_visualization']
+            if hasattr(self.openapi_types, 'has_sample_visualization'): del self.openapi_types['has_sample_visualization']
+        if has_calibration is not None:
+            self.has_calibration = has_calibration
+        else:
+            if hasattr(self, '_has_calibration'): del self._has_calibration
+            if hasattr(self.attribute_map, 'has_calibration'): del self.attribute_map['has_calibration']
+            if hasattr(self.openapi_types, 'has_calibration'): del self.openapi_types['has_calibration']
+        if has_causal_diagram is not None:
+            self.has_causal_diagram = has_causal_diagram
+        else:
+            if hasattr(self, '_has_causal_diagram'): del self._has_causal_diagram
+            if hasattr(self.attribute_map, 'has_causal_diagram'): del self.attribute_map['has_causal_diagram']
+            if hasattr(self.openapi_types, 'has_causal_diagram'): del self.openapi_types['has_causal_diagram']
+        if memory_requirements is not None:
+            self.memory_requirements = memory_requirements
+        else:
+            if hasattr(self, '_memory_requirements'): del self._memory_requirements
+            if hasattr(self.attribute_map, 'memory_requirements'): del self.attribute_map['memory_requirements']
+            if hasattr(self.openapi_types, 'memory_requirements'): del self.openapi_types['memory_requirements']
+        if website is not None:
+            self.website = website
+        else:
+            if hasattr(self, '_website'): del self._website
+            if hasattr(self.attribute_map, 'website'): del self.attribute_map['website']
+            if hasattr(self.openapi_types, 'website'): del self.openapi_types['website']
+        if citation is not None:
+            self.citation = citation
+        else:
+            if hasattr(self, '_citation'): del self._citation
+            if hasattr(self.attribute_map, 'citation'): del self.attribute_map['citation']
+            if hasattr(self.openapi_types, 'citation'): del self.openapi_types['citation']
+        if processor_requirements is not None:
+            self.processor_requirements = processor_requirements
+        else:
+            if hasattr(self, '_processor_requirements'): del self._processor_requirements
+            if hasattr(self.attribute_map, 'processor_requirements'): del self.attribute_map['processor_requirements']
+            if hasattr(self.openapi_types, 'processor_requirements'): del self.openapi_types['processor_requirements']
         if adjustable_parameter is not None:
             self.adjustable_parameter = adjustable_parameter
         else:
@@ -274,42 +565,30 @@ class ModelConfiguration(object):
             if hasattr(self, '_label'): del self._label
             if hasattr(self.attribute_map, 'label'): del self.attribute_map['label']
             if hasattr(self.openapi_types, 'label'): del self.openapi_types['label']
-        if has_execution_command is not None:
-            self.has_execution_command = has_execution_command
+        if has_assumption is not None:
+            self.has_assumption = has_assumption
         else:
-            if hasattr(self, '_has_execution_command'): del self._has_execution_command
-            if hasattr(self.attribute_map, 'has_execution_command'): del self.attribute_map['has_execution_command']
-            if hasattr(self.openapi_types, 'has_execution_command'): del self.openapi_types['has_execution_command']
+            if hasattr(self, '_has_assumption'): del self._has_assumption
+            if hasattr(self.attribute_map, 'has_assumption'): del self.attribute_map['has_assumption']
+            if hasattr(self.openapi_types, 'has_assumption'): del self.openapi_types['has_assumption']
         if has_parameter is not None:
             self.has_parameter = has_parameter
         else:
             if hasattr(self, '_has_parameter'): del self._has_parameter
             if hasattr(self.attribute_map, 'has_parameter'): del self.attribute_map['has_parameter']
             if hasattr(self.openapi_types, 'has_parameter'): del self.openapi_types['has_parameter']
-        if has_explanation_diagram is not None:
-            self.has_explanation_diagram = has_explanation_diagram
+        if operating_systems is not None:
+            self.operating_systems = operating_systems
         else:
-            if hasattr(self, '_has_explanation_diagram'): del self._has_explanation_diagram
-            if hasattr(self.attribute_map, 'has_explanation_diagram'): del self.attribute_map['has_explanation_diagram']
-            if hasattr(self.openapi_types, 'has_explanation_diagram'): del self.openapi_types['has_explanation_diagram']
+            if hasattr(self, '_operating_systems'): del self._operating_systems
+            if hasattr(self.attribute_map, 'operating_systems'): del self.attribute_map['operating_systems']
+            if hasattr(self.openapi_types, 'operating_systems'): del self.openapi_types['operating_systems']
         if has_equation is not None:
             self.has_equation = has_equation
         else:
             if hasattr(self, '_has_equation'): del self._has_equation
             if hasattr(self.attribute_map, 'has_equation'): del self.attribute_map['has_equation']
             if hasattr(self.openapi_types, 'has_equation'): del self.openapi_types['has_equation']
-        if has_output is not None:
-            self.has_output = has_output
-        else:
-            if hasattr(self, '_has_output'): del self._has_output
-            if hasattr(self.attribute_map, 'has_output'): del self.attribute_map['has_output']
-            if hasattr(self.openapi_types, 'has_output'): del self.openapi_types['has_output']
-        if has_output_time_interval is not None:
-            self.has_output_time_interval = has_output_time_interval
-        else:
-            if hasattr(self, '_has_output_time_interval'): del self._has_output_time_interval
-            if hasattr(self.attribute_map, 'has_output_time_interval'): del self.attribute_map['has_output_time_interval']
-            if hasattr(self.openapi_types, 'has_output_time_interval'): del self.openapi_types['has_output_time_interval']
         if has_input is not None:
             self.has_input = has_input
         else:
@@ -318,46 +597,46 @@ class ModelConfiguration(object):
             if hasattr(self.openapi_types, 'has_input'): del self.openapi_types['has_input']
 
     @property
-    def parameter_assignment_method(self):
-        """Gets the parameter_assignment_method of this ModelConfiguration.  # noqa: E501
+    def keywords(self):
+        """Gets the keywords of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The parameter_assignment_method of this ModelConfiguration.  # noqa: E501
+        :return: The keywords of this ModelConfiguration.  # noqa: E501
         :rtype: list[str]
         """
-        return self._parameter_assignment_method
+        return self._keywords
 
-    @parameter_assignment_method.setter
-    def parameter_assignment_method(self, parameter_assignment_method):
-        """Sets the parameter_assignment_method of this ModelConfiguration.
+    @keywords.setter
+    def keywords(self, keywords):
+        """Sets the keywords of this ModelConfiguration.
 
 
-        :param parameter_assignment_method: The parameter_assignment_method of this ModelConfiguration.  # noqa: E501
+        :param keywords: The keywords of this ModelConfiguration.  # noqa: E501
         :type: list[str]
         """
 
-        self._parameter_assignment_method = parameter_assignment_method
+        self._keywords = keywords
 
     @property
-    def has_component_location(self):
-        """Gets the has_component_location of this ModelConfiguration.  # noqa: E501
+    def has_documentation(self):
+        """Gets the has_documentation of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The has_component_location of this ModelConfiguration.  # noqa: E501
+        :return: The has_documentation of this ModelConfiguration.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_component_location
+        return self._has_documentation
 
-    @has_component_location.setter
-    def has_component_location(self, has_component_location):
-        """Sets the has_component_location of this ModelConfiguration.
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this ModelConfiguration.
 
 
-        :param has_component_location: The has_component_location of this ModelConfiguration.  # noqa: E501
+        :param has_documentation: The has_documentation of this ModelConfiguration.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_component_location = has_component_location
+        self._has_documentation = has_documentation
 
     @property
     def has_grid(self):
@@ -381,25 +660,25 @@ class ModelConfiguration(object):
         self._has_grid = has_grid
 
     @property
-    def has_process(self):
-        """Gets the has_process of this ModelConfiguration.  # noqa: E501
+    def software_requirements(self):
+        """Gets the software_requirements of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The has_process of this ModelConfiguration.  # noqa: E501
-        :rtype: list[Process]
+        :return: The software_requirements of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._has_process
+        return self._software_requirements
 
-    @has_process.setter
-    def has_process(self, has_process):
-        """Sets the has_process of this ModelConfiguration.
+    @software_requirements.setter
+    def software_requirements(self, software_requirements):
+        """Sets the software_requirements of this ModelConfiguration.
 
 
-        :param has_process: The has_process of this ModelConfiguration.  # noqa: E501
-        :type: list[Process]
+        :param software_requirements: The software_requirements of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
         """
 
-        self._has_process = has_process
+        self._software_requirements = software_requirements
 
     @property
     def has_implementation_script_location(self):
@@ -421,6 +700,27 @@ class ModelConfiguration(object):
         """
 
         self._has_implementation_script_location = has_implementation_script_location
+
+    @property
+    def has_download_url(self):
+        """Gets the has_download_url of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_download_url of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_download_url
+
+    @has_download_url.setter
+    def has_download_url(self, has_download_url):
+        """Sets the has_download_url of this ModelConfiguration.
+
+
+        :param has_download_url: The has_download_url of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_download_url = has_download_url
 
     @property
     def type(self):
@@ -465,46 +765,25 @@ class ModelConfiguration(object):
         self._calibrated_variable = calibrated_variable
 
     @property
-    def has_model_category(self):
-        """Gets the has_model_category of this ModelConfiguration.  # noqa: E501
+    def has_installation_instructions(self):
+        """Gets the has_installation_instructions of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The has_model_category of this ModelConfiguration.  # noqa: E501
+        :return: The has_installation_instructions of this ModelConfiguration.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_model_category
+        return self._has_installation_instructions
 
-    @has_model_category.setter
-    def has_model_category(self, has_model_category):
-        """Sets the has_model_category of this ModelConfiguration.
+    @has_installation_instructions.setter
+    def has_installation_instructions(self, has_installation_instructions):
+        """Sets the has_installation_instructions of this ModelConfiguration.
 
 
-        :param has_model_category: The has_model_category of this ModelConfiguration.  # noqa: E501
+        :param has_installation_instructions: The has_installation_instructions of this ModelConfiguration.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_model_category = has_model_category
-
-    @property
-    def has_software_image(self):
-        """Gets the has_software_image of this ModelConfiguration.  # noqa: E501
-
-
-        :return: The has_software_image of this ModelConfiguration.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._has_software_image
-
-    @has_software_image.setter
-    def has_software_image(self, has_software_image):
-        """Sets the has_software_image of this ModelConfiguration.
-
-
-        :param has_software_image: The has_software_image of this ModelConfiguration.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._has_software_image = has_software_image
+        self._has_installation_instructions = has_installation_instructions
 
     @property
     def compatible_visualization_software(self):
@@ -570,46 +849,67 @@ class ModelConfiguration(object):
         self._has_region = has_region
 
     @property
-    def has_model_result_table(self):
-        """Gets the has_model_result_table of this ModelConfiguration.  # noqa: E501
+    def has_faq(self):
+        """Gets the has_faq of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The has_model_result_table of this ModelConfiguration.  # noqa: E501
+        :return: The has_faq of this ModelConfiguration.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_model_result_table
+        return self._has_faq
 
-    @has_model_result_table.setter
-    def has_model_result_table(self, has_model_result_table):
-        """Sets the has_model_result_table of this ModelConfiguration.
+    @has_faq.setter
+    def has_faq(self, has_faq):
+        """Sets the has_faq of this ModelConfiguration.
 
 
-        :param has_model_result_table: The has_model_result_table of this ModelConfiguration.  # noqa: E501
+        :param has_faq: The has_faq of this ModelConfiguration.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_model_result_table = has_model_result_table
+        self._has_faq = has_faq
 
     @property
-    def calibration_target_variable(self):
-        """Gets the calibration_target_variable of this ModelConfiguration.  # noqa: E501
+    def logo(self):
+        """Gets the logo of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The calibration_target_variable of this ModelConfiguration.  # noqa: E501
+        :return: The logo of this ModelConfiguration.  # noqa: E501
         :rtype: list[object]
         """
-        return self._calibration_target_variable
+        return self._logo
 
-    @calibration_target_variable.setter
-    def calibration_target_variable(self, calibration_target_variable):
-        """Sets the calibration_target_variable of this ModelConfiguration.
+    @logo.setter
+    def logo(self, logo):
+        """Sets the logo of this ModelConfiguration.
 
 
-        :param calibration_target_variable: The calibration_target_variable of this ModelConfiguration.  # noqa: E501
+        :param logo: The logo of this ModelConfiguration.  # noqa: E501
         :type: list[object]
         """
 
-        self._calibration_target_variable = calibration_target_variable
+        self._logo = logo
+
+    @property
+    def has_contact_person(self):
+        """Gets the has_contact_person of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_contact_person of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_contact_person
+
+    @has_contact_person.setter
+    def has_contact_person(self, has_contact_person):
+        """Sets the has_contact_person of this ModelConfiguration.
+
+
+        :param has_contact_person: The has_contact_person of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_contact_person = has_contact_person
 
     @property
     def id(self):
@@ -633,67 +933,25 @@ class ModelConfiguration(object):
         self._id = id
 
     @property
-    def has_expert_tuned_model(self):
-        """Gets the has_expert_tuned_model of this ModelConfiguration.  # noqa: E501
+    def identifier(self):
+        """Gets the identifier of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The has_expert_tuned_model of this ModelConfiguration.  # noqa: E501
-        :rtype: list[ModelConfiguration]
+        :return: The identifier of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._has_expert_tuned_model
+        return self._identifier
 
-    @has_expert_tuned_model.setter
-    def has_expert_tuned_model(self, has_expert_tuned_model):
-        """Sets the has_expert_tuned_model of this ModelConfiguration.
-
-
-        :param has_expert_tuned_model: The has_expert_tuned_model of this ModelConfiguration.  # noqa: E501
-        :type: list[ModelConfiguration]
-        """
-
-        self._has_expert_tuned_model = has_expert_tuned_model
-
-    @property
-    def has_calibration(self):
-        """Gets the has_calibration of this ModelConfiguration.  # noqa: E501
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this ModelConfiguration.
 
 
-        :return: The has_calibration of this ModelConfiguration.  # noqa: E501
-        :rtype: list[ModelConfiguration]
-        """
-        return self._has_calibration
-
-    @has_calibration.setter
-    def has_calibration(self, has_calibration):
-        """Sets the has_calibration of this ModelConfiguration.
-
-
-        :param has_calibration: The has_calibration of this ModelConfiguration.  # noqa: E501
-        :type: list[ModelConfiguration]
+        :param identifier: The identifier of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
         """
 
-        self._has_calibration = has_calibration
-
-    @property
-    def has_causal_diagram(self):
-        """Gets the has_causal_diagram of this ModelConfiguration.  # noqa: E501
-
-
-        :return: The has_causal_diagram of this ModelConfiguration.  # noqa: E501
-        :rtype: list[CausalDiagram]
-        """
-        return self._has_causal_diagram
-
-    @has_causal_diagram.setter
-    def has_causal_diagram(self, has_causal_diagram):
-        """Sets the has_causal_diagram of this ModelConfiguration.
-
-
-        :param has_causal_diagram: The has_causal_diagram of this ModelConfiguration.  # noqa: E501
-        :type: list[CausalDiagram]
-        """
-
-        self._has_causal_diagram = has_causal_diagram
+        self._identifier = identifier
 
     @property
     def has_sample_execution(self):
@@ -738,6 +996,27 @@ class ModelConfiguration(object):
         self._has_sample_result = has_sample_result
 
     @property
+    def author(self):
+        """Gets the author of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The author of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._author
+
+    @author.setter
+    def author(self, author):
+        """Sets the author of this ModelConfiguration.
+
+
+        :param author: The author of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._author = author
+
+    @property
     def has_constraint(self):
         """Gets the has_constraint of this ModelConfiguration.  # noqa: E501
 
@@ -757,6 +1036,699 @@ class ModelConfiguration(object):
         """
 
         self._has_constraint = has_constraint
+
+    @property
+    def short_description(self):
+        """Gets the short_description of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The short_description of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._short_description
+
+    @short_description.setter
+    def short_description(self, short_description):
+        """Sets the short_description of this ModelConfiguration.
+
+
+        :param short_description: The short_description of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._short_description = short_description
+
+    @property
+    def has_execution_command(self):
+        """Gets the has_execution_command of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_execution_command of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_execution_command
+
+    @has_execution_command.setter
+    def has_execution_command(self, has_execution_command):
+        """Sets the has_execution_command of this ModelConfiguration.
+
+
+        :param has_execution_command: The has_execution_command of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_execution_command = has_execution_command
+
+    @property
+    def date_published(self):
+        """Gets the date_published of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The date_published of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._date_published
+
+    @date_published.setter
+    def date_published(self, date_published):
+        """Sets the date_published of this ModelConfiguration.
+
+
+        :param date_published: The date_published of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._date_published = date_published
+
+    @property
+    def license(self):
+        """Gets the license of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The license of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._license
+
+    @license.setter
+    def license(self, license):
+        """Sets the license of this ModelConfiguration.
+
+
+        :param license: The license of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._license = license
+
+    @property
+    def has_source_code(self):
+        """Gets the has_source_code of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_source_code of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_source_code
+
+    @has_source_code.setter
+    def has_source_code(self, has_source_code):
+        """Sets the has_source_code of this ModelConfiguration.
+
+
+        :param has_source_code: The has_source_code of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_source_code = has_source_code
+
+    @property
+    def has_explanation_diagram(self):
+        """Gets the has_explanation_diagram of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_explanation_diagram of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_explanation_diagram
+
+    @has_explanation_diagram.setter
+    def has_explanation_diagram(self, has_explanation_diagram):
+        """Sets the has_explanation_diagram of this ModelConfiguration.
+
+
+        :param has_explanation_diagram: The has_explanation_diagram of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_explanation_diagram = has_explanation_diagram
+
+    @property
+    def publisher(self):
+        """Gets the publisher of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The publisher of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._publisher
+
+    @publisher.setter
+    def publisher(self, publisher):
+        """Sets the publisher of this ModelConfiguration.
+
+
+        :param publisher: The publisher of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._publisher = publisher
+
+    @property
+    def has_output(self):
+        """Gets the has_output of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_output of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_output
+
+    @has_output.setter
+    def has_output(self, has_output):
+        """Sets the has_output of this ModelConfiguration.
+
+
+        :param has_output: The has_output of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_output = has_output
+
+    @property
+    def has_output_time_interval(self):
+        """Gets the has_output_time_interval of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_output_time_interval of this ModelConfiguration.  # noqa: E501
+        :rtype: list[TimeInterval]
+        """
+        return self._has_output_time_interval
+
+    @has_output_time_interval.setter
+    def has_output_time_interval(self, has_output_time_interval):
+        """Sets the has_output_time_interval of this ModelConfiguration.
+
+
+        :param has_output_time_interval: The has_output_time_interval of this ModelConfiguration.  # noqa: E501
+        :type: list[TimeInterval]
+        """
+
+        self._has_output_time_interval = has_output_time_interval
+
+    @property
+    def funding_source(self):
+        """Gets the funding_source of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The funding_source of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._funding_source
+
+    @funding_source.setter
+    def funding_source(self, funding_source):
+        """Sets the funding_source of this ModelConfiguration.
+
+
+        :param funding_source: The funding_source of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._funding_source = funding_source
+
+    @property
+    def parameter_assignment_method(self):
+        """Gets the parameter_assignment_method of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The parameter_assignment_method of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._parameter_assignment_method
+
+    @parameter_assignment_method.setter
+    def parameter_assignment_method(self, parameter_assignment_method):
+        """Sets the parameter_assignment_method of this ModelConfiguration.
+
+
+        :param parameter_assignment_method: The parameter_assignment_method of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._parameter_assignment_method = parameter_assignment_method
+
+    @property
+    def has_component_location(self):
+        """Gets the has_component_location of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_component_location of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_component_location
+
+    @has_component_location.setter
+    def has_component_location(self, has_component_location):
+        """Sets the has_component_location of this ModelConfiguration.
+
+
+        :param has_component_location: The has_component_location of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_component_location = has_component_location
+
+    @property
+    def has_process(self):
+        """Gets the has_process of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_process of this ModelConfiguration.  # noqa: E501
+        :rtype: list[Process]
+        """
+        return self._has_process
+
+    @has_process.setter
+    def has_process(self, has_process):
+        """Sets the has_process of this ModelConfiguration.
+
+
+        :param has_process: The has_process of this ModelConfiguration.  # noqa: E501
+        :type: list[Process]
+        """
+
+        self._has_process = has_process
+
+    @property
+    def has_version(self):
+        """Gets the has_version of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_version of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_version
+
+    @has_version.setter
+    def has_version(self, has_version):
+        """Sets the has_version of this ModelConfiguration.
+
+
+        :param has_version: The has_version of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_version = has_version
+
+    @property
+    def has_typical_data_source(self):
+        """Gets the has_typical_data_source of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_typical_data_source of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_typical_data_source
+
+    @has_typical_data_source.setter
+    def has_typical_data_source(self, has_typical_data_source):
+        """Sets the has_typical_data_source of this ModelConfiguration.
+
+
+        :param has_typical_data_source: The has_typical_data_source of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_typical_data_source = has_typical_data_source
+
+    @property
+    def description(self):
+        """Gets the description of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The description of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this ModelConfiguration.
+
+
+        :param description: The description of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._description = description
+
+    @property
+    def reference_publication(self):
+        """Gets the reference_publication of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The reference_publication of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reference_publication
+
+    @reference_publication.setter
+    def reference_publication(self, reference_publication):
+        """Sets the reference_publication of this ModelConfiguration.
+
+
+        :param reference_publication: The reference_publication of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reference_publication = reference_publication
+
+    @property
+    def screenshot(self):
+        """Gets the screenshot of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The screenshot of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._screenshot
+
+    @screenshot.setter
+    def screenshot(self, screenshot):
+        """Sets the screenshot of this ModelConfiguration.
+
+
+        :param screenshot: The screenshot of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._screenshot = screenshot
+
+    @property
+    def has_model_category(self):
+        """Gets the has_model_category of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_model_category of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_model_category
+
+    @has_model_category.setter
+    def has_model_category(self, has_model_category):
+        """Sets the has_model_category of this ModelConfiguration.
+
+
+        :param has_model_category: The has_model_category of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_model_category = has_model_category
+
+    @property
+    def has_software_image(self):
+        """Gets the has_software_image of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_software_image of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_software_image
+
+    @has_software_image.setter
+    def has_software_image(self, has_software_image):
+        """Sets the has_software_image of this ModelConfiguration.
+
+
+        :param has_software_image: The has_software_image of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_software_image = has_software_image
+
+    @property
+    def date_created(self):
+        """Gets the date_created of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The date_created of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._date_created
+
+    @date_created.setter
+    def date_created(self, date_created):
+        """Sets the date_created of this ModelConfiguration.
+
+
+        :param date_created: The date_created of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._date_created = date_created
+
+    @property
+    def contributor(self):
+        """Gets the contributor of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The contributor of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._contributor
+
+    @contributor.setter
+    def contributor(self, contributor):
+        """Sets the contributor of this ModelConfiguration.
+
+
+        :param contributor: The contributor of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._contributor = contributor
+
+    @property
+    def has_model_result_table(self):
+        """Gets the has_model_result_table of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_model_result_table of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_model_result_table
+
+    @has_model_result_table.setter
+    def has_model_result_table(self, has_model_result_table):
+        """Sets the has_model_result_table of this ModelConfiguration.
+
+
+        :param has_model_result_table: The has_model_result_table of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_model_result_table = has_model_result_table
+
+    @property
+    def calibration_target_variable(self):
+        """Gets the calibration_target_variable of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The calibration_target_variable of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._calibration_target_variable
+
+    @calibration_target_variable.setter
+    def calibration_target_variable(self, calibration_target_variable):
+        """Sets the calibration_target_variable of this ModelConfiguration.
+
+
+        :param calibration_target_variable: The calibration_target_variable of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._calibration_target_variable = calibration_target_variable
+
+    @property
+    def has_purpose(self):
+        """Gets the has_purpose of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_purpose of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_purpose
+
+    @has_purpose.setter
+    def has_purpose(self, has_purpose):
+        """Sets the has_purpose of this ModelConfiguration.
+
+
+        :param has_purpose: The has_purpose of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_purpose = has_purpose
+
+    @property
+    def has_expert_tuned_model(self):
+        """Gets the has_expert_tuned_model of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_expert_tuned_model of this ModelConfiguration.  # noqa: E501
+        :rtype: list[ModelConfiguration]
+        """
+        return self._has_expert_tuned_model
+
+    @has_expert_tuned_model.setter
+    def has_expert_tuned_model(self, has_expert_tuned_model):
+        """Sets the has_expert_tuned_model of this ModelConfiguration.
+
+
+        :param has_expert_tuned_model: The has_expert_tuned_model of this ModelConfiguration.  # noqa: E501
+        :type: list[ModelConfiguration]
+        """
+
+        self._has_expert_tuned_model = has_expert_tuned_model
+
+    @property
+    def has_sample_visualization(self):
+        """Gets the has_sample_visualization of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_sample_visualization of this ModelConfiguration.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_sample_visualization
+
+    @has_sample_visualization.setter
+    def has_sample_visualization(self, has_sample_visualization):
+        """Sets the has_sample_visualization of this ModelConfiguration.
+
+
+        :param has_sample_visualization: The has_sample_visualization of this ModelConfiguration.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_sample_visualization = has_sample_visualization
+
+    @property
+    def has_calibration(self):
+        """Gets the has_calibration of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_calibration of this ModelConfiguration.  # noqa: E501
+        :rtype: list[ModelConfiguration]
+        """
+        return self._has_calibration
+
+    @has_calibration.setter
+    def has_calibration(self, has_calibration):
+        """Sets the has_calibration of this ModelConfiguration.
+
+
+        :param has_calibration: The has_calibration of this ModelConfiguration.  # noqa: E501
+        :type: list[ModelConfiguration]
+        """
+
+        self._has_calibration = has_calibration
+
+    @property
+    def has_causal_diagram(self):
+        """Gets the has_causal_diagram of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The has_causal_diagram of this ModelConfiguration.  # noqa: E501
+        :rtype: list[CausalDiagram]
+        """
+        return self._has_causal_diagram
+
+    @has_causal_diagram.setter
+    def has_causal_diagram(self, has_causal_diagram):
+        """Sets the has_causal_diagram of this ModelConfiguration.
+
+
+        :param has_causal_diagram: The has_causal_diagram of this ModelConfiguration.  # noqa: E501
+        :type: list[CausalDiagram]
+        """
+
+        self._has_causal_diagram = has_causal_diagram
+
+    @property
+    def memory_requirements(self):
+        """Gets the memory_requirements of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The memory_requirements of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._memory_requirements
+
+    @memory_requirements.setter
+    def memory_requirements(self, memory_requirements):
+        """Sets the memory_requirements of this ModelConfiguration.
+
+
+        :param memory_requirements: The memory_requirements of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._memory_requirements = memory_requirements
+
+    @property
+    def website(self):
+        """Gets the website of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The website of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._website
+
+    @website.setter
+    def website(self, website):
+        """Sets the website of this ModelConfiguration.
+
+
+        :param website: The website of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._website = website
+
+    @property
+    def citation(self):
+        """Gets the citation of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The citation of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._citation
+
+    @citation.setter
+    def citation(self, citation):
+        """Sets the citation of this ModelConfiguration.
+
+
+        :param citation: The citation of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._citation = citation
+
+    @property
+    def processor_requirements(self):
+        """Gets the processor_requirements of this ModelConfiguration.  # noqa: E501
+
+
+        :return: The processor_requirements of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._processor_requirements
+
+    @processor_requirements.setter
+    def processor_requirements(self, processor_requirements):
+        """Sets the processor_requirements of this ModelConfiguration.
+
+
+        :param processor_requirements: The processor_requirements of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._processor_requirements = processor_requirements
 
     @property
     def adjustable_parameter(self):
@@ -806,7 +1778,7 @@ class ModelConfiguration(object):
 
 
         :return: The label of this ModelConfiguration.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -816,31 +1788,31 @@ class ModelConfiguration(object):
 
 
         :param label: The label of this ModelConfiguration.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label
 
     @property
-    def has_execution_command(self):
-        """Gets the has_execution_command of this ModelConfiguration.  # noqa: E501
+    def has_assumption(self):
+        """Gets the has_assumption of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The has_execution_command of this ModelConfiguration.  # noqa: E501
+        :return: The has_assumption of this ModelConfiguration.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_execution_command
+        return self._has_assumption
 
-    @has_execution_command.setter
-    def has_execution_command(self, has_execution_command):
-        """Sets the has_execution_command of this ModelConfiguration.
+    @has_assumption.setter
+    def has_assumption(self, has_assumption):
+        """Sets the has_assumption of this ModelConfiguration.
 
 
-        :param has_execution_command: The has_execution_command of this ModelConfiguration.  # noqa: E501
+        :param has_assumption: The has_assumption of this ModelConfiguration.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_execution_command = has_execution_command
+        self._has_assumption = has_assumption
 
     @property
     def has_parameter(self):
@@ -864,25 +1836,25 @@ class ModelConfiguration(object):
         self._has_parameter = has_parameter
 
     @property
-    def has_explanation_diagram(self):
-        """Gets the has_explanation_diagram of this ModelConfiguration.  # noqa: E501
+    def operating_systems(self):
+        """Gets the operating_systems of this ModelConfiguration.  # noqa: E501
 
 
-        :return: The has_explanation_diagram of this ModelConfiguration.  # noqa: E501
-        :rtype: list[object]
+        :return: The operating_systems of this ModelConfiguration.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._has_explanation_diagram
+        return self._operating_systems
 
-    @has_explanation_diagram.setter
-    def has_explanation_diagram(self, has_explanation_diagram):
-        """Sets the has_explanation_diagram of this ModelConfiguration.
+    @operating_systems.setter
+    def operating_systems(self, operating_systems):
+        """Sets the operating_systems of this ModelConfiguration.
 
 
-        :param has_explanation_diagram: The has_explanation_diagram of this ModelConfiguration.  # noqa: E501
-        :type: list[object]
+        :param operating_systems: The operating_systems of this ModelConfiguration.  # noqa: E501
+        :type: list[str]
         """
 
-        self._has_explanation_diagram = has_explanation_diagram
+        self._operating_systems = operating_systems
 
     @property
     def has_equation(self):
@@ -904,48 +1876,6 @@ class ModelConfiguration(object):
         """
 
         self._has_equation = has_equation
-
-    @property
-    def has_output(self):
-        """Gets the has_output of this ModelConfiguration.  # noqa: E501
-
-
-        :return: The has_output of this ModelConfiguration.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._has_output
-
-    @has_output.setter
-    def has_output(self, has_output):
-        """Sets the has_output of this ModelConfiguration.
-
-
-        :param has_output: The has_output of this ModelConfiguration.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._has_output = has_output
-
-    @property
-    def has_output_time_interval(self):
-        """Gets the has_output_time_interval of this ModelConfiguration.  # noqa: E501
-
-
-        :return: The has_output_time_interval of this ModelConfiguration.  # noqa: E501
-        :rtype: list[TimeInterval]
-        """
-        return self._has_output_time_interval
-
-    @has_output_time_interval.setter
-    def has_output_time_interval(self, has_output_time_interval):
-        """Sets the has_output_time_interval of this ModelConfiguration.
-
-
-        :param has_output_time_interval: The has_output_time_interval of this ModelConfiguration.  # noqa: E501
-        :type: list[TimeInterval]
-        """
-
-        self._has_output_time_interval = has_output_time_interval
 
     @property
     def has_input(self):

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **softwareconfigurations_get**
-> list[SoftwareConfiguration] softwareconfigurations_get(username=username)
+> list[SoftwareConfiguration] softwareconfigurations_get(username=username, label=label)
 
 List all SoftwareConfiguration entities
 
@@ -30,10 +30,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = modelcatalog.SoftwareConfigurationApi()
 username = 'username_example' # str | Username to query (optional)
+label = 'label_example' # str | Filter by label (optional)
 
 try:
     # List all SoftwareConfiguration entities
-    api_response = api_instance.softwareconfigurations_get(username=username)
+    api_response = api_instance.softwareconfigurations_get(username=username, label=label)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareConfigurationApi->softwareconfigurations_get: %s\n" % e)
@@ -44,6 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**| Username to query | [optional] 
+ **label** | **str**| Filter by label | [optional] 
 
 ### Return type
 

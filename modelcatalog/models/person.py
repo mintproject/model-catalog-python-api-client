@@ -34,7 +34,7 @@ class Person(object):
         'identifier': 'list[str]',
         'website': 'list[str]',
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]',
         'email': 'list[str]'
     }
@@ -161,7 +161,7 @@ class Person(object):
 
 
         :return: The label of this Person.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -171,7 +171,7 @@ class Person(object):
 
 
         :param label: The label of this Person.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

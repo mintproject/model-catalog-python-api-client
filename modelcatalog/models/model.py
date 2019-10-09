@@ -31,15 +31,15 @@ class Model(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_documentation': 'list[str]',
         'keywords': 'list[str]',
+        'has_documentation': 'list[str]',
         'has_grid': 'list[Grid]',
         'software_requirements': 'list[str]',
         'has_version': 'list[object]',
         'has_typical_data_source': 'list[str]',
         'has_download_url': 'list[str]',
-        'reference_publication': 'list[str]',
         'description': 'list[str]',
+        'reference_publication': 'list[str]',
         'screenshot': 'list[object]',
         'type': 'list[str]',
         'has_installation_instructions': 'list[str]',
@@ -59,28 +59,28 @@ class Model(object):
         'author': 'list[object]',
         'processor_requirements': 'list[str]',
         'short_description': 'list[str]',
-        'label': 'str',
+        'label': 'list[str]',
         'has_assumption': 'list[str]',
         'date_published': 'list[str]',
         'operating_systems': 'list[str]',
         'license': 'list[str]',
         'has_source_code': 'list[object]',
         'has_explanation_diagram': 'list[object]',
-        'has_equation': 'list[Equation]',
         'publisher': 'list[object]',
+        'has_equation': 'list[Equation]',
         'funding_source': 'list[object]'
     }
 
     attribute_map = {
-        'has_documentation': 'hasDocumentation',
         'keywords': 'keywords',
+        'has_documentation': 'hasDocumentation',
         'has_grid': 'hasGrid',
         'software_requirements': 'softwareRequirements',
         'has_version': 'hasVersion',
         'has_typical_data_source': 'hasTypicalDataSource',
         'has_download_url': 'hasDownloadURL',
-        'reference_publication': 'referencePublication',
         'description': 'description',
+        'reference_publication': 'referencePublication',
         'screenshot': 'screenshot',
         'type': 'type',
         'has_installation_instructions': 'hasInstallationInstructions',
@@ -107,23 +107,23 @@ class Model(object):
         'license': 'license',
         'has_source_code': 'hasSourceCode',
         'has_explanation_diagram': 'hasExplanationDiagram',
-        'has_equation': 'hasEquation',
         'publisher': 'publisher',
+        'has_equation': 'hasEquation',
         'funding_source': 'fundingSource'
     }
 
-    def __init__(self, has_documentation=None, keywords=None, has_grid=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, reference_publication=None, description=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, date_created=None, contributor=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_explanation_diagram=None, has_equation=None, publisher=None, funding_source=None):  # noqa: E501
+    def __init__(self, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, date_created=None, contributor=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_explanation_diagram=None, publisher=None, has_equation=None, funding_source=None):  # noqa: E501
         """Model - a model defined in OpenAPI"""  # noqa: E501
 
-        self._has_documentation = None
         self._keywords = None
+        self._has_documentation = None
         self._has_grid = None
         self._software_requirements = None
         self._has_version = None
         self._has_typical_data_source = None
         self._has_download_url = None
-        self._reference_publication = None
         self._description = None
+        self._reference_publication = None
         self._screenshot = None
         self._type = None
         self._has_installation_instructions = None
@@ -150,23 +150,23 @@ class Model(object):
         self._license = None
         self._has_source_code = None
         self._has_explanation_diagram = None
-        self._has_equation = None
         self._publisher = None
+        self._has_equation = None
         self._funding_source = None
         self.discriminator = None
 
-        if has_documentation is not None:
-            self.has_documentation = has_documentation
-        else:
-            if hasattr(self, '_has_documentation'): del self._has_documentation
-            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
-            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if keywords is not None:
             self.keywords = keywords
         else:
             if hasattr(self, '_keywords'): del self._keywords
             if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
             if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
+        if has_documentation is not None:
+            self.has_documentation = has_documentation
+        else:
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if has_grid is not None:
             self.has_grid = has_grid
         else:
@@ -197,18 +197,18 @@ class Model(object):
             if hasattr(self, '_has_download_url'): del self._has_download_url
             if hasattr(self.attribute_map, 'has_download_url'): del self.attribute_map['has_download_url']
             if hasattr(self.openapi_types, 'has_download_url'): del self.openapi_types['has_download_url']
-        if reference_publication is not None:
-            self.reference_publication = reference_publication
-        else:
-            if hasattr(self, '_reference_publication'): del self._reference_publication
-            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
-            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
         if description is not None:
             self.description = description
         else:
             if hasattr(self, '_description'): del self._description
             if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
             if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
+        if reference_publication is not None:
+            self.reference_publication = reference_publication
+        else:
+            if hasattr(self, '_reference_publication'): del self._reference_publication
+            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
+            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
         if screenshot is not None:
             self.screenshot = screenshot
         else:
@@ -361,45 +361,24 @@ class Model(object):
             if hasattr(self, '_has_explanation_diagram'): del self._has_explanation_diagram
             if hasattr(self.attribute_map, 'has_explanation_diagram'): del self.attribute_map['has_explanation_diagram']
             if hasattr(self.openapi_types, 'has_explanation_diagram'): del self.openapi_types['has_explanation_diagram']
-        if has_equation is not None:
-            self.has_equation = has_equation
-        else:
-            if hasattr(self, '_has_equation'): del self._has_equation
-            if hasattr(self.attribute_map, 'has_equation'): del self.attribute_map['has_equation']
-            if hasattr(self.openapi_types, 'has_equation'): del self.openapi_types['has_equation']
         if publisher is not None:
             self.publisher = publisher
         else:
             if hasattr(self, '_publisher'): del self._publisher
             if hasattr(self.attribute_map, 'publisher'): del self.attribute_map['publisher']
             if hasattr(self.openapi_types, 'publisher'): del self.openapi_types['publisher']
+        if has_equation is not None:
+            self.has_equation = has_equation
+        else:
+            if hasattr(self, '_has_equation'): del self._has_equation
+            if hasattr(self.attribute_map, 'has_equation'): del self.attribute_map['has_equation']
+            if hasattr(self.openapi_types, 'has_equation'): del self.openapi_types['has_equation']
         if funding_source is not None:
             self.funding_source = funding_source
         else:
             if hasattr(self, '_funding_source'): del self._funding_source
             if hasattr(self.attribute_map, 'funding_source'): del self.attribute_map['funding_source']
             if hasattr(self.openapi_types, 'funding_source'): del self.openapi_types['funding_source']
-
-    @property
-    def has_documentation(self):
-        """Gets the has_documentation of this Model.  # noqa: E501
-
-
-        :return: The has_documentation of this Model.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this Model.
-
-
-        :param has_documentation: The has_documentation of this Model.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
 
     @property
     def keywords(self):
@@ -421,6 +400,27 @@ class Model(object):
         """
 
         self._keywords = keywords
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this Model.  # noqa: E501
+
+
+        :return: The has_documentation of this Model.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this Model.
+
+
+        :param has_documentation: The has_documentation of this Model.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def has_grid(self):
@@ -528,27 +528,6 @@ class Model(object):
         self._has_download_url = has_download_url
 
     @property
-    def reference_publication(self):
-        """Gets the reference_publication of this Model.  # noqa: E501
-
-
-        :return: The reference_publication of this Model.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._reference_publication
-
-    @reference_publication.setter
-    def reference_publication(self, reference_publication):
-        """Sets the reference_publication of this Model.
-
-
-        :param reference_publication: The reference_publication of this Model.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._reference_publication = reference_publication
-
-    @property
     def description(self):
         """Gets the description of this Model.  # noqa: E501
 
@@ -568,6 +547,27 @@ class Model(object):
         """
 
         self._description = description
+
+    @property
+    def reference_publication(self):
+        """Gets the reference_publication of this Model.  # noqa: E501
+
+
+        :return: The reference_publication of this Model.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reference_publication
+
+    @reference_publication.setter
+    def reference_publication(self, reference_publication):
+        """Sets the reference_publication of this Model.
+
+
+        :param reference_publication: The reference_publication of this Model.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reference_publication = reference_publication
 
     @property
     def screenshot(self):
@@ -974,7 +974,7 @@ class Model(object):
 
 
         :return: The label of this Model.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -984,7 +984,7 @@ class Model(object):
 
 
         :param label: The label of this Model.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label
@@ -1116,27 +1116,6 @@ class Model(object):
         self._has_explanation_diagram = has_explanation_diagram
 
     @property
-    def has_equation(self):
-        """Gets the has_equation of this Model.  # noqa: E501
-
-
-        :return: The has_equation of this Model.  # noqa: E501
-        :rtype: list[Equation]
-        """
-        return self._has_equation
-
-    @has_equation.setter
-    def has_equation(self, has_equation):
-        """Sets the has_equation of this Model.
-
-
-        :param has_equation: The has_equation of this Model.  # noqa: E501
-        :type: list[Equation]
-        """
-
-        self._has_equation = has_equation
-
-    @property
     def publisher(self):
         """Gets the publisher of this Model.  # noqa: E501
 
@@ -1156,6 +1135,27 @@ class Model(object):
         """
 
         self._publisher = publisher
+
+    @property
+    def has_equation(self):
+        """Gets the has_equation of this Model.  # noqa: E501
+
+
+        :return: The has_equation of this Model.  # noqa: E501
+        :rtype: list[Equation]
+        """
+        return self._has_equation
+
+    @has_equation.setter
+    def has_equation(self, has_equation):
+        """Sets the has_equation of this Model.
+
+
+        :param has_equation: The has_equation of this Model.  # noqa: E501
+        :type: list[Equation]
+        """
+
+        self._has_equation = has_equation
 
     @property
     def funding_source(self):

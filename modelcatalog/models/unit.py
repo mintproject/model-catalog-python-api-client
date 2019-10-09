@@ -32,7 +32,7 @@ class Unit(object):
     """
     openapi_types = {
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]'
     }
 
@@ -92,7 +92,7 @@ class Unit(object):
 
 
         :return: The label of this Unit.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -102,7 +102,7 @@ class Unit(object):
 
 
         :param label: The label of this Unit.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **processs_get**
-> list[Process] processs_get(username=username)
+> list[Process] processs_get(username=username, label=label)
 
 List all Process entities
 
@@ -30,10 +30,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = modelcatalog.ProcessApi()
 username = 'username_example' # str | Username to query (optional)
+label = 'label_example' # str | Filter by label (optional)
 
 try:
     # List all Process entities
-    api_response = api_instance.processs_get(username=username)
+    api_response = api_instance.processs_get(username=username, label=label)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProcessApi->processs_get: %s\n" % e)
@@ -44,6 +45,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**| Username to query | [optional] 
+ **label** | **str**| Filter by label | [optional] 
 
 ### Return type
 

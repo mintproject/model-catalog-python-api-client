@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **has_presentation** | [**list[VariablePresentation]**](VariablePresentation.md) |  | [optional] 
 **position** | **list[float]** |  | [optional] 
 **id** | **str** |  | [optional] 
-**label** | **str** |  | [optional] 
+**label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **has_fixed_resource** | [**list[SampleResource]**](SampleResource.md) |  | [optional] 
 

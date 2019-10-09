@@ -32,7 +32,7 @@ class Process(object):
     """
     openapi_types = {
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]',
         'influences': 'list[Process]'
     }
@@ -101,7 +101,7 @@ class Process(object):
 
 
         :return: The label of this Process.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -111,7 +111,7 @@ class Process(object):
 
 
         :param label: The label of this Process.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

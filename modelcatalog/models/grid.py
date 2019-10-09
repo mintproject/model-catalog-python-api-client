@@ -35,7 +35,7 @@ class Grid(object):
         'has_format': 'list[str]',
         'has_file_structure': 'object',
         'has_presentation': 'list[object]',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]',
         'has_fixed_resource': 'list[object]',
         'has_spatial_resolution': 'list[str]',
@@ -245,7 +245,7 @@ class Grid(object):
 
 
         :return: The label of this Grid.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -255,7 +255,7 @@ class Grid(object):
 
 
         :param label: The label of this Grid.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

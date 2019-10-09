@@ -32,15 +32,15 @@ class SoftwareConfiguration(object):
     """
     openapi_types = {
         'has_component_location': 'list[str]',
-        'has_documentation': 'list[str]',
         'keywords': 'list[str]',
+        'has_documentation': 'list[str]',
         'has_implementation_script_location': 'list[str]',
         'software_requirements': 'list[str]',
         'has_version': 'list[SoftwareVersion]',
         'has_typical_data_source': 'list[str]',
         'has_download_url': 'list[str]',
-        'reference_publication': 'list[str]',
         'description': 'list[str]',
+        'reference_publication': 'list[str]',
         'screenshot': 'list[Image]',
         'type': 'list[str]',
         'has_installation_instructions': 'list[str]',
@@ -54,8 +54,8 @@ class SoftwareConfiguration(object):
         'has_purpose': 'list[str]',
         'id': 'str',
         'has_sample_visualization': 'list[Visualization]',
-        'identifier': 'list[str]',
         'memory_requirements': 'list[str]',
+        'identifier': 'list[str]',
         'website': 'list[str]',
         'has_sample_execution': 'list[SampleExecution]',
         'has_sample_result': 'list[SampleResource]',
@@ -65,7 +65,7 @@ class SoftwareConfiguration(object):
         'has_constraint': 'list[str]',
         'has_support_script_location': 'list[str]',
         'short_description': 'list[str]',
-        'label': 'str',
+        'label': 'list[str]',
         'has_execution_command': 'list[str]',
         'has_assumption': 'list[str]',
         'has_parameter': 'list[Parameter]',
@@ -75,21 +75,21 @@ class SoftwareConfiguration(object):
         'has_source_code': 'list[SourceCode]',
         'publisher': 'list[object]',
         'has_output': 'list[DatasetSpecification]',
-        'funding_source': 'list[Organization]',
-        'has_input': 'list[DatasetSpecification]'
+        'has_input': 'list[DatasetSpecification]',
+        'funding_source': 'list[Organization]'
     }
 
     attribute_map = {
         'has_component_location': 'hasComponentLocation',
-        'has_documentation': 'hasDocumentation',
         'keywords': 'keywords',
+        'has_documentation': 'hasDocumentation',
         'has_implementation_script_location': 'hasImplementationScriptLocation',
         'software_requirements': 'softwareRequirements',
         'has_version': 'hasVersion',
         'has_typical_data_source': 'hasTypicalDataSource',
         'has_download_url': 'hasDownloadURL',
-        'reference_publication': 'referencePublication',
         'description': 'description',
+        'reference_publication': 'referencePublication',
         'screenshot': 'screenshot',
         'type': 'type',
         'has_installation_instructions': 'hasInstallationInstructions',
@@ -103,8 +103,8 @@ class SoftwareConfiguration(object):
         'has_purpose': 'hasPurpose',
         'id': 'id',
         'has_sample_visualization': 'hasSampleVisualization',
-        'identifier': 'identifier',
         'memory_requirements': 'memoryRequirements',
+        'identifier': 'identifier',
         'website': 'website',
         'has_sample_execution': 'hasSampleExecution',
         'has_sample_result': 'hasSampleResult',
@@ -124,23 +124,23 @@ class SoftwareConfiguration(object):
         'has_source_code': 'hasSourceCode',
         'publisher': 'publisher',
         'has_output': 'hasOutput',
-        'funding_source': 'fundingSource',
-        'has_input': 'hasInput'
+        'has_input': 'hasInput',
+        'funding_source': 'fundingSource'
     }
 
-    def __init__(self, has_component_location=None, has_documentation=None, keywords=None, has_implementation_script_location=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, reference_publication=None, description=None, screenshot=None, type=None, has_installation_instructions=None, has_software_image=None, date_created=None, compatible_visualization_software=None, contributor=None, has_faq=None, has_contact_person=None, logo=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, has_sample_execution=None, has_sample_result=None, citation=None, author=None, processor_requirements=None, has_constraint=None, has_support_script_location=None, short_description=None, label=None, has_execution_command=None, has_assumption=None, has_parameter=None, date_published=None, operating_systems=None, license=None, has_source_code=None, publisher=None, has_output=None, funding_source=None, has_input=None):  # noqa: E501
+    def __init__(self, has_component_location=None, keywords=None, has_documentation=None, has_implementation_script_location=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_software_image=None, date_created=None, compatible_visualization_software=None, contributor=None, has_faq=None, has_contact_person=None, logo=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, has_sample_execution=None, has_sample_result=None, citation=None, author=None, processor_requirements=None, has_constraint=None, has_support_script_location=None, short_description=None, label=None, has_execution_command=None, has_assumption=None, has_parameter=None, date_published=None, operating_systems=None, license=None, has_source_code=None, publisher=None, has_output=None, has_input=None, funding_source=None):  # noqa: E501
         """SoftwareConfiguration - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_component_location = None
-        self._has_documentation = None
         self._keywords = None
+        self._has_documentation = None
         self._has_implementation_script_location = None
         self._software_requirements = None
         self._has_version = None
         self._has_typical_data_source = None
         self._has_download_url = None
-        self._reference_publication = None
         self._description = None
+        self._reference_publication = None
         self._screenshot = None
         self._type = None
         self._has_installation_instructions = None
@@ -154,8 +154,8 @@ class SoftwareConfiguration(object):
         self._has_purpose = None
         self._id = None
         self._has_sample_visualization = None
-        self._identifier = None
         self._memory_requirements = None
+        self._identifier = None
         self._website = None
         self._has_sample_execution = None
         self._has_sample_result = None
@@ -175,8 +175,8 @@ class SoftwareConfiguration(object):
         self._has_source_code = None
         self._publisher = None
         self._has_output = None
-        self._funding_source = None
         self._has_input = None
+        self._funding_source = None
         self.discriminator = None
 
         if has_component_location is not None:
@@ -185,18 +185,18 @@ class SoftwareConfiguration(object):
             if hasattr(self, '_has_component_location'): del self._has_component_location
             if hasattr(self.attribute_map, 'has_component_location'): del self.attribute_map['has_component_location']
             if hasattr(self.openapi_types, 'has_component_location'): del self.openapi_types['has_component_location']
-        if has_documentation is not None:
-            self.has_documentation = has_documentation
-        else:
-            if hasattr(self, '_has_documentation'): del self._has_documentation
-            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
-            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if keywords is not None:
             self.keywords = keywords
         else:
             if hasattr(self, '_keywords'): del self._keywords
             if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
             if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
+        if has_documentation is not None:
+            self.has_documentation = has_documentation
+        else:
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if has_implementation_script_location is not None:
             self.has_implementation_script_location = has_implementation_script_location
         else:
@@ -227,18 +227,18 @@ class SoftwareConfiguration(object):
             if hasattr(self, '_has_download_url'): del self._has_download_url
             if hasattr(self.attribute_map, 'has_download_url'): del self.attribute_map['has_download_url']
             if hasattr(self.openapi_types, 'has_download_url'): del self.openapi_types['has_download_url']
-        if reference_publication is not None:
-            self.reference_publication = reference_publication
-        else:
-            if hasattr(self, '_reference_publication'): del self._reference_publication
-            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
-            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
         if description is not None:
             self.description = description
         else:
             if hasattr(self, '_description'): del self._description
             if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
             if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
+        if reference_publication is not None:
+            self.reference_publication = reference_publication
+        else:
+            if hasattr(self, '_reference_publication'): del self._reference_publication
+            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
+            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
         if screenshot is not None:
             self.screenshot = screenshot
         else:
@@ -313,18 +313,18 @@ class SoftwareConfiguration(object):
             if hasattr(self, '_has_sample_visualization'): del self._has_sample_visualization
             if hasattr(self.attribute_map, 'has_sample_visualization'): del self.attribute_map['has_sample_visualization']
             if hasattr(self.openapi_types, 'has_sample_visualization'): del self.openapi_types['has_sample_visualization']
-        if identifier is not None:
-            self.identifier = identifier
-        else:
-            if hasattr(self, '_identifier'): del self._identifier
-            if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
-            if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
         if memory_requirements is not None:
             self.memory_requirements = memory_requirements
         else:
             if hasattr(self, '_memory_requirements'): del self._memory_requirements
             if hasattr(self.attribute_map, 'memory_requirements'): del self.attribute_map['memory_requirements']
             if hasattr(self.openapi_types, 'memory_requirements'): del self.openapi_types['memory_requirements']
+        if identifier is not None:
+            self.identifier = identifier
+        else:
+            if hasattr(self, '_identifier'): del self._identifier
+            if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
+            if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
         if website is not None:
             self.website = website
         else:
@@ -439,18 +439,18 @@ class SoftwareConfiguration(object):
             if hasattr(self, '_has_output'): del self._has_output
             if hasattr(self.attribute_map, 'has_output'): del self.attribute_map['has_output']
             if hasattr(self.openapi_types, 'has_output'): del self.openapi_types['has_output']
-        if funding_source is not None:
-            self.funding_source = funding_source
-        else:
-            if hasattr(self, '_funding_source'): del self._funding_source
-            if hasattr(self.attribute_map, 'funding_source'): del self.attribute_map['funding_source']
-            if hasattr(self.openapi_types, 'funding_source'): del self.openapi_types['funding_source']
         if has_input is not None:
             self.has_input = has_input
         else:
             if hasattr(self, '_has_input'): del self._has_input
             if hasattr(self.attribute_map, 'has_input'): del self.attribute_map['has_input']
             if hasattr(self.openapi_types, 'has_input'): del self.openapi_types['has_input']
+        if funding_source is not None:
+            self.funding_source = funding_source
+        else:
+            if hasattr(self, '_funding_source'): del self._funding_source
+            if hasattr(self.attribute_map, 'funding_source'): del self.attribute_map['funding_source']
+            if hasattr(self.openapi_types, 'funding_source'): del self.openapi_types['funding_source']
 
     @property
     def has_component_location(self):
@@ -474,27 +474,6 @@ class SoftwareConfiguration(object):
         self._has_component_location = has_component_location
 
     @property
-    def has_documentation(self):
-        """Gets the has_documentation of this SoftwareConfiguration.  # noqa: E501
-
-
-        :return: The has_documentation of this SoftwareConfiguration.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this SoftwareConfiguration.
-
-
-        :param has_documentation: The has_documentation of this SoftwareConfiguration.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
-
-    @property
     def keywords(self):
         """Gets the keywords of this SoftwareConfiguration.  # noqa: E501
 
@@ -514,6 +493,27 @@ class SoftwareConfiguration(object):
         """
 
         self._keywords = keywords
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this SoftwareConfiguration.  # noqa: E501
+
+
+        :return: The has_documentation of this SoftwareConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this SoftwareConfiguration.
+
+
+        :param has_documentation: The has_documentation of this SoftwareConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def has_implementation_script_location(self):
@@ -621,27 +621,6 @@ class SoftwareConfiguration(object):
         self._has_download_url = has_download_url
 
     @property
-    def reference_publication(self):
-        """Gets the reference_publication of this SoftwareConfiguration.  # noqa: E501
-
-
-        :return: The reference_publication of this SoftwareConfiguration.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._reference_publication
-
-    @reference_publication.setter
-    def reference_publication(self, reference_publication):
-        """Sets the reference_publication of this SoftwareConfiguration.
-
-
-        :param reference_publication: The reference_publication of this SoftwareConfiguration.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._reference_publication = reference_publication
-
-    @property
     def description(self):
         """Gets the description of this SoftwareConfiguration.  # noqa: E501
 
@@ -661,6 +640,27 @@ class SoftwareConfiguration(object):
         """
 
         self._description = description
+
+    @property
+    def reference_publication(self):
+        """Gets the reference_publication of this SoftwareConfiguration.  # noqa: E501
+
+
+        :return: The reference_publication of this SoftwareConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reference_publication
+
+    @reference_publication.setter
+    def reference_publication(self, reference_publication):
+        """Sets the reference_publication of this SoftwareConfiguration.
+
+
+        :param reference_publication: The reference_publication of this SoftwareConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reference_publication = reference_publication
 
     @property
     def screenshot(self):
@@ -936,27 +936,6 @@ class SoftwareConfiguration(object):
         self._has_sample_visualization = has_sample_visualization
 
     @property
-    def identifier(self):
-        """Gets the identifier of this SoftwareConfiguration.  # noqa: E501
-
-
-        :return: The identifier of this SoftwareConfiguration.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._identifier
-
-    @identifier.setter
-    def identifier(self, identifier):
-        """Sets the identifier of this SoftwareConfiguration.
-
-
-        :param identifier: The identifier of this SoftwareConfiguration.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._identifier = identifier
-
-    @property
     def memory_requirements(self):
         """Gets the memory_requirements of this SoftwareConfiguration.  # noqa: E501
 
@@ -976,6 +955,27 @@ class SoftwareConfiguration(object):
         """
 
         self._memory_requirements = memory_requirements
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this SoftwareConfiguration.  # noqa: E501
+
+
+        :return: The identifier of this SoftwareConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this SoftwareConfiguration.
+
+
+        :param identifier: The identifier of this SoftwareConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._identifier = identifier
 
     @property
     def website(self):
@@ -1172,7 +1172,7 @@ class SoftwareConfiguration(object):
 
 
         :return: The label of this SoftwareConfiguration.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -1182,7 +1182,7 @@ class SoftwareConfiguration(object):
 
 
         :param label: The label of this SoftwareConfiguration.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label
@@ -1377,27 +1377,6 @@ class SoftwareConfiguration(object):
         self._has_output = has_output
 
     @property
-    def funding_source(self):
-        """Gets the funding_source of this SoftwareConfiguration.  # noqa: E501
-
-
-        :return: The funding_source of this SoftwareConfiguration.  # noqa: E501
-        :rtype: list[Organization]
-        """
-        return self._funding_source
-
-    @funding_source.setter
-    def funding_source(self, funding_source):
-        """Sets the funding_source of this SoftwareConfiguration.
-
-
-        :param funding_source: The funding_source of this SoftwareConfiguration.  # noqa: E501
-        :type: list[Organization]
-        """
-
-        self._funding_source = funding_source
-
-    @property
     def has_input(self):
         """Gets the has_input of this SoftwareConfiguration.  # noqa: E501
 
@@ -1417,6 +1396,27 @@ class SoftwareConfiguration(object):
         """
 
         self._has_input = has_input
+
+    @property
+    def funding_source(self):
+        """Gets the funding_source of this SoftwareConfiguration.  # noqa: E501
+
+
+        :return: The funding_source of this SoftwareConfiguration.  # noqa: E501
+        :rtype: list[Organization]
+        """
+        return self._funding_source
+
+    @funding_source.setter
+    def funding_source(self, funding_source):
+        """Sets the funding_source of this SoftwareConfiguration.
+
+
+        :param funding_source: The funding_source of this SoftwareConfiguration.  # noqa: E501
+        :type: list[Organization]
+        """
+
+        self._funding_source = funding_source
 
     def to_dict(self):
         """Returns the model properties as a dict"""

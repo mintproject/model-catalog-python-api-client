@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **has_format** | **list[str]** |  | [optional] 
 **has_file_structure** | [**object**](.md) |  | [optional] 
 **has_presentation** | **list[object]** |  | [optional] 
-**label** | **str** |  | [optional] 
+**label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **has_fixed_resource** | **list[object]** |  | [optional] 
 **has_spatial_resolution** | **list[str]** |  | [optional] 

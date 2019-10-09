@@ -31,14 +31,14 @@ class SoftwareVersion(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_documentation': 'list[str]',
         'keywords': 'list[str]',
+        'has_documentation': 'list[str]',
         'software_requirements': 'list[str]',
         'has_version': 'list[SoftwareVersion]',
         'has_typical_data_source': 'list[str]',
         'has_download_url': 'list[str]',
-        'reference_publication': 'list[str]',
         'description': 'list[str]',
+        'reference_publication': 'list[str]',
         'screenshot': 'list[Image]',
         'type': 'list[str]',
         'has_installation_instructions': 'list[str]',
@@ -50,15 +50,15 @@ class SoftwareVersion(object):
         'has_purpose': 'list[str]',
         'id': 'str',
         'has_sample_visualization': 'list[Visualization]',
-        'identifier': 'list[str]',
         'memory_requirements': 'list[str]',
+        'identifier': 'list[str]',
         'website': 'list[str]',
         'citation': 'list[str]',
         'has_configuration': 'list[SoftwareConfiguration]',
         'author': 'list[object]',
         'processor_requirements': 'list[str]',
         'short_description': 'list[str]',
-        'label': 'str',
+        'label': 'list[str]',
         'has_assumption': 'list[str]',
         'date_published': 'list[str]',
         'operating_systems': 'list[str]',
@@ -70,14 +70,14 @@ class SoftwareVersion(object):
     }
 
     attribute_map = {
-        'has_documentation': 'hasDocumentation',
         'keywords': 'keywords',
+        'has_documentation': 'hasDocumentation',
         'software_requirements': 'softwareRequirements',
         'has_version': 'hasVersion',
         'has_typical_data_source': 'hasTypicalDataSource',
         'has_download_url': 'hasDownloadURL',
-        'reference_publication': 'referencePublication',
         'description': 'description',
+        'reference_publication': 'referencePublication',
         'screenshot': 'screenshot',
         'type': 'type',
         'has_installation_instructions': 'hasInstallationInstructions',
@@ -89,8 +89,8 @@ class SoftwareVersion(object):
         'has_purpose': 'hasPurpose',
         'id': 'id',
         'has_sample_visualization': 'hasSampleVisualization',
-        'identifier': 'identifier',
         'memory_requirements': 'memoryRequirements',
+        'identifier': 'identifier',
         'website': 'website',
         'citation': 'citation',
         'has_configuration': 'hasConfiguration',
@@ -108,17 +108,17 @@ class SoftwareVersion(object):
         'has_version_id': 'hasVersionId'
     }
 
-    def __init__(self, has_documentation=None, keywords=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, reference_publication=None, description=None, screenshot=None, type=None, has_installation_instructions=None, date_created=None, contributor=None, has_faq=None, has_contact_person=None, logo=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, has_configuration=None, author=None, processor_requirements=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, publisher=None, funding_source=None, has_version_id=None):  # noqa: E501
+    def __init__(self, keywords=None, has_documentation=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, date_created=None, contributor=None, has_faq=None, has_contact_person=None, logo=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, has_configuration=None, author=None, processor_requirements=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, publisher=None, funding_source=None, has_version_id=None):  # noqa: E501
         """SoftwareVersion - a model defined in OpenAPI"""  # noqa: E501
 
-        self._has_documentation = None
         self._keywords = None
+        self._has_documentation = None
         self._software_requirements = None
         self._has_version = None
         self._has_typical_data_source = None
         self._has_download_url = None
-        self._reference_publication = None
         self._description = None
+        self._reference_publication = None
         self._screenshot = None
         self._type = None
         self._has_installation_instructions = None
@@ -130,8 +130,8 @@ class SoftwareVersion(object):
         self._has_purpose = None
         self._id = None
         self._has_sample_visualization = None
-        self._identifier = None
         self._memory_requirements = None
+        self._identifier = None
         self._website = None
         self._citation = None
         self._has_configuration = None
@@ -149,18 +149,18 @@ class SoftwareVersion(object):
         self._has_version_id = None
         self.discriminator = None
 
-        if has_documentation is not None:
-            self.has_documentation = has_documentation
-        else:
-            if hasattr(self, '_has_documentation'): del self._has_documentation
-            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
-            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if keywords is not None:
             self.keywords = keywords
         else:
             if hasattr(self, '_keywords'): del self._keywords
             if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
             if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
+        if has_documentation is not None:
+            self.has_documentation = has_documentation
+        else:
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if software_requirements is not None:
             self.software_requirements = software_requirements
         else:
@@ -185,18 +185,18 @@ class SoftwareVersion(object):
             if hasattr(self, '_has_download_url'): del self._has_download_url
             if hasattr(self.attribute_map, 'has_download_url'): del self.attribute_map['has_download_url']
             if hasattr(self.openapi_types, 'has_download_url'): del self.openapi_types['has_download_url']
-        if reference_publication is not None:
-            self.reference_publication = reference_publication
-        else:
-            if hasattr(self, '_reference_publication'): del self._reference_publication
-            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
-            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
         if description is not None:
             self.description = description
         else:
             if hasattr(self, '_description'): del self._description
             if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
             if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
+        if reference_publication is not None:
+            self.reference_publication = reference_publication
+        else:
+            if hasattr(self, '_reference_publication'): del self._reference_publication
+            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
+            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
         if screenshot is not None:
             self.screenshot = screenshot
         else:
@@ -259,18 +259,18 @@ class SoftwareVersion(object):
             if hasattr(self, '_has_sample_visualization'): del self._has_sample_visualization
             if hasattr(self.attribute_map, 'has_sample_visualization'): del self.attribute_map['has_sample_visualization']
             if hasattr(self.openapi_types, 'has_sample_visualization'): del self.openapi_types['has_sample_visualization']
-        if identifier is not None:
-            self.identifier = identifier
-        else:
-            if hasattr(self, '_identifier'): del self._identifier
-            if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
-            if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
         if memory_requirements is not None:
             self.memory_requirements = memory_requirements
         else:
             if hasattr(self, '_memory_requirements'): del self._memory_requirements
             if hasattr(self.attribute_map, 'memory_requirements'): del self.attribute_map['memory_requirements']
             if hasattr(self.openapi_types, 'memory_requirements'): del self.openapi_types['memory_requirements']
+        if identifier is not None:
+            self.identifier = identifier
+        else:
+            if hasattr(self, '_identifier'): del self._identifier
+            if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
+            if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
         if website is not None:
             self.website = website
         else:
@@ -363,27 +363,6 @@ class SoftwareVersion(object):
             if hasattr(self.openapi_types, 'has_version_id'): del self.openapi_types['has_version_id']
 
     @property
-    def has_documentation(self):
-        """Gets the has_documentation of this SoftwareVersion.  # noqa: E501
-
-
-        :return: The has_documentation of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this SoftwareVersion.
-
-
-        :param has_documentation: The has_documentation of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
-
-    @property
     def keywords(self):
         """Gets the keywords of this SoftwareVersion.  # noqa: E501
 
@@ -403,6 +382,27 @@ class SoftwareVersion(object):
         """
 
         self._keywords = keywords
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this SoftwareVersion.  # noqa: E501
+
+
+        :return: The has_documentation of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this SoftwareVersion.
+
+
+        :param has_documentation: The has_documentation of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def software_requirements(self):
@@ -489,27 +489,6 @@ class SoftwareVersion(object):
         self._has_download_url = has_download_url
 
     @property
-    def reference_publication(self):
-        """Gets the reference_publication of this SoftwareVersion.  # noqa: E501
-
-
-        :return: The reference_publication of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._reference_publication
-
-    @reference_publication.setter
-    def reference_publication(self, reference_publication):
-        """Sets the reference_publication of this SoftwareVersion.
-
-
-        :param reference_publication: The reference_publication of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._reference_publication = reference_publication
-
-    @property
     def description(self):
         """Gets the description of this SoftwareVersion.  # noqa: E501
 
@@ -529,6 +508,27 @@ class SoftwareVersion(object):
         """
 
         self._description = description
+
+    @property
+    def reference_publication(self):
+        """Gets the reference_publication of this SoftwareVersion.  # noqa: E501
+
+
+        :return: The reference_publication of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reference_publication
+
+    @reference_publication.setter
+    def reference_publication(self, reference_publication):
+        """Sets the reference_publication of this SoftwareVersion.
+
+
+        :param reference_publication: The reference_publication of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reference_publication = reference_publication
 
     @property
     def screenshot(self):
@@ -762,27 +762,6 @@ class SoftwareVersion(object):
         self._has_sample_visualization = has_sample_visualization
 
     @property
-    def identifier(self):
-        """Gets the identifier of this SoftwareVersion.  # noqa: E501
-
-
-        :return: The identifier of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._identifier
-
-    @identifier.setter
-    def identifier(self, identifier):
-        """Sets the identifier of this SoftwareVersion.
-
-
-        :param identifier: The identifier of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._identifier = identifier
-
-    @property
     def memory_requirements(self):
         """Gets the memory_requirements of this SoftwareVersion.  # noqa: E501
 
@@ -802,6 +781,27 @@ class SoftwareVersion(object):
         """
 
         self._memory_requirements = memory_requirements
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this SoftwareVersion.  # noqa: E501
+
+
+        :return: The identifier of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this SoftwareVersion.
+
+
+        :param identifier: The identifier of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._identifier = identifier
 
     @property
     def website(self):
@@ -935,7 +935,7 @@ class SoftwareVersion(object):
 
 
         :return: The label of this SoftwareVersion.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -945,7 +945,7 @@ class SoftwareVersion(object):
 
 
         :param label: The label of this SoftwareVersion.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

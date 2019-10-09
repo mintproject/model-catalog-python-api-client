@@ -40,7 +40,7 @@ class Parameter(object):
         'has_presentation': 'list[VariablePresentation]',
         'position': 'list[float]',
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'type': 'list[str]'
     }
 
@@ -332,7 +332,7 @@ class Parameter(object):
 
 
         :return: The label of this Parameter.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -342,7 +342,7 @@ class Parameter(object):
 
 
         :param label: The label of this Parameter.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label

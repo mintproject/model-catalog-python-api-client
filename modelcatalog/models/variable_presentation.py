@@ -38,7 +38,7 @@ class VariablePresentation(object):
         'has_maximum_accepted_value': 'list[object]',
         'has_constraint': 'list[str]',
         'id': 'str',
-        'label': 'str',
+        'label': 'list[str]',
         'part_of_dataset': 'list[DatasetSpecification]',
         'type': 'list[str]',
         'uses_unit': 'list[object]',
@@ -299,7 +299,7 @@ class VariablePresentation(object):
 
 
         :return: The label of this VariablePresentation.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._label
 
@@ -309,7 +309,7 @@ class VariablePresentation(object):
 
 
         :param label: The label of this VariablePresentation.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._label = label
