@@ -1,6 +1,6 @@
 # modelcatalog.GridApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **grids_id_put**
-> grids_id_put(id, user, grid=grid)
+> Grid grids_id_put(id, user, grid=grid)
 
 Update a Grid
 
@@ -195,7 +195,8 @@ grid = modelcatalog.Grid() # Grid | An old Gridto be updated (optional)
 
 try:
     # Update a Grid
-    api_instance.grids_id_put(id, user, grid=grid)
+    api_response = api_instance.grids_id_put(id, user, grid=grid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling GridApi->grids_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Grid**](Grid.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **grids_post**
-> grids_post(user, grid=grid)
+> Grid grids_post(user, grid=grid)
 
 Create a Grid
 
@@ -250,7 +251,8 @@ grid = modelcatalog.Grid() # Grid | A new Gridto be created (optional)
 
 try:
     # Create a Grid
-    api_instance.grids_post(user, grid=grid)
+    api_response = api_instance.grids_post(user, grid=grid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling GridApi->grids_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Grid**](Grid.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

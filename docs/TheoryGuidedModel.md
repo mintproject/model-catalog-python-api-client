@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**has_funding** | **list[object]** |  | [optional] 
 **keywords** | **list[str]** |  | [optional] 
 **has_documentation** | **list[str]** |  | [optional] 
 **has_grid** | [**list[Grid]**](Grid.md) |  | [optional] 
@@ -18,29 +19,31 @@ Name | Type | Description | Notes
 **has_model_category** | **list[str]** |  | [optional] 
 **date_created** | **list[str]** |  | [optional] 
 **contributor** | **list[object]** |  | [optional] 
+**compatible_visualization_software** | **list[object]** |  | [optional] 
 **has_faq** | **list[str]** |  | [optional] 
 **logo** | **list[object]** |  | [optional] 
 **has_contact_person** | **list[object]** |  | [optional] 
 **has_purpose** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **has_sample_visualization** | **list[object]** |  | [optional] 
-**memory_requirements** | **list[str]** |  | [optional] 
 **identifier** | **list[str]** |  | [optional] 
+**memory_requirements** | **list[str]** |  | [optional] 
 **website** | **list[str]** |  | [optional] 
 **citation** | **list[str]** |  | [optional] 
 **author** | **list[object]** |  | [optional] 
 **processor_requirements** | **list[str]** |  | [optional] 
+**has_usage_notes** | **list[str]** |  | [optional] 
 **short_description** | **list[str]** |  | [optional] 
 **label** | **list[str]** |  | [optional] 
 **has_assumption** | **list[str]** |  | [optional] 
 **date_published** | **list[str]** |  | [optional] 
-**operating_systems** | **list[str]** |  | [optional] 
 **license** | **list[str]** |  | [optional] 
+**operating_systems** | **list[str]** |  | [optional] 
 **has_source_code** | **list[object]** |  | [optional] 
 **has_explanation_diagram** | **list[object]** |  | [optional] 
-**publisher** | **list[object]** |  | [optional] 
+**has_example** | **list[str]** |  | [optional] 
 **has_equation** | [**list[Equation]**](Equation.md) |  | [optional] 
-**funding_source** | **list[object]** |  | [optional] 
+**publisher** | **list[object]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

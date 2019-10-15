@@ -1,6 +1,6 @@
 # modelcatalog.RegionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **regions_id_put**
-> regions_id_put(id, user, region=region)
+> Region regions_id_put(id, user, region=region)
 
 Update a Region
 
@@ -195,7 +195,8 @@ region = modelcatalog.Region() # Region | An old Regionto be updated (optional)
 
 try:
     # Update a Region
-    api_instance.regions_id_put(id, user, region=region)
+    api_response = api_instance.regions_id_put(id, user, region=region)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling RegionApi->regions_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Region**](Region.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **regions_post**
-> regions_post(user, region=region)
+> Region regions_post(user, region=region)
 
 Create a Region
 
@@ -250,7 +251,8 @@ region = modelcatalog.Region() # Region | A new Regionto be created (optional)
 
 try:
     # Create a Region
-    api_instance.regions_post(user, region=region)
+    api_response = api_instance.regions_post(user, region=region)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling RegionApi->regions_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Region**](Region.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **has_format** | **list[str]** |  | [optional] 
+**description** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 

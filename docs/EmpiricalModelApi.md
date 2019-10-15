@@ -1,6 +1,6 @@
 # modelcatalog.EmpiricalModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **empiricalmodels_id_put**
-> empiricalmodels_id_put(id, user, empirical_model=empirical_model)
+> EmpiricalModel empiricalmodels_id_put(id, user, empirical_model=empirical_model)
 
 Update a EmpiricalModel
 
@@ -195,7 +195,8 @@ empirical_model = modelcatalog.EmpiricalModel() # EmpiricalModel | An old Empiri
 
 try:
     # Update a EmpiricalModel
-    api_instance.empiricalmodels_id_put(id, user, empirical_model=empirical_model)
+    api_response = api_instance.empiricalmodels_id_put(id, user, empirical_model=empirical_model)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmpiricalModelApi->empiricalmodels_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**EmpiricalModel**](EmpiricalModel.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **empiricalmodels_post**
-> empiricalmodels_post(user, empirical_model=empirical_model)
+> EmpiricalModel empiricalmodels_post(user, empirical_model=empirical_model)
 
 Create a EmpiricalModel
 
@@ -250,7 +251,8 @@ empirical_model = modelcatalog.EmpiricalModel() # EmpiricalModel | A new Empiric
 
 try:
     # Create a EmpiricalModel
-    api_instance.empiricalmodels_post(user, empirical_model=empirical_model)
+    api_response = api_instance.empiricalmodels_post(user, empirical_model=empirical_model)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmpiricalModelApi->empiricalmodels_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**EmpiricalModel**](EmpiricalModel.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

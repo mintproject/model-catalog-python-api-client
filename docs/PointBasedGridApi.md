@@ -1,6 +1,6 @@
 # modelcatalog.PointBasedGridApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pointbasedgrids_id_put**
-> pointbasedgrids_id_put(id, user, point_based_grid=point_based_grid)
+> PointBasedGrid pointbasedgrids_id_put(id, user, point_based_grid=point_based_grid)
 
 Update a PointBasedGrid
 
@@ -195,7 +195,8 @@ point_based_grid = modelcatalog.PointBasedGrid() # PointBasedGrid | An old Point
 
 try:
     # Update a PointBasedGrid
-    api_instance.pointbasedgrids_id_put(id, user, point_based_grid=point_based_grid)
+    api_response = api_instance.pointbasedgrids_id_put(id, user, point_based_grid=point_based_grid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling PointBasedGridApi->pointbasedgrids_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**PointBasedGrid**](PointBasedGrid.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pointbasedgrids_post**
-> pointbasedgrids_post(user, point_based_grid=point_based_grid)
+> PointBasedGrid pointbasedgrids_post(user, point_based_grid=point_based_grid)
 
 Create a PointBasedGrid
 
@@ -250,7 +251,8 @@ point_based_grid = modelcatalog.PointBasedGrid() # PointBasedGrid | A new PointB
 
 try:
     # Create a PointBasedGrid
-    api_instance.pointbasedgrids_post(user, point_based_grid=point_based_grid)
+    api_response = api_instance.pointbasedgrids_post(user, point_based_grid=point_based_grid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling PointBasedGridApi->pointbasedgrids_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**PointBasedGrid**](PointBasedGrid.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

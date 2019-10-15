@@ -1,7 +1,6 @@
 # modelcatalog.ModelConfigurationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
-
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -169,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **modelconfigurations_id_put**
-> modelconfigurations_id_put(id, user, model_configuration=model_configuration)
+> ModelConfiguration modelconfigurations_id_put(id, user, model_configuration=model_configuration)
 
 Update a ModelConfiguration
 
@@ -196,7 +195,8 @@ model_configuration = modelcatalog.ModelConfiguration() # ModelConfiguration | A
 
 try:
     # Update a ModelConfiguration
-    api_instance.modelconfigurations_id_put(id, user, model_configuration=model_configuration)
+    api_response = api_instance.modelconfigurations_id_put(id, user, model_configuration=model_configuration)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ModelConfigurationApi->modelconfigurations_id_put: %s\n" % e)
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ModelConfiguration**](ModelConfiguration.md)
 
 ### Authorization
 
@@ -220,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **modelconfigurations_post**
-> modelconfigurations_post(user, model_configuration=model_configuration)
+> ModelConfiguration modelconfigurations_post(user, model_configuration=model_configuration)
 
 Create a ModelConfiguration
 
@@ -251,7 +251,8 @@ model_configuration = modelcatalog.ModelConfiguration() # ModelConfiguration | A
 
 try:
     # Create a ModelConfiguration
-    api_instance.modelconfigurations_post(user, model_configuration=model_configuration)
+    api_response = api_instance.modelconfigurations_post(user, model_configuration=model_configuration)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ModelConfigurationApi->modelconfigurations_post: %s\n" % e)
 ```
@@ -265,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ModelConfiguration**](ModelConfiguration.md)
 
 ### Authorization
 
@@ -274,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

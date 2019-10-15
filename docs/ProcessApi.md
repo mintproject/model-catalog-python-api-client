@@ -1,6 +1,6 @@
 # modelcatalog.ProcessApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **processs_id_put**
-> processs_id_put(id, user, process=process)
+> Process processs_id_put(id, user, process=process)
 
 Update a Process
 
@@ -195,7 +195,8 @@ process = modelcatalog.Process() # Process | An old Processto be updated (option
 
 try:
     # Update a Process
-    api_instance.processs_id_put(id, user, process=process)
+    api_response = api_instance.processs_id_put(id, user, process=process)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProcessApi->processs_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Process**](Process.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **processs_post**
-> processs_post(user, process=process)
+> Process processs_post(user, process=process)
 
 Create a Process
 
@@ -250,7 +251,8 @@ process = modelcatalog.Process() # Process | A new Processto be created (optiona
 
 try:
     # Create a Process
-    api_instance.processs_post(user, process=process)
+    api_response = api_instance.processs_post(user, process=process)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProcessApi->processs_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Process**](Process.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

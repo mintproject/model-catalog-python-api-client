@@ -1,6 +1,6 @@
 # modelcatalog.ParameterApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **parameters_id_put**
-> parameters_id_put(id, user, parameter=parameter)
+> Parameter parameters_id_put(id, user, parameter=parameter)
 
 Update a Parameter
 
@@ -195,7 +195,8 @@ parameter = modelcatalog.Parameter() # Parameter | An old Parameterto be updated
 
 try:
     # Update a Parameter
-    api_instance.parameters_id_put(id, user, parameter=parameter)
+    api_response = api_instance.parameters_id_put(id, user, parameter=parameter)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ParameterApi->parameters_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Parameter**](Parameter.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **parameters_post**
-> parameters_post(user, parameter=parameter)
+> Parameter parameters_post(user, parameter=parameter)
 
 Create a Parameter
 
@@ -250,7 +251,8 @@ parameter = modelcatalog.Parameter() # Parameter | A new Parameterto be created 
 
 try:
     # Create a Parameter
-    api_instance.parameters_post(user, parameter=parameter)
+    api_response = api_instance.parameters_post(user, parameter=parameter)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ParameterApi->parameters_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Parameter**](Parameter.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

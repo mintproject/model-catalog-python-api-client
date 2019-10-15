@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **has_dimensionality** | **list[float]** |  | [optional] 
 **has_format** | **list[str]** |  | [optional] 
 **has_file_structure** | [**object**](.md) |  | [optional] 
+**description** | **list[str]** |  | [optional] 
 **has_presentation** | **list[object]** |  | [optional] 
 **label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 

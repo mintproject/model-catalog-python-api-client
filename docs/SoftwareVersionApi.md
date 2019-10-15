@@ -1,6 +1,6 @@
 # modelcatalog.SoftwareVersionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **softwareversions_id_put**
-> softwareversions_id_put(id, user, software_version=software_version)
+> SoftwareVersion softwareversions_id_put(id, user, software_version=software_version)
 
 Update a SoftwareVersion
 
@@ -195,7 +195,8 @@ software_version = modelcatalog.SoftwareVersion() # SoftwareVersion | An old Sof
 
 try:
     # Update a SoftwareVersion
-    api_instance.softwareversions_id_put(id, user, software_version=software_version)
+    api_response = api_instance.softwareversions_id_put(id, user, software_version=software_version)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareVersionApi->softwareversions_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SoftwareVersion**](SoftwareVersion.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **softwareversions_post**
-> softwareversions_post(user, software_version=software_version)
+> SoftwareVersion softwareversions_post(user, software_version=software_version)
 
 Create a SoftwareVersion
 
@@ -250,7 +251,8 @@ software_version = modelcatalog.SoftwareVersion() # SoftwareVersion | A new Soft
 
 try:
     # Create a SoftwareVersion
-    api_instance.softwareversions_post(user, software_version=software_version)
+    api_response = api_instance.softwareversions_post(user, software_version=software_version)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareVersionApi->softwareversions_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SoftwareVersion**](SoftwareVersion.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

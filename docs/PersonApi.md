@@ -1,6 +1,6 @@
 # modelcatalog.PersonApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **persons_id_put**
-> persons_id_put(id, user, person=person)
+> Person persons_id_put(id, user, person=person)
 
 Update a Person
 
@@ -195,7 +195,8 @@ person = modelcatalog.Person() # Person | An old Personto be updated (optional)
 
 try:
     # Update a Person
-    api_instance.persons_id_put(id, user, person=person)
+    api_response = api_instance.persons_id_put(id, user, person=person)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling PersonApi->persons_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Person**](Person.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **persons_post**
-> persons_post(user, person=person)
+> Person persons_post(user, person=person)
 
 Create a Person
 
@@ -250,7 +251,8 @@ person = modelcatalog.Person() # Person | A new Personto be created (optional)
 
 try:
     # Create a Person
-    api_instance.persons_post(user, person=person)
+    api_response = api_instance.persons_post(user, person=person)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling PersonApi->persons_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Person**](Person.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

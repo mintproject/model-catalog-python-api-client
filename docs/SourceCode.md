@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **license** | **list[str]** |  | [optional] 
 **programming_language** | **list[str]** |  | [optional] 
+**description** | **list[str]** |  | [optional] 
 **code_repository** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **label** | **list[str]** |  | [optional] 

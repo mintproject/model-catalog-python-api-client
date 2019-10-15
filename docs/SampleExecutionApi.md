@@ -1,6 +1,6 @@
 # modelcatalog.SampleExecutionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sampleexecutions_id_put**
-> sampleexecutions_id_put(id, user, sample_execution=sample_execution)
+> SampleExecution sampleexecutions_id_put(id, user, sample_execution=sample_execution)
 
 Update a SampleExecution
 
@@ -195,7 +195,8 @@ sample_execution = modelcatalog.SampleExecution() # SampleExecution | An old Sam
 
 try:
     # Update a SampleExecution
-    api_instance.sampleexecutions_id_put(id, user, sample_execution=sample_execution)
+    api_response = api_instance.sampleexecutions_id_put(id, user, sample_execution=sample_execution)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleExecutionApi->sampleexecutions_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SampleExecution**](SampleExecution.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sampleexecutions_post**
-> sampleexecutions_post(user, sample_execution=sample_execution)
+> SampleExecution sampleexecutions_post(user, sample_execution=sample_execution)
 
 Create a SampleExecution
 
@@ -250,7 +251,8 @@ sample_execution = modelcatalog.SampleExecution() # SampleExecution | A new Samp
 
 try:
     # Create a SampleExecution
-    api_instance.sampleexecutions_post(user, sample_execution=sample_execution)
+    api_response = api_instance.sampleexecutions_post(user, sample_execution=sample_execution)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleExecutionApi->sampleexecutions_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SampleExecution**](SampleExecution.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

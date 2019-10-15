@@ -1,6 +1,6 @@
 # modelcatalog.SourceCodeApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sourcecodes_id_put**
-> sourcecodes_id_put(id, user, source_code=source_code)
+> SourceCode sourcecodes_id_put(id, user, source_code=source_code)
 
 Update a SourceCode
 
@@ -195,7 +195,8 @@ source_code = modelcatalog.SourceCode() # SourceCode | An old SourceCodeto be up
 
 try:
     # Update a SourceCode
-    api_instance.sourcecodes_id_put(id, user, source_code=source_code)
+    api_response = api_instance.sourcecodes_id_put(id, user, source_code=source_code)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourceCodeApi->sourcecodes_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SourceCode**](SourceCode.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sourcecodes_post**
-> sourcecodes_post(user, source_code=source_code)
+> SourceCode sourcecodes_post(user, source_code=source_code)
 
 Create a SourceCode
 
@@ -250,7 +251,8 @@ source_code = modelcatalog.SourceCode() # SourceCode | A new SourceCodeto be cre
 
 try:
     # Create a SourceCode
-    api_instance.sourcecodes_post(user, source_code=source_code)
+    api_response = api_instance.sourcecodes_post(user, source_code=source_code)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourceCodeApi->sourcecodes_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SourceCode**](SourceCode.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

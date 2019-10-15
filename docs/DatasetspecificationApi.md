@@ -1,6 +1,6 @@
 # modelcatalog.DatasetSpecificationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **datasetspecifications_id_put**
-> datasetspecifications_id_put(id, user, dataset_specification=dataset_specification)
+> DatasetSpecification datasetspecifications_id_put(id, user, dataset_specification=dataset_specification)
 
 Update a DatasetSpecification
 
@@ -195,7 +195,8 @@ dataset_specification = modelcatalog.DatasetSpecification() # DatasetSpecificati
 
 try:
     # Update a DatasetSpecification
-    api_instance.datasetspecifications_id_put(id, user, dataset_specification=dataset_specification)
+    api_response = api_instance.datasetspecifications_id_put(id, user, dataset_specification=dataset_specification)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DatasetSpecificationApi->datasetspecifications_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DatasetSpecification**](DatasetSpecification.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **datasetspecifications_post**
-> datasetspecifications_post(user, dataset_specification=dataset_specification)
+> DatasetSpecification datasetspecifications_post(user, dataset_specification=dataset_specification)
 
 Create a DatasetSpecification
 
@@ -250,7 +251,8 @@ dataset_specification = modelcatalog.DatasetSpecification() # DatasetSpecificati
 
 try:
     # Create a DatasetSpecification
-    api_instance.datasetspecifications_post(user, dataset_specification=dataset_specification)
+    api_response = api_instance.datasetspecifications_post(user, dataset_specification=dataset_specification)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DatasetSpecificationApi->datasetspecifications_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**DatasetSpecification**](DatasetSpecification.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

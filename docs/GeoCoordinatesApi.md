@@ -1,6 +1,6 @@
 # modelcatalog.GeoCoordinatesApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **geocoordinatess_id_put**
-> geocoordinatess_id_put(id, user, geo_coordinates=geo_coordinates)
+> GeoCoordinates geocoordinatess_id_put(id, user, geo_coordinates=geo_coordinates)
 
 Update a GeoCoordinates
 
@@ -195,7 +195,8 @@ geo_coordinates = modelcatalog.GeoCoordinates() # GeoCoordinates | An old GeoCoo
 
 try:
     # Update a GeoCoordinates
-    api_instance.geocoordinatess_id_put(id, user, geo_coordinates=geo_coordinates)
+    api_response = api_instance.geocoordinatess_id_put(id, user, geo_coordinates=geo_coordinates)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling GeoCoordinatesApi->geocoordinatess_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeoCoordinates**](GeoCoordinates.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **geocoordinatess_post**
-> geocoordinatess_post(user, geo_coordinates=geo_coordinates)
+> GeoCoordinates geocoordinatess_post(user, geo_coordinates=geo_coordinates)
 
 Create a GeoCoordinates
 
@@ -250,7 +251,8 @@ geo_coordinates = modelcatalog.GeoCoordinates() # GeoCoordinates | A new GeoCoor
 
 try:
     # Create a GeoCoordinates
-    api_instance.geocoordinatess_post(user, geo_coordinates=geo_coordinates)
+    api_response = api_instance.geocoordinatess_post(user, geo_coordinates=geo_coordinates)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling GeoCoordinatesApi->geocoordinatess_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeoCoordinates**](GeoCoordinates.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 # modelcatalog.HybridModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **hybridmodels_id_put**
-> hybridmodels_id_put(id, user, hybrid_model=hybrid_model)
+> HybridModel hybridmodels_id_put(id, user, hybrid_model=hybrid_model)
 
 Update a HybridModel
 
@@ -195,7 +195,8 @@ hybrid_model = modelcatalog.HybridModel() # HybridModel | An old HybridModelto b
 
 try:
     # Update a HybridModel
-    api_instance.hybridmodels_id_put(id, user, hybrid_model=hybrid_model)
+    api_response = api_instance.hybridmodels_id_put(id, user, hybrid_model=hybrid_model)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling HybridModelApi->hybridmodels_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**HybridModel**](HybridModel.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **hybridmodels_post**
-> hybridmodels_post(user, hybrid_model=hybrid_model)
+> HybridModel hybridmodels_post(user, hybrid_model=hybrid_model)
 
 Create a HybridModel
 
@@ -250,7 +251,8 @@ hybrid_model = modelcatalog.HybridModel() # HybridModel | A new HybridModelto be
 
 try:
     # Create a HybridModel
-    api_instance.hybridmodels_post(user, hybrid_model=hybrid_model)
+    api_response = api_instance.hybridmodels_post(user, hybrid_model=hybrid_model)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling HybridModelApi->hybridmodels_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**HybridModel**](HybridModel.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

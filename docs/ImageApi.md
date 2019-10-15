@@ -1,6 +1,6 @@
 # modelcatalog.ImageApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **images_id_put**
-> images_id_put(id, user, image=image)
+> Image images_id_put(id, user, image=image)
 
 Update a Image
 
@@ -195,7 +195,8 @@ image = modelcatalog.Image() # Image | An old Imageto be updated (optional)
 
 try:
     # Update a Image
-    api_instance.images_id_put(id, user, image=image)
+    api_response = api_instance.images_id_put(id, user, image=image)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ImageApi->images_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Image**](Image.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **images_post**
-> images_post(user, image=image)
+> Image images_post(user, image=image)
 
 Create a Image
 
@@ -250,7 +251,8 @@ image = modelcatalog.Image() # Image | A new Imageto be created (optional)
 
 try:
     # Create a Image
-    api_instance.images_post(user, image=image)
+    api_response = api_instance.images_post(user, image=image)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ImageApi->images_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Image**](Image.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

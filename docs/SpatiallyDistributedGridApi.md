@@ -1,6 +1,6 @@
 # modelcatalog.SpatiallyDistributedGridApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **spatiallydistributedgrids_id_put**
-> spatiallydistributedgrids_id_put(id, user, spatially_distributed_grid=spatially_distributed_grid)
+> SpatiallyDistributedGrid spatiallydistributedgrids_id_put(id, user, spatially_distributed_grid=spatially_distributed_grid)
 
 Update a SpatiallyDistributedGrid
 
@@ -195,7 +195,8 @@ spatially_distributed_grid = modelcatalog.SpatiallyDistributedGrid() # Spatially
 
 try:
     # Update a SpatiallyDistributedGrid
-    api_instance.spatiallydistributedgrids_id_put(id, user, spatially_distributed_grid=spatially_distributed_grid)
+    api_response = api_instance.spatiallydistributedgrids_id_put(id, user, spatially_distributed_grid=spatially_distributed_grid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SpatiallyDistributedGridApi->spatiallydistributedgrids_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SpatiallyDistributedGrid**](SpatiallyDistributedGrid.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **spatiallydistributedgrids_post**
-> spatiallydistributedgrids_post(user, spatially_distributed_grid=spatially_distributed_grid)
+> SpatiallyDistributedGrid spatiallydistributedgrids_post(user, spatially_distributed_grid=spatially_distributed_grid)
 
 Create a SpatiallyDistributedGrid
 
@@ -250,7 +251,8 @@ spatially_distributed_grid = modelcatalog.SpatiallyDistributedGrid() # Spatially
 
 try:
     # Create a SpatiallyDistributedGrid
-    api_instance.spatiallydistributedgrids_post(user, spatially_distributed_grid=spatially_distributed_grid)
+    api_response = api_instance.spatiallydistributedgrids_post(user, spatially_distributed_grid=spatially_distributed_grid)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SpatiallyDistributedGridApi->spatiallydistributedgrids_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SpatiallyDistributedGrid**](SpatiallyDistributedGrid.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

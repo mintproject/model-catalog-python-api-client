@@ -1,6 +1,6 @@
 # modelcatalog.CausalDiagramApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **causaldiagrams_id_put**
-> causaldiagrams_id_put(id, user, causal_diagram=causal_diagram)
+> CausalDiagram causaldiagrams_id_put(id, user, causal_diagram=causal_diagram)
 
 Update a CausalDiagram
 
@@ -195,7 +195,8 @@ causal_diagram = modelcatalog.CausalDiagram() # CausalDiagram | An old CausalDia
 
 try:
     # Update a CausalDiagram
-    api_instance.causaldiagrams_id_put(id, user, causal_diagram=causal_diagram)
+    api_response = api_instance.causaldiagrams_id_put(id, user, causal_diagram=causal_diagram)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling CausalDiagramApi->causaldiagrams_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CausalDiagram**](CausalDiagram.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **causaldiagrams_post**
-> causaldiagrams_post(user, causal_diagram=causal_diagram)
+> CausalDiagram causaldiagrams_post(user, causal_diagram=causal_diagram)
 
 Create a CausalDiagram
 
@@ -250,7 +251,8 @@ causal_diagram = modelcatalog.CausalDiagram() # CausalDiagram | A new CausalDiag
 
 try:
     # Create a CausalDiagram
-    api_instance.causaldiagrams_post(user, causal_diagram=causal_diagram)
+    api_response = api_instance.causaldiagrams_post(user, causal_diagram=causal_diagram)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling CausalDiagramApi->causaldiagrams_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**CausalDiagram**](CausalDiagram.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

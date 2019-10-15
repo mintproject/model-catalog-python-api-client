@@ -1,6 +1,6 @@
 # modelcatalog.OrganizationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **organizations_id_put**
-> organizations_id_put(id, user, organization=organization)
+> Organization organizations_id_put(id, user, organization=organization)
 
 Update a Organization
 
@@ -195,7 +195,8 @@ organization = modelcatalog.Organization() # Organization | An old Organizationt
 
 try:
     # Update a Organization
-    api_instance.organizations_id_put(id, user, organization=organization)
+    api_response = api_instance.organizations_id_put(id, user, organization=organization)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling OrganizationApi->organizations_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Organization**](Organization.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **organizations_post**
-> organizations_post(user, organization=organization)
+> Organization organizations_post(user, organization=organization)
 
 Create a Organization
 
@@ -250,7 +251,8 @@ organization = modelcatalog.Organization() # Organization | A new Organizationto
 
 try:
     # Create a Organization
-    api_instance.organizations_post(user, organization=organization)
+    api_response = api_instance.organizations_post(user, organization=organization)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling OrganizationApi->organizations_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Organization**](Organization.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 # modelcatalog.TheoryGuidedModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **theory_guidedmodels_id_put**
-> theory_guidedmodels_id_put(id, user, theory_guided_model=theory_guided_model)
+> TheoryGuidedModel theory_guidedmodels_id_put(id, user, theory_guided_model=theory_guided_model)
 
 Update a Theory-GuidedModel
 
@@ -195,7 +195,8 @@ theory_guided_model = modelcatalog.TheoryGuidedModel() # TheoryGuidedModel | An 
 
 try:
     # Update a Theory-GuidedModel
-    api_instance.theory_guidedmodels_id_put(id, user, theory_guided_model=theory_guided_model)
+    api_response = api_instance.theory_guidedmodels_id_put(id, user, theory_guided_model=theory_guided_model)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling TheoryGuidedModelApi->theory_guidedmodels_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**TheoryGuidedModel**](TheoryGuidedModel.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **theory_guidedmodels_post**
-> theory_guidedmodels_post(user, theory_guided_model=theory_guided_model)
+> TheoryGuidedModel theory_guidedmodels_post(user, theory_guided_model=theory_guided_model)
 
 Create a Theory-GuidedModel
 
@@ -250,7 +251,8 @@ theory_guided_model = modelcatalog.TheoryGuidedModel() # TheoryGuidedModel | A n
 
 try:
     # Create a Theory-GuidedModel
-    api_instance.theory_guidedmodels_post(user, theory_guided_model=theory_guided_model)
+    api_response = api_instance.theory_guidedmodels_post(user, theory_guided_model=theory_guided_model)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling TheoryGuidedModelApi->theory_guidedmodels_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**TheoryGuidedModel**](TheoryGuidedModel.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

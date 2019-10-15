@@ -1,6 +1,6 @@
 # modelcatalog.SoftwareImageApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **softwareimages_id_put**
-> softwareimages_id_put(id, user, software_image=software_image)
+> SoftwareImage softwareimages_id_put(id, user, software_image=software_image)
 
 Update a SoftwareImage
 
@@ -195,7 +195,8 @@ software_image = modelcatalog.SoftwareImage() # SoftwareImage | An old SoftwareI
 
 try:
     # Update a SoftwareImage
-    api_instance.softwareimages_id_put(id, user, software_image=software_image)
+    api_response = api_instance.softwareimages_id_put(id, user, software_image=software_image)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareImageApi->softwareimages_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SoftwareImage**](SoftwareImage.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **softwareimages_post**
-> softwareimages_post(user, software_image=software_image)
+> SoftwareImage softwareimages_post(user, software_image=software_image)
 
 Create a SoftwareImage
 
@@ -250,7 +251,8 @@ software_image = modelcatalog.SoftwareImage() # SoftwareImage | A new SoftwareIm
 
 try:
     # Create a SoftwareImage
-    api_instance.softwareimages_post(user, software_image=software_image)
+    api_response = api_instance.softwareimages_post(user, software_image=software_image)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareImageApi->softwareimages_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SoftwareImage**](SoftwareImage.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

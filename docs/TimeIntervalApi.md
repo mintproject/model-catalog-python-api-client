@@ -1,6 +1,6 @@
 # modelcatalog.TimeIntervalApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **timeintervals_id_put**
-> timeintervals_id_put(id, user, time_interval=time_interval)
+> TimeInterval timeintervals_id_put(id, user, time_interval=time_interval)
 
 Update a TimeInterval
 
@@ -195,7 +195,8 @@ time_interval = modelcatalog.TimeInterval() # TimeInterval | An old TimeInterval
 
 try:
     # Update a TimeInterval
-    api_instance.timeintervals_id_put(id, user, time_interval=time_interval)
+    api_response = api_instance.timeintervals_id_put(id, user, time_interval=time_interval)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling TimeIntervalApi->timeintervals_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**TimeInterval**](TimeInterval.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **timeintervals_post**
-> timeintervals_post(user, time_interval=time_interval)
+> TimeInterval timeintervals_post(user, time_interval=time_interval)
 
 Create a TimeInterval
 
@@ -250,7 +251,8 @@ time_interval = modelcatalog.TimeInterval() # TimeInterval | A new TimeIntervalt
 
 try:
     # Create a TimeInterval
-    api_instance.timeintervals_post(user, time_interval=time_interval)
+    api_response = api_instance.timeintervals_post(user, time_interval=time_interval)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling TimeIntervalApi->timeintervals_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**TimeInterval**](TimeInterval.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 # modelcatalog.SVOVariableApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **svovariables_id_put**
-> svovariables_id_put(id, user, svo_variable=svo_variable)
+> SVOVariable svovariables_id_put(id, user, svo_variable=svo_variable)
 
 Update a SVOVariable
 
@@ -195,7 +195,8 @@ svo_variable = modelcatalog.SVOVariable() # SVOVariable | An old SVOVariableto b
 
 try:
     # Update a SVOVariable
-    api_instance.svovariables_id_put(id, user, svo_variable=svo_variable)
+    api_response = api_instance.svovariables_id_put(id, user, svo_variable=svo_variable)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SVOVariableApi->svovariables_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SVOVariable**](SVOVariable.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **svovariables_post**
-> svovariables_post(user, svo_variable=svo_variable)
+> SVOVariable svovariables_post(user, svo_variable=svo_variable)
 
 Create a SVOVariable
 
@@ -250,7 +251,8 @@ svo_variable = modelcatalog.SVOVariable() # SVOVariable | A new SVOVariableto be
 
 try:
     # Create a SVOVariable
-    api_instance.svovariables_post(user, svo_variable=svo_variable)
+    api_response = api_instance.svovariables_post(user, svo_variable=svo_variable)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SVOVariableApi->svovariables_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SVOVariable**](SVOVariable.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

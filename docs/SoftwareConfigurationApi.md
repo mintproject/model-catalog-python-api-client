@@ -1,6 +1,6 @@
 # modelcatalog.SoftwareConfigurationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **softwareconfigurations_id_put**
-> softwareconfigurations_id_put(id, user, software_configuration=software_configuration)
+> SoftwareConfiguration softwareconfigurations_id_put(id, user, software_configuration=software_configuration)
 
 Update a SoftwareConfiguration
 
@@ -195,7 +195,8 @@ software_configuration = modelcatalog.SoftwareConfiguration() # SoftwareConfigur
 
 try:
     # Update a SoftwareConfiguration
-    api_instance.softwareconfigurations_id_put(id, user, software_configuration=software_configuration)
+    api_response = api_instance.softwareconfigurations_id_put(id, user, software_configuration=software_configuration)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareConfigurationApi->softwareconfigurations_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SoftwareConfiguration**](SoftwareConfiguration.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **softwareconfigurations_post**
-> softwareconfigurations_post(user, software_configuration=software_configuration)
+> SoftwareConfiguration softwareconfigurations_post(user, software_configuration=software_configuration)
 
 Create a SoftwareConfiguration
 
@@ -250,7 +251,8 @@ software_configuration = modelcatalog.SoftwareConfiguration() # SoftwareConfigur
 
 try:
     # Create a SoftwareConfiguration
-    api_instance.softwareconfigurations_post(user, software_configuration=software_configuration)
+    api_response = api_instance.softwareconfigurations_post(user, software_configuration=software_configuration)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareConfigurationApi->softwareconfigurations_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SoftwareConfiguration**](SoftwareConfiguration.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

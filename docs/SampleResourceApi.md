@@ -1,6 +1,6 @@
 # modelcatalog.SampleResourceApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sampleresources_id_put**
-> sampleresources_id_put(id, user, sample_resource=sample_resource)
+> SampleResource sampleresources_id_put(id, user, sample_resource=sample_resource)
 
 Update a SampleResource
 
@@ -195,7 +195,8 @@ sample_resource = modelcatalog.SampleResource() # SampleResource | An old Sample
 
 try:
     # Update a SampleResource
-    api_instance.sampleresources_id_put(id, user, sample_resource=sample_resource)
+    api_response = api_instance.sampleresources_id_put(id, user, sample_resource=sample_resource)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleResourceApi->sampleresources_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SampleResource**](SampleResource.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sampleresources_post**
-> sampleresources_post(user, sample_resource=sample_resource)
+> SampleResource sampleresources_post(user, sample_resource=sample_resource)
 
 Create a SampleResource
 
@@ -250,7 +251,8 @@ sample_resource = modelcatalog.SampleResource() # SampleResource | A new SampleR
 
 try:
     # Create a SampleResource
-    api_instance.sampleresources_post(user, sample_resource=sample_resource)
+    api_response = api_instance.sampleresources_post(user, sample_resource=sample_resource)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleResourceApi->sampleresources_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SampleResource**](SampleResource.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

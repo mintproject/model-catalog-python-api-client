@@ -1,6 +1,6 @@
 # modelcatalog.ModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **models_id_put**
-> models_id_put(id, user, model=model)
+> Model models_id_put(id, user, model=model)
 
 Update a Model
 
@@ -195,7 +195,8 @@ model = modelcatalog.Model() # Model | An old Modelto be updated (optional)
 
 try:
     # Update a Model
-    api_instance.models_id_put(id, user, model=model)
+    api_response = api_instance.models_id_put(id, user, model=model)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ModelApi->models_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Model**](Model.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **models_post**
-> models_post(user, model=model)
+> Model models_post(user, model=model)
 
 Create a Model
 
@@ -250,7 +251,8 @@ model = modelcatalog.Model() # Model | A new Modelto be created (optional)
 
 try:
     # Create a Model
-    api_instance.models_post(user, model=model)
+    api_response = api_instance.models_post(user, model=model)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ModelApi->models_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Model**](Model.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

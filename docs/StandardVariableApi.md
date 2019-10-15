@@ -1,6 +1,6 @@
 # modelcatalog.StandardVariableApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **standardvariables_id_put**
-> standardvariables_id_put(id, user, standard_variable=standard_variable)
+> StandardVariable standardvariables_id_put(id, user, standard_variable=standard_variable)
 
 Update a StandardVariable
 
@@ -195,7 +195,8 @@ standard_variable = modelcatalog.StandardVariable() # StandardVariable | An old 
 
 try:
     # Update a StandardVariable
-    api_instance.standardvariables_id_put(id, user, standard_variable=standard_variable)
+    api_response = api_instance.standardvariables_id_put(id, user, standard_variable=standard_variable)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling StandardVariableApi->standardvariables_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardVariable**](StandardVariable.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **standardvariables_post**
-> standardvariables_post(user, standard_variable=standard_variable)
+> StandardVariable standardvariables_post(user, standard_variable=standard_variable)
 
 Create a StandardVariable
 
@@ -250,7 +251,8 @@ standard_variable = modelcatalog.StandardVariable() # StandardVariable | A new S
 
 try:
     # Create a StandardVariable
-    api_instance.standardvariables_post(user, standard_variable=standard_variable)
+    api_response = api_instance.standardvariables_post(user, standard_variable=standard_variable)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling StandardVariableApi->standardvariables_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**StandardVariable**](StandardVariable.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

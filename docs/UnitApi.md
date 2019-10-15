@@ -1,6 +1,6 @@
 # modelcatalog.UnitApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **units_id_put**
-> units_id_put(id, user, unit=unit)
+> Unit units_id_put(id, user, unit=unit)
 
 Update a Unit
 
@@ -195,7 +195,8 @@ unit = modelcatalog.Unit() # Unit | An old Unitto be updated (optional)
 
 try:
     # Update a Unit
-    api_instance.units_id_put(id, user, unit=unit)
+    api_response = api_instance.units_id_put(id, user, unit=unit)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling UnitApi->units_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Unit**](Unit.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **units_post**
-> units_post(user, unit=unit)
+> Unit units_post(user, unit=unit)
 
 Create a Unit
 
@@ -250,7 +251,8 @@ unit = modelcatalog.Unit() # Unit | A new Unitto be created (optional)
 
 try:
     # Create a Unit
-    api_instance.units_post(user, unit=unit)
+    api_response = api_instance.units_post(user, unit=unit)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling UnitApi->units_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Unit**](Unit.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,6 +1,6 @@
 # modelcatalog.VariableApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **variables_id_put**
-> variables_id_put(id, user, variable=variable)
+> Variable variables_id_put(id, user, variable=variable)
 
 Update a Variable
 
@@ -195,7 +195,8 @@ variable = modelcatalog.Variable() # Variable | An old Variableto be updated (op
 
 try:
     # Update a Variable
-    api_instance.variables_id_put(id, user, variable=variable)
+    api_response = api_instance.variables_id_put(id, user, variable=variable)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling VariableApi->variables_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Variable**](Variable.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **variables_post**
-> variables_post(user, variable=variable)
+> Variable variables_post(user, variable=variable)
 
 Create a Variable
 
@@ -250,7 +251,8 @@ variable = modelcatalog.Variable() # Variable | A new Variableto be created (opt
 
 try:
     # Create a Variable
-    api_instance.variables_post(user, variable=variable)
+    api_response = api_instance.variables_post(user, variable=variable)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling VariableApi->variables_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Variable**](Variable.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

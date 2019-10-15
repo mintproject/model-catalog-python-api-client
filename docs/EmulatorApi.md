@@ -1,6 +1,6 @@
 # modelcatalog.EmulatorApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **emulators_id_put**
-> emulators_id_put(id, user, emulator=emulator)
+> Emulator emulators_id_put(id, user, emulator=emulator)
 
 Update a Emulator
 
@@ -195,7 +195,8 @@ emulator = modelcatalog.Emulator() # Emulator | An old Emulatorto be updated (op
 
 try:
     # Update a Emulator
-    api_instance.emulators_id_put(id, user, emulator=emulator)
+    api_response = api_instance.emulators_id_put(id, user, emulator=emulator)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmulatorApi->emulators_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Emulator**](Emulator.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **emulators_post**
-> emulators_post(user, emulator=emulator)
+> Emulator emulators_post(user, emulator=emulator)
 
 Create a Emulator
 
@@ -250,7 +251,8 @@ emulator = modelcatalog.Emulator() # Emulator | A new Emulatorto be created (opt
 
 try:
     # Create a Emulator
-    api_instance.emulators_post(user, emulator=emulator)
+    api_response = api_instance.emulators_post(user, emulator=emulator)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmulatorApi->emulators_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Emulator**](Emulator.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

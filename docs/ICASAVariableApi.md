@@ -1,6 +1,6 @@
 # modelcatalog.ICASAVariableApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **icasavariables_id_put**
-> icasavariables_id_put(id, user, icasa_variable=icasa_variable)
+> ICASAVariable icasavariables_id_put(id, user, icasa_variable=icasa_variable)
 
 Update a ICASAVariable
 
@@ -195,7 +195,8 @@ icasa_variable = modelcatalog.ICASAVariable() # ICASAVariable | An old ICASAVari
 
 try:
     # Update a ICASAVariable
-    api_instance.icasavariables_id_put(id, user, icasa_variable=icasa_variable)
+    api_response = api_instance.icasavariables_id_put(id, user, icasa_variable=icasa_variable)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ICASAVariableApi->icasavariables_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ICASAVariable**](ICASAVariable.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **icasavariables_post**
-> icasavariables_post(user, icasa_variable=icasa_variable)
+> ICASAVariable icasavariables_post(user, icasa_variable=icasa_variable)
 
 Create a ICASAVariable
 
@@ -250,7 +251,8 @@ icasa_variable = modelcatalog.ICASAVariable() # ICASAVariable | A new ICASAVaria
 
 try:
     # Create a ICASAVariable
-    api_instance.icasavariables_post(user, icasa_variable=icasa_variable)
+    api_response = api_instance.icasavariables_post(user, icasa_variable=icasa_variable)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ICASAVariableApi->icasavariables_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**ICASAVariable**](ICASAVariable.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -8,6 +8,7 @@ from modelcatalog.api.dataset_specification_api import DatasetSpecificationApi
 from modelcatalog.api.empirical_model_api import EmpiricalModelApi
 from modelcatalog.api.emulator_api import EmulatorApi
 from modelcatalog.api.equation_api import EquationApi
+from modelcatalog.api.funding_information_api import FundingInformationApi
 from modelcatalog.api.geo_coordinates_api import GeoCoordinatesApi
 from modelcatalog.api.geo_shape_api import GeoShapeApi
 from modelcatalog.api.grid_api import GridApi

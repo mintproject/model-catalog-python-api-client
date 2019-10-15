@@ -1,6 +1,6 @@
 # modelcatalog.EquationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **equations_id_put**
-> equations_id_put(id, user, equation=equation)
+> Equation equations_id_put(id, user, equation=equation)
 
 Update a Equation
 
@@ -195,7 +195,8 @@ equation = modelcatalog.Equation() # Equation | An old Equationto be updated (op
 
 try:
     # Update a Equation
-    api_instance.equations_id_put(id, user, equation=equation)
+    api_response = api_instance.equations_id_put(id, user, equation=equation)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling EquationApi->equations_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Equation**](Equation.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **equations_post**
-> equations_post(user, equation=equation)
+> Equation equations_post(user, equation=equation)
 
 Create a Equation
 
@@ -250,7 +251,8 @@ equation = modelcatalog.Equation() # Equation | A new Equationto be created (opt
 
 try:
     # Create a Equation
-    api_instance.equations_post(user, equation=equation)
+    api_response = api_instance.equations_post(user, equation=equation)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling EquationApi->equations_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Equation**](Equation.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

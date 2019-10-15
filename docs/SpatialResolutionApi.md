@@ -1,6 +1,6 @@
 # modelcatalog.SpatialResolutionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.0.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.1.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **spatialresolutions_id_put**
-> spatialresolutions_id_put(id, user, spatial_resolution=spatial_resolution)
+> SpatialResolution spatialresolutions_id_put(id, user, spatial_resolution=spatial_resolution)
 
 Update a SpatialResolution
 
@@ -195,7 +195,8 @@ spatial_resolution = modelcatalog.SpatialResolution() # SpatialResolution | An o
 
 try:
     # Update a SpatialResolution
-    api_instance.spatialresolutions_id_put(id, user, spatial_resolution=spatial_resolution)
+    api_response = api_instance.spatialresolutions_id_put(id, user, spatial_resolution=spatial_resolution)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SpatialResolutionApi->spatialresolutions_id_put: %s\n" % e)
 ```
@@ -210,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SpatialResolution**](SpatialResolution.md)
 
 ### Authorization
 
@@ -219,12 +220,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **spatialresolutions_post**
-> spatialresolutions_post(user, spatial_resolution=spatial_resolution)
+> SpatialResolution spatialresolutions_post(user, spatial_resolution=spatial_resolution)
 
 Create a SpatialResolution
 
@@ -250,7 +251,8 @@ spatial_resolution = modelcatalog.SpatialResolution() # SpatialResolution | A ne
 
 try:
     # Create a SpatialResolution
-    api_instance.spatialresolutions_post(user, spatial_resolution=spatial_resolution)
+    api_response = api_instance.spatialresolutions_post(user, spatial_resolution=spatial_resolution)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SpatialResolutionApi->spatialresolutions_post: %s\n" % e)
 ```
@@ -264,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SpatialResolution**](SpatialResolution.md)
 
 ### Authorization
 
@@ -273,7 +275,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
