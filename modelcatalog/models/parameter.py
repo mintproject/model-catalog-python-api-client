@@ -31,15 +31,15 @@ class Parameter(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_default_value': 'list[object]',
-        'has_maximum_accepted_value': 'list[object]',
+        'has_default_value': 'list[str]',
+        'has_maximum_accepted_value': 'list[str]',
         'description': 'list[str]',
         'has_data_type': 'list[str]',
-        'has_fixed_value': 'list[object]',
+        'has_fixed_value': 'list[str]',
         'has_presentation': 'list[VariablePresentation]',
         'label': 'list[str]',
         'type': 'list[str]',
-        'has_minimum_accepted_value': 'list[object]',
+        'has_minimum_accepted_value': 'list[str]',
         'adjusts_variable': 'list[object]',
         'position': 'list[float]',
         'id': 'str',
@@ -161,7 +161,7 @@ class Parameter(object):
 
 
         :return: The has_default_value of this Parameter.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[str]
         """
         return self._has_default_value
 
@@ -171,7 +171,7 @@ class Parameter(object):
 
 
         :param has_default_value: The has_default_value of this Parameter.  # noqa: E501
-        :type: list[object]
+        :type: list[str]
         """
 
         self._has_default_value = has_default_value
@@ -182,7 +182,7 @@ class Parameter(object):
 
 
         :return: The has_maximum_accepted_value of this Parameter.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[str]
         """
         return self._has_maximum_accepted_value
 
@@ -192,7 +192,7 @@ class Parameter(object):
 
 
         :param has_maximum_accepted_value: The has_maximum_accepted_value of this Parameter.  # noqa: E501
-        :type: list[object]
+        :type: list[str]
         """
 
         self._has_maximum_accepted_value = has_maximum_accepted_value
@@ -245,7 +245,7 @@ class Parameter(object):
 
 
         :return: The has_fixed_value of this Parameter.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[str]
         """
         return self._has_fixed_value
 
@@ -255,7 +255,7 @@ class Parameter(object):
 
 
         :param has_fixed_value: The has_fixed_value of this Parameter.  # noqa: E501
-        :type: list[object]
+        :type: list[str]
         """
 
         self._has_fixed_value = has_fixed_value
@@ -329,7 +329,7 @@ class Parameter(object):
 
 
         :return: The has_minimum_accepted_value of this Parameter.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[str]
         """
         return self._has_minimum_accepted_value
 
@@ -339,7 +339,7 @@ class Parameter(object):
 
 
         :param has_minimum_accepted_value: The has_minimum_accepted_value of this Parameter.  # noqa: E501
-        :type: list[object]
+        :type: list[str]
         """
 
         self._has_minimum_accepted_value = has_minimum_accepted_value

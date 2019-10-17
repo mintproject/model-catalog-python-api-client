@@ -61,8 +61,8 @@ class SoftwareConfiguration(object):
         'has_component_location': 'list[str]',
         'has_version': 'list[SoftwareVersion]',
         'has_typical_data_source': 'list[str]',
-        'reference_publication': 'list[str]',
         'description': 'list[str]',
+        'reference_publication': 'list[str]',
         'screenshot': 'list[Image]',
         'has_software_image': 'list[SoftwareImage]',
         'date_created': 'list[str]',
@@ -114,8 +114,8 @@ class SoftwareConfiguration(object):
         'has_component_location': 'hasComponentLocation',
         'has_version': 'hasVersion',
         'has_typical_data_source': 'hasTypicalDataSource',
-        'reference_publication': 'referencePublication',
         'description': 'description',
+        'reference_publication': 'referencePublication',
         'screenshot': 'screenshot',
         'has_software_image': 'hasSoftwareImage',
         'date_created': 'dateCreated',
@@ -136,7 +136,7 @@ class SoftwareConfiguration(object):
         'has_input': 'hasInput'
     }
 
-    def __init__(self, has_documentation=None, keywords=None, software_requirements=None, has_implementation_script_location=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_example=None, publisher=None, has_output=None, has_funding=None, has_component_location=None, has_version=None, has_typical_data_source=None, reference_publication=None, description=None, screenshot=None, has_software_image=None, date_created=None, contributor=None, has_purpose=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_input=None):  # noqa: E501
+    def __init__(self, has_documentation=None, keywords=None, software_requirements=None, has_implementation_script_location=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_example=None, publisher=None, has_output=None, has_funding=None, has_component_location=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, has_software_image=None, date_created=None, contributor=None, has_purpose=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_input=None):  # noqa: E501
         """SoftwareConfiguration - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_documentation = None
@@ -169,8 +169,8 @@ class SoftwareConfiguration(object):
         self._has_component_location = None
         self._has_version = None
         self._has_typical_data_source = None
-        self._reference_publication = None
         self._description = None
+        self._reference_publication = None
         self._screenshot = None
         self._has_software_image = None
         self._date_created = None
@@ -367,18 +367,18 @@ class SoftwareConfiguration(object):
             if hasattr(self, '_has_typical_data_source'): del self._has_typical_data_source
             if hasattr(self.attribute_map, 'has_typical_data_source'): del self.attribute_map['has_typical_data_source']
             if hasattr(self.openapi_types, 'has_typical_data_source'): del self.openapi_types['has_typical_data_source']
-        if reference_publication is not None:
-            self.reference_publication = reference_publication
-        else:
-            if hasattr(self, '_reference_publication'): del self._reference_publication
-            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
-            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
         if description is not None:
             self.description = description
         else:
             if hasattr(self, '_description'): del self._description
             if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
             if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
+        if reference_publication is not None:
+            self.reference_publication = reference_publication
+        else:
+            if hasattr(self, '_reference_publication'): del self._reference_publication
+            if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
+            if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
         if screenshot is not None:
             self.screenshot = screenshot
         else:
@@ -1119,27 +1119,6 @@ class SoftwareConfiguration(object):
         self._has_typical_data_source = has_typical_data_source
 
     @property
-    def reference_publication(self):
-        """Gets the reference_publication of this SoftwareConfiguration.  # noqa: E501
-
-
-        :return: The reference_publication of this SoftwareConfiguration.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._reference_publication
-
-    @reference_publication.setter
-    def reference_publication(self, reference_publication):
-        """Sets the reference_publication of this SoftwareConfiguration.
-
-
-        :param reference_publication: The reference_publication of this SoftwareConfiguration.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._reference_publication = reference_publication
-
-    @property
     def description(self):
         """Gets the description of this SoftwareConfiguration.  # noqa: E501
 
@@ -1159,6 +1138,27 @@ class SoftwareConfiguration(object):
         """
 
         self._description = description
+
+    @property
+    def reference_publication(self):
+        """Gets the reference_publication of this SoftwareConfiguration.  # noqa: E501
+
+
+        :return: The reference_publication of this SoftwareConfiguration.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reference_publication
+
+    @reference_publication.setter
+    def reference_publication(self, reference_publication):
+        """Sets the reference_publication of this SoftwareConfiguration.
+
+
+        :param reference_publication: The reference_publication of this SoftwareConfiguration.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reference_publication = reference_publication
 
     @property
     def screenshot(self):

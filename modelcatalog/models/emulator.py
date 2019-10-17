@@ -54,8 +54,8 @@ class Emulator(object):
         'has_purpose': 'list[str]',
         'id': 'str',
         'has_sample_visualization': 'list[object]',
-        'identifier': 'list[str]',
         'memory_requirements': 'list[str]',
+        'identifier': 'list[str]',
         'website': 'list[str]',
         'citation': 'list[str]',
         'author': 'list[object]',
@@ -98,8 +98,8 @@ class Emulator(object):
         'has_purpose': 'hasPurpose',
         'id': 'id',
         'has_sample_visualization': 'hasSampleVisualization',
-        'identifier': 'identifier',
         'memory_requirements': 'memoryRequirements',
+        'identifier': 'identifier',
         'website': 'website',
         'citation': 'citation',
         'author': 'author',
@@ -118,7 +118,7 @@ class Emulator(object):
         'publisher': 'publisher'
     }
 
-    def __init__(self, has_funding=None, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, license=None, operating_systems=None, has_source_code=None, has_explanation_diagram=None, has_example=None, has_equation=None, publisher=None):  # noqa: E501
+    def __init__(self, has_funding=None, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, license=None, operating_systems=None, has_source_code=None, has_explanation_diagram=None, has_example=None, has_equation=None, publisher=None):  # noqa: E501
         """Emulator - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_funding = None
@@ -144,8 +144,8 @@ class Emulator(object):
         self._has_purpose = None
         self._id = None
         self._has_sample_visualization = None
-        self._identifier = None
         self._memory_requirements = None
+        self._identifier = None
         self._website = None
         self._citation = None
         self._author = None
@@ -298,18 +298,18 @@ class Emulator(object):
             if hasattr(self, '_has_sample_visualization'): del self._has_sample_visualization
             if hasattr(self.attribute_map, 'has_sample_visualization'): del self.attribute_map['has_sample_visualization']
             if hasattr(self.openapi_types, 'has_sample_visualization'): del self.openapi_types['has_sample_visualization']
-        if identifier is not None:
-            self.identifier = identifier
-        else:
-            if hasattr(self, '_identifier'): del self._identifier
-            if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
-            if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
         if memory_requirements is not None:
             self.memory_requirements = memory_requirements
         else:
             if hasattr(self, '_memory_requirements'): del self._memory_requirements
             if hasattr(self.attribute_map, 'memory_requirements'): del self.attribute_map['memory_requirements']
             if hasattr(self.openapi_types, 'memory_requirements'): del self.openapi_types['memory_requirements']
+        if identifier is not None:
+            self.identifier = identifier
+        else:
+            if hasattr(self, '_identifier'): del self._identifier
+            if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
+            if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
         if website is not None:
             self.website = website
         else:
@@ -891,27 +891,6 @@ class Emulator(object):
         self._has_sample_visualization = has_sample_visualization
 
     @property
-    def identifier(self):
-        """Gets the identifier of this Emulator.  # noqa: E501
-
-
-        :return: The identifier of this Emulator.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._identifier
-
-    @identifier.setter
-    def identifier(self, identifier):
-        """Sets the identifier of this Emulator.
-
-
-        :param identifier: The identifier of this Emulator.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._identifier = identifier
-
-    @property
     def memory_requirements(self):
         """Gets the memory_requirements of this Emulator.  # noqa: E501
 
@@ -931,6 +910,27 @@ class Emulator(object):
         """
 
         self._memory_requirements = memory_requirements
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this Emulator.  # noqa: E501
+
+
+        :return: The identifier of this Emulator.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this Emulator.
+
+
+        :param identifier: The identifier of this Emulator.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._identifier = identifier
 
     @property
     def website(self):
