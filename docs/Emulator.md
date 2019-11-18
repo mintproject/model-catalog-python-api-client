@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **has_documentation** | **list[str]** |  | [optional] 
 **has_grid** | [**list[Grid]**](Grid.md) |  | [optional] 
 **software_requirements** | **list[str]** |  | [optional] 
+**support_details** | **list[str]** |  | [optional] 
 **has_version** | **list[object]** |  | [optional] 
 **has_typical_data_source** | **list[str]** |  | [optional] 
 **has_download_url** | **list[str]** |  | [optional] 
@@ -17,9 +18,10 @@ Name | Type | Description | Notes
 **type** | **list[str]** |  | [optional] 
 **has_installation_instructions** | **list[str]** |  | [optional] 
 **has_model_category** | **list[str]** |  | [optional] 
+**had_primary_source** | **list[object]** |  | [optional] 
 **date_created** | **list[str]** |  | [optional] 
-**contributor** | **list[object]** |  | [optional] 
 **compatible_visualization_software** | **list[object]** |  | [optional] 
+**contributor** | **list[object]** |  | [optional] 
 **has_faq** | **list[str]** |  | [optional] 
 **logo** | **list[object]** |  | [optional] 
 **has_contact_person** | **list[object]** |  | [optional] 
@@ -42,8 +44,9 @@ Name | Type | Description | Notes
 **has_source_code** | **list[object]** |  | [optional] 
 **has_explanation_diagram** | **list[object]** |  | [optional] 
 **has_example** | **list[str]** |  | [optional] 
-**has_equation** | [**list[Equation]**](Equation.md) |  | [optional] 
 **publisher** | **list[object]** |  | [optional] 
+**has_equation** | [**list[Equation]**](Equation.md) |  | [optional] 
+**useful_for_calculating_index** | [**list[NumericalIndex]**](NumericalIndex.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

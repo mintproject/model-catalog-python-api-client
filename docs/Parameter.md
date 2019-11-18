@@ -4,14 +4,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **has_default_value** | **list[str]** |  | [optional] 
-**has_maximum_accepted_value** | **list[str]** |  | [optional] 
+**has_maximum_accepted_value** | **list[float]** |  | [optional] 
 **description** | **list[str]** |  | [optional] 
 **has_data_type** | **list[str]** |  | [optional] 
-**has_fixed_value** | **list[str]** |  | [optional] 
+**has_fixed_value** | **list[object]** |  | [optional] 
 **has_presentation** | [**list[VariablePresentation]**](VariablePresentation.md) |  | [optional] 
 **label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
-**has_minimum_accepted_value** | **list[str]** |  | [optional] 
+**has_minimum_accepted_value** | **list[float]** |  | [optional] 
+**has_accepted_values** | **list[str]** |  | [optional] 
 **adjusts_variable** | **list[object]** |  | [optional] 
 **position** | **list[float]** |  | [optional] 
 **id** | **str** |  | [optional] 

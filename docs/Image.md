@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **has_dimensionality** | **list[float]** |  | [optional] 
 **has_format** | **list[str]** |  | [optional] 
+**had_primary_source** | **list[object]** |  | [optional] 
 **has_file_structure** | [**object**](.md) |  | [optional] 
 **description** | **list[str]** |  | [optional] 
 **has_presentation** | [**list[VariablePresentation]**](VariablePresentation.md) |  | [optional] 
@@ -12,6 +13,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | [optional] 
 **label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
+**value** | **list[str]** |  | [optional] 
 **has_fixed_resource** | [**list[SampleResource]**](SampleResource.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
