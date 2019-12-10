@@ -32,33 +32,33 @@ class Emulator(object):
     """
     openapi_types = {
         'has_funding': 'list[object]',
+        'has_documentation': 'list[object]',
         'keywords': 'list[str]',
-        'has_documentation': 'list[str]',
         'has_grid': 'list[Grid]',
-        'software_requirements': 'list[str]',
         'support_details': 'list[str]',
+        'software_requirements': 'list[str]',
         'has_version': 'list[object]',
-        'has_typical_data_source': 'list[str]',
-        'has_download_url': 'list[str]',
-        'description': 'list[str]',
+        'has_typical_data_source': 'list[object]',
+        'has_download_url': 'list[object]',
         'reference_publication': 'list[str]',
+        'description': 'list[str]',
         'screenshot': 'list[object]',
         'type': 'list[str]',
         'has_installation_instructions': 'list[str]',
         'has_model_category': 'list[str]',
         'had_primary_source': 'list[object]',
         'date_created': 'list[str]',
-        'compatible_visualization_software': 'list[object]',
         'contributor': 'list[object]',
+        'compatible_visualization_software': 'list[object]',
         'has_faq': 'list[str]',
-        'logo': 'list[object]',
         'has_contact_person': 'list[object]',
+        'logo': 'list[object]',
         'has_purpose': 'list[str]',
         'id': 'str',
         'has_sample_visualization': 'list[object]',
-        'memory_requirements': 'list[str]',
         'identifier': 'list[str]',
-        'website': 'list[str]',
+        'memory_requirements': 'list[str]',
+        'website': 'list[object]',
         'citation': 'list[str]',
         'author': 'list[object]',
         'processor_requirements': 'list[str]',
@@ -67,44 +67,44 @@ class Emulator(object):
         'label': 'list[str]',
         'has_assumption': 'list[str]',
         'date_published': 'list[str]',
-        'license': 'list[str]',
+        'license': 'list[object]',
         'operating_systems': 'list[str]',
         'has_source_code': 'list[object]',
         'has_explanation_diagram': 'list[object]',
         'has_example': 'list[str]',
-        'publisher': 'list[object]',
         'has_equation': 'list[Equation]',
+        'publisher': 'list[object]',
         'useful_for_calculating_index': 'list[NumericalIndex]'
     }
 
     attribute_map = {
         'has_funding': 'hasFunding',
-        'keywords': 'keywords',
         'has_documentation': 'hasDocumentation',
+        'keywords': 'keywords',
         'has_grid': 'hasGrid',
-        'software_requirements': 'softwareRequirements',
         'support_details': 'supportDetails',
+        'software_requirements': 'softwareRequirements',
         'has_version': 'hasVersion',
         'has_typical_data_source': 'hasTypicalDataSource',
         'has_download_url': 'hasDownloadURL',
-        'description': 'description',
         'reference_publication': 'referencePublication',
+        'description': 'description',
         'screenshot': 'screenshot',
         'type': 'type',
         'has_installation_instructions': 'hasInstallationInstructions',
         'has_model_category': 'hasModelCategory',
         'had_primary_source': 'hadPrimarySource',
         'date_created': 'dateCreated',
-        'compatible_visualization_software': 'compatibleVisualizationSoftware',
         'contributor': 'contributor',
+        'compatible_visualization_software': 'compatibleVisualizationSoftware',
         'has_faq': 'hasFAQ',
-        'logo': 'logo',
         'has_contact_person': 'hasContactPerson',
+        'logo': 'logo',
         'has_purpose': 'hasPurpose',
         'id': 'id',
         'has_sample_visualization': 'hasSampleVisualization',
-        'memory_requirements': 'memoryRequirements',
         'identifier': 'identifier',
+        'memory_requirements': 'memoryRequirements',
         'website': 'website',
         'citation': 'citation',
         'author': 'author',
@@ -119,41 +119,41 @@ class Emulator(object):
         'has_source_code': 'hasSourceCode',
         'has_explanation_diagram': 'hasExplanationDiagram',
         'has_example': 'hasExample',
-        'publisher': 'publisher',
         'has_equation': 'hasEquation',
+        'publisher': 'publisher',
         'useful_for_calculating_index': 'usefulForCalculatingIndex'
     }
 
-    def __init__(self, has_funding=None, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, support_details=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, had_primary_source=None, date_created=None, compatible_visualization_software=None, contributor=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, license=None, operating_systems=None, has_source_code=None, has_explanation_diagram=None, has_example=None, publisher=None, has_equation=None, useful_for_calculating_index=None):  # noqa: E501
+    def __init__(self, has_funding=None, has_documentation=None, keywords=None, has_grid=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, reference_publication=None, description=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, had_primary_source=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, has_contact_person=None, logo=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, license=None, operating_systems=None, has_source_code=None, has_explanation_diagram=None, has_example=None, has_equation=None, publisher=None, useful_for_calculating_index=None):  # noqa: E501
         """Emulator - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_funding = None
-        self._keywords = None
         self._has_documentation = None
+        self._keywords = None
         self._has_grid = None
-        self._software_requirements = None
         self._support_details = None
+        self._software_requirements = None
         self._has_version = None
         self._has_typical_data_source = None
         self._has_download_url = None
-        self._description = None
         self._reference_publication = None
+        self._description = None
         self._screenshot = None
         self._type = None
         self._has_installation_instructions = None
         self._has_model_category = None
         self._had_primary_source = None
         self._date_created = None
-        self._compatible_visualization_software = None
         self._contributor = None
+        self._compatible_visualization_software = None
         self._has_faq = None
-        self._logo = None
         self._has_contact_person = None
+        self._logo = None
         self._has_purpose = None
         self._id = None
         self._has_sample_visualization = None
-        self._memory_requirements = None
         self._identifier = None
+        self._memory_requirements = None
         self._website = None
         self._citation = None
         self._author = None
@@ -168,8 +168,8 @@ class Emulator(object):
         self._has_source_code = None
         self._has_explanation_diagram = None
         self._has_example = None
-        self._publisher = None
         self._has_equation = None
+        self._publisher = None
         self._useful_for_calculating_index = None
         self.discriminator = None
 
@@ -179,36 +179,36 @@ class Emulator(object):
             if hasattr(self, '_has_funding'): del self._has_funding
             if hasattr(self.attribute_map, 'has_funding'): del self.attribute_map['has_funding']
             if hasattr(self.openapi_types, 'has_funding'): del self.openapi_types['has_funding']
-        if keywords is not None:
-            self.keywords = keywords
-        else:
-            if hasattr(self, '_keywords'): del self._keywords
-            if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
-            if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
         if has_documentation is not None:
             self.has_documentation = has_documentation
         else:
             if hasattr(self, '_has_documentation'): del self._has_documentation
             if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
             if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
+        if keywords is not None:
+            self.keywords = keywords
+        else:
+            if hasattr(self, '_keywords'): del self._keywords
+            if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
+            if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
         if has_grid is not None:
             self.has_grid = has_grid
         else:
             if hasattr(self, '_has_grid'): del self._has_grid
             if hasattr(self.attribute_map, 'has_grid'): del self.attribute_map['has_grid']
             if hasattr(self.openapi_types, 'has_grid'): del self.openapi_types['has_grid']
-        if software_requirements is not None:
-            self.software_requirements = software_requirements
-        else:
-            if hasattr(self, '_software_requirements'): del self._software_requirements
-            if hasattr(self.attribute_map, 'software_requirements'): del self.attribute_map['software_requirements']
-            if hasattr(self.openapi_types, 'software_requirements'): del self.openapi_types['software_requirements']
         if support_details is not None:
             self.support_details = support_details
         else:
             if hasattr(self, '_support_details'): del self._support_details
             if hasattr(self.attribute_map, 'support_details'): del self.attribute_map['support_details']
             if hasattr(self.openapi_types, 'support_details'): del self.openapi_types['support_details']
+        if software_requirements is not None:
+            self.software_requirements = software_requirements
+        else:
+            if hasattr(self, '_software_requirements'): del self._software_requirements
+            if hasattr(self.attribute_map, 'software_requirements'): del self.attribute_map['software_requirements']
+            if hasattr(self.openapi_types, 'software_requirements'): del self.openapi_types['software_requirements']
         if has_version is not None:
             self.has_version = has_version
         else:
@@ -227,18 +227,18 @@ class Emulator(object):
             if hasattr(self, '_has_download_url'): del self._has_download_url
             if hasattr(self.attribute_map, 'has_download_url'): del self.attribute_map['has_download_url']
             if hasattr(self.openapi_types, 'has_download_url'): del self.openapi_types['has_download_url']
-        if description is not None:
-            self.description = description
-        else:
-            if hasattr(self, '_description'): del self._description
-            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
-            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if reference_publication is not None:
             self.reference_publication = reference_publication
         else:
             if hasattr(self, '_reference_publication'): del self._reference_publication
             if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
             if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if screenshot is not None:
             self.screenshot = screenshot
         else:
@@ -275,36 +275,36 @@ class Emulator(object):
             if hasattr(self, '_date_created'): del self._date_created
             if hasattr(self.attribute_map, 'date_created'): del self.attribute_map['date_created']
             if hasattr(self.openapi_types, 'date_created'): del self.openapi_types['date_created']
-        if compatible_visualization_software is not None:
-            self.compatible_visualization_software = compatible_visualization_software
-        else:
-            if hasattr(self, '_compatible_visualization_software'): del self._compatible_visualization_software
-            if hasattr(self.attribute_map, 'compatible_visualization_software'): del self.attribute_map['compatible_visualization_software']
-            if hasattr(self.openapi_types, 'compatible_visualization_software'): del self.openapi_types['compatible_visualization_software']
         if contributor is not None:
             self.contributor = contributor
         else:
             if hasattr(self, '_contributor'): del self._contributor
             if hasattr(self.attribute_map, 'contributor'): del self.attribute_map['contributor']
             if hasattr(self.openapi_types, 'contributor'): del self.openapi_types['contributor']
+        if compatible_visualization_software is not None:
+            self.compatible_visualization_software = compatible_visualization_software
+        else:
+            if hasattr(self, '_compatible_visualization_software'): del self._compatible_visualization_software
+            if hasattr(self.attribute_map, 'compatible_visualization_software'): del self.attribute_map['compatible_visualization_software']
+            if hasattr(self.openapi_types, 'compatible_visualization_software'): del self.openapi_types['compatible_visualization_software']
         if has_faq is not None:
             self.has_faq = has_faq
         else:
             if hasattr(self, '_has_faq'): del self._has_faq
             if hasattr(self.attribute_map, 'has_faq'): del self.attribute_map['has_faq']
             if hasattr(self.openapi_types, 'has_faq'): del self.openapi_types['has_faq']
-        if logo is not None:
-            self.logo = logo
-        else:
-            if hasattr(self, '_logo'): del self._logo
-            if hasattr(self.attribute_map, 'logo'): del self.attribute_map['logo']
-            if hasattr(self.openapi_types, 'logo'): del self.openapi_types['logo']
         if has_contact_person is not None:
             self.has_contact_person = has_contact_person
         else:
             if hasattr(self, '_has_contact_person'): del self._has_contact_person
             if hasattr(self.attribute_map, 'has_contact_person'): del self.attribute_map['has_contact_person']
             if hasattr(self.openapi_types, 'has_contact_person'): del self.openapi_types['has_contact_person']
+        if logo is not None:
+            self.logo = logo
+        else:
+            if hasattr(self, '_logo'): del self._logo
+            if hasattr(self.attribute_map, 'logo'): del self.attribute_map['logo']
+            if hasattr(self.openapi_types, 'logo'): del self.openapi_types['logo']
         if has_purpose is not None:
             self.has_purpose = has_purpose
         else:
@@ -319,18 +319,18 @@ class Emulator(object):
             if hasattr(self, '_has_sample_visualization'): del self._has_sample_visualization
             if hasattr(self.attribute_map, 'has_sample_visualization'): del self.attribute_map['has_sample_visualization']
             if hasattr(self.openapi_types, 'has_sample_visualization'): del self.openapi_types['has_sample_visualization']
-        if memory_requirements is not None:
-            self.memory_requirements = memory_requirements
-        else:
-            if hasattr(self, '_memory_requirements'): del self._memory_requirements
-            if hasattr(self.attribute_map, 'memory_requirements'): del self.attribute_map['memory_requirements']
-            if hasattr(self.openapi_types, 'memory_requirements'): del self.openapi_types['memory_requirements']
         if identifier is not None:
             self.identifier = identifier
         else:
             if hasattr(self, '_identifier'): del self._identifier
             if hasattr(self.attribute_map, 'identifier'): del self.attribute_map['identifier']
             if hasattr(self.openapi_types, 'identifier'): del self.openapi_types['identifier']
+        if memory_requirements is not None:
+            self.memory_requirements = memory_requirements
+        else:
+            if hasattr(self, '_memory_requirements'): del self._memory_requirements
+            if hasattr(self.attribute_map, 'memory_requirements'): del self.attribute_map['memory_requirements']
+            if hasattr(self.openapi_types, 'memory_requirements'): del self.openapi_types['memory_requirements']
         if website is not None:
             self.website = website
         else:
@@ -415,18 +415,18 @@ class Emulator(object):
             if hasattr(self, '_has_example'): del self._has_example
             if hasattr(self.attribute_map, 'has_example'): del self.attribute_map['has_example']
             if hasattr(self.openapi_types, 'has_example'): del self.openapi_types['has_example']
-        if publisher is not None:
-            self.publisher = publisher
-        else:
-            if hasattr(self, '_publisher'): del self._publisher
-            if hasattr(self.attribute_map, 'publisher'): del self.attribute_map['publisher']
-            if hasattr(self.openapi_types, 'publisher'): del self.openapi_types['publisher']
         if has_equation is not None:
             self.has_equation = has_equation
         else:
             if hasattr(self, '_has_equation'): del self._has_equation
             if hasattr(self.attribute_map, 'has_equation'): del self.attribute_map['has_equation']
             if hasattr(self.openapi_types, 'has_equation'): del self.openapi_types['has_equation']
+        if publisher is not None:
+            self.publisher = publisher
+        else:
+            if hasattr(self, '_publisher'): del self._publisher
+            if hasattr(self.attribute_map, 'publisher'): del self.attribute_map['publisher']
+            if hasattr(self.openapi_types, 'publisher'): del self.openapi_types['publisher']
         if useful_for_calculating_index is not None:
             self.useful_for_calculating_index = useful_for_calculating_index
         else:
@@ -456,6 +456,27 @@ class Emulator(object):
         self._has_funding = has_funding
 
     @property
+    def has_documentation(self):
+        """Gets the has_documentation of this Emulator.  # noqa: E501
+
+
+        :return: The has_documentation of this Emulator.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this Emulator.
+
+
+        :param has_documentation: The has_documentation of this Emulator.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_documentation = has_documentation
+
+    @property
     def keywords(self):
         """Gets the keywords of this Emulator.  # noqa: E501
 
@@ -475,27 +496,6 @@ class Emulator(object):
         """
 
         self._keywords = keywords
-
-    @property
-    def has_documentation(self):
-        """Gets the has_documentation of this Emulator.  # noqa: E501
-
-
-        :return: The has_documentation of this Emulator.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this Emulator.
-
-
-        :param has_documentation: The has_documentation of this Emulator.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
 
     @property
     def has_grid(self):
@@ -519,27 +519,6 @@ class Emulator(object):
         self._has_grid = has_grid
 
     @property
-    def software_requirements(self):
-        """Gets the software_requirements of this Emulator.  # noqa: E501
-
-
-        :return: The software_requirements of this Emulator.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._software_requirements
-
-    @software_requirements.setter
-    def software_requirements(self, software_requirements):
-        """Sets the software_requirements of this Emulator.
-
-
-        :param software_requirements: The software_requirements of this Emulator.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._software_requirements = software_requirements
-
-    @property
     def support_details(self):
         """Gets the support_details of this Emulator.  # noqa: E501
 
@@ -559,6 +538,27 @@ class Emulator(object):
         """
 
         self._support_details = support_details
+
+    @property
+    def software_requirements(self):
+        """Gets the software_requirements of this Emulator.  # noqa: E501
+
+
+        :return: The software_requirements of this Emulator.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._software_requirements
+
+    @software_requirements.setter
+    def software_requirements(self, software_requirements):
+        """Sets the software_requirements of this Emulator.
+
+
+        :param software_requirements: The software_requirements of this Emulator.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._software_requirements = software_requirements
 
     @property
     def has_version(self):
@@ -587,7 +587,7 @@ class Emulator(object):
 
 
         :return: The has_typical_data_source of this Emulator.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_typical_data_source
 
@@ -597,7 +597,7 @@ class Emulator(object):
 
 
         :param has_typical_data_source: The has_typical_data_source of this Emulator.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_typical_data_source = has_typical_data_source
@@ -608,7 +608,7 @@ class Emulator(object):
 
 
         :return: The has_download_url of this Emulator.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_download_url
 
@@ -618,31 +618,10 @@ class Emulator(object):
 
 
         :param has_download_url: The has_download_url of this Emulator.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_download_url = has_download_url
-
-    @property
-    def description(self):
-        """Gets the description of this Emulator.  # noqa: E501
-
-
-        :return: The description of this Emulator.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Emulator.
-
-
-        :param description: The description of this Emulator.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._description = description
 
     @property
     def reference_publication(self):
@@ -664,6 +643,27 @@ class Emulator(object):
         """
 
         self._reference_publication = reference_publication
+
+    @property
+    def description(self):
+        """Gets the description of this Emulator.  # noqa: E501
+
+
+        :return: The description of this Emulator.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Emulator.
+
+
+        :param description: The description of this Emulator.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._description = description
 
     @property
     def screenshot(self):
@@ -792,27 +792,6 @@ class Emulator(object):
         self._date_created = date_created
 
     @property
-    def compatible_visualization_software(self):
-        """Gets the compatible_visualization_software of this Emulator.  # noqa: E501
-
-
-        :return: The compatible_visualization_software of this Emulator.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._compatible_visualization_software
-
-    @compatible_visualization_software.setter
-    def compatible_visualization_software(self, compatible_visualization_software):
-        """Sets the compatible_visualization_software of this Emulator.
-
-
-        :param compatible_visualization_software: The compatible_visualization_software of this Emulator.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._compatible_visualization_software = compatible_visualization_software
-
-    @property
     def contributor(self):
         """Gets the contributor of this Emulator.  # noqa: E501
 
@@ -832,6 +811,27 @@ class Emulator(object):
         """
 
         self._contributor = contributor
+
+    @property
+    def compatible_visualization_software(self):
+        """Gets the compatible_visualization_software of this Emulator.  # noqa: E501
+
+
+        :return: The compatible_visualization_software of this Emulator.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._compatible_visualization_software
+
+    @compatible_visualization_software.setter
+    def compatible_visualization_software(self, compatible_visualization_software):
+        """Sets the compatible_visualization_software of this Emulator.
+
+
+        :param compatible_visualization_software: The compatible_visualization_software of this Emulator.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._compatible_visualization_software = compatible_visualization_software
 
     @property
     def has_faq(self):
@@ -855,27 +855,6 @@ class Emulator(object):
         self._has_faq = has_faq
 
     @property
-    def logo(self):
-        """Gets the logo of this Emulator.  # noqa: E501
-
-
-        :return: The logo of this Emulator.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._logo
-
-    @logo.setter
-    def logo(self, logo):
-        """Sets the logo of this Emulator.
-
-
-        :param logo: The logo of this Emulator.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._logo = logo
-
-    @property
     def has_contact_person(self):
         """Gets the has_contact_person of this Emulator.  # noqa: E501
 
@@ -895,6 +874,27 @@ class Emulator(object):
         """
 
         self._has_contact_person = has_contact_person
+
+    @property
+    def logo(self):
+        """Gets the logo of this Emulator.  # noqa: E501
+
+
+        :return: The logo of this Emulator.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._logo
+
+    @logo.setter
+    def logo(self, logo):
+        """Sets the logo of this Emulator.
+
+
+        :param logo: The logo of this Emulator.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._logo = logo
 
     @property
     def has_purpose(self):
@@ -960,27 +960,6 @@ class Emulator(object):
         self._has_sample_visualization = has_sample_visualization
 
     @property
-    def memory_requirements(self):
-        """Gets the memory_requirements of this Emulator.  # noqa: E501
-
-
-        :return: The memory_requirements of this Emulator.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._memory_requirements
-
-    @memory_requirements.setter
-    def memory_requirements(self, memory_requirements):
-        """Sets the memory_requirements of this Emulator.
-
-
-        :param memory_requirements: The memory_requirements of this Emulator.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._memory_requirements = memory_requirements
-
-    @property
     def identifier(self):
         """Gets the identifier of this Emulator.  # noqa: E501
 
@@ -1002,12 +981,33 @@ class Emulator(object):
         self._identifier = identifier
 
     @property
+    def memory_requirements(self):
+        """Gets the memory_requirements of this Emulator.  # noqa: E501
+
+
+        :return: The memory_requirements of this Emulator.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._memory_requirements
+
+    @memory_requirements.setter
+    def memory_requirements(self, memory_requirements):
+        """Sets the memory_requirements of this Emulator.
+
+
+        :param memory_requirements: The memory_requirements of this Emulator.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._memory_requirements = memory_requirements
+
+    @property
     def website(self):
         """Gets the website of this Emulator.  # noqa: E501
 
 
         :return: The website of this Emulator.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._website
 
@@ -1017,7 +1017,7 @@ class Emulator(object):
 
 
         :param website: The website of this Emulator.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._website = website
@@ -1196,7 +1196,7 @@ class Emulator(object):
 
 
         :return: The license of this Emulator.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._license
 
@@ -1206,7 +1206,7 @@ class Emulator(object):
 
 
         :param license: The license of this Emulator.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._license = license
@@ -1296,27 +1296,6 @@ class Emulator(object):
         self._has_example = has_example
 
     @property
-    def publisher(self):
-        """Gets the publisher of this Emulator.  # noqa: E501
-
-
-        :return: The publisher of this Emulator.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._publisher
-
-    @publisher.setter
-    def publisher(self, publisher):
-        """Sets the publisher of this Emulator.
-
-
-        :param publisher: The publisher of this Emulator.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._publisher = publisher
-
-    @property
     def has_equation(self):
         """Gets the has_equation of this Emulator.  # noqa: E501
 
@@ -1336,6 +1315,27 @@ class Emulator(object):
         """
 
         self._has_equation = has_equation
+
+    @property
+    def publisher(self):
+        """Gets the publisher of this Emulator.  # noqa: E501
+
+
+        :return: The publisher of this Emulator.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._publisher
+
+    @publisher.setter
+    def publisher(self, publisher):
+        """Sets the publisher of this Emulator.
+
+
+        :param publisher: The publisher of this Emulator.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._publisher = publisher
 
     @property
     def useful_for_calculating_index(self):

@@ -31,16 +31,16 @@ class VariablePresentation(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_default_value': 'list[str]',
+        'has_default_value': 'list[object]',
         'has_standard_variable': 'list[StandardVariable]',
-        'has_maximum_accepted_value': 'list[float]',
+        'has_maximum_accepted_value': 'list[object]',
         'has_constraint': 'list[str]',
         'description': 'list[str]',
         'label': 'list[str]',
         'type': 'list[str]',
         'has_long_name': 'list[str]',
         'has_short_name': 'list[str]',
-        'has_minimum_accepted_value': 'list[float]',
+        'has_minimum_accepted_value': 'list[object]',
         'id': 'str',
         'part_of_dataset': 'list[DatasetSpecification]',
         'uses_unit': 'list[object]'
@@ -161,7 +161,7 @@ class VariablePresentation(object):
 
 
         :return: The has_default_value of this VariablePresentation.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_default_value
 
@@ -171,7 +171,7 @@ class VariablePresentation(object):
 
 
         :param has_default_value: The has_default_value of this VariablePresentation.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_default_value = has_default_value
@@ -203,7 +203,7 @@ class VariablePresentation(object):
 
 
         :return: The has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[object]
         """
         return self._has_maximum_accepted_value
 
@@ -213,7 +213,7 @@ class VariablePresentation(object):
 
 
         :param has_maximum_accepted_value: The has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
-        :type: list[float]
+        :type: list[object]
         """
 
         self._has_maximum_accepted_value = has_maximum_accepted_value
@@ -350,7 +350,7 @@ class VariablePresentation(object):
 
 
         :return: The has_minimum_accepted_value of this VariablePresentation.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[object]
         """
         return self._has_minimum_accepted_value
 
@@ -360,7 +360,7 @@ class VariablePresentation(object):
 
 
         :param has_minimum_accepted_value: The has_minimum_accepted_value of this VariablePresentation.  # noqa: E501
-        :type: list[float]
+        :type: list[object]
         """
 
         self._has_minimum_accepted_value = has_minimum_accepted_value

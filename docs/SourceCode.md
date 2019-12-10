@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**license** | **list[str]** |  | [optional] 
+**license** | **list[object]** |  | [optional] 
 **programming_language** | **list[str]** |  | [optional] 
 **description** | **list[str]** |  | [optional] 
-**code_repository** | **list[str]** |  | [optional] 
+**code_repository** | **list[object]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 

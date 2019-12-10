@@ -32,7 +32,7 @@ class Organization(object):
     """
     openapi_types = {
         'identifier': 'list[str]',
-        'website': 'list[str]',
+        'website': 'list[object]',
         'description': 'list[str]',
         'id': 'str',
         'label': 'list[str]',
@@ -119,7 +119,7 @@ class Organization(object):
 
 
         :return: The website of this Organization.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._website
 
@@ -129,7 +129,7 @@ class Organization(object):
 
 
         :param website: The website of this Organization.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._website = website

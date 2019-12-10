@@ -38,7 +38,7 @@ class Visualization(object):
         'id': 'str',
         'label': 'list[str]',
         'type': 'list[str]',
-        'value': 'list[str]'
+        'value': 'list[object]'
     }
 
     attribute_map = {
@@ -263,7 +263,7 @@ class Visualization(object):
 
 
         :return: The value of this Visualization.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._value
 
@@ -273,7 +273,7 @@ class Visualization(object):
 
 
         :param value: The value of this Visualization.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._value = value

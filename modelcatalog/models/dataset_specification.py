@@ -31,12 +31,12 @@ class DatasetSpecification(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_dimensionality': 'list[float]',
+        'has_dimensionality': 'list[int]',
         'has_format': 'list[str]',
         'has_file_structure': 'object',
         'description': 'list[str]',
         'has_presentation': 'list[VariablePresentation]',
-        'position': 'list[float]',
+        'position': 'list[int]',
         'id': 'str',
         'label': 'list[str]',
         'type': 'list[str]',
@@ -134,7 +134,7 @@ class DatasetSpecification(object):
 
 
         :return: The has_dimensionality of this DatasetSpecification.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[int]
         """
         return self._has_dimensionality
 
@@ -144,7 +144,7 @@ class DatasetSpecification(object):
 
 
         :param has_dimensionality: The has_dimensionality of this DatasetSpecification.  # noqa: E501
-        :type: list[float]
+        :type: list[int]
         """
 
         self._has_dimensionality = has_dimensionality
@@ -239,7 +239,7 @@ class DatasetSpecification(object):
 
 
         :return: The position of this DatasetSpecification.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[int]
         """
         return self._position
 
@@ -249,7 +249,7 @@ class DatasetSpecification(object):
 
 
         :param position: The position of this DatasetSpecification.  # noqa: E501
-        :type: list[float]
+        :type: list[int]
         """
 
         self._position = position

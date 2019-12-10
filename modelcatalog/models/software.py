@@ -32,13 +32,13 @@ class Software(object):
     """
     openapi_types = {
         'has_funding': 'list[FundingInformation]',
+        'has_documentation': 'list[object]',
         'keywords': 'list[str]',
-        'has_documentation': 'list[str]',
         'support_details': 'list[str]',
         'software_requirements': 'list[str]',
         'has_version': 'list[SoftwareVersion]',
-        'has_typical_data_source': 'list[str]',
-        'has_download_url': 'list[str]',
+        'has_typical_data_source': 'list[object]',
+        'has_download_url': 'list[object]',
         'reference_publication': 'list[str]',
         'description': 'list[str]',
         'screenshot': 'list[Image]',
@@ -46,17 +46,17 @@ class Software(object):
         'has_installation_instructions': 'list[str]',
         'had_primary_source': 'list[object]',
         'date_created': 'list[str]',
-        'contributor': 'list[Person]',
         'compatible_visualization_software': 'list[Software]',
+        'contributor': 'list[Person]',
         'has_faq': 'list[str]',
-        'logo': 'list[Image]',
         'has_contact_person': 'list[object]',
+        'logo': 'list[Image]',
         'has_purpose': 'list[str]',
         'id': 'str',
         'has_sample_visualization': 'list[Visualization]',
         'memory_requirements': 'list[str]',
         'identifier': 'list[str]',
-        'website': 'list[str]',
+        'website': 'list[object]',
         'citation': 'list[str]',
         'author': 'list[object]',
         'processor_requirements': 'list[str]',
@@ -66,7 +66,7 @@ class Software(object):
         'has_assumption': 'list[str]',
         'date_published': 'list[str]',
         'operating_systems': 'list[str]',
-        'license': 'list[str]',
+        'license': 'list[object]',
         'has_source_code': 'list[SourceCode]',
         'has_example': 'list[str]',
         'publisher': 'list[object]'
@@ -74,8 +74,8 @@ class Software(object):
 
     attribute_map = {
         'has_funding': 'hasFunding',
-        'keywords': 'keywords',
         'has_documentation': 'hasDocumentation',
+        'keywords': 'keywords',
         'support_details': 'supportDetails',
         'software_requirements': 'softwareRequirements',
         'has_version': 'hasVersion',
@@ -88,11 +88,11 @@ class Software(object):
         'has_installation_instructions': 'hasInstallationInstructions',
         'had_primary_source': 'hadPrimarySource',
         'date_created': 'dateCreated',
-        'contributor': 'contributor',
         'compatible_visualization_software': 'compatibleVisualizationSoftware',
+        'contributor': 'contributor',
         'has_faq': 'hasFAQ',
-        'logo': 'logo',
         'has_contact_person': 'hasContactPerson',
+        'logo': 'logo',
         'has_purpose': 'hasPurpose',
         'id': 'id',
         'has_sample_visualization': 'hasSampleVisualization',
@@ -114,12 +114,12 @@ class Software(object):
         'publisher': 'publisher'
     }
 
-    def __init__(self, has_funding=None, keywords=None, has_documentation=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, reference_publication=None, description=None, screenshot=None, type=None, has_installation_instructions=None, had_primary_source=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_example=None, publisher=None):  # noqa: E501
+    def __init__(self, has_funding=None, has_documentation=None, keywords=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, reference_publication=None, description=None, screenshot=None, type=None, has_installation_instructions=None, had_primary_source=None, date_created=None, compatible_visualization_software=None, contributor=None, has_faq=None, has_contact_person=None, logo=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_example=None, publisher=None):  # noqa: E501
         """Software - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_funding = None
-        self._keywords = None
         self._has_documentation = None
+        self._keywords = None
         self._support_details = None
         self._software_requirements = None
         self._has_version = None
@@ -132,11 +132,11 @@ class Software(object):
         self._has_installation_instructions = None
         self._had_primary_source = None
         self._date_created = None
-        self._contributor = None
         self._compatible_visualization_software = None
+        self._contributor = None
         self._has_faq = None
-        self._logo = None
         self._has_contact_person = None
+        self._logo = None
         self._has_purpose = None
         self._id = None
         self._has_sample_visualization = None
@@ -164,18 +164,18 @@ class Software(object):
             if hasattr(self, '_has_funding'): del self._has_funding
             if hasattr(self.attribute_map, 'has_funding'): del self.attribute_map['has_funding']
             if hasattr(self.openapi_types, 'has_funding'): del self.openapi_types['has_funding']
-        if keywords is not None:
-            self.keywords = keywords
-        else:
-            if hasattr(self, '_keywords'): del self._keywords
-            if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
-            if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
         if has_documentation is not None:
             self.has_documentation = has_documentation
         else:
             if hasattr(self, '_has_documentation'): del self._has_documentation
             if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
             if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
+        if keywords is not None:
+            self.keywords = keywords
+        else:
+            if hasattr(self, '_keywords'): del self._keywords
+            if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
+            if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
         if support_details is not None:
             self.support_details = support_details
         else:
@@ -248,36 +248,36 @@ class Software(object):
             if hasattr(self, '_date_created'): del self._date_created
             if hasattr(self.attribute_map, 'date_created'): del self.attribute_map['date_created']
             if hasattr(self.openapi_types, 'date_created'): del self.openapi_types['date_created']
-        if contributor is not None:
-            self.contributor = contributor
-        else:
-            if hasattr(self, '_contributor'): del self._contributor
-            if hasattr(self.attribute_map, 'contributor'): del self.attribute_map['contributor']
-            if hasattr(self.openapi_types, 'contributor'): del self.openapi_types['contributor']
         if compatible_visualization_software is not None:
             self.compatible_visualization_software = compatible_visualization_software
         else:
             if hasattr(self, '_compatible_visualization_software'): del self._compatible_visualization_software
             if hasattr(self.attribute_map, 'compatible_visualization_software'): del self.attribute_map['compatible_visualization_software']
             if hasattr(self.openapi_types, 'compatible_visualization_software'): del self.openapi_types['compatible_visualization_software']
+        if contributor is not None:
+            self.contributor = contributor
+        else:
+            if hasattr(self, '_contributor'): del self._contributor
+            if hasattr(self.attribute_map, 'contributor'): del self.attribute_map['contributor']
+            if hasattr(self.openapi_types, 'contributor'): del self.openapi_types['contributor']
         if has_faq is not None:
             self.has_faq = has_faq
         else:
             if hasattr(self, '_has_faq'): del self._has_faq
             if hasattr(self.attribute_map, 'has_faq'): del self.attribute_map['has_faq']
             if hasattr(self.openapi_types, 'has_faq'): del self.openapi_types['has_faq']
-        if logo is not None:
-            self.logo = logo
-        else:
-            if hasattr(self, '_logo'): del self._logo
-            if hasattr(self.attribute_map, 'logo'): del self.attribute_map['logo']
-            if hasattr(self.openapi_types, 'logo'): del self.openapi_types['logo']
         if has_contact_person is not None:
             self.has_contact_person = has_contact_person
         else:
             if hasattr(self, '_has_contact_person'): del self._has_contact_person
             if hasattr(self.attribute_map, 'has_contact_person'): del self.attribute_map['has_contact_person']
             if hasattr(self.openapi_types, 'has_contact_person'): del self.openapi_types['has_contact_person']
+        if logo is not None:
+            self.logo = logo
+        else:
+            if hasattr(self, '_logo'): del self._logo
+            if hasattr(self.attribute_map, 'logo'): del self.attribute_map['logo']
+            if hasattr(self.openapi_types, 'logo'): del self.openapi_types['logo']
         if has_purpose is not None:
             self.has_purpose = has_purpose
         else:
@@ -411,6 +411,27 @@ class Software(object):
         self._has_funding = has_funding
 
     @property
+    def has_documentation(self):
+        """Gets the has_documentation of this Software.  # noqa: E501
+
+
+        :return: The has_documentation of this Software.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this Software.
+
+
+        :param has_documentation: The has_documentation of this Software.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_documentation = has_documentation
+
+    @property
     def keywords(self):
         """Gets the keywords of this Software.  # noqa: E501
 
@@ -430,27 +451,6 @@ class Software(object):
         """
 
         self._keywords = keywords
-
-    @property
-    def has_documentation(self):
-        """Gets the has_documentation of this Software.  # noqa: E501
-
-
-        :return: The has_documentation of this Software.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this Software.
-
-
-        :param has_documentation: The has_documentation of this Software.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
 
     @property
     def support_details(self):
@@ -521,7 +521,7 @@ class Software(object):
 
 
         :return: The has_typical_data_source of this Software.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_typical_data_source
 
@@ -531,7 +531,7 @@ class Software(object):
 
 
         :param has_typical_data_source: The has_typical_data_source of this Software.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_typical_data_source = has_typical_data_source
@@ -542,7 +542,7 @@ class Software(object):
 
 
         :return: The has_download_url of this Software.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_download_url
 
@@ -552,7 +552,7 @@ class Software(object):
 
 
         :param has_download_url: The has_download_url of this Software.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_download_url = has_download_url
@@ -705,27 +705,6 @@ class Software(object):
         self._date_created = date_created
 
     @property
-    def contributor(self):
-        """Gets the contributor of this Software.  # noqa: E501
-
-
-        :return: The contributor of this Software.  # noqa: E501
-        :rtype: list[Person]
-        """
-        return self._contributor
-
-    @contributor.setter
-    def contributor(self, contributor):
-        """Sets the contributor of this Software.
-
-
-        :param contributor: The contributor of this Software.  # noqa: E501
-        :type: list[Person]
-        """
-
-        self._contributor = contributor
-
-    @property
     def compatible_visualization_software(self):
         """Gets the compatible_visualization_software of this Software.  # noqa: E501
 
@@ -745,6 +724,27 @@ class Software(object):
         """
 
         self._compatible_visualization_software = compatible_visualization_software
+
+    @property
+    def contributor(self):
+        """Gets the contributor of this Software.  # noqa: E501
+
+
+        :return: The contributor of this Software.  # noqa: E501
+        :rtype: list[Person]
+        """
+        return self._contributor
+
+    @contributor.setter
+    def contributor(self, contributor):
+        """Sets the contributor of this Software.
+
+
+        :param contributor: The contributor of this Software.  # noqa: E501
+        :type: list[Person]
+        """
+
+        self._contributor = contributor
 
     @property
     def has_faq(self):
@@ -768,27 +768,6 @@ class Software(object):
         self._has_faq = has_faq
 
     @property
-    def logo(self):
-        """Gets the logo of this Software.  # noqa: E501
-
-
-        :return: The logo of this Software.  # noqa: E501
-        :rtype: list[Image]
-        """
-        return self._logo
-
-    @logo.setter
-    def logo(self, logo):
-        """Sets the logo of this Software.
-
-
-        :param logo: The logo of this Software.  # noqa: E501
-        :type: list[Image]
-        """
-
-        self._logo = logo
-
-    @property
     def has_contact_person(self):
         """Gets the has_contact_person of this Software.  # noqa: E501
 
@@ -808,6 +787,27 @@ class Software(object):
         """
 
         self._has_contact_person = has_contact_person
+
+    @property
+    def logo(self):
+        """Gets the logo of this Software.  # noqa: E501
+
+
+        :return: The logo of this Software.  # noqa: E501
+        :rtype: list[Image]
+        """
+        return self._logo
+
+    @logo.setter
+    def logo(self, logo):
+        """Sets the logo of this Software.
+
+
+        :param logo: The logo of this Software.  # noqa: E501
+        :type: list[Image]
+        """
+
+        self._logo = logo
 
     @property
     def has_purpose(self):
@@ -920,7 +920,7 @@ class Software(object):
 
 
         :return: The website of this Software.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._website
 
@@ -930,7 +930,7 @@ class Software(object):
 
 
         :param website: The website of this Software.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._website = website
@@ -1130,7 +1130,7 @@ class Software(object):
 
 
         :return: The license of this Software.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._license
 
@@ -1140,7 +1140,7 @@ class Software(object):
 
 
         :param license: The license of this Software.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._license = license

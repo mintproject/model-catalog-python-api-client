@@ -32,7 +32,7 @@ class Person(object):
     """
     openapi_types = {
         'identifier': 'list[str]',
-        'website': 'list[str]',
+        'website': 'list[object]',
         'description': 'list[str]',
         'id': 'str',
         'label': 'list[str]',
@@ -128,7 +128,7 @@ class Person(object):
 
 
         :return: The website of this Person.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._website
 
@@ -138,7 +138,7 @@ class Person(object):
 
 
         :param website: The website of this Person.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._website = website

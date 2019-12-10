@@ -31,12 +31,12 @@ class ModelConfigurationSetup(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'has_documentation': 'list[object]',
         'keywords': 'list[str]',
-        'has_documentation': 'list[str]',
         'has_grid': 'list[Grid]',
         'software_requirements': 'list[str]',
-        'has_implementation_script_location': 'list[str]',
-        'has_download_url': 'list[str]',
+        'has_implementation_script_location': 'list[object]',
+        'has_download_url': 'list[object]',
         'type': 'list[str]',
         'calibrated_variable': 'list[object]',
         'has_installation_instructions': 'list[str]',
@@ -44,8 +44,8 @@ class ModelConfigurationSetup(object):
         'calibration_method': 'list[str]',
         'has_region': 'list[Region]',
         'has_faq': 'list[str]',
-        'logo': 'list[object]',
         'has_contact_person': 'list[object]',
+        'logo': 'list[object]',
         'id': 'str',
         'identifier': 'list[str]',
         'has_sample_execution': 'list[object]',
@@ -55,7 +55,7 @@ class ModelConfigurationSetup(object):
         'short_description': 'list[str]',
         'has_execution_command': 'list[str]',
         'date_published': 'list[str]',
-        'license': 'list[str]',
+        'license': 'list[object]',
         'has_source_code': 'list[object]',
         'has_setup': 'list[object]',
         'has_explanation_diagram': 'list[object]',
@@ -66,13 +66,13 @@ class ModelConfigurationSetup(object):
         'has_output_time_interval': 'list[TimeInterval]',
         'parameter_assignment_method': 'list[str]',
         'has_funding': 'list[object]',
-        'has_component_location': 'list[str]',
+        'has_component_location': 'list[object]',
         'has_process': 'list[Process]',
         'support_details': 'list[str]',
         'has_version': 'list[object]',
-        'has_typical_data_source': 'list[str]',
-        'description': 'list[str]',
+        'has_typical_data_source': 'list[object]',
         'reference_publication': 'list[str]',
+        'description': 'list[str]',
         'screenshot': 'list[object]',
         'has_model_category': 'list[str]',
         'had_primary_source': 'list[object]',
@@ -85,25 +85,25 @@ class ModelConfigurationSetup(object):
         'has_sample_visualization': 'list[object]',
         'has_causal_diagram': 'list[CausalDiagram]',
         'memory_requirements': 'list[str]',
-        'website': 'list[str]',
+        'website': 'list[object]',
         'citation': 'list[str]',
         'processor_requirements': 'list[str]',
         'adjustable_parameter': 'list[object]',
         'has_usage_notes': 'list[str]',
-        'has_support_script_location': 'list[str]',
+        'has_support_script_location': 'list[object]',
         'label': 'list[str]',
         'has_assumption': 'list[str]',
         'has_parameter': 'list[object]',
         'operating_systems': 'list[str]',
         'valid_until': 'list[str]',
         'has_equation': 'list[Equation]',
-        'useful_for_calculating_index': 'list[NumericalIndex]',
-        'has_input': 'list[object]'
+        'has_input': 'list[object]',
+        'useful_for_calculating_index': 'list[NumericalIndex]'
     }
 
     attribute_map = {
-        'keywords': 'keywords',
         'has_documentation': 'hasDocumentation',
+        'keywords': 'keywords',
         'has_grid': 'hasGrid',
         'software_requirements': 'softwareRequirements',
         'has_implementation_script_location': 'hasImplementationScriptLocation',
@@ -115,8 +115,8 @@ class ModelConfigurationSetup(object):
         'calibration_method': 'calibrationMethod',
         'has_region': 'hasRegion',
         'has_faq': 'hasFAQ',
-        'logo': 'logo',
         'has_contact_person': 'hasContactPerson',
+        'logo': 'logo',
         'id': 'id',
         'identifier': 'identifier',
         'has_sample_execution': 'hasSampleExecution',
@@ -142,8 +142,8 @@ class ModelConfigurationSetup(object):
         'support_details': 'supportDetails',
         'has_version': 'hasVersion',
         'has_typical_data_source': 'hasTypicalDataSource',
-        'description': 'description',
         'reference_publication': 'referencePublication',
+        'description': 'description',
         'screenshot': 'screenshot',
         'has_model_category': 'hasModelCategory',
         'had_primary_source': 'hadPrimarySource',
@@ -168,15 +168,15 @@ class ModelConfigurationSetup(object):
         'operating_systems': 'operatingSystems',
         'valid_until': 'validUntil',
         'has_equation': 'hasEquation',
-        'useful_for_calculating_index': 'usefulForCalculatingIndex',
-        'has_input': 'hasInput'
+        'has_input': 'hasInput',
+        'useful_for_calculating_index': 'usefulForCalculatingIndex'
     }
 
-    def __init__(self, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, has_implementation_script_location=None, has_download_url=None, type=None, calibrated_variable=None, has_installation_instructions=None, compatible_visualization_software=None, calibration_method=None, has_region=None, has_faq=None, logo=None, has_contact_person=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_explanation_diagram=None, has_example=None, calibration_interval=None, publisher=None, has_output=None, has_output_time_interval=None, parameter_assignment_method=None, has_funding=None, has_component_location=None, has_process=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, has_model_category=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_model_result_table=None, calibration_target_variable=None, has_purpose=None, has_sample_visualization=None, has_causal_diagram=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, valid_until=None, has_equation=None, useful_for_calculating_index=None, has_input=None):  # noqa: E501
+    def __init__(self, has_documentation=None, keywords=None, has_grid=None, software_requirements=None, has_implementation_script_location=None, has_download_url=None, type=None, calibrated_variable=None, has_installation_instructions=None, compatible_visualization_software=None, calibration_method=None, has_region=None, has_faq=None, has_contact_person=None, logo=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_explanation_diagram=None, has_example=None, calibration_interval=None, publisher=None, has_output=None, has_output_time_interval=None, parameter_assignment_method=None, has_funding=None, has_component_location=None, has_process=None, support_details=None, has_version=None, has_typical_data_source=None, reference_publication=None, description=None, screenshot=None, has_model_category=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_model_result_table=None, calibration_target_variable=None, has_purpose=None, has_sample_visualization=None, has_causal_diagram=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, valid_until=None, has_equation=None, has_input=None, useful_for_calculating_index=None):  # noqa: E501
         """ModelConfigurationSetup - a model defined in OpenAPI"""  # noqa: E501
 
-        self._keywords = None
         self._has_documentation = None
+        self._keywords = None
         self._has_grid = None
         self._software_requirements = None
         self._has_implementation_script_location = None
@@ -188,8 +188,8 @@ class ModelConfigurationSetup(object):
         self._calibration_method = None
         self._has_region = None
         self._has_faq = None
-        self._logo = None
         self._has_contact_person = None
+        self._logo = None
         self._id = None
         self._identifier = None
         self._has_sample_execution = None
@@ -215,8 +215,8 @@ class ModelConfigurationSetup(object):
         self._support_details = None
         self._has_version = None
         self._has_typical_data_source = None
-        self._description = None
         self._reference_publication = None
+        self._description = None
         self._screenshot = None
         self._has_model_category = None
         self._had_primary_source = None
@@ -241,22 +241,22 @@ class ModelConfigurationSetup(object):
         self._operating_systems = None
         self._valid_until = None
         self._has_equation = None
-        self._useful_for_calculating_index = None
         self._has_input = None
+        self._useful_for_calculating_index = None
         self.discriminator = None
 
-        if keywords is not None:
-            self.keywords = keywords
-        else:
-            if hasattr(self, '_keywords'): del self._keywords
-            if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
-            if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
         if has_documentation is not None:
             self.has_documentation = has_documentation
         else:
             if hasattr(self, '_has_documentation'): del self._has_documentation
             if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
             if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
+        if keywords is not None:
+            self.keywords = keywords
+        else:
+            if hasattr(self, '_keywords'): del self._keywords
+            if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
+            if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
         if has_grid is not None:
             self.has_grid = has_grid
         else:
@@ -323,18 +323,18 @@ class ModelConfigurationSetup(object):
             if hasattr(self, '_has_faq'): del self._has_faq
             if hasattr(self.attribute_map, 'has_faq'): del self.attribute_map['has_faq']
             if hasattr(self.openapi_types, 'has_faq'): del self.openapi_types['has_faq']
-        if logo is not None:
-            self.logo = logo
-        else:
-            if hasattr(self, '_logo'): del self._logo
-            if hasattr(self.attribute_map, 'logo'): del self.attribute_map['logo']
-            if hasattr(self.openapi_types, 'logo'): del self.openapi_types['logo']
         if has_contact_person is not None:
             self.has_contact_person = has_contact_person
         else:
             if hasattr(self, '_has_contact_person'): del self._has_contact_person
             if hasattr(self.attribute_map, 'has_contact_person'): del self.attribute_map['has_contact_person']
             if hasattr(self.openapi_types, 'has_contact_person'): del self.openapi_types['has_contact_person']
+        if logo is not None:
+            self.logo = logo
+        else:
+            if hasattr(self, '_logo'): del self._logo
+            if hasattr(self.attribute_map, 'logo'): del self.attribute_map['logo']
+            if hasattr(self.openapi_types, 'logo'): del self.openapi_types['logo']
         if id is not None:
             self.id = id
         if identifier is not None:
@@ -481,18 +481,18 @@ class ModelConfigurationSetup(object):
             if hasattr(self, '_has_typical_data_source'): del self._has_typical_data_source
             if hasattr(self.attribute_map, 'has_typical_data_source'): del self.attribute_map['has_typical_data_source']
             if hasattr(self.openapi_types, 'has_typical_data_source'): del self.openapi_types['has_typical_data_source']
-        if description is not None:
-            self.description = description
-        else:
-            if hasattr(self, '_description'): del self._description
-            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
-            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if reference_publication is not None:
             self.reference_publication = reference_publication
         else:
             if hasattr(self, '_reference_publication'): del self._reference_publication
             if hasattr(self.attribute_map, 'reference_publication'): del self.attribute_map['reference_publication']
             if hasattr(self.openapi_types, 'reference_publication'): del self.openapi_types['reference_publication']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if screenshot is not None:
             self.screenshot = screenshot
         else:
@@ -637,18 +637,39 @@ class ModelConfigurationSetup(object):
             if hasattr(self, '_has_equation'): del self._has_equation
             if hasattr(self.attribute_map, 'has_equation'): del self.attribute_map['has_equation']
             if hasattr(self.openapi_types, 'has_equation'): del self.openapi_types['has_equation']
-        if useful_for_calculating_index is not None:
-            self.useful_for_calculating_index = useful_for_calculating_index
-        else:
-            if hasattr(self, '_useful_for_calculating_index'): del self._useful_for_calculating_index
-            if hasattr(self.attribute_map, 'useful_for_calculating_index'): del self.attribute_map['useful_for_calculating_index']
-            if hasattr(self.openapi_types, 'useful_for_calculating_index'): del self.openapi_types['useful_for_calculating_index']
         if has_input is not None:
             self.has_input = has_input
         else:
             if hasattr(self, '_has_input'): del self._has_input
             if hasattr(self.attribute_map, 'has_input'): del self.attribute_map['has_input']
             if hasattr(self.openapi_types, 'has_input'): del self.openapi_types['has_input']
+        if useful_for_calculating_index is not None:
+            self.useful_for_calculating_index = useful_for_calculating_index
+        else:
+            if hasattr(self, '_useful_for_calculating_index'): del self._useful_for_calculating_index
+            if hasattr(self.attribute_map, 'useful_for_calculating_index'): del self.attribute_map['useful_for_calculating_index']
+            if hasattr(self.openapi_types, 'useful_for_calculating_index'): del self.openapi_types['useful_for_calculating_index']
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this ModelConfigurationSetup.  # noqa: E501
+
+
+        :return: The has_documentation of this ModelConfigurationSetup.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this ModelConfigurationSetup.
+
+
+        :param has_documentation: The has_documentation of this ModelConfigurationSetup.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def keywords(self):
@@ -670,27 +691,6 @@ class ModelConfigurationSetup(object):
         """
 
         self._keywords = keywords
-
-    @property
-    def has_documentation(self):
-        """Gets the has_documentation of this ModelConfigurationSetup.  # noqa: E501
-
-
-        :return: The has_documentation of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this ModelConfigurationSetup.
-
-
-        :param has_documentation: The has_documentation of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
 
     @property
     def has_grid(self):
@@ -740,7 +740,7 @@ class ModelConfigurationSetup(object):
 
 
         :return: The has_implementation_script_location of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_implementation_script_location
 
@@ -750,7 +750,7 @@ class ModelConfigurationSetup(object):
 
 
         :param has_implementation_script_location: The has_implementation_script_location of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_implementation_script_location = has_implementation_script_location
@@ -761,7 +761,7 @@ class ModelConfigurationSetup(object):
 
 
         :return: The has_download_url of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_download_url
 
@@ -771,7 +771,7 @@ class ModelConfigurationSetup(object):
 
 
         :param has_download_url: The has_download_url of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_download_url = has_download_url
@@ -924,27 +924,6 @@ class ModelConfigurationSetup(object):
         self._has_faq = has_faq
 
     @property
-    def logo(self):
-        """Gets the logo of this ModelConfigurationSetup.  # noqa: E501
-
-
-        :return: The logo of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._logo
-
-    @logo.setter
-    def logo(self, logo):
-        """Sets the logo of this ModelConfigurationSetup.
-
-
-        :param logo: The logo of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._logo = logo
-
-    @property
     def has_contact_person(self):
         """Gets the has_contact_person of this ModelConfigurationSetup.  # noqa: E501
 
@@ -964,6 +943,27 @@ class ModelConfigurationSetup(object):
         """
 
         self._has_contact_person = has_contact_person
+
+    @property
+    def logo(self):
+        """Gets the logo of this ModelConfigurationSetup.  # noqa: E501
+
+
+        :return: The logo of this ModelConfigurationSetup.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._logo
+
+    @logo.setter
+    def logo(self, logo):
+        """Sets the logo of this ModelConfigurationSetup.
+
+
+        :param logo: The logo of this ModelConfigurationSetup.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._logo = logo
 
     @property
     def id(self):
@@ -1160,7 +1160,7 @@ class ModelConfigurationSetup(object):
 
 
         :return: The license of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._license
 
@@ -1170,7 +1170,7 @@ class ModelConfigurationSetup(object):
 
 
         :param license: The license of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._license = license
@@ -1391,7 +1391,7 @@ class ModelConfigurationSetup(object):
 
 
         :return: The has_component_location of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_component_location
 
@@ -1401,7 +1401,7 @@ class ModelConfigurationSetup(object):
 
 
         :param has_component_location: The has_component_location of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_component_location = has_component_location
@@ -1475,7 +1475,7 @@ class ModelConfigurationSetup(object):
 
 
         :return: The has_typical_data_source of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_typical_data_source
 
@@ -1485,31 +1485,10 @@ class ModelConfigurationSetup(object):
 
 
         :param has_typical_data_source: The has_typical_data_source of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_typical_data_source = has_typical_data_source
-
-    @property
-    def description(self):
-        """Gets the description of this ModelConfigurationSetup.  # noqa: E501
-
-
-        :return: The description of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this ModelConfigurationSetup.
-
-
-        :param description: The description of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._description = description
 
     @property
     def reference_publication(self):
@@ -1531,6 +1510,27 @@ class ModelConfigurationSetup(object):
         """
 
         self._reference_publication = reference_publication
+
+    @property
+    def description(self):
+        """Gets the description of this ModelConfigurationSetup.  # noqa: E501
+
+
+        :return: The description of this ModelConfigurationSetup.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this ModelConfigurationSetup.
+
+
+        :param description: The description of this ModelConfigurationSetup.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._description = description
 
     @property
     def screenshot(self):
@@ -1790,7 +1790,7 @@ class ModelConfigurationSetup(object):
 
 
         :return: The website of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._website
 
@@ -1800,7 +1800,7 @@ class ModelConfigurationSetup(object):
 
 
         :param website: The website of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._website = website
@@ -1895,7 +1895,7 @@ class ModelConfigurationSetup(object):
 
 
         :return: The has_support_script_location of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_support_script_location
 
@@ -1905,7 +1905,7 @@ class ModelConfigurationSetup(object):
 
 
         :param has_support_script_location: The has_support_script_location of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_support_script_location = has_support_script_location
@@ -2037,27 +2037,6 @@ class ModelConfigurationSetup(object):
         self._has_equation = has_equation
 
     @property
-    def useful_for_calculating_index(self):
-        """Gets the useful_for_calculating_index of this ModelConfigurationSetup.  # noqa: E501
-
-
-        :return: The useful_for_calculating_index of this ModelConfigurationSetup.  # noqa: E501
-        :rtype: list[NumericalIndex]
-        """
-        return self._useful_for_calculating_index
-
-    @useful_for_calculating_index.setter
-    def useful_for_calculating_index(self, useful_for_calculating_index):
-        """Sets the useful_for_calculating_index of this ModelConfigurationSetup.
-
-
-        :param useful_for_calculating_index: The useful_for_calculating_index of this ModelConfigurationSetup.  # noqa: E501
-        :type: list[NumericalIndex]
-        """
-
-        self._useful_for_calculating_index = useful_for_calculating_index
-
-    @property
     def has_input(self):
         """Gets the has_input of this ModelConfigurationSetup.  # noqa: E501
 
@@ -2077,6 +2056,27 @@ class ModelConfigurationSetup(object):
         """
 
         self._has_input = has_input
+
+    @property
+    def useful_for_calculating_index(self):
+        """Gets the useful_for_calculating_index of this ModelConfigurationSetup.  # noqa: E501
+
+
+        :return: The useful_for_calculating_index of this ModelConfigurationSetup.  # noqa: E501
+        :rtype: list[NumericalIndex]
+        """
+        return self._useful_for_calculating_index
+
+    @useful_for_calculating_index.setter
+    def useful_for_calculating_index(self, useful_for_calculating_index):
+        """Sets the useful_for_calculating_index of this ModelConfigurationSetup.
+
+
+        :param useful_for_calculating_index: The useful_for_calculating_index of this ModelConfigurationSetup.  # noqa: E501
+        :type: list[NumericalIndex]
+        """
+
+        self._useful_for_calculating_index = useful_for_calculating_index
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,7 +31,7 @@ class SpatiallyDistributedGrid(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_dimensionality': 'list[float]',
+        'has_dimensionality': 'list[int]',
         'has_format': 'list[str]',
         'has_file_structure': 'object',
         'description': 'list[str]',
@@ -39,11 +39,11 @@ class SpatiallyDistributedGrid(object):
         'label': 'list[str]',
         'type': 'list[str]',
         'has_fixed_resource': 'list[object]',
-        'has_spatial_resolution': 'list[str]',
         'has_coordinate_system': 'list[str]',
+        'has_spatial_resolution': 'list[str]',
         'has_shape': 'list[str]',
         'has_dimension': 'list[str]',
-        'position': 'list[float]',
+        'position': 'list[int]',
         'id': 'str'
     }
 
@@ -56,15 +56,15 @@ class SpatiallyDistributedGrid(object):
         'label': 'label',
         'type': 'type',
         'has_fixed_resource': 'hasFixedResource',
-        'has_spatial_resolution': 'hasSpatialResolution',
         'has_coordinate_system': 'hasCoordinateSystem',
+        'has_spatial_resolution': 'hasSpatialResolution',
         'has_shape': 'hasShape',
         'has_dimension': 'hasDimension',
         'position': 'position',
         'id': 'id'
     }
 
-    def __init__(self, has_dimensionality=None, has_format=None, has_file_structure=None, description=None, has_presentation=None, label=None, type=None, has_fixed_resource=None, has_spatial_resolution=None, has_coordinate_system=None, has_shape=None, has_dimension=None, position=None, id=None):  # noqa: E501
+    def __init__(self, has_dimensionality=None, has_format=None, has_file_structure=None, description=None, has_presentation=None, label=None, type=None, has_fixed_resource=None, has_coordinate_system=None, has_spatial_resolution=None, has_shape=None, has_dimension=None, position=None, id=None):  # noqa: E501
         """SpatiallyDistributedGrid - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_dimensionality = None
@@ -75,8 +75,8 @@ class SpatiallyDistributedGrid(object):
         self._label = None
         self._type = None
         self._has_fixed_resource = None
-        self._has_spatial_resolution = None
         self._has_coordinate_system = None
+        self._has_spatial_resolution = None
         self._has_shape = None
         self._has_dimension = None
         self._position = None
@@ -131,18 +131,18 @@ class SpatiallyDistributedGrid(object):
             if hasattr(self, '_has_fixed_resource'): del self._has_fixed_resource
             if hasattr(self.attribute_map, 'has_fixed_resource'): del self.attribute_map['has_fixed_resource']
             if hasattr(self.openapi_types, 'has_fixed_resource'): del self.openapi_types['has_fixed_resource']
-        if has_spatial_resolution is not None:
-            self.has_spatial_resolution = has_spatial_resolution
-        else:
-            if hasattr(self, '_has_spatial_resolution'): del self._has_spatial_resolution
-            if hasattr(self.attribute_map, 'has_spatial_resolution'): del self.attribute_map['has_spatial_resolution']
-            if hasattr(self.openapi_types, 'has_spatial_resolution'): del self.openapi_types['has_spatial_resolution']
         if has_coordinate_system is not None:
             self.has_coordinate_system = has_coordinate_system
         else:
             if hasattr(self, '_has_coordinate_system'): del self._has_coordinate_system
             if hasattr(self.attribute_map, 'has_coordinate_system'): del self.attribute_map['has_coordinate_system']
             if hasattr(self.openapi_types, 'has_coordinate_system'): del self.openapi_types['has_coordinate_system']
+        if has_spatial_resolution is not None:
+            self.has_spatial_resolution = has_spatial_resolution
+        else:
+            if hasattr(self, '_has_spatial_resolution'): del self._has_spatial_resolution
+            if hasattr(self.attribute_map, 'has_spatial_resolution'): del self.attribute_map['has_spatial_resolution']
+            if hasattr(self.openapi_types, 'has_spatial_resolution'): del self.openapi_types['has_spatial_resolution']
         if has_shape is not None:
             self.has_shape = has_shape
         else:
@@ -170,7 +170,7 @@ class SpatiallyDistributedGrid(object):
 
 
         :return: The has_dimensionality of this SpatiallyDistributedGrid.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[int]
         """
         return self._has_dimensionality
 
@@ -180,7 +180,7 @@ class SpatiallyDistributedGrid(object):
 
 
         :param has_dimensionality: The has_dimensionality of this SpatiallyDistributedGrid.  # noqa: E501
-        :type: list[float]
+        :type: list[int]
         """
 
         self._has_dimensionality = has_dimensionality
@@ -333,27 +333,6 @@ class SpatiallyDistributedGrid(object):
         self._has_fixed_resource = has_fixed_resource
 
     @property
-    def has_spatial_resolution(self):
-        """Gets the has_spatial_resolution of this SpatiallyDistributedGrid.  # noqa: E501
-
-
-        :return: The has_spatial_resolution of this SpatiallyDistributedGrid.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_spatial_resolution
-
-    @has_spatial_resolution.setter
-    def has_spatial_resolution(self, has_spatial_resolution):
-        """Sets the has_spatial_resolution of this SpatiallyDistributedGrid.
-
-
-        :param has_spatial_resolution: The has_spatial_resolution of this SpatiallyDistributedGrid.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_spatial_resolution = has_spatial_resolution
-
-    @property
     def has_coordinate_system(self):
         """Gets the has_coordinate_system of this SpatiallyDistributedGrid.  # noqa: E501
 
@@ -373,6 +352,27 @@ class SpatiallyDistributedGrid(object):
         """
 
         self._has_coordinate_system = has_coordinate_system
+
+    @property
+    def has_spatial_resolution(self):
+        """Gets the has_spatial_resolution of this SpatiallyDistributedGrid.  # noqa: E501
+
+
+        :return: The has_spatial_resolution of this SpatiallyDistributedGrid.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_spatial_resolution
+
+    @has_spatial_resolution.setter
+    def has_spatial_resolution(self, has_spatial_resolution):
+        """Sets the has_spatial_resolution of this SpatiallyDistributedGrid.
+
+
+        :param has_spatial_resolution: The has_spatial_resolution of this SpatiallyDistributedGrid.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_spatial_resolution = has_spatial_resolution
 
     @property
     def has_shape(self):
@@ -422,7 +422,7 @@ class SpatiallyDistributedGrid(object):
 
 
         :return: The position of this SpatiallyDistributedGrid.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[int]
         """
         return self._position
 
@@ -432,7 +432,7 @@ class SpatiallyDistributedGrid(object):
 
 
         :param position: The position of this SpatiallyDistributedGrid.  # noqa: E501
-        :type: list[float]
+        :type: list[int]
         """
 
         self._position = position

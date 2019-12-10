@@ -31,10 +31,10 @@ class SourceCode(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'license': 'list[str]',
+        'license': 'list[object]',
         'programming_language': 'list[str]',
         'description': 'list[str]',
-        'code_repository': 'list[str]',
+        'code_repository': 'list[object]',
         'id': 'str',
         'label': 'list[str]',
         'type': 'list[str]'
@@ -107,7 +107,7 @@ class SourceCode(object):
 
 
         :return: The license of this SourceCode.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._license
 
@@ -117,7 +117,7 @@ class SourceCode(object):
 
 
         :param license: The license of this SourceCode.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._license = license
@@ -170,7 +170,7 @@ class SourceCode(object):
 
 
         :return: The code_repository of this SourceCode.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._code_repository
 
@@ -180,7 +180,7 @@ class SourceCode(object):
 
 
         :param code_repository: The code_repository of this SourceCode.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._code_repository = code_repository

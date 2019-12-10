@@ -31,17 +31,17 @@ class Image(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_dimensionality': 'list[float]',
+        'has_dimensionality': 'list[int]',
         'has_format': 'list[str]',
         'had_primary_source': 'list[object]',
         'has_file_structure': 'object',
         'description': 'list[str]',
         'has_presentation': 'list[VariablePresentation]',
-        'position': 'list[float]',
+        'position': 'list[int]',
         'id': 'str',
         'label': 'list[str]',
         'type': 'list[str]',
-        'value': 'list[str]',
+        'value': 'list[object]',
         'has_fixed_resource': 'list[SampleResource]'
     }
 
@@ -152,7 +152,7 @@ class Image(object):
 
 
         :return: The has_dimensionality of this Image.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[int]
         """
         return self._has_dimensionality
 
@@ -162,7 +162,7 @@ class Image(object):
 
 
         :param has_dimensionality: The has_dimensionality of this Image.  # noqa: E501
-        :type: list[float]
+        :type: list[int]
         """
 
         self._has_dimensionality = has_dimensionality
@@ -278,7 +278,7 @@ class Image(object):
 
 
         :return: The position of this Image.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[int]
         """
         return self._position
 
@@ -288,7 +288,7 @@ class Image(object):
 
 
         :param position: The position of this Image.  # noqa: E501
-        :type: list[float]
+        :type: list[int]
         """
 
         self._position = position
@@ -362,7 +362,7 @@ class Image(object):
 
 
         :return: The value of this Image.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._value
 
@@ -372,7 +372,7 @@ class Image(object):
 
 
         :param value: The value of this Image.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._value = value

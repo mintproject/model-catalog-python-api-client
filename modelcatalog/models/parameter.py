@@ -31,18 +31,18 @@ class Parameter(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_default_value': 'list[str]',
-        'has_maximum_accepted_value': 'list[float]',
-        'description': 'list[str]',
+        'has_default_value': 'list[object]',
+        'has_maximum_accepted_value': 'list[object]',
         'has_data_type': 'list[str]',
+        'description': 'list[str]',
         'has_fixed_value': 'list[object]',
         'has_presentation': 'list[VariablePresentation]',
         'label': 'list[str]',
         'type': 'list[str]',
-        'has_minimum_accepted_value': 'list[float]',
+        'has_minimum_accepted_value': 'list[object]',
         'has_accepted_values': 'list[str]',
         'adjusts_variable': 'list[object]',
-        'position': 'list[float]',
+        'position': 'list[int]',
         'id': 'str',
         'uses_unit': 'list[object]'
     }
@@ -50,8 +50,8 @@ class Parameter(object):
     attribute_map = {
         'has_default_value': 'hasDefaultValue',
         'has_maximum_accepted_value': 'hasMaximumAcceptedValue',
-        'description': 'description',
         'has_data_type': 'hasDataType',
+        'description': 'description',
         'has_fixed_value': 'hasFixedValue',
         'has_presentation': 'hasPresentation',
         'label': 'label',
@@ -64,13 +64,13 @@ class Parameter(object):
         'uses_unit': 'usesUnit'
     }
 
-    def __init__(self, has_default_value=None, has_maximum_accepted_value=None, description=None, has_data_type=None, has_fixed_value=None, has_presentation=None, label=None, type=None, has_minimum_accepted_value=None, has_accepted_values=None, adjusts_variable=None, position=None, id=None, uses_unit=None):  # noqa: E501
+    def __init__(self, has_default_value=None, has_maximum_accepted_value=None, has_data_type=None, description=None, has_fixed_value=None, has_presentation=None, label=None, type=None, has_minimum_accepted_value=None, has_accepted_values=None, adjusts_variable=None, position=None, id=None, uses_unit=None):  # noqa: E501
         """Parameter - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_default_value = None
         self._has_maximum_accepted_value = None
-        self._description = None
         self._has_data_type = None
+        self._description = None
         self._has_fixed_value = None
         self._has_presentation = None
         self._label = None
@@ -95,18 +95,18 @@ class Parameter(object):
             if hasattr(self, '_has_maximum_accepted_value'): del self._has_maximum_accepted_value
             if hasattr(self.attribute_map, 'has_maximum_accepted_value'): del self.attribute_map['has_maximum_accepted_value']
             if hasattr(self.openapi_types, 'has_maximum_accepted_value'): del self.openapi_types['has_maximum_accepted_value']
-        if description is not None:
-            self.description = description
-        else:
-            if hasattr(self, '_description'): del self._description
-            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
-            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if has_data_type is not None:
             self.has_data_type = has_data_type
         else:
             if hasattr(self, '_has_data_type'): del self._has_data_type
             if hasattr(self.attribute_map, 'has_data_type'): del self.attribute_map['has_data_type']
             if hasattr(self.openapi_types, 'has_data_type'): del self.openapi_types['has_data_type']
+        if description is not None:
+            self.description = description
+        else:
+            if hasattr(self, '_description'): del self._description
+            if hasattr(self.attribute_map, 'description'): del self.attribute_map['description']
+            if hasattr(self.openapi_types, 'description'): del self.openapi_types['description']
         if has_fixed_value is not None:
             self.has_fixed_value = has_fixed_value
         else:
@@ -170,7 +170,7 @@ class Parameter(object):
 
 
         :return: The has_default_value of this Parameter.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._has_default_value
 
@@ -180,7 +180,7 @@ class Parameter(object):
 
 
         :param has_default_value: The has_default_value of this Parameter.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._has_default_value = has_default_value
@@ -191,7 +191,7 @@ class Parameter(object):
 
 
         :return: The has_maximum_accepted_value of this Parameter.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[object]
         """
         return self._has_maximum_accepted_value
 
@@ -201,31 +201,10 @@ class Parameter(object):
 
 
         :param has_maximum_accepted_value: The has_maximum_accepted_value of this Parameter.  # noqa: E501
-        :type: list[float]
+        :type: list[object]
         """
 
         self._has_maximum_accepted_value = has_maximum_accepted_value
-
-    @property
-    def description(self):
-        """Gets the description of this Parameter.  # noqa: E501
-
-
-        :return: The description of this Parameter.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Parameter.
-
-
-        :param description: The description of this Parameter.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._description = description
 
     @property
     def has_data_type(self):
@@ -247,6 +226,27 @@ class Parameter(object):
         """
 
         self._has_data_type = has_data_type
+
+    @property
+    def description(self):
+        """Gets the description of this Parameter.  # noqa: E501
+
+
+        :return: The description of this Parameter.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Parameter.
+
+
+        :param description: The description of this Parameter.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._description = description
 
     @property
     def has_fixed_value(self):
@@ -338,7 +338,7 @@ class Parameter(object):
 
 
         :return: The has_minimum_accepted_value of this Parameter.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[object]
         """
         return self._has_minimum_accepted_value
 
@@ -348,7 +348,7 @@ class Parameter(object):
 
 
         :param has_minimum_accepted_value: The has_minimum_accepted_value of this Parameter.  # noqa: E501
-        :type: list[float]
+        :type: list[object]
         """
 
         self._has_minimum_accepted_value = has_minimum_accepted_value
@@ -401,7 +401,7 @@ class Parameter(object):
 
 
         :return: The position of this Parameter.  # noqa: E501
-        :rtype: list[float]
+        :rtype: list[int]
         """
         return self._position
 
@@ -411,7 +411,7 @@ class Parameter(object):
 
 
         :param position: The position of this Parameter.  # noqa: E501
-        :type: list[float]
+        :type: list[int]
         """
 
         self._position = position
