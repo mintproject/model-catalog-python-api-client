@@ -1,6 +1,6 @@
 # modelcatalog.ConfigurationSetupApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.2.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**configurationsetups_id_get**](ConfigurationSetupApi.md#configurationsetups_id_get) | **GET** /configurationsetups/{id} | Get a ConfigurationSetup
 [**configurationsetups_id_put**](ConfigurationSetupApi.md#configurationsetups_id_put) | **PUT** /configurationsetups/{id} | Update a ConfigurationSetup
 [**configurationsetups_post**](ConfigurationSetupApi.md#configurationsetups_post) | **POST** /configurationsetups | Create a ConfigurationSetup
+[**custom_configurationsetups_id_get**](ConfigurationSetupApi.md#custom_configurationsetups_id_get) | **GET** /custom/configurationsetups/{id} | Get a ModelConfigurationSetup
 
 
 # **configurationsetups_get**
@@ -275,6 +276,59 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **custom_configurationsetups_id_get**
+> ModelConfigurationSetup custom_configurationsetups_id_get(id, username=username, custom_query_name=custom_query_name)
+
+Get a ModelConfigurationSetup
+
+Gets the details of a single instance of a ModelConfigurationSetup
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import modelcatalog
+from modelcatalog.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = modelcatalog.ConfigurationSetupApi()
+id = 'id_example' # str | The ID of the resource
+username = 'username_example' # str | Username to query (optional)
+custom_query_name = 'custom_configurationsetups' # str | Name of the custom query (optional) (default to 'custom_configurationsetups')
+
+try:
+    # Get a ModelConfigurationSetup
+    api_response = api_instance.custom_configurationsetups_id_get(id, username=username, custom_query_name=custom_query_name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ConfigurationSetupApi->custom_configurationsetups_id_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **username** | **str**| Username to query | [optional] 
+ **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_configurationsetups&#39;]
+
+### Return type
+
+[**ModelConfigurationSetup**](ModelConfigurationSetup.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

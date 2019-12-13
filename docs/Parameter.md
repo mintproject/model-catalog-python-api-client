@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **position** | **list[int]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **uses_unit** | **list[object]** |  | [optional] 
+**has_step_size** | **list[float]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

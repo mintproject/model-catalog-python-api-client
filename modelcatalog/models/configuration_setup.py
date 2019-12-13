@@ -31,8 +31,8 @@ class ConfigurationSetup(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_documentation': 'list[object]',
         'keywords': 'list[str]',
+        'has_documentation': 'list[object]',
         'software_requirements': 'list[str]',
         'has_implementation_script_location': 'list[object]',
         'has_download_url': 'list[object]',
@@ -86,8 +86,8 @@ class ConfigurationSetup(object):
     }
 
     attribute_map = {
-        'has_documentation': 'hasDocumentation',
         'keywords': 'keywords',
+        'has_documentation': 'hasDocumentation',
         'software_requirements': 'softwareRequirements',
         'has_implementation_script_location': 'hasImplementationScriptLocation',
         'has_download_url': 'hasDownloadURL',
@@ -140,11 +140,11 @@ class ConfigurationSetup(object):
         'has_input': 'hasInput'
     }
 
-    def __init__(self, has_documentation=None, keywords=None, software_requirements=None, has_implementation_script_location=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, has_faq=None, has_contact_person=None, logo=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_example=None, publisher=None, has_output=None, has_funding=None, has_component_location=None, support_details=None, has_version=None, has_typical_data_source=None, reference_publication=None, description=None, screenshot=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_purpose=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_input=None):  # noqa: E501
+    def __init__(self, keywords=None, has_documentation=None, software_requirements=None, has_implementation_script_location=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, has_faq=None, has_contact_person=None, logo=None, id=None, identifier=None, has_sample_execution=None, has_sample_result=None, author=None, has_constraint=None, short_description=None, has_execution_command=None, date_published=None, license=None, has_source_code=None, has_setup=None, has_example=None, publisher=None, has_output=None, has_funding=None, has_component_location=None, support_details=None, has_version=None, has_typical_data_source=None, reference_publication=None, description=None, screenshot=None, had_primary_source=None, has_software_image=None, date_created=None, contributor=None, has_purpose=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, adjustable_parameter=None, has_usage_notes=None, has_support_script_location=None, label=None, has_assumption=None, has_parameter=None, operating_systems=None, has_input=None):  # noqa: E501
         """ConfigurationSetup - a model defined in OpenAPI"""  # noqa: E501
 
-        self._has_documentation = None
         self._keywords = None
+        self._has_documentation = None
         self._software_requirements = None
         self._has_implementation_script_location = None
         self._has_download_url = None
@@ -197,18 +197,18 @@ class ConfigurationSetup(object):
         self._has_input = None
         self.discriminator = None
 
-        if has_documentation is not None:
-            self.has_documentation = has_documentation
-        else:
-            if hasattr(self, '_has_documentation'): del self._has_documentation
-            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
-            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if keywords is not None:
             self.keywords = keywords
         else:
             if hasattr(self, '_keywords'): del self._keywords
             if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
             if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
+        if has_documentation is not None:
+            self.has_documentation = has_documentation
+        else:
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if software_requirements is not None:
             self.software_requirements = software_requirements
         else:
@@ -507,27 +507,6 @@ class ConfigurationSetup(object):
             if hasattr(self.openapi_types, 'has_input'): del self.openapi_types['has_input']
 
     @property
-    def has_documentation(self):
-        """Gets the has_documentation of this ConfigurationSetup.  # noqa: E501
-
-
-        :return: The has_documentation of this ConfigurationSetup.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this ConfigurationSetup.
-
-
-        :param has_documentation: The has_documentation of this ConfigurationSetup.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._has_documentation = has_documentation
-
-    @property
     def keywords(self):
         """Gets the keywords of this ConfigurationSetup.  # noqa: E501
 
@@ -547,6 +526,27 @@ class ConfigurationSetup(object):
         """
 
         self._keywords = keywords
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this ConfigurationSetup.  # noqa: E501
+
+
+        :return: The has_documentation of this ConfigurationSetup.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this ConfigurationSetup.
+
+
+        :param has_documentation: The has_documentation of this ConfigurationSetup.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def software_requirements(self):

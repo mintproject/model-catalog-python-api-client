@@ -1,6 +1,6 @@
 # modelcatalog.HybridModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.2.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

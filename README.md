@@ -68,7 +68,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.2.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.3.0*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -82,6 +82,7 @@ Class | Method | HTTP request | Description
 *ConfigurationSetupApi* | [**configurationsetups_id_get**](docs/ConfigurationSetupApi.md#configurationsetups_id_get) | **GET** /configurationsetups/{id} | Get a ConfigurationSetup
 *ConfigurationSetupApi* | [**configurationsetups_id_put**](docs/ConfigurationSetupApi.md#configurationsetups_id_put) | **PUT** /configurationsetups/{id} | Update a ConfigurationSetup
 *ConfigurationSetupApi* | [**configurationsetups_post**](docs/ConfigurationSetupApi.md#configurationsetups_post) | **POST** /configurationsetups | Create a ConfigurationSetup
+*ConfigurationSetupApi* | [**custom_configurationsetups_id_get**](docs/ConfigurationSetupApi.md#custom_configurationsetups_id_get) | **GET** /custom/configurationsetups/{id} | Get a ModelConfigurationSetup
 *DatasetSpecificationApi* | [**datasetspecifications_get**](docs/DatasetSpecificationApi.md#datasetspecifications_get) | **GET** /datasetspecifications | List all DatasetSpecification entities
 *DatasetSpecificationApi* | [**datasetspecifications_id_delete**](docs/DatasetSpecificationApi.md#datasetspecifications_id_delete) | **DELETE** /datasetspecifications/{id} | Delete a DatasetSpecification
 *DatasetSpecificationApi* | [**datasetspecifications_id_get**](docs/DatasetSpecificationApi.md#datasetspecifications_id_get) | **GET** /datasetspecifications/{id} | Get a DatasetSpecification

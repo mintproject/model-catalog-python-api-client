@@ -46,7 +46,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "https://api.models.mint.isi.edu/v1.2.0"
+        self.host = "https://api.models.mint.isi.edu/v1.3.0"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
@@ -246,15 +246,15 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         """
         return [
             {
-                'url': "https://api.models.mint.isi.edu/v1.2.0",
+                'url': "https://api.models.mint.isi.edu/v1.3.0",
                 'description': "No description provided",
             },
             {
-                'url': "https://dev.api.models.mint.isi.edu/v1.2.0",
+                'url': "https://dev.api.models.mint.isi.edu/v1.3.0",
                 'description': "No description provided",
             },
             {
-                'url': "http://localhost:8080/v1.2.0",
+                'url': "http://localhost:8080/v1.3.0",
                 'description': "No description provided",
             }
         ]

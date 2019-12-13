@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**has_documentation** | **list[object]** |  | [optional] 
 **keywords** | **list[str]** |  | [optional] 
+**has_documentation** | **list[object]** |  | [optional] 
 **software_requirements** | **list[str]** |  | [optional] 
 **has_implementation_script_location** | **list[object]** |  | [optional] 
 **has_download_url** | **list[object]** |  | [optional] 

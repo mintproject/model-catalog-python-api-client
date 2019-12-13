@@ -32,8 +32,8 @@ class SoftwareImage(object):
     """
     openapi_types = {
         'has_funding': 'list[FundingInformation]',
-        'has_documentation': 'list[object]',
         'keywords': 'list[str]',
+        'has_documentation': 'list[object]',
         'support_details': 'list[str]',
         'software_requirements': 'list[str]',
         'has_version': 'list[SoftwareVersion]',
@@ -46,8 +46,8 @@ class SoftwareImage(object):
         'has_installation_instructions': 'list[str]',
         'had_primary_source': 'list[object]',
         'date_created': 'list[str]',
-        'compatible_visualization_software': 'list[Software]',
         'contributor': 'list[Person]',
+        'compatible_visualization_software': 'list[Software]',
         'has_faq': 'list[str]',
         'has_contact_person': 'list[object]',
         'logo': 'list[Image]',
@@ -66,8 +66,8 @@ class SoftwareImage(object):
         'has_execution_command': 'list[str]',
         'has_assumption': 'list[str]',
         'date_published': 'list[str]',
-        'operating_systems': 'list[str]',
         'license': 'list[object]',
+        'operating_systems': 'list[str]',
         'has_source_code': 'list[SourceCode]',
         'has_example': 'list[str]',
         'publisher': 'list[object]'
@@ -75,8 +75,8 @@ class SoftwareImage(object):
 
     attribute_map = {
         'has_funding': 'hasFunding',
-        'has_documentation': 'hasDocumentation',
         'keywords': 'keywords',
+        'has_documentation': 'hasDocumentation',
         'support_details': 'supportDetails',
         'software_requirements': 'softwareRequirements',
         'has_version': 'hasVersion',
@@ -89,8 +89,8 @@ class SoftwareImage(object):
         'has_installation_instructions': 'hasInstallationInstructions',
         'had_primary_source': 'hadPrimarySource',
         'date_created': 'dateCreated',
-        'compatible_visualization_software': 'compatibleVisualizationSoftware',
         'contributor': 'contributor',
+        'compatible_visualization_software': 'compatibleVisualizationSoftware',
         'has_faq': 'hasFAQ',
         'has_contact_person': 'hasContactPerson',
         'logo': 'logo',
@@ -109,19 +109,19 @@ class SoftwareImage(object):
         'has_execution_command': 'hasExecutionCommand',
         'has_assumption': 'hasAssumption',
         'date_published': 'datePublished',
-        'operating_systems': 'operatingSystems',
         'license': 'license',
+        'operating_systems': 'operatingSystems',
         'has_source_code': 'hasSourceCode',
         'has_example': 'hasExample',
         'publisher': 'publisher'
     }
 
-    def __init__(self, has_funding=None, has_documentation=None, keywords=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, reference_publication=None, description=None, screenshot=None, type=None, has_installation_instructions=None, had_primary_source=None, date_created=None, compatible_visualization_software=None, contributor=None, has_faq=None, has_contact_person=None, logo=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_execution_command=None, has_assumption=None, date_published=None, operating_systems=None, license=None, has_source_code=None, has_example=None, publisher=None):  # noqa: E501
+    def __init__(self, has_funding=None, keywords=None, has_documentation=None, support_details=None, software_requirements=None, has_version=None, has_typical_data_source=None, has_download_url=None, reference_publication=None, description=None, screenshot=None, type=None, has_installation_instructions=None, had_primary_source=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, has_contact_person=None, logo=None, has_purpose=None, id=None, has_sample_visualization=None, memory_requirements=None, identifier=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_execution_command=None, has_assumption=None, date_published=None, license=None, operating_systems=None, has_source_code=None, has_example=None, publisher=None):  # noqa: E501
         """SoftwareImage - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_funding = None
-        self._has_documentation = None
         self._keywords = None
+        self._has_documentation = None
         self._support_details = None
         self._software_requirements = None
         self._has_version = None
@@ -134,8 +134,8 @@ class SoftwareImage(object):
         self._has_installation_instructions = None
         self._had_primary_source = None
         self._date_created = None
-        self._compatible_visualization_software = None
         self._contributor = None
+        self._compatible_visualization_software = None
         self._has_faq = None
         self._has_contact_person = None
         self._logo = None
@@ -154,8 +154,8 @@ class SoftwareImage(object):
         self._has_execution_command = None
         self._has_assumption = None
         self._date_published = None
-        self._operating_systems = None
         self._license = None
+        self._operating_systems = None
         self._has_source_code = None
         self._has_example = None
         self._publisher = None
@@ -167,18 +167,18 @@ class SoftwareImage(object):
             if hasattr(self, '_has_funding'): del self._has_funding
             if hasattr(self.attribute_map, 'has_funding'): del self.attribute_map['has_funding']
             if hasattr(self.openapi_types, 'has_funding'): del self.openapi_types['has_funding']
-        if has_documentation is not None:
-            self.has_documentation = has_documentation
-        else:
-            if hasattr(self, '_has_documentation'): del self._has_documentation
-            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
-            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if keywords is not None:
             self.keywords = keywords
         else:
             if hasattr(self, '_keywords'): del self._keywords
             if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
             if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
+        if has_documentation is not None:
+            self.has_documentation = has_documentation
+        else:
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if support_details is not None:
             self.support_details = support_details
         else:
@@ -251,18 +251,18 @@ class SoftwareImage(object):
             if hasattr(self, '_date_created'): del self._date_created
             if hasattr(self.attribute_map, 'date_created'): del self.attribute_map['date_created']
             if hasattr(self.openapi_types, 'date_created'): del self.openapi_types['date_created']
-        if compatible_visualization_software is not None:
-            self.compatible_visualization_software = compatible_visualization_software
-        else:
-            if hasattr(self, '_compatible_visualization_software'): del self._compatible_visualization_software
-            if hasattr(self.attribute_map, 'compatible_visualization_software'): del self.attribute_map['compatible_visualization_software']
-            if hasattr(self.openapi_types, 'compatible_visualization_software'): del self.openapi_types['compatible_visualization_software']
         if contributor is not None:
             self.contributor = contributor
         else:
             if hasattr(self, '_contributor'): del self._contributor
             if hasattr(self.attribute_map, 'contributor'): del self.attribute_map['contributor']
             if hasattr(self.openapi_types, 'contributor'): del self.openapi_types['contributor']
+        if compatible_visualization_software is not None:
+            self.compatible_visualization_software = compatible_visualization_software
+        else:
+            if hasattr(self, '_compatible_visualization_software'): del self._compatible_visualization_software
+            if hasattr(self.attribute_map, 'compatible_visualization_software'): del self.attribute_map['compatible_visualization_software']
+            if hasattr(self.openapi_types, 'compatible_visualization_software'): del self.openapi_types['compatible_visualization_software']
         if has_faq is not None:
             self.has_faq = has_faq
         else:
@@ -367,18 +367,18 @@ class SoftwareImage(object):
             if hasattr(self, '_date_published'): del self._date_published
             if hasattr(self.attribute_map, 'date_published'): del self.attribute_map['date_published']
             if hasattr(self.openapi_types, 'date_published'): del self.openapi_types['date_published']
-        if operating_systems is not None:
-            self.operating_systems = operating_systems
-        else:
-            if hasattr(self, '_operating_systems'): del self._operating_systems
-            if hasattr(self.attribute_map, 'operating_systems'): del self.attribute_map['operating_systems']
-            if hasattr(self.openapi_types, 'operating_systems'): del self.openapi_types['operating_systems']
         if license is not None:
             self.license = license
         else:
             if hasattr(self, '_license'): del self._license
             if hasattr(self.attribute_map, 'license'): del self.attribute_map['license']
             if hasattr(self.openapi_types, 'license'): del self.openapi_types['license']
+        if operating_systems is not None:
+            self.operating_systems = operating_systems
+        else:
+            if hasattr(self, '_operating_systems'): del self._operating_systems
+            if hasattr(self.attribute_map, 'operating_systems'): del self.attribute_map['operating_systems']
+            if hasattr(self.openapi_types, 'operating_systems'): del self.openapi_types['operating_systems']
         if has_source_code is not None:
             self.has_source_code = has_source_code
         else:
@@ -420,27 +420,6 @@ class SoftwareImage(object):
         self._has_funding = has_funding
 
     @property
-    def has_documentation(self):
-        """Gets the has_documentation of this SoftwareImage.  # noqa: E501
-
-
-        :return: The has_documentation of this SoftwareImage.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this SoftwareImage.
-
-
-        :param has_documentation: The has_documentation of this SoftwareImage.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._has_documentation = has_documentation
-
-    @property
     def keywords(self):
         """Gets the keywords of this SoftwareImage.  # noqa: E501
 
@@ -460,6 +439,27 @@ class SoftwareImage(object):
         """
 
         self._keywords = keywords
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this SoftwareImage.  # noqa: E501
+
+
+        :return: The has_documentation of this SoftwareImage.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this SoftwareImage.
+
+
+        :param has_documentation: The has_documentation of this SoftwareImage.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def support_details(self):
@@ -714,27 +714,6 @@ class SoftwareImage(object):
         self._date_created = date_created
 
     @property
-    def compatible_visualization_software(self):
-        """Gets the compatible_visualization_software of this SoftwareImage.  # noqa: E501
-
-
-        :return: The compatible_visualization_software of this SoftwareImage.  # noqa: E501
-        :rtype: list[Software]
-        """
-        return self._compatible_visualization_software
-
-    @compatible_visualization_software.setter
-    def compatible_visualization_software(self, compatible_visualization_software):
-        """Sets the compatible_visualization_software of this SoftwareImage.
-
-
-        :param compatible_visualization_software: The compatible_visualization_software of this SoftwareImage.  # noqa: E501
-        :type: list[Software]
-        """
-
-        self._compatible_visualization_software = compatible_visualization_software
-
-    @property
     def contributor(self):
         """Gets the contributor of this SoftwareImage.  # noqa: E501
 
@@ -754,6 +733,27 @@ class SoftwareImage(object):
         """
 
         self._contributor = contributor
+
+    @property
+    def compatible_visualization_software(self):
+        """Gets the compatible_visualization_software of this SoftwareImage.  # noqa: E501
+
+
+        :return: The compatible_visualization_software of this SoftwareImage.  # noqa: E501
+        :rtype: list[Software]
+        """
+        return self._compatible_visualization_software
+
+    @compatible_visualization_software.setter
+    def compatible_visualization_software(self, compatible_visualization_software):
+        """Sets the compatible_visualization_software of this SoftwareImage.
+
+
+        :param compatible_visualization_software: The compatible_visualization_software of this SoftwareImage.  # noqa: E501
+        :type: list[Software]
+        """
+
+        self._compatible_visualization_software = compatible_visualization_software
 
     @property
     def has_faq(self):
@@ -1134,27 +1134,6 @@ class SoftwareImage(object):
         self._date_published = date_published
 
     @property
-    def operating_systems(self):
-        """Gets the operating_systems of this SoftwareImage.  # noqa: E501
-
-
-        :return: The operating_systems of this SoftwareImage.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._operating_systems
-
-    @operating_systems.setter
-    def operating_systems(self, operating_systems):
-        """Sets the operating_systems of this SoftwareImage.
-
-
-        :param operating_systems: The operating_systems of this SoftwareImage.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._operating_systems = operating_systems
-
-    @property
     def license(self):
         """Gets the license of this SoftwareImage.  # noqa: E501
 
@@ -1174,6 +1153,27 @@ class SoftwareImage(object):
         """
 
         self._license = license
+
+    @property
+    def operating_systems(self):
+        """Gets the operating_systems of this SoftwareImage.  # noqa: E501
+
+
+        :return: The operating_systems of this SoftwareImage.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._operating_systems
+
+    @operating_systems.setter
+    def operating_systems(self, operating_systems):
+        """Sets the operating_systems of this SoftwareImage.
+
+
+        :param operating_systems: The operating_systems of this SoftwareImage.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._operating_systems = operating_systems
 
     @property
     def has_source_code(self):

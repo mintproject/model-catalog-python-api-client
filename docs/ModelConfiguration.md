@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**has_documentation** | **list[object]** |  | [optional] 
 **keywords** | **list[str]** |  | [optional] 
+**has_documentation** | **list[object]** |  | [optional] 
 **has_grid** | [**list[Grid]**](Grid.md) |  | [optional] 
-**software_requirements** | **list[str]** |  | [optional] 
 **has_implementation_script_location** | **list[object]** |  | [optional] 
+**software_requirements** | **list[str]** |  | [optional] 
 **has_download_url** | **list[object]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **has_installation_instructions** | **list[str]** |  | [optional] 
@@ -39,8 +39,8 @@ Name | Type | Description | Notes
 **support_details** | **list[str]** |  | [optional] 
 **has_version** | **list[object]** |  | [optional] 
 **has_typical_data_source** | **list[object]** |  | [optional] 
-**reference_publication** | **list[str]** |  | [optional] 
 **description** | **list[str]** |  | [optional] 
+**reference_publication** | **list[str]** |  | [optional] 
 **screenshot** | **list[object]** |  | [optional] 
 **has_model_category** | **list[str]** |  | [optional] 
 **had_primary_source** | **list[object]** |  | [optional] 

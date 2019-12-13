@@ -44,7 +44,8 @@ class Parameter(object):
         'adjusts_variable': 'list[object]',
         'position': 'list[int]',
         'id': 'str',
-        'uses_unit': 'list[object]'
+        'uses_unit': 'list[object]',
+        'has_step_size': 'list[float]'
     }
 
     attribute_map = {
@@ -61,10 +62,11 @@ class Parameter(object):
         'adjusts_variable': 'adjustsVariable',
         'position': 'position',
         'id': 'id',
-        'uses_unit': 'usesUnit'
+        'uses_unit': 'usesUnit',
+        'has_step_size': 'hasStepSize'
     }
 
-    def __init__(self, has_default_value=None, has_maximum_accepted_value=None, has_data_type=None, description=None, has_fixed_value=None, has_presentation=None, label=None, type=None, has_minimum_accepted_value=None, has_accepted_values=None, adjusts_variable=None, position=None, id=None, uses_unit=None):  # noqa: E501
+    def __init__(self, has_default_value=None, has_maximum_accepted_value=None, has_data_type=None, description=None, has_fixed_value=None, has_presentation=None, label=None, type=None, has_minimum_accepted_value=None, has_accepted_values=None, adjusts_variable=None, position=None, id=None, uses_unit=None, has_step_size=None):  # noqa: E501
         """Parameter - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_default_value = None
@@ -81,6 +83,7 @@ class Parameter(object):
         self._position = None
         self._id = None
         self._uses_unit = None
+        self._has_step_size = None
         self.discriminator = None
 
         if has_default_value is not None:
@@ -163,6 +166,12 @@ class Parameter(object):
             if hasattr(self, '_uses_unit'): del self._uses_unit
             if hasattr(self.attribute_map, 'uses_unit'): del self.attribute_map['uses_unit']
             if hasattr(self.openapi_types, 'uses_unit'): del self.openapi_types['uses_unit']
+        if has_step_size is not None:
+            self.has_step_size = has_step_size
+        else:
+            if hasattr(self, '_has_step_size'): del self._has_step_size
+            if hasattr(self.attribute_map, 'has_step_size'): del self.attribute_map['has_step_size']
+            if hasattr(self.openapi_types, 'has_step_size'): del self.openapi_types['has_step_size']
 
     @property
     def has_default_value(self):
@@ -457,6 +466,27 @@ class Parameter(object):
         """
 
         self._uses_unit = uses_unit
+
+    @property
+    def has_step_size(self):
+        """Gets the has_step_size of this Parameter.  # noqa: E501
+
+
+        :return: The has_step_size of this Parameter.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._has_step_size
+
+    @has_step_size.setter
+    def has_step_size(self, has_step_size):
+        """Sets the has_step_size of this Parameter.
+
+
+        :param has_step_size: The has_step_size of this Parameter.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._has_step_size = has_step_size
 
     def to_dict(self):
         """Returns the model properties as a dict"""
