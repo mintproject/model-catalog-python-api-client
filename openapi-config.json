@@ -2,6 +2,6 @@
     "packageName": "modelcatalog",
     "projectName": "modelcatalog-api",
     "modelPropertyNaming": "camelCase",
-    "packageVersion": "1.3.0",
+    "packageVersion": "1.7.0",
     "packageUrl": "https://pypi.org/project/modelcatalog-api/" 
 }
