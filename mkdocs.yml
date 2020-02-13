@@ -1,0 +1,6 @@
+site_name: OBA documentation
+nav:
+  - Home: index.md
+theme: readthedocs
+markdown_extensions:
+  - admonition
