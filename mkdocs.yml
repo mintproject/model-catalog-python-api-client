@@ -4,6 +4,7 @@ nav:
   - Searching models: models.md
   - Get a version of a model: modelversion.md
   - Searching model configurations: modelconfigurations.md
+  - Examples: example.md
   - Documentation for API Endpoints: endpoints/index.md 
 theme: 
   name: material
