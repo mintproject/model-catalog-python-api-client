@@ -1,7 +1,14 @@
-site_name: OBA documentation
+site_name: Model Catalog Python client
 nav:
   - Home: index.md
+  - Searching models: models.md
+  - Searching model configurations: modelconfigurations.md
   - Documentation for API Endpoints: endpoints/index.md 
-theme: readthedocs
+theme: 
+  name: material
 markdown_extensions:
   - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
