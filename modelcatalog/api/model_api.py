@@ -36,6 +36,318 @@ class ModelApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def custom_model_index_get(self, label, **kwargs):  # noqa: E501
+        """Get a Model  # noqa: E501
+
+        Gets the details of a single instance of a Model  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.custom_model_index_get(label, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str label: Label of NumericalIndex (required)
+        :param str custom_query_name: Name of the custom query
+        :param str username: Username to query
+        :return: Model
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.custom_model_index_get_with_http_info(label, **kwargs)  # noqa: E501
+        else:
+            (data) = self.custom_model_index_get_with_http_info(label, **kwargs)  # noqa: E501
+            return data
+
+    def custom_model_index_get_with_http_info(self, label, **kwargs):  # noqa: E501
+        """Get a Model  # noqa: E501
+
+        Gets the details of a single instance of a Model  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.custom_model_index_get_with_http_info(label, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str label: Label of NumericalIndex (required)
+        :param str custom_query_name: Name of the custom query
+        :param str username: Username to query
+        :return: Model
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['label', 'custom_query_name', 'username']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method custom_model_index_get" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'label' is set
+        if ('label' not in local_var_params or
+                local_var_params['label'] is None):
+            raise ApiValueError("Missing the required parameter `label` when calling `custom_model_index_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'custom_query_name' in local_var_params:
+            query_params.append(('custom_query_name', local_var_params['custom_query_name']))  # noqa: E501
+        if 'username' in local_var_params:
+            query_params.append(('username', local_var_params['username']))  # noqa: E501
+        if 'label' in local_var_params:
+            query_params.append(('label', local_var_params['label']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/custom/model/index', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Model',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def custom_model_intervention_get(self, label, **kwargs):  # noqa: E501
+        """Get a Model  # noqa: E501
+
+        Gets the details of a single instance of a Model  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.custom_model_intervention_get(label, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str label: Label of intervation (required)
+        :param str custom_query_name: Name of the custom query
+        :param str username: Username to query
+        :return: Model
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.custom_model_intervention_get_with_http_info(label, **kwargs)  # noqa: E501
+        else:
+            (data) = self.custom_model_intervention_get_with_http_info(label, **kwargs)  # noqa: E501
+            return data
+
+    def custom_model_intervention_get_with_http_info(self, label, **kwargs):  # noqa: E501
+        """Get a Model  # noqa: E501
+
+        Gets the details of a single instance of a Model  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.custom_model_intervention_get_with_http_info(label, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str label: Label of intervation (required)
+        :param str custom_query_name: Name of the custom query
+        :param str username: Username to query
+        :return: Model
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['label', 'custom_query_name', 'username']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method custom_model_intervention_get" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'label' is set
+        if ('label' not in local_var_params or
+                local_var_params['label'] is None):
+            raise ApiValueError("Missing the required parameter `label` when calling `custom_model_intervention_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'custom_query_name' in local_var_params:
+            query_params.append(('custom_query_name', local_var_params['custom_query_name']))  # noqa: E501
+        if 'username' in local_var_params:
+            query_params.append(('username', local_var_params['username']))  # noqa: E501
+        if 'label' in local_var_params:
+            query_params.append(('label', local_var_params['label']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/custom/model/intervention', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Model',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def custom_model_region_get(self, label, **kwargs):  # noqa: E501
+        """Get a Model  # noqa: E501
+
+        Gets the details of a single instance of a Model  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.custom_model_region_get(label, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str label: region to search (required)
+        :param str custom_query_name: Name of the custom query
+        :param str username: Username to query
+        :return: Model
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.custom_model_region_get_with_http_info(label, **kwargs)  # noqa: E501
+        else:
+            (data) = self.custom_model_region_get_with_http_info(label, **kwargs)  # noqa: E501
+            return data
+
+    def custom_model_region_get_with_http_info(self, label, **kwargs):  # noqa: E501
+        """Get a Model  # noqa: E501
+
+        Gets the details of a single instance of a Model  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.custom_model_region_get_with_http_info(label, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str label: region to search (required)
+        :param str custom_query_name: Name of the custom query
+        :param str username: Username to query
+        :return: Model
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['label', 'custom_query_name', 'username']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method custom_model_region_get" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'label' is set
+        if ('label' not in local_var_params or
+                local_var_params['label'] is None):
+            raise ApiValueError("Missing the required parameter `label` when calling `custom_model_region_get`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'custom_query_name' in local_var_params:
+            query_params.append(('custom_query_name', local_var_params['custom_query_name']))  # noqa: E501
+        if 'username' in local_var_params:
+            query_params.append(('username', local_var_params['username']))  # noqa: E501
+        if 'label' in local_var_params:
+            query_params.append(('label', local_var_params['label']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = []  # noqa: E501
+
+        return self.api_client.call_api(
+            '/custom/model/region', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Model',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def models_get(self, **kwargs):  # noqa: E501
         """List all Model entities  # noqa: E501
 

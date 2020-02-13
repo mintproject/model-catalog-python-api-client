@@ -4,12 +4,174 @@ All URIs are relative to *https://api.models.mint.isi.edu/v1.3.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**custom_model_index_get**](ModelApi.md#custom_model_index_get) | **GET** /custom/model/index | Get a Model
+[**custom_model_intervention_get**](ModelApi.md#custom_model_intervention_get) | **GET** /custom/model/intervention | Get a Model
+[**custom_model_region_get**](ModelApi.md#custom_model_region_get) | **GET** /custom/model/region | Get a Model
 [**models_get**](ModelApi.md#models_get) | **GET** /models | List all Model entities
 [**models_id_delete**](ModelApi.md#models_id_delete) | **DELETE** /models/{id} | Delete a Model
 [**models_id_get**](ModelApi.md#models_id_get) | **GET** /models/{id} | Get a Model
 [**models_id_put**](ModelApi.md#models_id_put) | **PUT** /models/{id} | Update a Model
 [**models_post**](ModelApi.md#models_post) | **POST** /models | Create a Model
 
+
+# **custom_model_index_get**
+> Model custom_model_index_get(label, custom_query_name=custom_query_name, username=username)
+
+Get a Model
+
+Gets the details of a single instance of a Model
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import modelcatalog
+from modelcatalog.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = modelcatalog.ModelApi()
+label = 'label_example' # str | Label of NumericalIndex
+custom_query_name = 'custom_model_index' # str | Name of the custom query (optional) (default to 'custom_model_index')
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Get a Model
+    api_response = api_instance.custom_model_index_get(label, custom_query_name=custom_query_name, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ModelApi->custom_model_index_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **label** | **str**| Label of NumericalIndex | 
+ **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_model_index&#39;]
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
+
+# **custom_model_intervention_get**
+> Model custom_model_intervention_get(label, custom_query_name=custom_query_name, username=username)
+
+Get a Model
+
+Gets the details of a single instance of a Model
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import modelcatalog
+from modelcatalog.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = modelcatalog.ModelApi()
+label = 'label_example' # str | Label of intervation
+custom_query_name = 'custom_model_intervetion' # str | Name of the custom query (optional) (default to 'custom_model_intervetion')
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Get a Model
+    api_response = api_instance.custom_model_intervention_get(label, custom_query_name=custom_query_name, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ModelApi->custom_model_intervention_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **label** | **str**| Label of intervation | 
+ **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_model_intervetion&#39;]
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
+
+# **custom_model_region_get**
+> Model custom_model_region_get(label, custom_query_name=custom_query_name, username=username)
+
+Get a Model
+
+Gets the details of a single instance of a Model
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import modelcatalog
+from modelcatalog.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = modelcatalog.ModelApi()
+label = 'label_example' # str | region to search
+custom_query_name = 'custom_model_region' # str | Name of the custom query (optional) (default to 'custom_model_region')
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Get a Model
+    api_response = api_instance.custom_model_region_get(label, custom_query_name=custom_query_name, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ModelApi->custom_model_region_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **label** | **str**| region to search | 
+ **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_model_region&#39;]
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_get**
 > list[Model] models_get(username=username, label=label)
