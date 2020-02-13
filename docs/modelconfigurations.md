@@ -19,7 +19,7 @@ except ApiException as e:
 
 #### Response
 
-We found 7 model configurations. A ModelConfiguration contains information such as description, parameters, inputs, outputs, region. For more information go to: [**[ModelConfiguration]**](../endpoints/ModelConfiguration)
+We found 7 model configurations. A ModelConfiguration contains information such as description, parameters, inputs, outputs, region. For more information, go to: [**[ModelConfiguration]**](../endpoints/ModelConfiguration)
 
 !!! warning
     We are displaying only the id and description in a table for visualization purposes. The real output is a JSON.

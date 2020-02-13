@@ -2,10 +2,13 @@ site_name: Model Catalog Python client
 nav:
   - Home: index.md
   - Searching models: models.md
+  - Get a version of a model: modelversion.md
   - Searching model configurations: modelconfigurations.md
   - Documentation for API Endpoints: endpoints/index.md 
 theme: 
   name: material
+  logo: 'logo.png'
+
 markdown_extensions:
   - admonition
   - codehilite:

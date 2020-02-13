@@ -17,7 +17,7 @@ except ApiException as e:
 
 ### Response
 
-A Model contains information such as description, documentation, authors and license. For more information, go to: [**Model**](../endpoints/Model)
+A Model contains information such as description, documentation, authors and license. For more information go to: [**list[Model]**](../endpoints/Model)
 
 ### Search a model
 
