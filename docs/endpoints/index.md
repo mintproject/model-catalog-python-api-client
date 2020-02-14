@@ -93,16 +93,9 @@ Class | Method | HTTP request | Description
  - [SourceCode](SourceCode.md)
  - [VariablePresentation](VariablePresentation.md)
 
-
-## Documentation For Authorization
-
-
 ## BearerAuth
 
 - **Type**: Bearer authentication (JWT)
-
-
-## Author
 
 
 
