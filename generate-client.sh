@@ -1,3 +1,4 @@
+set -e
 dir=${PWD}
 parentdir="$(dirname "$dir")"
 
@@ -14,7 +15,11 @@ docker run -ti --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v4.1.2 \
      --template-dir /local/.openapi-generator/template
 
 mv -f docs/ModelconfigurationApi.md docs/ModelConfigurationApi.md
+
+sed -i 's~docs/~docs/endpoints/~g' README.md
 mv docs/[A-Z]*.md docs/endpoints/
 pushd docs/endpoints/
-bash .fix.sh
+for file in $(ls *.md); do
+    sed -i 's/README.md//g' $file
+done
 popd

@@ -49,7 +49,7 @@ class ModelApi(object):
         :param str label: Label of NumericalIndex (required)
         :param str custom_query_name: Name of the custom query
         :param str username: Username to query
-        :return: Model
+        :return: list[Model]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -73,7 +73,7 @@ class ModelApi(object):
         :param str label: Label of NumericalIndex (required)
         :param str custom_query_name: Name of the custom query
         :param str username: Username to query
-        :return: Model
+        :return: list[Model]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -132,7 +132,7 @@ class ModelApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Model',  # noqa: E501
+            response_type='list[Model]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -153,7 +153,7 @@ class ModelApi(object):
         :param str label: Label of intervation (required)
         :param str custom_query_name: Name of the custom query
         :param str username: Username to query
-        :return: Model
+        :return: list[Model]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -177,7 +177,7 @@ class ModelApi(object):
         :param str label: Label of intervation (required)
         :param str custom_query_name: Name of the custom query
         :param str username: Username to query
-        :return: Model
+        :return: list[Model]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -236,7 +236,7 @@ class ModelApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Model',  # noqa: E501
+            response_type='list[Model]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -257,7 +257,7 @@ class ModelApi(object):
         :param str label: region to search (required)
         :param str custom_query_name: Name of the custom query
         :param str username: Username to query
-        :return: Model
+        :return: list[Model]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -281,7 +281,7 @@ class ModelApi(object):
         :param str label: region to search (required)
         :param str custom_query_name: Name of the custom query
         :param str username: Username to query
-        :return: Model
+        :return: list[Model]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -340,7 +340,7 @@ class ModelApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Model',  # noqa: E501
+            response_type='list[Model]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

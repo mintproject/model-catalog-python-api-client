@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **custom_model_index_get**
-> Model custom_model_index_get(label, custom_query_name=custom_query_name, username=username)
+> list[Model] custom_model_index_get(label, custom_query_name=custom_query_name, username=username)
 
 Get a Model
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Model**](Model.md)
+[**list[Model]**](Model.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **custom_model_intervention_get**
-> Model custom_model_intervention_get(label, custom_query_name=custom_query_name, username=username)
+> list[Model] custom_model_intervention_get(label, custom_query_name=custom_query_name, username=username)
 
 Get a Model
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Model**](Model.md)
+[**list[Model]**](Model.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **custom_model_region_get**
-> Model custom_model_region_get(label, custom_query_name=custom_query_name, username=username)
+> list[Model] custom_model_region_get(label, custom_query_name=custom_query_name, username=username)
 
 Get a Model
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Model**](Model.md)
+[**list[Model]**](Model.md)
 
 ### Authorization
 
