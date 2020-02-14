@@ -1,4 +1,8 @@
 # Quickstart
+This page describes how to easily retrieve model information from the MINT model catalog.
+
+!!! info "Terminology"
+    For more information about the terms used in this page (model, model version), please see [https://mintproject.readthedocs.io/en/latest/modelcatalog/#overview](https://mintproject.readthedocs.io/en/latest/modelcatalog/#overview)
 
 ## Models
 
@@ -17,11 +21,11 @@ except ApiException as e:
 
 ### Response
 
-A Model contains information such as description, documentation, authors and license. For more information go to: [**list[Model]**](../endpoints/Model)
+A Model contains information such as description, documentation, authors and license. For more information about the properties of a model see: [**list[Model]**](../endpoints/Model)
 
 ### Search a model
 
-You can search a model by a free text. Let's search all the models by the text: `agriculture`
+You can search a model by using free text, which we will match against the model name, description and keywords. For example, let's search all the models by the word: `agriculture`
 
 ```python
 # create an instance of the API class
@@ -40,7 +44,7 @@ except ApiException as e:
 We found 2 models.
 
 !!! warning
-    We are displaying only the id and description in a table for visualization purposes. The real output is a JSON.
+    For readibility purposes, we are displaying the id and description in the table below. The real output is a JSON file which contains a full description of the model.
     
 | Property    | Value                                                                                                                                                                                                                                                                                             |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -54,9 +58,9 @@ We found 2 models.
 | id          | https://w3id.org/okn/i/mint/DSSAT   |
 
 
-### Get information of a model
+### Get metadata from a model
 
-You can obtain information of a model. For example, the description, author and versions of the model `CYCLES`.
+You can use the python client to easily retrieve basic metadata of a model. For example, let's retrieve the description, author and versions of the `CYCLES` model.
 
 ```
 model_id = "CYCLES"
@@ -72,7 +76,7 @@ except ApiException as e:
 
 
 !!! warning
-    We are displaying only the id, description, authors and versions
+    For readibility purposes, we are only displaying the id, description, authors and versions of the model
     
 | Property           | Value                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
