@@ -1,5 +1,4 @@
-# Executing and Testing models
-This page contains pointers to several notebooks 
+# Executing and Testing models 
 
 ## Jupyter notebook
 
