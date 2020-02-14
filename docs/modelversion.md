@@ -1,6 +1,10 @@
 # Software Version
+In this page we will show how to navigate through the different versions of a model
 
-### List the SoftwareVersion of a Model
+!!! info 
+    For more information about the concepts shown in this page please see [https://mintproject.readthedocs.io/en/latest/modelcatalog/#model-and-model-versions](https://mintproject.readthedocs.io/en/latest/modelcatalog/#model-and-model-versions)
+
+### List all Software Versions of a Model
 
 ```python
 # create an instance of the API class
@@ -18,7 +22,7 @@ except ApiException as e:
 
 ### Response
 
-The model `CYCLES` has three SoftwareVersion
+The model `CYCLES` has three versions (`SoftwareVersion`), identified by the following URIs:
 
 ```
 https://w3id.org/okn/i/mint/cycles_v0.9.3_alpha
@@ -26,7 +30,7 @@ https://w3id.org/okn/i/mint/cycles_v0.10.2_alpha
 https://w3id.org/okn/i/mint/cycles_v0.9.4_alpha
 ```
 
-### Get information of a SoftwareVersion
+### Metadata of a SoftwareVersion
 
 ```python
 api_instance = modelcatalog.SoftwareVersionApi()
@@ -48,7 +52,7 @@ The **SoftwareVersion** has one **ModelConfiguration**: cycles-0.9.4-alpha
 
 
 !!! warning
-    We are displaying only the id and description in a table for visualization purposes. The real output is a JSON.
+    For readibility, we are only displaying the id and description in a table. The real output is a JSON response.
     
 | Property          | Value                                                                                                                                                                                                                            |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
