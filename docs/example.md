@@ -14,6 +14,6 @@ The following movie shows how to execute a Model Configuration from the command 
 <script id="asciicast-301392" src="https://asciinema.org/a/301392.js" async></script>
 
 ### Running a Setup
-The followung movie shows how to execute a Model Configuration Setup from the command line: 
+The following movie shows how to execute a Model Configuration Setup from the command line: 
 
 <script id="asciicast-301391" src="https://asciinema.org/a/301391.js" async></script>
