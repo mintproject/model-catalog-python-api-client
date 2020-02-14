@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "modelcatalog-api"
-VERSION = "1.7.2"
+VERSION = "1.7.3"
 # To install the library, run the following
 #
 # python setup.py install
