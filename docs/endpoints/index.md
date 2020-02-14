@@ -1,5 +1,3 @@
-## Documentation for API Endpoints
-
 All URIs are relative to *https://api.models.mint.isi.edu/v1.3.0*
 
 Class | Method | HTTP request | Description
