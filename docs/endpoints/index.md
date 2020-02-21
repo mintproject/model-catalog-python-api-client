@@ -1,5 +1,3 @@
-## Documentation for API Endpoints
-
 All URIs are relative to *https://api.models.mint.isi.edu/v1.3.0*
 
 Class | Method | HTTP request | Description
@@ -95,16 +93,9 @@ Class | Method | HTTP request | Description
  - [SourceCode](SourceCode.md)
  - [VariablePresentation](VariablePresentation.md)
 
-
-## Documentation For Authorization
-
-
 ## BearerAuth
 
 - **Type**: Bearer authentication (JWT)
-
-
-## Author
 
 
 

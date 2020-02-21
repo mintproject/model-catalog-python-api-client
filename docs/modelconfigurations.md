@@ -1,9 +1,13 @@
 # Searching model configurations
 
+In this page we show step by step examples on how to retrieve metadata from model configurations
 
-### Search a model configuration by text
+!!! info
+    For more information about the concepts used in this page, please see [https://mintproject.readthedocs.io/en/latest/modelcatalog/#model-configuration](https://mintproject.readthedocs.io/en/latest/modelcatalog/#model-configuration)
 
-You can search a model by a free text. Let's search all the models by the text: `agriculture`
+### Search a model configuration by keyword
+
+You can search a model by using free text, and the API will match it against the model name, description, keywords and category of a model. For example, let's search all the model configurations containing the text: `agriculture`
 
 ```python
 # create an instance of the API class
@@ -19,10 +23,10 @@ except ApiException as e:
 
 #### Response
 
-We found 7 model configurations. A ModelConfiguration contains information such as description, parameters, inputs, outputs, region. For more information, go to: [**[ModelConfiguration]**](../endpoints/ModelConfiguration)
+The API found 7 model configurations. A ModelConfiguration contains information such as description, parameters, inputs, outputs, region. For more information about the fields of a ModelConfiguration, please see: [**[ModelConfiguration]**](../endpoints/ModelConfiguration)
 
 !!! warning
-    We are displaying only the id and description in a table for visualization purposes. The real output is a JSON.
+    For readibility, we are displaying only the id and description in a table. The response from the API is a JSON.
 
 | Property    | Value                                                                                           |
 |-------------|-------------------------------------------------------------------------------------------------|
@@ -67,9 +71,9 @@ We found 7 model configurations. A ModelConfiguration contains information such 
 
 
 
-### Obtain the information for execution
+### Obtain metadata of a model configuration for its execution
 
-Let's use the **ModelConfiguration**: cycles-0.9.4-alpha
+Let's use the **ModelConfiguration** wirh id: cycles-0.9.4-alpha
 
 ```python
 # create an instance of the API class
@@ -84,7 +88,7 @@ except ApiException as e:
 pprint(resource)
 ```
 
-#### Display the parameters
+#### Display information about parameters
 
 ```
 parameters = resource.has_parameter
@@ -92,7 +96,7 @@ parameters = resource.has_parameter
 
 
 !!! warning
-    This resource has 8 parameters but we're showing only two.
+    This configuration has 8 parameters but for readibility purposes we are only showing two.
 
 | Property                | Value                                                                                                                                                                           |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -119,14 +123,14 @@ parameters = resource.has_parameter
 
 
 
-#### Display the inputs
+#### Displaying a description of the input files
 
 ```
 inputs = resource.has_input
 ```
 
 !!! warning
-    This resource has 3 inputs but we're showing only one.
+    This model configuration has 3 inputs but for readibility we are only showing one.
 
 | Property          | Value                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -139,7 +143,7 @@ inputs = resource.has_input
 | position          | ['2']                                                                                                                                                                                                                                                                                                                                                                                                                                  |
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
-#### Display the outputs
+#### Displaying a description of the output files
 
 
 ```
@@ -148,7 +152,7 @@ output = resource.has_output
 
 
 !!! warning
-    This resource has four outputs but we're showing only one.
+    This resource has four output files, but for readibility we are only showing one.
 
 
 | Property          | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
