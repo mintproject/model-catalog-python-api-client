@@ -43,7 +43,7 @@ class VariablePresentation(object):
         'has_minimum_accepted_value': 'list[object]',
         'id': 'str',
         'part_of_dataset': 'list[DatasetSpecification]',
-        'uses_unit': 'list[object]'
+        'uses_unit': 'list[Unit]'
     }
 
     attribute_map = {
@@ -413,7 +413,7 @@ class VariablePresentation(object):
 
 
         :return: The uses_unit of this VariablePresentation.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[Unit]
         """
         return self._uses_unit
 
@@ -423,7 +423,7 @@ class VariablePresentation(object):
 
 
         :param uses_unit: The uses_unit of this VariablePresentation.  # noqa: E501
-        :type: list[object]
+        :type: list[Unit]
         """
 
         self._uses_unit = uses_unit

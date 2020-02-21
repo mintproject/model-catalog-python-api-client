@@ -33,12 +33,12 @@ class PointBasedGrid(object):
     openapi_types = {
         'has_dimensionality': 'list[int]',
         'has_format': 'list[str]',
-        'has_file_structure': 'object',
+        'has_file_structure': 'list[object]',
         'description': 'list[str]',
-        'has_presentation': 'list[object]',
+        'has_presentation': 'list[VariablePresentation]',
         'label': 'list[str]',
         'type': 'list[str]',
-        'has_fixed_resource': 'list[object]',
+        'has_fixed_resource': 'list[SampleResource]',
         'has_spatial_resolution': 'list[str]',
         'has_coordinate_system': 'list[str]',
         'has_shape': 'list[str]',
@@ -212,7 +212,7 @@ class PointBasedGrid(object):
 
 
         :return: The has_file_structure of this PointBasedGrid.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._has_file_structure
 
@@ -222,7 +222,7 @@ class PointBasedGrid(object):
 
 
         :param has_file_structure: The has_file_structure of this PointBasedGrid.  # noqa: E501
-        :type: object
+        :type: list[object]
         """
 
         self._has_file_structure = has_file_structure
@@ -254,7 +254,7 @@ class PointBasedGrid(object):
 
 
         :return: The has_presentation of this PointBasedGrid.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[VariablePresentation]
         """
         return self._has_presentation
 
@@ -264,7 +264,7 @@ class PointBasedGrid(object):
 
 
         :param has_presentation: The has_presentation of this PointBasedGrid.  # noqa: E501
-        :type: list[object]
+        :type: list[VariablePresentation]
         """
 
         self._has_presentation = has_presentation
@@ -317,7 +317,7 @@ class PointBasedGrid(object):
 
 
         :return: The has_fixed_resource of this PointBasedGrid.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[SampleResource]
         """
         return self._has_fixed_resource
 
@@ -327,7 +327,7 @@ class PointBasedGrid(object):
 
 
         :param has_fixed_resource: The has_fixed_resource of this PointBasedGrid.  # noqa: E501
-        :type: list[object]
+        :type: list[SampleResource]
         """
 
         self._has_fixed_resource = has_fixed_resource

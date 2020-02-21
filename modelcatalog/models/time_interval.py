@@ -36,7 +36,7 @@ class TimeInterval(object):
         'label': 'list[str]',
         'type': 'list[str]',
         'interval_value': 'list[object]',
-        'interval_unit': 'list[object]'
+        'interval_unit': 'list[Unit]'
     }
 
     attribute_map = {
@@ -203,7 +203,7 @@ class TimeInterval(object):
 
 
         :return: The interval_unit of this TimeInterval.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[Unit]
         """
         return self._interval_unit
 
@@ -213,7 +213,7 @@ class TimeInterval(object):
 
 
         :param interval_unit: The interval_unit of this TimeInterval.  # noqa: E501
-        :type: list[object]
+        :type: list[Unit]
         """
 
         self._interval_unit = interval_unit

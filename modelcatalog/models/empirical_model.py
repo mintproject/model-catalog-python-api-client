@@ -31,31 +31,31 @@ class EmpiricalModel(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_funding': 'list[object]',
-        'has_documentation': 'list[str]',
+        'has_funding': 'list[FundingInformation]',
         'keywords': 'list[str]',
+        'has_documentation': 'list[str]',
         'has_grid': 'list[Grid]',
         'software_requirements': 'list[str]',
         'support_details': 'list[str]',
-        'has_version': 'list[object]',
+        'has_version': 'list[SoftwareVersion]',
         'has_typical_data_source': 'list[str]',
         'has_download_url': 'list[str]',
         'description': 'list[str]',
         'reference_publication': 'list[str]',
-        'screenshot': 'list[object]',
+        'screenshot': 'list[Image]',
         'type': 'list[str]',
         'has_installation_instructions': 'list[str]',
         'has_model_category': 'list[str]',
         'had_primary_source': 'list[object]',
         'date_created': 'list[str]',
-        'contributor': 'list[object]',
-        'compatible_visualization_software': 'list[object]',
+        'compatible_visualization_software': 'list[Software]',
+        'contributor': 'list[Person]',
         'has_faq': 'list[str]',
-        'logo': 'list[object]',
+        'logo': 'list[Image]',
         'has_contact_person': 'list[object]',
         'has_purpose': 'list[str]',
         'id': 'str',
-        'has_sample_visualization': 'list[object]',
+        'has_sample_visualization': 'list[Visualization]',
         'identifier': 'list[str]',
         'memory_requirements': 'list[str]',
         'website': 'list[str]',
@@ -69,8 +69,8 @@ class EmpiricalModel(object):
         'date_published': 'list[str]',
         'license': 'list[str]',
         'operating_systems': 'list[str]',
-        'has_source_code': 'list[object]',
-        'has_explanation_diagram': 'list[object]',
+        'has_source_code': 'list[SourceCode]',
+        'has_explanation_diagram': 'list[Image]',
         'has_example': 'list[str]',
         'has_equation': 'list[Equation]',
         'publisher': 'list[object]',
@@ -79,8 +79,8 @@ class EmpiricalModel(object):
 
     attribute_map = {
         'has_funding': 'hasFunding',
-        'has_documentation': 'hasDocumentation',
         'keywords': 'keywords',
+        'has_documentation': 'hasDocumentation',
         'has_grid': 'hasGrid',
         'software_requirements': 'softwareRequirements',
         'support_details': 'supportDetails',
@@ -95,8 +95,8 @@ class EmpiricalModel(object):
         'has_model_category': 'hasModelCategory',
         'had_primary_source': 'hadPrimarySource',
         'date_created': 'dateCreated',
-        'contributor': 'contributor',
         'compatible_visualization_software': 'compatibleVisualizationSoftware',
+        'contributor': 'contributor',
         'has_faq': 'hasFAQ',
         'logo': 'logo',
         'has_contact_person': 'hasContactPerson',
@@ -124,12 +124,12 @@ class EmpiricalModel(object):
         'useful_for_calculating_index': 'usefulForCalculatingIndex'
     }
 
-    def __init__(self, has_funding=None, has_documentation=None, keywords=None, has_grid=None, software_requirements=None, support_details=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, had_primary_source=None, date_created=None, contributor=None, compatible_visualization_software=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, license=None, operating_systems=None, has_source_code=None, has_explanation_diagram=None, has_example=None, has_equation=None, publisher=None, useful_for_calculating_index=None):  # noqa: E501
+    def __init__(self, has_funding=None, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, support_details=None, has_version=None, has_typical_data_source=None, has_download_url=None, description=None, reference_publication=None, screenshot=None, type=None, has_installation_instructions=None, has_model_category=None, had_primary_source=None, date_created=None, compatible_visualization_software=None, contributor=None, has_faq=None, logo=None, has_contact_person=None, has_purpose=None, id=None, has_sample_visualization=None, identifier=None, memory_requirements=None, website=None, citation=None, author=None, processor_requirements=None, has_usage_notes=None, short_description=None, label=None, has_assumption=None, date_published=None, license=None, operating_systems=None, has_source_code=None, has_explanation_diagram=None, has_example=None, has_equation=None, publisher=None, useful_for_calculating_index=None):  # noqa: E501
         """EmpiricalModel - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_funding = None
-        self._has_documentation = None
         self._keywords = None
+        self._has_documentation = None
         self._has_grid = None
         self._software_requirements = None
         self._support_details = None
@@ -144,8 +144,8 @@ class EmpiricalModel(object):
         self._has_model_category = None
         self._had_primary_source = None
         self._date_created = None
-        self._contributor = None
         self._compatible_visualization_software = None
+        self._contributor = None
         self._has_faq = None
         self._logo = None
         self._has_contact_person = None
@@ -179,18 +179,18 @@ class EmpiricalModel(object):
             if hasattr(self, '_has_funding'): del self._has_funding
             if hasattr(self.attribute_map, 'has_funding'): del self.attribute_map['has_funding']
             if hasattr(self.openapi_types, 'has_funding'): del self.openapi_types['has_funding']
-        if has_documentation is not None:
-            self.has_documentation = has_documentation
-        else:
-            if hasattr(self, '_has_documentation'): del self._has_documentation
-            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
-            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if keywords is not None:
             self.keywords = keywords
         else:
             if hasattr(self, '_keywords'): del self._keywords
             if hasattr(self.attribute_map, 'keywords'): del self.attribute_map['keywords']
             if hasattr(self.openapi_types, 'keywords'): del self.openapi_types['keywords']
+        if has_documentation is not None:
+            self.has_documentation = has_documentation
+        else:
+            if hasattr(self, '_has_documentation'): del self._has_documentation
+            if hasattr(self.attribute_map, 'has_documentation'): del self.attribute_map['has_documentation']
+            if hasattr(self.openapi_types, 'has_documentation'): del self.openapi_types['has_documentation']
         if has_grid is not None:
             self.has_grid = has_grid
         else:
@@ -275,18 +275,18 @@ class EmpiricalModel(object):
             if hasattr(self, '_date_created'): del self._date_created
             if hasattr(self.attribute_map, 'date_created'): del self.attribute_map['date_created']
             if hasattr(self.openapi_types, 'date_created'): del self.openapi_types['date_created']
-        if contributor is not None:
-            self.contributor = contributor
-        else:
-            if hasattr(self, '_contributor'): del self._contributor
-            if hasattr(self.attribute_map, 'contributor'): del self.attribute_map['contributor']
-            if hasattr(self.openapi_types, 'contributor'): del self.openapi_types['contributor']
         if compatible_visualization_software is not None:
             self.compatible_visualization_software = compatible_visualization_software
         else:
             if hasattr(self, '_compatible_visualization_software'): del self._compatible_visualization_software
             if hasattr(self.attribute_map, 'compatible_visualization_software'): del self.attribute_map['compatible_visualization_software']
             if hasattr(self.openapi_types, 'compatible_visualization_software'): del self.openapi_types['compatible_visualization_software']
+        if contributor is not None:
+            self.contributor = contributor
+        else:
+            if hasattr(self, '_contributor'): del self._contributor
+            if hasattr(self.attribute_map, 'contributor'): del self.attribute_map['contributor']
+            if hasattr(self.openapi_types, 'contributor'): del self.openapi_types['contributor']
         if has_faq is not None:
             self.has_faq = has_faq
         else:
@@ -440,7 +440,7 @@ class EmpiricalModel(object):
 
 
         :return: The has_funding of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[FundingInformation]
         """
         return self._has_funding
 
@@ -450,31 +450,10 @@ class EmpiricalModel(object):
 
 
         :param has_funding: The has_funding of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
+        :type: list[FundingInformation]
         """
 
         self._has_funding = has_funding
-
-    @property
-    def has_documentation(self):
-        """Gets the has_documentation of this EmpiricalModel.  # noqa: E501
-
-
-        :return: The has_documentation of this EmpiricalModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this EmpiricalModel.
-
-
-        :param has_documentation: The has_documentation of this EmpiricalModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
 
     @property
     def keywords(self):
@@ -496,6 +475,27 @@ class EmpiricalModel(object):
         """
 
         self._keywords = keywords
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The has_documentation of this EmpiricalModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this EmpiricalModel.
+
+
+        :param has_documentation: The has_documentation of this EmpiricalModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_documentation = has_documentation
 
     @property
     def has_grid(self):
@@ -566,7 +566,7 @@ class EmpiricalModel(object):
 
 
         :return: The has_version of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[SoftwareVersion]
         """
         return self._has_version
 
@@ -576,7 +576,7 @@ class EmpiricalModel(object):
 
 
         :param has_version: The has_version of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
+        :type: list[SoftwareVersion]
         """
 
         self._has_version = has_version
@@ -671,7 +671,7 @@ class EmpiricalModel(object):
 
 
         :return: The screenshot of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[Image]
         """
         return self._screenshot
 
@@ -681,7 +681,7 @@ class EmpiricalModel(object):
 
 
         :param screenshot: The screenshot of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
+        :type: list[Image]
         """
 
         self._screenshot = screenshot
@@ -792,33 +792,12 @@ class EmpiricalModel(object):
         self._date_created = date_created
 
     @property
-    def contributor(self):
-        """Gets the contributor of this EmpiricalModel.  # noqa: E501
-
-
-        :return: The contributor of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._contributor
-
-    @contributor.setter
-    def contributor(self, contributor):
-        """Sets the contributor of this EmpiricalModel.
-
-
-        :param contributor: The contributor of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._contributor = contributor
-
-    @property
     def compatible_visualization_software(self):
         """Gets the compatible_visualization_software of this EmpiricalModel.  # noqa: E501
 
 
         :return: The compatible_visualization_software of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[Software]
         """
         return self._compatible_visualization_software
 
@@ -828,10 +807,31 @@ class EmpiricalModel(object):
 
 
         :param compatible_visualization_software: The compatible_visualization_software of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
+        :type: list[Software]
         """
 
         self._compatible_visualization_software = compatible_visualization_software
+
+    @property
+    def contributor(self):
+        """Gets the contributor of this EmpiricalModel.  # noqa: E501
+
+
+        :return: The contributor of this EmpiricalModel.  # noqa: E501
+        :rtype: list[Person]
+        """
+        return self._contributor
+
+    @contributor.setter
+    def contributor(self, contributor):
+        """Sets the contributor of this EmpiricalModel.
+
+
+        :param contributor: The contributor of this EmpiricalModel.  # noqa: E501
+        :type: list[Person]
+        """
+
+        self._contributor = contributor
 
     @property
     def has_faq(self):
@@ -860,7 +860,7 @@ class EmpiricalModel(object):
 
 
         :return: The logo of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[Image]
         """
         return self._logo
 
@@ -870,7 +870,7 @@ class EmpiricalModel(object):
 
 
         :param logo: The logo of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
+        :type: list[Image]
         """
 
         self._logo = logo
@@ -944,7 +944,7 @@ class EmpiricalModel(object):
 
 
         :return: The has_sample_visualization of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[Visualization]
         """
         return self._has_sample_visualization
 
@@ -954,7 +954,7 @@ class EmpiricalModel(object):
 
 
         :param has_sample_visualization: The has_sample_visualization of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
+        :type: list[Visualization]
         """
 
         self._has_sample_visualization = has_sample_visualization
@@ -1238,7 +1238,7 @@ class EmpiricalModel(object):
 
 
         :return: The has_source_code of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[SourceCode]
         """
         return self._has_source_code
 
@@ -1248,7 +1248,7 @@ class EmpiricalModel(object):
 
 
         :param has_source_code: The has_source_code of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
+        :type: list[SourceCode]
         """
 
         self._has_source_code = has_source_code
@@ -1259,7 +1259,7 @@ class EmpiricalModel(object):
 
 
         :return: The has_explanation_diagram of this EmpiricalModel.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[Image]
         """
         return self._has_explanation_diagram
 
@@ -1269,7 +1269,7 @@ class EmpiricalModel(object):
 
 
         :param has_explanation_diagram: The has_explanation_diagram of this EmpiricalModel.  # noqa: E501
-        :type: list[object]
+        :type: list[Image]
         """
 
         self._has_explanation_diagram = has_explanation_diagram

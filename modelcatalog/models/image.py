@@ -34,7 +34,7 @@ class Image(object):
         'has_dimensionality': 'list[int]',
         'has_format': 'list[str]',
         'had_primary_source': 'list[object]',
-        'has_file_structure': 'object',
+        'has_file_structure': 'list[object]',
         'description': 'list[str]',
         'has_presentation': 'list[VariablePresentation]',
         'position': 'list[int]',
@@ -215,7 +215,7 @@ class Image(object):
 
 
         :return: The has_file_structure of this Image.  # noqa: E501
-        :rtype: object
+        :rtype: list[object]
         """
         return self._has_file_structure
 
@@ -225,7 +225,7 @@ class Image(object):
 
 
         :param has_file_structure: The has_file_structure of this Image.  # noqa: E501
-        :type: object
+        :type: list[object]
         """
 
         self._has_file_structure = has_file_structure
