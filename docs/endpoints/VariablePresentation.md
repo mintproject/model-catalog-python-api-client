@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **has_minimum_accepted_value** | **list[object]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **part_of_dataset** | [**list[DatasetSpecification]**](DatasetSpecification.md) |  | [optional] 
-**uses_unit** | [**list[Unit]**](Unit.md) |  | [optional] 
+**uses_unit** | **list[object]** |  | [optional] 
 
 [[Back to Model list]](../#documentation-for-models) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to README]](../)
 
