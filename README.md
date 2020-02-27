@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**custom_model_index_get**](docs/endpoints/ModelApi.md#custom_model_index_get) | **GET** /custom/model/index | Get a Model
 *ModelApi* | [**custom_model_intervention_get**](docs/endpoints/ModelApi.md#custom_model_intervention_get) | **GET** /custom/model/intervention | Get a Model
 *ModelApi* | [**custom_model_region_get**](docs/endpoints/ModelApi.md#custom_model_region_get) | **GET** /custom/model/region | Get a Model
+*ModelApi* | [**custom_models_variable_get**](docs/endpoints/ModelApi.md#custom_models_variable_get) | **GET** /custom/models/variable | Get a list of Model
 *ModelApi* | [**models_get**](docs/endpoints/ModelApi.md#models_get) | **GET** /models | List all Model entities
 *ModelApi* | [**models_id_delete**](docs/endpoints/ModelApi.md#models_id_delete) | **DELETE** /models/{id} | Delete a Model
 *ModelApi* | [**models_id_get**](docs/endpoints/ModelApi.md#models_id_get) | **GET** /models/{id} | Get a Model
@@ -163,6 +164,7 @@ Class | Method | HTTP request | Description
 *ModelConfigurationApi* | [**modelconfigurations_id_put**](docs/endpoints/ModelConfigurationApi.md#modelconfigurations_id_put) | **PUT** /modelconfigurations/{id} | Update a ModelConfiguration
 *ModelConfigurationApi* | [**modelconfigurations_post**](docs/endpoints/ModelConfigurationApi.md#modelconfigurations_post) | **POST** /modelconfigurations | Create a ModelConfiguration
 *ModelConfigurationSetupApi* | [**custom_modelconfigurationsetups_id_get**](docs/endpoints/ModelConfigurationSetupApi.md#custom_modelconfigurationsetups_id_get) | **GET** /custom/modelconfigurationsetups/{id} | Get a ModelConfigurationSetup
+*ModelConfigurationSetupApi* | [**custom_modelconfigurationsetups_variable_get**](docs/endpoints/ModelConfigurationSetupApi.md#custom_modelconfigurationsetups_variable_get) | **GET** /custom/modelconfigurationsetups/variable | Get a list  Model
 *ModelConfigurationSetupApi* | [**modelconfigurationsetups_get**](docs/endpoints/ModelConfigurationSetupApi.md#modelconfigurationsetups_get) | **GET** /modelconfigurationsetups | List all ModelConfigurationSetup entities
 *ModelConfigurationSetupApi* | [**modelconfigurationsetups_id_delete**](docs/endpoints/ModelConfigurationSetupApi.md#modelconfigurationsetups_id_delete) | **DELETE** /modelconfigurationsetups/{id} | Delete a ModelConfigurationSetup
 *ModelConfigurationSetupApi* | [**modelconfigurationsetups_id_get**](docs/endpoints/ModelConfigurationSetupApi.md#modelconfigurationsetups_id_get) | **GET** /modelconfigurationsetups/{id} | Get a ModelConfigurationSetup

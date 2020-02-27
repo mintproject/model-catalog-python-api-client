@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**custom_model_index_get**](ModelApi.md#custom_model_index_get) | **GET** /custom/model/index | Get a Model
 [**custom_model_intervention_get**](ModelApi.md#custom_model_intervention_get) | **GET** /custom/model/intervention | Get a Model
 [**custom_model_region_get**](ModelApi.md#custom_model_region_get) | **GET** /custom/model/region | Get a Model
+[**custom_models_variable_get**](ModelApi.md#custom_models_variable_get) | **GET** /custom/models/variable | Get a list of Model
 [**models_get**](ModelApi.md#models_get) | **GET** /models | List all Model entities
 [**models_id_delete**](ModelApi.md#models_id_delete) | **DELETE** /models/{id} | Delete a Model
 [**models_id_get**](ModelApi.md#models_id_get) | **GET** /models/{id} | Get a Model
@@ -156,6 +157,59 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **label** | **str**| region to search | 
  **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_model_region&#39;]
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**list[Model]**](Model.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
+
+# **custom_models_variable_get**
+> list[Model] custom_models_variable_get(label, custom_query_name=custom_query_name, username=username)
+
+Get a list of Model
+
+Get models by variable name
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import modelcatalog
+from modelcatalog.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = modelcatalog.ModelApi()
+label = 'label_example' # str | variable to search
+custom_query_name = 'custom_models_variable' # str | Name of the custom query (optional) (default to 'custom_models_variable')
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Get a list of Model
+    api_response = api_instance.custom_models_variable_get(label, custom_query_name=custom_query_name, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ModelApi->custom_models_variable_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **label** | **str**| variable to search | 
+ **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_models_variable&#39;]
  **username** | **str**| Username to query | [optional] 
 
 ### Return type
