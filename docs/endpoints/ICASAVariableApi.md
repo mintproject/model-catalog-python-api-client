@@ -1,6 +1,6 @@
 # modelcatalog.ICASAVariableApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.3.1*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

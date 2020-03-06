@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **has_dimensionality** | **list[int]** |  | [optional] 
 **has_format** | **list[str]** |  | [optional] 
 **had_primary_source** | **list[object]** |  | [optional] 
-**has_file_structure** | [**object**](.md) |  | [optional] 
+**has_file_structure** | **list[object]** |  | [optional] 
 **description** | **list[str]** |  | [optional] 
 **has_presentation** | [**list[VariablePresentation]**](VariablePresentation.md) |  | [optional] 
 **position** | **list[int]** |  | [optional] 

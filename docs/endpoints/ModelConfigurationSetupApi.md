@@ -1,11 +1,10 @@
 # modelcatalog.ModelConfigurationSetupApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.3.1*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**custom_modelconfigurationsetups_id_get**](ModelConfigurationSetupApi.md#custom_modelconfigurationsetups_id_get) | **GET** /custom/modelconfigurationsetups/{id} | Get a ModelConfigurationSetup
-[**custom_modelconfigurationsetups_variable_get**](ModelConfigurationSetupApi.md#custom_modelconfigurationsetups_variable_get) | **GET** /custom/modelconfigurationsetups/variable | Get a list  Model
 [**modelconfigurationsetups_get**](ModelConfigurationSetupApi.md#modelconfigurationsetups_get) | **GET** /modelconfigurationsetups | List all ModelConfigurationSetup entities
 [**modelconfigurationsetups_id_delete**](ModelConfigurationSetupApi.md#modelconfigurationsetups_id_delete) | **DELETE** /modelconfigurationsetups/{id} | Delete a ModelConfigurationSetup
 [**modelconfigurationsetups_id_get**](ModelConfigurationSetupApi.md#modelconfigurationsetups_id_get) | **GET** /modelconfigurationsetups/{id} | Get a ModelConfigurationSetup
@@ -54,59 +53,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ModelConfigurationSetup**](ModelConfigurationSetup.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
-
-# **custom_modelconfigurationsetups_variable_get**
-> list[ModelConfigurationSetup] custom_modelconfigurationsetups_variable_get(label, custom_query_name=custom_query_name, username=username)
-
-Get a list  Model
-
-Get model configurations by variable name
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import modelcatalog
-from modelcatalog.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = modelcatalog.ModelConfigurationSetupApi()
-label = 'label_example' # str | variable to search
-custom_query_name = 'custom_modelconfigurationsetups_variable' # str | Name of the custom query (optional) (default to 'custom_modelconfigurationsetups_variable')
-username = 'username_example' # str | Username to query (optional)
-
-try:
-    # Get a list  Model
-    api_response = api_instance.custom_modelconfigurationsetups_variable_get(label, custom_query_name=custom_query_name, username=username)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ModelConfigurationSetupApi->custom_modelconfigurationsetups_variable_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **label** | **str**| variable to search | 
- **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_modelconfigurationsetups_variable&#39;]
- **username** | **str**| Username to query | [optional] 
-
-### Return type
-
-[**list[ModelConfigurationSetup]**](ModelConfigurationSetup.md)
 
 ### Authorization
 
