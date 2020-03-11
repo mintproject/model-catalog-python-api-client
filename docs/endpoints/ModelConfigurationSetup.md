@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **keywords** | **list[str]** |  | [optional] 
 **has_documentation** | **list[str]** |  | [optional] 
 **has_grid** | [**list[Grid]**](Grid.md) |  | [optional] 
-**software_requirements** | **list[str]** |  | [optional] 
 **has_implementation_script_location** | **list[str]** |  | [optional] 
+**software_requirements** | **list[str]** |  | [optional] 
 **has_download_url** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
 **calibrated_variable** | [**list[VariablePresentation]**](VariablePresentation.md) |  | [optional] 
@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **has_faq** | **list[str]** |  | [optional] 
 **logo** | [**list[Image]**](Image.md) |  | [optional] 
 **has_contact_person** | **list[object]** |  | [optional] 
+**tag** | **list[str]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **identifier** | **list[str]** |  | [optional] 
 **has_sample_execution** | [**list[SampleExecution]**](SampleExecution.md) |  | [optional] 
@@ -69,8 +70,8 @@ Name | Type | Description | Notes
 **operating_systems** | **list[str]** |  | [optional] 
 **valid_until** | **list[str]** |  | [optional] 
 **has_equation** | [**list[Equation]**](Equation.md) |  | [optional] 
-**useful_for_calculating_index** | [**list[NumericalIndex]**](NumericalIndex.md) |  | [optional] 
 **has_input** | [**list[DatasetSpecification]**](DatasetSpecification.md) |  | [optional] 
+**useful_for_calculating_index** | [**list[NumericalIndex]**](NumericalIndex.md) |  | [optional] 
 
 [[Back to Model list]](../#documentation-for-models) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to README]](../)
 
