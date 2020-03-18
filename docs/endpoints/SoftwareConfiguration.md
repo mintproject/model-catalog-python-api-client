@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**has_documentation** | **list[str]** |  | [optional] 
 **keywords** | **list[str]** |  | [optional] 
+**has_documentation** | **list[str]** |  | [optional] 
 **has_implementation_script_location** | **list[str]** |  | [optional] 
 **software_requirements** | **list[str]** |  | [optional] 
 **has_download_url** | **list[str]** |  | [optional] 
@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **has_installation_instructions** | **list[str]** |  | [optional] 
 **compatible_visualization_software** | [**list[Software]**](Software.md) |  | [optional] 
 **has_faq** | **list[str]** |  | [optional] 
-**has_contact_person** | **list[object]** |  | [optional] 
 **logo** | [**list[Image]**](Image.md) |  | [optional] 
+**has_contact_person** | **list[object]** |  | [optional] 
 **id** | **str** |  | [optional] 
 **identifier** | **list[str]** |  | [optional] 
 **has_sample_execution** | [**list[SampleExecution]**](SampleExecution.md) |  | [optional] 

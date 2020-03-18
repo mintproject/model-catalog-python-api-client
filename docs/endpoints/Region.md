@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **geo** | **list[object]** |  | [optional] 
 **description** | **list[str]** |  | [optional] 
-**country** | [**list[Region]**](Region.md) |  | [optional] 
+**part_of** | [**list[Region]**](Region.md) |  | [optional] 
 **id** | **str** |  | [optional] 
 **label** | **list[str]** |  | [optional] 
 **type** | **list[str]** |  | [optional] 
