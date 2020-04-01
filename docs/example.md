@@ -6,14 +6,14 @@
 
 ## Running Models using the ModelCatalog
 
-`mint-cli` is an internal project to run and test a ModelConfiguration or ModelConfigurationSetup.  It uses the MINT Model Catalog to obtain the information required for execution (inputs, parameters, executables, docker images, etc.).
+[Desktop Application for Model Execution](https://dame-cli.readthedocs.io/en/latest/) `(DAME)` is a command line interface for executing environmental models.  It uses the MINT Model Catalog to obtain the information required for execution (inputs, parameters, executables, docker images, etc.).
 
 ### Running a ModelConfiguration
 The following movie shows how to execute a Model Configuration from the command line:
 
-<script id="asciicast-301392" src="https://asciinema.org/a/301392.js" async></script>
+<script id="asciicast-ZhVn1dI5NBIzaaWGaIlD563Cj" src="https://asciinema.org/a/ZhVn1dI5NBIzaaWGaIlD563Cj.js" async></script>
 
 ### Running a Setup
 The following movie shows how to execute a Model Configuration Setup from the command line: 
 
-<script id="asciicast-301391" src="https://asciinema.org/a/301391.js" async></script>
+<script id="asciicast-ZhVn1dI5NBIzaaWGaIlD563Cj" src="https://asciinema.org/a/ZhVn1dI5NBIzaaWGaIlD563Cj.js" async></script>
