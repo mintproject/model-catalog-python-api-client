@@ -12,7 +12,6 @@ docker run -ti --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v4.1.2 \
      -c /local/openapi-config.json \
      --git-repo-id model-catalog-python-api-client \
      --git-user-id mintproject  \
-     --template-dir /local/.openapi-generator/template
 
 mv -f docs/ModelconfigurationApi.md docs/ModelConfigurationApi.md
 

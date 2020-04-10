@@ -32,7 +32,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
 label = 'label_example' # str | Label of NumericalIndex
 custom_query_name = 'custom_model_index' # str | Name of the custom query (optional) (default to 'custom_model_index')
@@ -67,6 +67,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets the details of a single instance of Model |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **custom_model_intervention_get**
@@ -85,7 +90,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
 label = 'label_example' # str | Label of intervation
 custom_query_name = 'custom_model_intervetion' # str | Name of the custom query (optional) (default to 'custom_model_intervetion')
@@ -120,6 +125,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets the details of a single instance of Model |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **custom_model_region_get**
@@ -138,7 +148,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
 label = 'label_example' # str | region to search
 custom_query_name = 'custom_model_region' # str | Name of the custom query (optional) (default to 'custom_model_region')
@@ -173,6 +183,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets the details of a single instance of Model |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **custom_models_standard_variable_get**
@@ -191,7 +206,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
 label = 'label_example' # str | standard variable name
 custom_query_name = 'custom_model_standard_variable' # str | Name of the custom query (optional) (default to 'custom_model_standard_variable')
@@ -226,6 +241,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets a list of models |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **custom_models_variable_get**
@@ -244,7 +264,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
 label = 'label_example' # str | variable to search
 custom_query_name = 'custom_models_variable' # str | Name of the custom query (optional) (default to 'custom_models_variable')
@@ -279,6 +299,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets a list of instance of Model |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_get**
@@ -297,7 +322,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
 username = 'username_example' # str | Username to query (optional)
 label = 'label_example' # str | Filter by label (optional)
@@ -330,6 +355,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response - returns an array of Model entities. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_id_delete**
@@ -352,7 +382,9 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# create an instance of the API class
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
+configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
@@ -384,6 +416,12 @@ void (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | Deleted |  -  |
+**404** | Not Found |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_id_get**
@@ -402,7 +440,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
 id = 'id_example' # str | The ID of the resource
 username = 'username_example' # str | Username to query (optional)
@@ -435,6 +473,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets the details of a single instance of  Model |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_id_put**
@@ -457,7 +500,9 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# create an instance of the API class
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
+configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
@@ -492,6 +537,12 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Updated |  -  |
+**404** | Not Found |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_post**
@@ -514,7 +565,9 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# create an instance of the API class
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
+configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Create an instance of the API class
 api_instance = modelcatalog.ModelApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
 model = modelcatalog.Model() # Model | A new Modelto be created (optional)
@@ -546,6 +599,11 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 

@@ -28,7 +28,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi()
 username = 'username_example' # str | Username to query (optional)
 label = 'label_example' # str | Filter by label (optional)
@@ -61,6 +61,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful response - returns an array of ConfigurationSetup entities. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **configurationsetups_id_delete**
@@ -83,7 +88,9 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# create an instance of the API class
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
+configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
@@ -115,6 +122,12 @@ void (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: Not defined
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | Deleted |  -  |
+**404** | Not Found |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **configurationsetups_id_get**
@@ -133,7 +146,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi()
 id = 'id_example' # str | The ID of the resource
 username = 'username_example' # str | Username to query (optional)
@@ -166,6 +179,11 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets the details of a single instance of  ConfigurationSetup |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **configurationsetups_id_put**
@@ -188,7 +206,9 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# create an instance of the API class
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
+configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the resource
 user = 'user_example' # str | Username
@@ -223,6 +243,12 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Updated |  -  |
+**404** | Not Found |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **configurationsetups_post**
@@ -245,7 +271,9 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# create an instance of the API class
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
+configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
 configuration_setup = modelcatalog.ConfigurationSetup() # ConfigurationSetup | A new ConfigurationSetupto be created (optional)
@@ -278,6 +306,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Created |  -  |
+
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **custom_configurationsetups_id_get**
@@ -296,7 +329,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi()
 id = 'id_example' # str | The ID of the resource
 username = 'username_example' # str | Username to query (optional)
@@ -330,6 +363,11 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets the details of a single instance of  ModelConfigurationSetup |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 

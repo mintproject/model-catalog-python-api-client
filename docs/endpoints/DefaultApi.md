@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **user_login_get**
-> str user_login_get(username, password)
+> object user_login_get(username, password)
 
 
 
@@ -23,7 +23,7 @@ import modelcatalog
 from modelcatalog.rest import ApiException
 from pprint import pprint
 
-# create an instance of the API class
+# Create an instance of the API class
 api_instance = modelcatalog.DefaultApi()
 username = 'username_example' # str | The user name for login
 password = 'password_example' # str | The password for login in clear text
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**str**
+**object**
 
 ### Authorization
 
@@ -54,6 +54,12 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-Rate-Limit - calls per hour allowed by the user <br>  * X-Expires-After - date in UTC when token expires <br>  |
+**400** | unsuccessful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
