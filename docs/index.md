@@ -21,3 +21,9 @@ Then import the package:
 ```python
 import modelcatalog 
 ```
+
+!!! info
+    This package is used by:
+
+    - Desktop appliation for model execution (DAME) [[Code](https://github.com/mintproject/dame_cli/)] [[Documentation](https://dame-cli.readthedocs.io/en/latest/)]                 [[Releases](https://github.com/mintproject/dame_cli/releases)]
+    - Model insertion checker (MIC) [[Code](https://github.com/mintproject/mic)] [[Documentation](https://mic-cli.readthedocs.io/en/latest/)] [[Releases](https://github.com/mintproject/mic/releases)]
