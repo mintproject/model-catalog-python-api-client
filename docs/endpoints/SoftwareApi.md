@@ -1,22 +1,22 @@
 # modelcatalog.SoftwareApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**softwares_get**](SoftwareApi.md#softwares_get) | **GET** /softwares | List all Software entities
-[**softwares_id_delete**](SoftwareApi.md#softwares_id_delete) | **DELETE** /softwares/{id} | Delete a Software
-[**softwares_id_get**](SoftwareApi.md#softwares_id_get) | **GET** /softwares/{id} | Get a Software
-[**softwares_id_put**](SoftwareApi.md#softwares_id_put) | **PUT** /softwares/{id} | Update a Software
-[**softwares_post**](SoftwareApi.md#softwares_post) | **POST** /softwares | Create a Software
+[**softwares_get**](SoftwareApi.md#softwares_get) | **GET** /softwares | List all instances of Software
+[**softwares_id_delete**](SoftwareApi.md#softwares_id_delete) | **DELETE** /softwares/{id} | Delete an existing Software
+[**softwares_id_get**](SoftwareApi.md#softwares_id_get) | **GET** /softwares/{id} | Get a single Software by its id
+[**softwares_id_put**](SoftwareApi.md#softwares_id_put) | **PUT** /softwares/{id} | Update an existing Software
+[**softwares_post**](SoftwareApi.md#softwares_post) | **POST** /softwares | Create one Software
 
 
 # **softwares_get**
-> list[Software] softwares_get(username=username, label=label)
+> list[Software] softwares_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Software entities
+List all instances of Software
 
-Gets a list of all Software entities
+Gets a list of all instances of Software (more information in https://w3id.org/okn/o/sd#Software)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Software entities
-    api_response = api_instance.softwares_get(username=username, label=label)
+    # List all instances of Software
+    api_response = api_instance.softwares_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareApi->softwares_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Software entities. |  -  |
+**200** | Successful response - returns an array with the instances of Software. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwares_id_delete**
 > softwares_id_delete(id, user)
 
-Delete a Software
-
 Delete an existing Software
+
+Delete an existing Software (more information in https://w3id.org/okn/o/sd#Software)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Software to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Software
+    # Delete an existing Software
     api_instance.softwares_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling SoftwareApi->softwares_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Software to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **softwares_id_get**
 > Software softwares_id_get(id, username=username)
 
-Get a Software
+Get a single Software by its id
 
-Gets the details of a single instance of a Software
+Gets the details of a given Software (more information in https://w3id.org/okn/o/sd#Software)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Software to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Software
+    # Get a single Software by its id
     api_response = api_instance.softwares_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Software to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Software |  -  |
+**200** | Gets the details of a given Software |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwares_id_put**
 > Software softwares_id_put(id, user, software=software)
 
-Update a Software
+Update an existing Software
 
-Updates an existing Software
+Updates an existing Software (more information in https://w3id.org/okn/o/sd#Software)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Software to be retrieved
 user = 'user_example' # str | Username
 software = modelcatalog.Software() # Software | An old Softwareto be updated (optional)
 
 try:
-    # Update a Software
+    # Update an existing Software
     api_response = api_instance.softwares_id_put(id, user, software=software)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Software to be retrieved | 
  **user** | **str**| Username | 
  **software** | [**Software**](Software.md)| An old Softwareto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **softwares_post**
 > Software softwares_post(user, software=software)
 
-Create a Software
+Create one Software
 
-Create a new instance of a Software
+Create a new instance of Software (more information in https://w3id.org/okn/o/sd#Software)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-software = modelcatalog.Software() # Software | A new Softwareto be created (optional)
+software = modelcatalog.Software() # Software | Information about the Softwareto be created (optional)
 
 try:
-    # Create a Software
+    # Create one Software
     api_response = api_instance.softwares_post(user, software=software)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **software** | [**Software**](Software.md)| A new Softwareto be created | [optional] 
+ **software** | [**Software**](Software.md)| Information about the Softwareto be created | [optional] 
 
 ### Return type
 

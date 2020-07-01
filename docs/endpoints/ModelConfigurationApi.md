@@ -1,15 +1,15 @@
 # modelcatalog.ModelConfigurationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**custom_modelconfigurations_id_get**](ModelConfigurationApi.md#custom_modelconfigurations_id_get) | **GET** /custom/modelconfigurations/{id} | Get a ModelConfiguration
-[**modelconfigurations_get**](ModelConfigurationApi.md#modelconfigurations_get) | **GET** /modelconfigurations | List all ModelConfiguration entities
-[**modelconfigurations_id_delete**](ModelConfigurationApi.md#modelconfigurations_id_delete) | **DELETE** /modelconfigurations/{id} | Delete a ModelConfiguration
-[**modelconfigurations_id_get**](ModelConfigurationApi.md#modelconfigurations_id_get) | **GET** /modelconfigurations/{id} | Get a ModelConfiguration
-[**modelconfigurations_id_put**](ModelConfigurationApi.md#modelconfigurations_id_put) | **PUT** /modelconfigurations/{id} | Update a ModelConfiguration
-[**modelconfigurations_post**](ModelConfigurationApi.md#modelconfigurations_post) | **POST** /modelconfigurations | Create a ModelConfiguration
+[**modelconfigurations_get**](ModelConfigurationApi.md#modelconfigurations_get) | **GET** /modelconfigurations | List all instances of ModelConfiguration
+[**modelconfigurations_id_delete**](ModelConfigurationApi.md#modelconfigurations_id_delete) | **DELETE** /modelconfigurations/{id} | Delete an existing ModelConfiguration
+[**modelconfigurations_id_get**](ModelConfigurationApi.md#modelconfigurations_id_get) | **GET** /modelconfigurations/{id} | Get a single ModelConfiguration by its id
+[**modelconfigurations_id_put**](ModelConfigurationApi.md#modelconfigurations_id_put) | **PUT** /modelconfigurations/{id} | Update an existing ModelConfiguration
+[**modelconfigurations_post**](ModelConfigurationApi.md#modelconfigurations_post) | **POST** /modelconfigurations | Create one ModelConfiguration
 
 
 # **custom_modelconfigurations_id_get**
@@ -71,11 +71,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **modelconfigurations_get**
-> list[ModelConfiguration] modelconfigurations_get(username=username, label=label)
+> list[ModelConfiguration] modelconfigurations_get(username=username, label=label, page=page, per_page=per_page)
 
-List all ModelConfiguration entities
+List all instances of ModelConfiguration
 
-Gets a list of all ModelConfiguration entities
+Gets a list of all instances of ModelConfiguration (more information in https://w3id.org/okn/o/sdm#ModelConfiguration)
 
 ### Example
 
@@ -88,12 +88,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.ModelConfigurationApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all ModelConfiguration entities
-    api_response = api_instance.modelconfigurations_get(username=username, label=label)
+    # List all instances of ModelConfiguration
+    api_response = api_instance.modelconfigurations_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ModelConfigurationApi->modelconfigurations_get: %s\n" % e)
@@ -103,8 +105,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -122,16 +126,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of ModelConfiguration entities. |  -  |
+**200** | Successful response - returns an array with the instances of ModelConfiguration. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **modelconfigurations_id_delete**
 > modelconfigurations_id_delete(id, user)
 
-Delete a ModelConfiguration
-
 Delete an existing ModelConfiguration
+
+Delete an existing ModelConfiguration (more information in https://w3id.org/okn/o/sdm#ModelConfiguration)
 
 ### Example
 
@@ -146,15 +150,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelConfigurationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the ModelConfiguration to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a ModelConfiguration
+    # Delete an existing ModelConfiguration
     api_instance.modelconfigurations_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling ModelConfigurationApi->modelconfigurations_id_delete: %s\n" % e)
@@ -164,7 +168,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the ModelConfiguration to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -191,9 +195,9 @@ void (empty response body)
 # **modelconfigurations_id_get**
 > ModelConfiguration modelconfigurations_id_get(id, username=username)
 
-Get a ModelConfiguration
+Get a single ModelConfiguration by its id
 
-Gets the details of a single instance of a ModelConfiguration
+Gets the details of a given ModelConfiguration (more information in https://w3id.org/okn/o/sdm#ModelConfiguration)
 
 ### Example
 
@@ -206,11 +210,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.ModelConfigurationApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the ModelConfiguration to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a ModelConfiguration
+    # Get a single ModelConfiguration by its id
     api_response = api_instance.modelconfigurations_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -221,8 +225,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the ModelConfiguration to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -240,16 +244,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  ModelConfiguration |  -  |
+**200** | Gets the details of a given ModelConfiguration |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **modelconfigurations_id_put**
 > ModelConfiguration modelconfigurations_id_put(id, user, model_configuration=model_configuration)
 
-Update a ModelConfiguration
+Update an existing ModelConfiguration
 
-Updates an existing ModelConfiguration
+Updates an existing ModelConfiguration (more information in https://w3id.org/okn/o/sdm#ModelConfiguration)
 
 ### Example
 
@@ -264,16 +268,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelConfigurationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the ModelConfiguration to be retrieved
 user = 'user_example' # str | Username
 model_configuration = modelcatalog.ModelConfiguration() # ModelConfiguration | An old ModelConfigurationto be updated (optional)
 
 try:
-    # Update a ModelConfiguration
+    # Update an existing ModelConfiguration
     api_response = api_instance.modelconfigurations_id_put(id, user, model_configuration=model_configuration)
     pprint(api_response)
 except ApiException as e:
@@ -284,7 +288,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the ModelConfiguration to be retrieved | 
  **user** | **str**| Username | 
  **model_configuration** | [**ModelConfiguration**](ModelConfiguration.md)| An old ModelConfigurationto be updated | [optional] 
 
@@ -312,9 +316,9 @@ Name | Type | Description  | Notes
 # **modelconfigurations_post**
 > ModelConfiguration modelconfigurations_post(user, model_configuration=model_configuration)
 
-Create a ModelConfiguration
+Create one ModelConfiguration
 
-Create a new instance of a ModelConfiguration
+Create a new instance of ModelConfiguration (more information in https://w3id.org/okn/o/sdm#ModelConfiguration)
 
 ### Example
 
@@ -329,15 +333,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelConfigurationApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-model_configuration = modelcatalog.ModelConfiguration() # ModelConfiguration | A new ModelConfigurationto be created (optional)
+model_configuration = modelcatalog.ModelConfiguration() # ModelConfiguration | Information about the ModelConfigurationto be created (optional)
 
 try:
-    # Create a ModelConfiguration
+    # Create one ModelConfiguration
     api_response = api_instance.modelconfigurations_post(user, model_configuration=model_configuration)
     pprint(api_response)
 except ApiException as e:
@@ -349,7 +353,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **model_configuration** | [**ModelConfiguration**](ModelConfiguration.md)| A new ModelConfigurationto be created | [optional] 
+ **model_configuration** | [**ModelConfiguration**](ModelConfiguration.md)| Information about the ModelConfigurationto be created | [optional] 
 
 ### Return type
 

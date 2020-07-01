@@ -1,22 +1,22 @@
 # modelcatalog.ParameterApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**parameters_get**](ParameterApi.md#parameters_get) | **GET** /parameters | List all Parameter entities
-[**parameters_id_delete**](ParameterApi.md#parameters_id_delete) | **DELETE** /parameters/{id} | Delete a Parameter
-[**parameters_id_get**](ParameterApi.md#parameters_id_get) | **GET** /parameters/{id} | Get a Parameter
-[**parameters_id_put**](ParameterApi.md#parameters_id_put) | **PUT** /parameters/{id} | Update a Parameter
-[**parameters_post**](ParameterApi.md#parameters_post) | **POST** /parameters | Create a Parameter
+[**parameters_get**](ParameterApi.md#parameters_get) | **GET** /parameters | List all instances of Parameter
+[**parameters_id_delete**](ParameterApi.md#parameters_id_delete) | **DELETE** /parameters/{id} | Delete an existing Parameter
+[**parameters_id_get**](ParameterApi.md#parameters_id_get) | **GET** /parameters/{id} | Get a single Parameter by its id
+[**parameters_id_put**](ParameterApi.md#parameters_id_put) | **PUT** /parameters/{id} | Update an existing Parameter
+[**parameters_post**](ParameterApi.md#parameters_post) | **POST** /parameters | Create one Parameter
 
 
 # **parameters_get**
-> list[Parameter] parameters_get(username=username, label=label)
+> list[Parameter] parameters_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Parameter entities
+List all instances of Parameter
 
-Gets a list of all Parameter entities
+Gets a list of all instances of Parameter (more information in https://w3id.org/okn/o/sd#Parameter)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.ParameterApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Parameter entities
-    api_response = api_instance.parameters_get(username=username, label=label)
+    # List all instances of Parameter
+    api_response = api_instance.parameters_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ParameterApi->parameters_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Parameter entities. |  -  |
+**200** | Successful response - returns an array with the instances of Parameter. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **parameters_id_delete**
 > parameters_id_delete(id, user)
 
-Delete a Parameter
-
 Delete an existing Parameter
+
+Delete an existing Parameter (more information in https://w3id.org/okn/o/sd#Parameter)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ParameterApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Parameter to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Parameter
+    # Delete an existing Parameter
     api_instance.parameters_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling ParameterApi->parameters_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Parameter to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **parameters_id_get**
 > Parameter parameters_id_get(id, username=username)
 
-Get a Parameter
+Get a single Parameter by its id
 
-Gets the details of a single instance of a Parameter
+Gets the details of a given Parameter (more information in https://w3id.org/okn/o/sd#Parameter)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.ParameterApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Parameter to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Parameter
+    # Get a single Parameter by its id
     api_response = api_instance.parameters_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Parameter to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Parameter |  -  |
+**200** | Gets the details of a given Parameter |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **parameters_id_put**
 > Parameter parameters_id_put(id, user, parameter=parameter)
 
-Update a Parameter
+Update an existing Parameter
 
-Updates an existing Parameter
+Updates an existing Parameter (more information in https://w3id.org/okn/o/sd#Parameter)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ParameterApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Parameter to be retrieved
 user = 'user_example' # str | Username
 parameter = modelcatalog.Parameter() # Parameter | An old Parameterto be updated (optional)
 
 try:
-    # Update a Parameter
+    # Update an existing Parameter
     api_response = api_instance.parameters_id_put(id, user, parameter=parameter)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Parameter to be retrieved | 
  **user** | **str**| Username | 
  **parameter** | [**Parameter**](Parameter.md)| An old Parameterto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **parameters_post**
 > Parameter parameters_post(user, parameter=parameter)
 
-Create a Parameter
+Create one Parameter
 
-Create a new instance of a Parameter
+Create a new instance of Parameter (more information in https://w3id.org/okn/o/sd#Parameter)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ParameterApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-parameter = modelcatalog.Parameter() # Parameter | A new Parameterto be created (optional)
+parameter = modelcatalog.Parameter() # Parameter | Information about the Parameterto be created (optional)
 
 try:
-    # Create a Parameter
+    # Create one Parameter
     api_response = api_instance.parameters_post(user, parameter=parameter)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **parameter** | [**Parameter**](Parameter.md)| A new Parameterto be created | [optional] 
+ **parameter** | [**Parameter**](Parameter.md)| Information about the Parameterto be created | [optional] 
 
 ### Return type
 

@@ -1,22 +1,22 @@
 # modelcatalog.GridApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**grids_get**](GridApi.md#grids_get) | **GET** /grids | List all Grid entities
-[**grids_id_delete**](GridApi.md#grids_id_delete) | **DELETE** /grids/{id} | Delete a Grid
-[**grids_id_get**](GridApi.md#grids_id_get) | **GET** /grids/{id} | Get a Grid
-[**grids_id_put**](GridApi.md#grids_id_put) | **PUT** /grids/{id} | Update a Grid
-[**grids_post**](GridApi.md#grids_post) | **POST** /grids | Create a Grid
+[**grids_get**](GridApi.md#grids_get) | **GET** /grids | List all instances of Grid
+[**grids_id_delete**](GridApi.md#grids_id_delete) | **DELETE** /grids/{id} | Delete an existing Grid
+[**grids_id_get**](GridApi.md#grids_id_get) | **GET** /grids/{id} | Get a single Grid by its id
+[**grids_id_put**](GridApi.md#grids_id_put) | **PUT** /grids/{id} | Update an existing Grid
+[**grids_post**](GridApi.md#grids_post) | **POST** /grids | Create one Grid
 
 
 # **grids_get**
-> list[Grid] grids_get(username=username, label=label)
+> list[Grid] grids_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Grid entities
+List all instances of Grid
 
-Gets a list of all Grid entities
+Gets a list of all instances of Grid (more information in https://w3id.org/okn/o/sdm#Grid)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.GridApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Grid entities
-    api_response = api_instance.grids_get(username=username, label=label)
+    # List all instances of Grid
+    api_response = api_instance.grids_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GridApi->grids_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Grid entities. |  -  |
+**200** | Successful response - returns an array with the instances of Grid. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **grids_id_delete**
 > grids_id_delete(id, user)
 
-Delete a Grid
-
 Delete an existing Grid
+
+Delete an existing Grid (more information in https://w3id.org/okn/o/sdm#Grid)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GridApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Grid to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Grid
+    # Delete an existing Grid
     api_instance.grids_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling GridApi->grids_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Grid to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **grids_id_get**
 > Grid grids_id_get(id, username=username)
 
-Get a Grid
+Get a single Grid by its id
 
-Gets the details of a single instance of a Grid
+Gets the details of a given Grid (more information in https://w3id.org/okn/o/sdm#Grid)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.GridApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Grid to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Grid
+    # Get a single Grid by its id
     api_response = api_instance.grids_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Grid to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Grid |  -  |
+**200** | Gets the details of a given Grid |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **grids_id_put**
 > Grid grids_id_put(id, user, grid=grid)
 
-Update a Grid
+Update an existing Grid
 
-Updates an existing Grid
+Updates an existing Grid (more information in https://w3id.org/okn/o/sdm#Grid)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GridApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Grid to be retrieved
 user = 'user_example' # str | Username
 grid = modelcatalog.Grid() # Grid | An old Gridto be updated (optional)
 
 try:
-    # Update a Grid
+    # Update an existing Grid
     api_response = api_instance.grids_id_put(id, user, grid=grid)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Grid to be retrieved | 
  **user** | **str**| Username | 
  **grid** | [**Grid**](Grid.md)| An old Gridto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **grids_post**
 > Grid grids_post(user, grid=grid)
 
-Create a Grid
+Create one Grid
 
-Create a new instance of a Grid
+Create a new instance of Grid (more information in https://w3id.org/okn/o/sdm#Grid)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GridApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-grid = modelcatalog.Grid() # Grid | A new Gridto be created (optional)
+grid = modelcatalog.Grid() # Grid | Information about the Gridto be created (optional)
 
 try:
-    # Create a Grid
+    # Create one Grid
     api_response = api_instance.grids_post(user, grid=grid)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **grid** | [**Grid**](Grid.md)| A new Gridto be created | [optional] 
+ **grid** | [**Grid**](Grid.md)| Information about the Gridto be created | [optional] 
 
 ### Return type
 

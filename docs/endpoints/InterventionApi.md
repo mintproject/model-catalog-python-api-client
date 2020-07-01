@@ -1,22 +1,22 @@
 # modelcatalog.InterventionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**interventions_get**](InterventionApi.md#interventions_get) | **GET** /interventions | List all Intervention entities
-[**interventions_id_delete**](InterventionApi.md#interventions_id_delete) | **DELETE** /interventions/{id} | Delete a Intervention
-[**interventions_id_get**](InterventionApi.md#interventions_id_get) | **GET** /interventions/{id} | Get a Intervention
-[**interventions_id_put**](InterventionApi.md#interventions_id_put) | **PUT** /interventions/{id} | Update a Intervention
-[**interventions_post**](InterventionApi.md#interventions_post) | **POST** /interventions | Create a Intervention
+[**interventions_get**](InterventionApi.md#interventions_get) | **GET** /interventions | List all instances of Intervention
+[**interventions_id_delete**](InterventionApi.md#interventions_id_delete) | **DELETE** /interventions/{id} | Delete an existing Intervention
+[**interventions_id_get**](InterventionApi.md#interventions_id_get) | **GET** /interventions/{id} | Get a single Intervention by its id
+[**interventions_id_put**](InterventionApi.md#interventions_id_put) | **PUT** /interventions/{id} | Update an existing Intervention
+[**interventions_post**](InterventionApi.md#interventions_post) | **POST** /interventions | Create one Intervention
 
 
 # **interventions_get**
-> list[Intervention] interventions_get(username=username, label=label)
+> list[Intervention] interventions_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Intervention entities
+List all instances of Intervention
 
-Gets a list of all Intervention entities
+Gets a list of all instances of Intervention (more information in https://w3id.org/okn/o/sdm#Intervention)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.InterventionApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Intervention entities
-    api_response = api_instance.interventions_get(username=username, label=label)
+    # List all instances of Intervention
+    api_response = api_instance.interventions_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InterventionApi->interventions_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Intervention entities. |  -  |
+**200** | Successful response - returns an array with the instances of Intervention. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **interventions_id_delete**
 > interventions_id_delete(id, user)
 
-Delete a Intervention
-
 Delete an existing Intervention
+
+Delete an existing Intervention (more information in https://w3id.org/okn/o/sdm#Intervention)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.InterventionApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Intervention to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Intervention
+    # Delete an existing Intervention
     api_instance.interventions_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling InterventionApi->interventions_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Intervention to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **interventions_id_get**
 > Intervention interventions_id_get(id, username=username)
 
-Get a Intervention
+Get a single Intervention by its id
 
-Gets the details of a single instance of a Intervention
+Gets the details of a given Intervention (more information in https://w3id.org/okn/o/sdm#Intervention)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.InterventionApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Intervention to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Intervention
+    # Get a single Intervention by its id
     api_response = api_instance.interventions_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Intervention to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Intervention |  -  |
+**200** | Gets the details of a given Intervention |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **interventions_id_put**
 > Intervention interventions_id_put(id, user, intervention=intervention)
 
-Update a Intervention
+Update an existing Intervention
 
-Updates an existing Intervention
+Updates an existing Intervention (more information in https://w3id.org/okn/o/sdm#Intervention)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.InterventionApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Intervention to be retrieved
 user = 'user_example' # str | Username
 intervention = modelcatalog.Intervention() # Intervention | An old Interventionto be updated (optional)
 
 try:
-    # Update a Intervention
+    # Update an existing Intervention
     api_response = api_instance.interventions_id_put(id, user, intervention=intervention)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Intervention to be retrieved | 
  **user** | **str**| Username | 
  **intervention** | [**Intervention**](Intervention.md)| An old Interventionto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **interventions_post**
 > Intervention interventions_post(user, intervention=intervention)
 
-Create a Intervention
+Create one Intervention
 
-Create a new instance of a Intervention
+Create a new instance of Intervention (more information in https://w3id.org/okn/o/sdm#Intervention)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.InterventionApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-intervention = modelcatalog.Intervention() # Intervention | A new Interventionto be created (optional)
+intervention = modelcatalog.Intervention() # Intervention | Information about the Interventionto be created (optional)
 
 try:
-    # Create a Intervention
+    # Create one Intervention
     api_response = api_instance.interventions_post(user, intervention=intervention)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **intervention** | [**Intervention**](Intervention.md)| A new Interventionto be created | [optional] 
+ **intervention** | [**Intervention**](Intervention.md)| Information about the Interventionto be created | [optional] 
 
 ### Return type
 

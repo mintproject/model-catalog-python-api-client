@@ -1,22 +1,22 @@
 # modelcatalog.SampleExecutionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**sampleexecutions_get**](SampleExecutionApi.md#sampleexecutions_get) | **GET** /sampleexecutions | List all SampleExecution entities
-[**sampleexecutions_id_delete**](SampleExecutionApi.md#sampleexecutions_id_delete) | **DELETE** /sampleexecutions/{id} | Delete a SampleExecution
-[**sampleexecutions_id_get**](SampleExecutionApi.md#sampleexecutions_id_get) | **GET** /sampleexecutions/{id} | Get a SampleExecution
-[**sampleexecutions_id_put**](SampleExecutionApi.md#sampleexecutions_id_put) | **PUT** /sampleexecutions/{id} | Update a SampleExecution
-[**sampleexecutions_post**](SampleExecutionApi.md#sampleexecutions_post) | **POST** /sampleexecutions | Create a SampleExecution
+[**sampleexecutions_get**](SampleExecutionApi.md#sampleexecutions_get) | **GET** /sampleexecutions | List all instances of SampleExecution
+[**sampleexecutions_id_delete**](SampleExecutionApi.md#sampleexecutions_id_delete) | **DELETE** /sampleexecutions/{id} | Delete an existing SampleExecution
+[**sampleexecutions_id_get**](SampleExecutionApi.md#sampleexecutions_id_get) | **GET** /sampleexecutions/{id} | Get a single SampleExecution by its id
+[**sampleexecutions_id_put**](SampleExecutionApi.md#sampleexecutions_id_put) | **PUT** /sampleexecutions/{id} | Update an existing SampleExecution
+[**sampleexecutions_post**](SampleExecutionApi.md#sampleexecutions_post) | **POST** /sampleexecutions | Create one SampleExecution
 
 
 # **sampleexecutions_get**
-> list[SampleExecution] sampleexecutions_get(username=username, label=label)
+> list[SampleExecution] sampleexecutions_get(username=username, label=label, page=page, per_page=per_page)
 
-List all SampleExecution entities
+List all instances of SampleExecution
 
-Gets a list of all SampleExecution entities
+Gets a list of all instances of SampleExecution (more information in https://w3id.org/okn/o/sd#SampleExecution)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SampleExecutionApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all SampleExecution entities
-    api_response = api_instance.sampleexecutions_get(username=username, label=label)
+    # List all instances of SampleExecution
+    api_response = api_instance.sampleexecutions_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleExecutionApi->sampleexecutions_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of SampleExecution entities. |  -  |
+**200** | Successful response - returns an array with the instances of SampleExecution. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sampleexecutions_id_delete**
 > sampleexecutions_id_delete(id, user)
 
-Delete a SampleExecution
-
 Delete an existing SampleExecution
+
+Delete an existing SampleExecution (more information in https://w3id.org/okn/o/sd#SampleExecution)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleExecutionApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SampleExecution to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a SampleExecution
+    # Delete an existing SampleExecution
     api_instance.sampleexecutions_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling SampleExecutionApi->sampleexecutions_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SampleExecution to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **sampleexecutions_id_get**
 > SampleExecution sampleexecutions_id_get(id, username=username)
 
-Get a SampleExecution
+Get a single SampleExecution by its id
 
-Gets the details of a single instance of a SampleExecution
+Gets the details of a given SampleExecution (more information in https://w3id.org/okn/o/sd#SampleExecution)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SampleExecutionApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the SampleExecution to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a SampleExecution
+    # Get a single SampleExecution by its id
     api_response = api_instance.sampleexecutions_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the SampleExecution to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  SampleExecution |  -  |
+**200** | Gets the details of a given SampleExecution |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sampleexecutions_id_put**
 > SampleExecution sampleexecutions_id_put(id, user, sample_execution=sample_execution)
 
-Update a SampleExecution
+Update an existing SampleExecution
 
-Updates an existing SampleExecution
+Updates an existing SampleExecution (more information in https://w3id.org/okn/o/sd#SampleExecution)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleExecutionApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SampleExecution to be retrieved
 user = 'user_example' # str | Username
 sample_execution = modelcatalog.SampleExecution() # SampleExecution | An old SampleExecutionto be updated (optional)
 
 try:
-    # Update a SampleExecution
+    # Update an existing SampleExecution
     api_response = api_instance.sampleexecutions_id_put(id, user, sample_execution=sample_execution)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SampleExecution to be retrieved | 
  **user** | **str**| Username | 
  **sample_execution** | [**SampleExecution**](SampleExecution.md)| An old SampleExecutionto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **sampleexecutions_post**
 > SampleExecution sampleexecutions_post(user, sample_execution=sample_execution)
 
-Create a SampleExecution
+Create one SampleExecution
 
-Create a new instance of a SampleExecution
+Create a new instance of SampleExecution (more information in https://w3id.org/okn/o/sd#SampleExecution)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleExecutionApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-sample_execution = modelcatalog.SampleExecution() # SampleExecution | A new SampleExecutionto be created (optional)
+sample_execution = modelcatalog.SampleExecution() # SampleExecution | Information about the SampleExecutionto be created (optional)
 
 try:
-    # Create a SampleExecution
+    # Create one SampleExecution
     api_response = api_instance.sampleexecutions_post(user, sample_execution=sample_execution)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **sample_execution** | [**SampleExecution**](SampleExecution.md)| A new SampleExecutionto be created | [optional] 
+ **sample_execution** | [**SampleExecution**](SampleExecution.md)| Information about the SampleExecutionto be created | [optional] 
 
 ### Return type
 

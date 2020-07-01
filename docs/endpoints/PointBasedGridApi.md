@@ -1,22 +1,22 @@
 # modelcatalog.PointBasedGridApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pointbasedgrids_get**](PointBasedGridApi.md#pointbasedgrids_get) | **GET** /pointbasedgrids | List all PointBasedGrid entities
-[**pointbasedgrids_id_delete**](PointBasedGridApi.md#pointbasedgrids_id_delete) | **DELETE** /pointbasedgrids/{id} | Delete a PointBasedGrid
-[**pointbasedgrids_id_get**](PointBasedGridApi.md#pointbasedgrids_id_get) | **GET** /pointbasedgrids/{id} | Get a PointBasedGrid
-[**pointbasedgrids_id_put**](PointBasedGridApi.md#pointbasedgrids_id_put) | **PUT** /pointbasedgrids/{id} | Update a PointBasedGrid
-[**pointbasedgrids_post**](PointBasedGridApi.md#pointbasedgrids_post) | **POST** /pointbasedgrids | Create a PointBasedGrid
+[**pointbasedgrids_get**](PointBasedGridApi.md#pointbasedgrids_get) | **GET** /pointbasedgrids | List all instances of PointBasedGrid
+[**pointbasedgrids_id_delete**](PointBasedGridApi.md#pointbasedgrids_id_delete) | **DELETE** /pointbasedgrids/{id} | Delete an existing PointBasedGrid
+[**pointbasedgrids_id_get**](PointBasedGridApi.md#pointbasedgrids_id_get) | **GET** /pointbasedgrids/{id} | Get a single PointBasedGrid by its id
+[**pointbasedgrids_id_put**](PointBasedGridApi.md#pointbasedgrids_id_put) | **PUT** /pointbasedgrids/{id} | Update an existing PointBasedGrid
+[**pointbasedgrids_post**](PointBasedGridApi.md#pointbasedgrids_post) | **POST** /pointbasedgrids | Create one PointBasedGrid
 
 
 # **pointbasedgrids_get**
-> list[PointBasedGrid] pointbasedgrids_get(username=username, label=label)
+> list[PointBasedGrid] pointbasedgrids_get(username=username, label=label, page=page, per_page=per_page)
 
-List all PointBasedGrid entities
+List all instances of PointBasedGrid
 
-Gets a list of all PointBasedGrid entities
+Gets a list of all instances of PointBasedGrid (more information in https://w3id.org/okn/o/sdm#PointBasedGrid)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.PointBasedGridApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all PointBasedGrid entities
-    api_response = api_instance.pointbasedgrids_get(username=username, label=label)
+    # List all instances of PointBasedGrid
+    api_response = api_instance.pointbasedgrids_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PointBasedGridApi->pointbasedgrids_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of PointBasedGrid entities. |  -  |
+**200** | Successful response - returns an array with the instances of PointBasedGrid. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **pointbasedgrids_id_delete**
 > pointbasedgrids_id_delete(id, user)
 
-Delete a PointBasedGrid
-
 Delete an existing PointBasedGrid
+
+Delete an existing PointBasedGrid (more information in https://w3id.org/okn/o/sdm#PointBasedGrid)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.PointBasedGridApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the PointBasedGrid to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a PointBasedGrid
+    # Delete an existing PointBasedGrid
     api_instance.pointbasedgrids_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling PointBasedGridApi->pointbasedgrids_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the PointBasedGrid to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **pointbasedgrids_id_get**
 > PointBasedGrid pointbasedgrids_id_get(id, username=username)
 
-Get a PointBasedGrid
+Get a single PointBasedGrid by its id
 
-Gets the details of a single instance of a PointBasedGrid
+Gets the details of a given PointBasedGrid (more information in https://w3id.org/okn/o/sdm#PointBasedGrid)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.PointBasedGridApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the PointBasedGrid to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a PointBasedGrid
+    # Get a single PointBasedGrid by its id
     api_response = api_instance.pointbasedgrids_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the PointBasedGrid to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  PointBasedGrid |  -  |
+**200** | Gets the details of a given PointBasedGrid |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **pointbasedgrids_id_put**
 > PointBasedGrid pointbasedgrids_id_put(id, user, point_based_grid=point_based_grid)
 
-Update a PointBasedGrid
+Update an existing PointBasedGrid
 
-Updates an existing PointBasedGrid
+Updates an existing PointBasedGrid (more information in https://w3id.org/okn/o/sdm#PointBasedGrid)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.PointBasedGridApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the PointBasedGrid to be retrieved
 user = 'user_example' # str | Username
 point_based_grid = modelcatalog.PointBasedGrid() # PointBasedGrid | An old PointBasedGridto be updated (optional)
 
 try:
-    # Update a PointBasedGrid
+    # Update an existing PointBasedGrid
     api_response = api_instance.pointbasedgrids_id_put(id, user, point_based_grid=point_based_grid)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the PointBasedGrid to be retrieved | 
  **user** | **str**| Username | 
  **point_based_grid** | [**PointBasedGrid**](PointBasedGrid.md)| An old PointBasedGridto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **pointbasedgrids_post**
 > PointBasedGrid pointbasedgrids_post(user, point_based_grid=point_based_grid)
 
-Create a PointBasedGrid
+Create one PointBasedGrid
 
-Create a new instance of a PointBasedGrid
+Create a new instance of PointBasedGrid (more information in https://w3id.org/okn/o/sdm#PointBasedGrid)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.PointBasedGridApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-point_based_grid = modelcatalog.PointBasedGrid() # PointBasedGrid | A new PointBasedGridto be created (optional)
+point_based_grid = modelcatalog.PointBasedGrid() # PointBasedGrid | Information about the PointBasedGridto be created (optional)
 
 try:
-    # Create a PointBasedGrid
+    # Create one PointBasedGrid
     api_response = api_instance.pointbasedgrids_post(user, point_based_grid=point_based_grid)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **point_based_grid** | [**PointBasedGrid**](PointBasedGrid.md)| A new PointBasedGridto be created | [optional] 
+ **point_based_grid** | [**PointBasedGrid**](PointBasedGrid.md)| Information about the PointBasedGridto be created | [optional] 
 
 ### Return type
 

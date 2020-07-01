@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**identifier** | **list[str]** |  | [optional] 
-**website** | **list[str]** |  | [optional] 
-**description** | **list[str]** |  | [optional] 
-**id** | **str** |  | [optional] 
-**label** | **list[str]** |  | [optional] 
-**type** | **list[str]** |  | [optional] 
-**email** | **list[str]** |  | [optional] 
+**identifier** | **list[str]** | Identifier of the resource being described | [optional] 
+**website** | **list[str]** | Website of the software | [optional] 
+**description** | **list[str]** | small description | [optional] 
+**id** | **str** | identifier | [optional] 
+**label** | **list[str]** | short description of the resource | [optional] 
+**type** | **list[str]** | type of the resource | [optional] 
+**email** | **list[str]** | Description not available | [optional] 
 
 [[Back to Model list]](../#documentation-for-models) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to README]](../)
 

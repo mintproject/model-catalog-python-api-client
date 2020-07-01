@@ -1,22 +1,22 @@
 # modelcatalog.GeoCoordinatesApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**geocoordinatess_get**](GeoCoordinatesApi.md#geocoordinatess_get) | **GET** /geocoordinatess | List all GeoCoordinates entities
-[**geocoordinatess_id_delete**](GeoCoordinatesApi.md#geocoordinatess_id_delete) | **DELETE** /geocoordinatess/{id} | Delete a GeoCoordinates
-[**geocoordinatess_id_get**](GeoCoordinatesApi.md#geocoordinatess_id_get) | **GET** /geocoordinatess/{id} | Get a GeoCoordinates
-[**geocoordinatess_id_put**](GeoCoordinatesApi.md#geocoordinatess_id_put) | **PUT** /geocoordinatess/{id} | Update a GeoCoordinates
-[**geocoordinatess_post**](GeoCoordinatesApi.md#geocoordinatess_post) | **POST** /geocoordinatess | Create a GeoCoordinates
+[**geocoordinatess_get**](GeoCoordinatesApi.md#geocoordinatess_get) | **GET** /geocoordinatess | List all instances of GeoCoordinates
+[**geocoordinatess_id_delete**](GeoCoordinatesApi.md#geocoordinatess_id_delete) | **DELETE** /geocoordinatess/{id} | Delete an existing GeoCoordinates
+[**geocoordinatess_id_get**](GeoCoordinatesApi.md#geocoordinatess_id_get) | **GET** /geocoordinatess/{id} | Get a single GeoCoordinates by its id
+[**geocoordinatess_id_put**](GeoCoordinatesApi.md#geocoordinatess_id_put) | **PUT** /geocoordinatess/{id} | Update an existing GeoCoordinates
+[**geocoordinatess_post**](GeoCoordinatesApi.md#geocoordinatess_post) | **POST** /geocoordinatess | Create one GeoCoordinates
 
 
 # **geocoordinatess_get**
-> list[GeoCoordinates] geocoordinatess_get(username=username, label=label)
+> list[GeoCoordinates] geocoordinatess_get(username=username, label=label, page=page, per_page=per_page)
 
-List all GeoCoordinates entities
+List all instances of GeoCoordinates
 
-Gets a list of all GeoCoordinates entities
+Gets a list of all instances of GeoCoordinates (more information in https://w3id.org/okn/o/sdm#GeoCoordinates)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.GeoCoordinatesApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all GeoCoordinates entities
-    api_response = api_instance.geocoordinatess_get(username=username, label=label)
+    # List all instances of GeoCoordinates
+    api_response = api_instance.geocoordinatess_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GeoCoordinatesApi->geocoordinatess_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of GeoCoordinates entities. |  -  |
+**200** | Successful response - returns an array with the instances of GeoCoordinates. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geocoordinatess_id_delete**
 > geocoordinatess_id_delete(id, user)
 
-Delete a GeoCoordinates
-
 Delete an existing GeoCoordinates
+
+Delete an existing GeoCoordinates (more information in https://w3id.org/okn/o/sdm#GeoCoordinates)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoCoordinatesApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the GeoCoordinates to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a GeoCoordinates
+    # Delete an existing GeoCoordinates
     api_instance.geocoordinatess_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling GeoCoordinatesApi->geocoordinatess_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the GeoCoordinates to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **geocoordinatess_id_get**
 > GeoCoordinates geocoordinatess_id_get(id, username=username)
 
-Get a GeoCoordinates
+Get a single GeoCoordinates by its id
 
-Gets the details of a single instance of a GeoCoordinates
+Gets the details of a given GeoCoordinates (more information in https://w3id.org/okn/o/sdm#GeoCoordinates)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.GeoCoordinatesApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the GeoCoordinates to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a GeoCoordinates
+    # Get a single GeoCoordinates by its id
     api_response = api_instance.geocoordinatess_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the GeoCoordinates to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  GeoCoordinates |  -  |
+**200** | Gets the details of a given GeoCoordinates |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geocoordinatess_id_put**
 > GeoCoordinates geocoordinatess_id_put(id, user, geo_coordinates=geo_coordinates)
 
-Update a GeoCoordinates
+Update an existing GeoCoordinates
 
-Updates an existing GeoCoordinates
+Updates an existing GeoCoordinates (more information in https://w3id.org/okn/o/sdm#GeoCoordinates)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoCoordinatesApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the GeoCoordinates to be retrieved
 user = 'user_example' # str | Username
 geo_coordinates = modelcatalog.GeoCoordinates() # GeoCoordinates | An old GeoCoordinatesto be updated (optional)
 
 try:
-    # Update a GeoCoordinates
+    # Update an existing GeoCoordinates
     api_response = api_instance.geocoordinatess_id_put(id, user, geo_coordinates=geo_coordinates)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the GeoCoordinates to be retrieved | 
  **user** | **str**| Username | 
  **geo_coordinates** | [**GeoCoordinates**](GeoCoordinates.md)| An old GeoCoordinatesto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **geocoordinatess_post**
 > GeoCoordinates geocoordinatess_post(user, geo_coordinates=geo_coordinates)
 
-Create a GeoCoordinates
+Create one GeoCoordinates
 
-Create a new instance of a GeoCoordinates
+Create a new instance of GeoCoordinates (more information in https://w3id.org/okn/o/sdm#GeoCoordinates)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoCoordinatesApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-geo_coordinates = modelcatalog.GeoCoordinates() # GeoCoordinates | A new GeoCoordinatesto be created (optional)
+geo_coordinates = modelcatalog.GeoCoordinates() # GeoCoordinates | Information about the GeoCoordinatesto be created (optional)
 
 try:
-    # Create a GeoCoordinates
+    # Create one GeoCoordinates
     api_response = api_instance.geocoordinatess_post(user, geo_coordinates=geo_coordinates)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **geo_coordinates** | [**GeoCoordinates**](GeoCoordinates.md)| A new GeoCoordinatesto be created | [optional] 
+ **geo_coordinates** | [**GeoCoordinates**](GeoCoordinates.md)| Information about the GeoCoordinatesto be created | [optional] 
 
 ### Return type
 

@@ -1,22 +1,22 @@
 # modelcatalog.VisualizationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**visualizations_get**](VisualizationApi.md#visualizations_get) | **GET** /visualizations | List all Visualization entities
-[**visualizations_id_delete**](VisualizationApi.md#visualizations_id_delete) | **DELETE** /visualizations/{id} | Delete a Visualization
-[**visualizations_id_get**](VisualizationApi.md#visualizations_id_get) | **GET** /visualizations/{id} | Get a Visualization
-[**visualizations_id_put**](VisualizationApi.md#visualizations_id_put) | **PUT** /visualizations/{id} | Update a Visualization
-[**visualizations_post**](VisualizationApi.md#visualizations_post) | **POST** /visualizations | Create a Visualization
+[**visualizations_get**](VisualizationApi.md#visualizations_get) | **GET** /visualizations | List all instances of Visualization
+[**visualizations_id_delete**](VisualizationApi.md#visualizations_id_delete) | **DELETE** /visualizations/{id} | Delete an existing Visualization
+[**visualizations_id_get**](VisualizationApi.md#visualizations_id_get) | **GET** /visualizations/{id} | Get a single Visualization by its id
+[**visualizations_id_put**](VisualizationApi.md#visualizations_id_put) | **PUT** /visualizations/{id} | Update an existing Visualization
+[**visualizations_post**](VisualizationApi.md#visualizations_post) | **POST** /visualizations | Create one Visualization
 
 
 # **visualizations_get**
-> list[Visualization] visualizations_get(username=username, label=label)
+> list[Visualization] visualizations_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Visualization entities
+List all instances of Visualization
 
-Gets a list of all Visualization entities
+Gets a list of all instances of Visualization (more information in https://w3id.org/okn/o/sd#Visualization)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.VisualizationApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Visualization entities
-    api_response = api_instance.visualizations_get(username=username, label=label)
+    # List all instances of Visualization
+    api_response = api_instance.visualizations_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling VisualizationApi->visualizations_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Visualization entities. |  -  |
+**200** | Successful response - returns an array with the instances of Visualization. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **visualizations_id_delete**
 > visualizations_id_delete(id, user)
 
-Delete a Visualization
-
 Delete an existing Visualization
+
+Delete an existing Visualization (more information in https://w3id.org/okn/o/sd#Visualization)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VisualizationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Visualization to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Visualization
+    # Delete an existing Visualization
     api_instance.visualizations_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling VisualizationApi->visualizations_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Visualization to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **visualizations_id_get**
 > Visualization visualizations_id_get(id, username=username)
 
-Get a Visualization
+Get a single Visualization by its id
 
-Gets the details of a single instance of a Visualization
+Gets the details of a given Visualization (more information in https://w3id.org/okn/o/sd#Visualization)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.VisualizationApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Visualization to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Visualization
+    # Get a single Visualization by its id
     api_response = api_instance.visualizations_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Visualization to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Visualization |  -  |
+**200** | Gets the details of a given Visualization |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **visualizations_id_put**
 > Visualization visualizations_id_put(id, user, visualization=visualization)
 
-Update a Visualization
+Update an existing Visualization
 
-Updates an existing Visualization
+Updates an existing Visualization (more information in https://w3id.org/okn/o/sd#Visualization)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VisualizationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Visualization to be retrieved
 user = 'user_example' # str | Username
 visualization = modelcatalog.Visualization() # Visualization | An old Visualizationto be updated (optional)
 
 try:
-    # Update a Visualization
+    # Update an existing Visualization
     api_response = api_instance.visualizations_id_put(id, user, visualization=visualization)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Visualization to be retrieved | 
  **user** | **str**| Username | 
  **visualization** | [**Visualization**](Visualization.md)| An old Visualizationto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **visualizations_post**
 > Visualization visualizations_post(user, visualization=visualization)
 
-Create a Visualization
+Create one Visualization
 
-Create a new instance of a Visualization
+Create a new instance of Visualization (more information in https://w3id.org/okn/o/sd#Visualization)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VisualizationApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-visualization = modelcatalog.Visualization() # Visualization | A new Visualizationto be created (optional)
+visualization = modelcatalog.Visualization() # Visualization | Information about the Visualizationto be created (optional)
 
 try:
-    # Create a Visualization
+    # Create one Visualization
     api_response = api_instance.visualizations_post(user, visualization=visualization)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **visualization** | [**Visualization**](Visualization.md)| A new Visualizationto be created | [optional] 
+ **visualization** | [**Visualization**](Visualization.md)| Information about the Visualizationto be created | [optional] 
 
 ### Return type
 

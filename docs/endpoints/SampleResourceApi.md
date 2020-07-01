@@ -1,22 +1,22 @@
 # modelcatalog.SampleResourceApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**sampleresources_get**](SampleResourceApi.md#sampleresources_get) | **GET** /sampleresources | List all SampleResource entities
-[**sampleresources_id_delete**](SampleResourceApi.md#sampleresources_id_delete) | **DELETE** /sampleresources/{id} | Delete a SampleResource
-[**sampleresources_id_get**](SampleResourceApi.md#sampleresources_id_get) | **GET** /sampleresources/{id} | Get a SampleResource
-[**sampleresources_id_put**](SampleResourceApi.md#sampleresources_id_put) | **PUT** /sampleresources/{id} | Update a SampleResource
-[**sampleresources_post**](SampleResourceApi.md#sampleresources_post) | **POST** /sampleresources | Create a SampleResource
+[**sampleresources_get**](SampleResourceApi.md#sampleresources_get) | **GET** /sampleresources | List all instances of SampleResource
+[**sampleresources_id_delete**](SampleResourceApi.md#sampleresources_id_delete) | **DELETE** /sampleresources/{id} | Delete an existing SampleResource
+[**sampleresources_id_get**](SampleResourceApi.md#sampleresources_id_get) | **GET** /sampleresources/{id} | Get a single SampleResource by its id
+[**sampleresources_id_put**](SampleResourceApi.md#sampleresources_id_put) | **PUT** /sampleresources/{id} | Update an existing SampleResource
+[**sampleresources_post**](SampleResourceApi.md#sampleresources_post) | **POST** /sampleresources | Create one SampleResource
 
 
 # **sampleresources_get**
-> list[SampleResource] sampleresources_get(username=username, label=label)
+> list[SampleResource] sampleresources_get(username=username, label=label, page=page, per_page=per_page)
 
-List all SampleResource entities
+List all instances of SampleResource
 
-Gets a list of all SampleResource entities
+Gets a list of all instances of SampleResource (more information in https://w3id.org/okn/o/sd#SampleResource)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SampleResourceApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all SampleResource entities
-    api_response = api_instance.sampleresources_get(username=username, label=label)
+    # List all instances of SampleResource
+    api_response = api_instance.sampleresources_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleResourceApi->sampleresources_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of SampleResource entities. |  -  |
+**200** | Successful response - returns an array with the instances of SampleResource. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sampleresources_id_delete**
 > sampleresources_id_delete(id, user)
 
-Delete a SampleResource
-
 Delete an existing SampleResource
+
+Delete an existing SampleResource (more information in https://w3id.org/okn/o/sd#SampleResource)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleResourceApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SampleResource to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a SampleResource
+    # Delete an existing SampleResource
     api_instance.sampleresources_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling SampleResourceApi->sampleresources_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SampleResource to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **sampleresources_id_get**
 > SampleResource sampleresources_id_get(id, username=username)
 
-Get a SampleResource
+Get a single SampleResource by its id
 
-Gets the details of a single instance of a SampleResource
+Gets the details of a given SampleResource (more information in https://w3id.org/okn/o/sd#SampleResource)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SampleResourceApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the SampleResource to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a SampleResource
+    # Get a single SampleResource by its id
     api_response = api_instance.sampleresources_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the SampleResource to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  SampleResource |  -  |
+**200** | Gets the details of a given SampleResource |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sampleresources_id_put**
 > SampleResource sampleresources_id_put(id, user, sample_resource=sample_resource)
 
-Update a SampleResource
+Update an existing SampleResource
 
-Updates an existing SampleResource
+Updates an existing SampleResource (more information in https://w3id.org/okn/o/sd#SampleResource)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleResourceApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SampleResource to be retrieved
 user = 'user_example' # str | Username
 sample_resource = modelcatalog.SampleResource() # SampleResource | An old SampleResourceto be updated (optional)
 
 try:
-    # Update a SampleResource
+    # Update an existing SampleResource
     api_response = api_instance.sampleresources_id_put(id, user, sample_resource=sample_resource)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SampleResource to be retrieved | 
  **user** | **str**| Username | 
  **sample_resource** | [**SampleResource**](SampleResource.md)| An old SampleResourceto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **sampleresources_post**
 > SampleResource sampleresources_post(user, sample_resource=sample_resource)
 
-Create a SampleResource
+Create one SampleResource
 
-Create a new instance of a SampleResource
+Create a new instance of SampleResource (more information in https://w3id.org/okn/o/sd#SampleResource)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleResourceApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-sample_resource = modelcatalog.SampleResource() # SampleResource | A new SampleResourceto be created (optional)
+sample_resource = modelcatalog.SampleResource() # SampleResource | Information about the SampleResourceto be created (optional)
 
 try:
-    # Create a SampleResource
+    # Create one SampleResource
     api_response = api_instance.sampleresources_post(user, sample_resource=sample_resource)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **sample_resource** | [**SampleResource**](SampleResource.md)| A new SampleResourceto be created | [optional] 
+ **sample_resource** | [**SampleResource**](SampleResource.md)| Information about the SampleResourceto be created | [optional] 
 
 ### Return type
 

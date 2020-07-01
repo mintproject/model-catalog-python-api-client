@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data_catalog_identifier** | **list[str]** |  | [optional] 
-**has_part** | [**list[SampleResource]**](SampleResource.md) |  | [optional] 
-**description** | **list[str]** |  | [optional] 
-**id** | **str** |  | [optional] 
-**label** | **list[str]** |  | [optional] 
-**type** | **list[str]** |  | [optional] 
-**value** | **list[object]** |  | [optional] 
+**data_catalog_identifier** | **list[str]** | An identifier for resources with metadata entries in a data catalog | [optional] 
+**has_part** | [**list[SampleResource]**](SampleResource.md) | Property designed to reference the elements included in a sample collection. | [optional] 
+**description** | **list[str]** | small description | [optional] 
+**id** | **str** | identifier | [optional] 
+**label** | **list[str]** | short description of the resource | [optional] 
+**type** | **list[str]** | type of the resource | [optional] 
+**value** | **list[object]** | Value associated to the described entity | [optional] 
 
 [[Back to Model list]](../#documentation-for-models) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to README]](../)
 

@@ -1,22 +1,22 @@
 # modelcatalog.DatasetSpecificationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datasetspecifications_get**](DatasetSpecificationApi.md#datasetspecifications_get) | **GET** /datasetspecifications | List all DatasetSpecification entities
-[**datasetspecifications_id_delete**](DatasetSpecificationApi.md#datasetspecifications_id_delete) | **DELETE** /datasetspecifications/{id} | Delete a DatasetSpecification
-[**datasetspecifications_id_get**](DatasetSpecificationApi.md#datasetspecifications_id_get) | **GET** /datasetspecifications/{id} | Get a DatasetSpecification
-[**datasetspecifications_id_put**](DatasetSpecificationApi.md#datasetspecifications_id_put) | **PUT** /datasetspecifications/{id} | Update a DatasetSpecification
-[**datasetspecifications_post**](DatasetSpecificationApi.md#datasetspecifications_post) | **POST** /datasetspecifications | Create a DatasetSpecification
+[**datasetspecifications_get**](DatasetSpecificationApi.md#datasetspecifications_get) | **GET** /datasetspecifications | List all instances of DatasetSpecification
+[**datasetspecifications_id_delete**](DatasetSpecificationApi.md#datasetspecifications_id_delete) | **DELETE** /datasetspecifications/{id} | Delete an existing DatasetSpecification
+[**datasetspecifications_id_get**](DatasetSpecificationApi.md#datasetspecifications_id_get) | **GET** /datasetspecifications/{id} | Get a single DatasetSpecification by its id
+[**datasetspecifications_id_put**](DatasetSpecificationApi.md#datasetspecifications_id_put) | **PUT** /datasetspecifications/{id} | Update an existing DatasetSpecification
+[**datasetspecifications_post**](DatasetSpecificationApi.md#datasetspecifications_post) | **POST** /datasetspecifications | Create one DatasetSpecification
 
 
 # **datasetspecifications_get**
-> list[DatasetSpecification] datasetspecifications_get(username=username, label=label)
+> list[DatasetSpecification] datasetspecifications_get(username=username, label=label, page=page, per_page=per_page)
 
-List all DatasetSpecification entities
+List all instances of DatasetSpecification
 
-Gets a list of all DatasetSpecification entities
+Gets a list of all instances of DatasetSpecification (more information in https://w3id.org/okn/o/sd#DatasetSpecification)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.DatasetSpecificationApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all DatasetSpecification entities
-    api_response = api_instance.datasetspecifications_get(username=username, label=label)
+    # List all instances of DatasetSpecification
+    api_response = api_instance.datasetspecifications_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DatasetSpecificationApi->datasetspecifications_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of DatasetSpecification entities. |  -  |
+**200** | Successful response - returns an array with the instances of DatasetSpecification. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **datasetspecifications_id_delete**
 > datasetspecifications_id_delete(id, user)
 
-Delete a DatasetSpecification
-
 Delete an existing DatasetSpecification
+
+Delete an existing DatasetSpecification (more information in https://w3id.org/okn/o/sd#DatasetSpecification)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.DatasetSpecificationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the DatasetSpecification to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a DatasetSpecification
+    # Delete an existing DatasetSpecification
     api_instance.datasetspecifications_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling DatasetSpecificationApi->datasetspecifications_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the DatasetSpecification to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **datasetspecifications_id_get**
 > DatasetSpecification datasetspecifications_id_get(id, username=username)
 
-Get a DatasetSpecification
+Get a single DatasetSpecification by its id
 
-Gets the details of a single instance of a DatasetSpecification
+Gets the details of a given DatasetSpecification (more information in https://w3id.org/okn/o/sd#DatasetSpecification)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.DatasetSpecificationApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the DatasetSpecification to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a DatasetSpecification
+    # Get a single DatasetSpecification by its id
     api_response = api_instance.datasetspecifications_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the DatasetSpecification to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  DatasetSpecification |  -  |
+**200** | Gets the details of a given DatasetSpecification |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **datasetspecifications_id_put**
 > DatasetSpecification datasetspecifications_id_put(id, user, dataset_specification=dataset_specification)
 
-Update a DatasetSpecification
+Update an existing DatasetSpecification
 
-Updates an existing DatasetSpecification
+Updates an existing DatasetSpecification (more information in https://w3id.org/okn/o/sd#DatasetSpecification)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.DatasetSpecificationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the DatasetSpecification to be retrieved
 user = 'user_example' # str | Username
 dataset_specification = modelcatalog.DatasetSpecification() # DatasetSpecification | An old DatasetSpecificationto be updated (optional)
 
 try:
-    # Update a DatasetSpecification
+    # Update an existing DatasetSpecification
     api_response = api_instance.datasetspecifications_id_put(id, user, dataset_specification=dataset_specification)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the DatasetSpecification to be retrieved | 
  **user** | **str**| Username | 
  **dataset_specification** | [**DatasetSpecification**](DatasetSpecification.md)| An old DatasetSpecificationto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **datasetspecifications_post**
 > DatasetSpecification datasetspecifications_post(user, dataset_specification=dataset_specification)
 
-Create a DatasetSpecification
+Create one DatasetSpecification
 
-Create a new instance of a DatasetSpecification
+Create a new instance of DatasetSpecification (more information in https://w3id.org/okn/o/sd#DatasetSpecification)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.DatasetSpecificationApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-dataset_specification = modelcatalog.DatasetSpecification() # DatasetSpecification | A new DatasetSpecificationto be created (optional)
+dataset_specification = modelcatalog.DatasetSpecification() # DatasetSpecification | Information about the DatasetSpecificationto be created (optional)
 
 try:
-    # Create a DatasetSpecification
+    # Create one DatasetSpecification
     api_response = api_instance.datasetspecifications_post(user, dataset_specification=dataset_specification)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **dataset_specification** | [**DatasetSpecification**](DatasetSpecification.md)| A new DatasetSpecificationto be created | [optional] 
+ **dataset_specification** | [**DatasetSpecification**](DatasetSpecification.md)| Information about the DatasetSpecificationto be created | [optional] 
 
 ### Return type
 

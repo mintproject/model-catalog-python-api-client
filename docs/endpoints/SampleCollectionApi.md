@@ -1,22 +1,22 @@
 # modelcatalog.SampleCollectionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**samplecollections_get**](SampleCollectionApi.md#samplecollections_get) | **GET** /samplecollections | List all SampleCollection entities
-[**samplecollections_id_delete**](SampleCollectionApi.md#samplecollections_id_delete) | **DELETE** /samplecollections/{id} | Delete a SampleCollection
-[**samplecollections_id_get**](SampleCollectionApi.md#samplecollections_id_get) | **GET** /samplecollections/{id} | Get a SampleCollection
-[**samplecollections_id_put**](SampleCollectionApi.md#samplecollections_id_put) | **PUT** /samplecollections/{id} | Update a SampleCollection
-[**samplecollections_post**](SampleCollectionApi.md#samplecollections_post) | **POST** /samplecollections | Create a SampleCollection
+[**samplecollections_get**](SampleCollectionApi.md#samplecollections_get) | **GET** /samplecollections | List all instances of SampleCollection
+[**samplecollections_id_delete**](SampleCollectionApi.md#samplecollections_id_delete) | **DELETE** /samplecollections/{id} | Delete an existing SampleCollection
+[**samplecollections_id_get**](SampleCollectionApi.md#samplecollections_id_get) | **GET** /samplecollections/{id} | Get a single SampleCollection by its id
+[**samplecollections_id_put**](SampleCollectionApi.md#samplecollections_id_put) | **PUT** /samplecollections/{id} | Update an existing SampleCollection
+[**samplecollections_post**](SampleCollectionApi.md#samplecollections_post) | **POST** /samplecollections | Create one SampleCollection
 
 
 # **samplecollections_get**
-> list[SampleCollection] samplecollections_get(username=username, label=label)
+> list[SampleCollection] samplecollections_get(username=username, label=label, page=page, per_page=per_page)
 
-List all SampleCollection entities
+List all instances of SampleCollection
 
-Gets a list of all SampleCollection entities
+Gets a list of all instances of SampleCollection (more information in https://w3id.org/okn/o/sd#SampleCollection)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SampleCollectionApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all SampleCollection entities
-    api_response = api_instance.samplecollections_get(username=username, label=label)
+    # List all instances of SampleCollection
+    api_response = api_instance.samplecollections_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleCollectionApi->samplecollections_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of SampleCollection entities. |  -  |
+**200** | Successful response - returns an array with the instances of SampleCollection. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **samplecollections_id_delete**
 > samplecollections_id_delete(id, user)
 
-Delete a SampleCollection
-
 Delete an existing SampleCollection
+
+Delete an existing SampleCollection (more information in https://w3id.org/okn/o/sd#SampleCollection)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleCollectionApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SampleCollection to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a SampleCollection
+    # Delete an existing SampleCollection
     api_instance.samplecollections_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling SampleCollectionApi->samplecollections_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SampleCollection to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **samplecollections_id_get**
 > SampleCollection samplecollections_id_get(id, username=username)
 
-Get a SampleCollection
+Get a single SampleCollection by its id
 
-Gets the details of a single instance of a SampleCollection
+Gets the details of a given SampleCollection (more information in https://w3id.org/okn/o/sd#SampleCollection)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SampleCollectionApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the SampleCollection to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a SampleCollection
+    # Get a single SampleCollection by its id
     api_response = api_instance.samplecollections_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the SampleCollection to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  SampleCollection |  -  |
+**200** | Gets the details of a given SampleCollection |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **samplecollections_id_put**
 > SampleCollection samplecollections_id_put(id, user, sample_collection=sample_collection)
 
-Update a SampleCollection
+Update an existing SampleCollection
 
-Updates an existing SampleCollection
+Updates an existing SampleCollection (more information in https://w3id.org/okn/o/sd#SampleCollection)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleCollectionApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SampleCollection to be retrieved
 user = 'user_example' # str | Username
 sample_collection = modelcatalog.SampleCollection() # SampleCollection | An old SampleCollectionto be updated (optional)
 
 try:
-    # Update a SampleCollection
+    # Update an existing SampleCollection
     api_response = api_instance.samplecollections_id_put(id, user, sample_collection=sample_collection)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SampleCollection to be retrieved | 
  **user** | **str**| Username | 
  **sample_collection** | [**SampleCollection**](SampleCollection.md)| An old SampleCollectionto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **samplecollections_post**
 > SampleCollection samplecollections_post(user, sample_collection=sample_collection)
 
-Create a SampleCollection
+Create one SampleCollection
 
-Create a new instance of a SampleCollection
+Create a new instance of SampleCollection (more information in https://w3id.org/okn/o/sd#SampleCollection)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleCollectionApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-sample_collection = modelcatalog.SampleCollection() # SampleCollection | A new SampleCollectionto be created (optional)
+sample_collection = modelcatalog.SampleCollection() # SampleCollection | Information about the SampleCollectionto be created (optional)
 
 try:
-    # Create a SampleCollection
+    # Create one SampleCollection
     api_response = api_instance.samplecollections_post(user, sample_collection=sample_collection)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **sample_collection** | [**SampleCollection**](SampleCollection.md)| A new SampleCollectionto be created | [optional] 
+ **sample_collection** | [**SampleCollection**](SampleCollection.md)| Information about the SampleCollectionto be created | [optional] 
 
 ### Return type
 

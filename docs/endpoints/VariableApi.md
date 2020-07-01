@@ -1,22 +1,22 @@
 # modelcatalog.VariableApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**variables_get**](VariableApi.md#variables_get) | **GET** /variables | List all Variable entities
-[**variables_id_delete**](VariableApi.md#variables_id_delete) | **DELETE** /variables/{id} | Delete a Variable
-[**variables_id_get**](VariableApi.md#variables_id_get) | **GET** /variables/{id} | Get a Variable
-[**variables_id_put**](VariableApi.md#variables_id_put) | **PUT** /variables/{id} | Update a Variable
-[**variables_post**](VariableApi.md#variables_post) | **POST** /variables | Create a Variable
+[**variables_get**](VariableApi.md#variables_get) | **GET** /variables | List all instances of Variable
+[**variables_id_delete**](VariableApi.md#variables_id_delete) | **DELETE** /variables/{id} | Delete an existing Variable
+[**variables_id_get**](VariableApi.md#variables_id_get) | **GET** /variables/{id} | Get a single Variable by its id
+[**variables_id_put**](VariableApi.md#variables_id_put) | **PUT** /variables/{id} | Update an existing Variable
+[**variables_post**](VariableApi.md#variables_post) | **POST** /variables | Create one Variable
 
 
 # **variables_get**
-> list[Variable] variables_get(username=username, label=label)
+> list[Variable] variables_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Variable entities
+List all instances of Variable
 
-Gets a list of all Variable entities
+Gets a list of all instances of Variable (more information in https://w3id.org/okn/o/sd#Variable)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.VariableApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Variable entities
-    api_response = api_instance.variables_get(username=username, label=label)
+    # List all instances of Variable
+    api_response = api_instance.variables_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling VariableApi->variables_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Variable entities. |  -  |
+**200** | Successful response - returns an array with the instances of Variable. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **variables_id_delete**
 > variables_id_delete(id, user)
 
-Delete a Variable
-
 Delete an existing Variable
+
+Delete an existing Variable (more information in https://w3id.org/okn/o/sd#Variable)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VariableApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Variable to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Variable
+    # Delete an existing Variable
     api_instance.variables_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling VariableApi->variables_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Variable to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **variables_id_get**
 > Variable variables_id_get(id, username=username)
 
-Get a Variable
+Get a single Variable by its id
 
-Gets the details of a single instance of a Variable
+Gets the details of a given Variable (more information in https://w3id.org/okn/o/sd#Variable)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.VariableApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Variable to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Variable
+    # Get a single Variable by its id
     api_response = api_instance.variables_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Variable to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Variable |  -  |
+**200** | Gets the details of a given Variable |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **variables_id_put**
 > Variable variables_id_put(id, user, variable=variable)
 
-Update a Variable
+Update an existing Variable
 
-Updates an existing Variable
+Updates an existing Variable (more information in https://w3id.org/okn/o/sd#Variable)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VariableApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Variable to be retrieved
 user = 'user_example' # str | Username
 variable = modelcatalog.Variable() # Variable | An old Variableto be updated (optional)
 
 try:
-    # Update a Variable
+    # Update an existing Variable
     api_response = api_instance.variables_id_put(id, user, variable=variable)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Variable to be retrieved | 
  **user** | **str**| Username | 
  **variable** | [**Variable**](Variable.md)| An old Variableto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **variables_post**
 > Variable variables_post(user, variable=variable)
 
-Create a Variable
+Create one Variable
 
-Create a new instance of a Variable
+Create a new instance of Variable (more information in https://w3id.org/okn/o/sd#Variable)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VariableApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-variable = modelcatalog.Variable() # Variable | A new Variableto be created (optional)
+variable = modelcatalog.Variable() # Variable | Information about the Variableto be created (optional)
 
 try:
-    # Create a Variable
+    # Create one Variable
     api_response = api_instance.variables_post(user, variable=variable)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **variable** | [**Variable**](Variable.md)| A new Variableto be created | [optional] 
+ **variable** | [**Variable**](Variable.md)| Information about the Variableto be created | [optional] 
 
 ### Return type
 

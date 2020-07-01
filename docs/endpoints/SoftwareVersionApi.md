@@ -1,22 +1,22 @@
 # modelcatalog.SoftwareVersionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**softwareversions_get**](SoftwareVersionApi.md#softwareversions_get) | **GET** /softwareversions | List all SoftwareVersion entities
-[**softwareversions_id_delete**](SoftwareVersionApi.md#softwareversions_id_delete) | **DELETE** /softwareversions/{id} | Delete a SoftwareVersion
-[**softwareversions_id_get**](SoftwareVersionApi.md#softwareversions_id_get) | **GET** /softwareversions/{id} | Get a SoftwareVersion
-[**softwareversions_id_put**](SoftwareVersionApi.md#softwareversions_id_put) | **PUT** /softwareversions/{id} | Update a SoftwareVersion
-[**softwareversions_post**](SoftwareVersionApi.md#softwareversions_post) | **POST** /softwareversions | Create a SoftwareVersion
+[**softwareversions_get**](SoftwareVersionApi.md#softwareversions_get) | **GET** /softwareversions | List all instances of SoftwareVersion
+[**softwareversions_id_delete**](SoftwareVersionApi.md#softwareversions_id_delete) | **DELETE** /softwareversions/{id} | Delete an existing SoftwareVersion
+[**softwareversions_id_get**](SoftwareVersionApi.md#softwareversions_id_get) | **GET** /softwareversions/{id} | Get a single SoftwareVersion by its id
+[**softwareversions_id_put**](SoftwareVersionApi.md#softwareversions_id_put) | **PUT** /softwareversions/{id} | Update an existing SoftwareVersion
+[**softwareversions_post**](SoftwareVersionApi.md#softwareversions_post) | **POST** /softwareversions | Create one SoftwareVersion
 
 
 # **softwareversions_get**
-> list[SoftwareVersion] softwareversions_get(username=username, label=label)
+> list[SoftwareVersion] softwareversions_get(username=username, label=label, page=page, per_page=per_page)
 
-List all SoftwareVersion entities
+List all instances of SoftwareVersion
 
-Gets a list of all SoftwareVersion entities
+Gets a list of all instances of SoftwareVersion (more information in https://w3id.org/okn/o/sd#SoftwareVersion)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareVersionApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all SoftwareVersion entities
-    api_response = api_instance.softwareversions_get(username=username, label=label)
+    # List all instances of SoftwareVersion
+    api_response = api_instance.softwareversions_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareVersionApi->softwareversions_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of SoftwareVersion entities. |  -  |
+**200** | Successful response - returns an array with the instances of SoftwareVersion. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareversions_id_delete**
 > softwareversions_id_delete(id, user)
 
-Delete a SoftwareVersion
-
 Delete an existing SoftwareVersion
+
+Delete an existing SoftwareVersion (more information in https://w3id.org/okn/o/sd#SoftwareVersion)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareVersionApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SoftwareVersion to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a SoftwareVersion
+    # Delete an existing SoftwareVersion
     api_instance.softwareversions_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling SoftwareVersionApi->softwareversions_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SoftwareVersion to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **softwareversions_id_get**
 > SoftwareVersion softwareversions_id_get(id, username=username)
 
-Get a SoftwareVersion
+Get a single SoftwareVersion by its id
 
-Gets the details of a single instance of a SoftwareVersion
+Gets the details of a given SoftwareVersion (more information in https://w3id.org/okn/o/sd#SoftwareVersion)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareVersionApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the SoftwareVersion to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a SoftwareVersion
+    # Get a single SoftwareVersion by its id
     api_response = api_instance.softwareversions_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the SoftwareVersion to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  SoftwareVersion |  -  |
+**200** | Gets the details of a given SoftwareVersion |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareversions_id_put**
 > SoftwareVersion softwareversions_id_put(id, user, software_version=software_version)
 
-Update a SoftwareVersion
+Update an existing SoftwareVersion
 
-Updates an existing SoftwareVersion
+Updates an existing SoftwareVersion (more information in https://w3id.org/okn/o/sd#SoftwareVersion)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareVersionApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SoftwareVersion to be retrieved
 user = 'user_example' # str | Username
 software_version = modelcatalog.SoftwareVersion() # SoftwareVersion | An old SoftwareVersionto be updated (optional)
 
 try:
-    # Update a SoftwareVersion
+    # Update an existing SoftwareVersion
     api_response = api_instance.softwareversions_id_put(id, user, software_version=software_version)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SoftwareVersion to be retrieved | 
  **user** | **str**| Username | 
  **software_version** | [**SoftwareVersion**](SoftwareVersion.md)| An old SoftwareVersionto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **softwareversions_post**
 > SoftwareVersion softwareversions_post(user, software_version=software_version)
 
-Create a SoftwareVersion
+Create one SoftwareVersion
 
-Create a new instance of a SoftwareVersion
+Create a new instance of SoftwareVersion (more information in https://w3id.org/okn/o/sd#SoftwareVersion)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareVersionApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-software_version = modelcatalog.SoftwareVersion() # SoftwareVersion | A new SoftwareVersionto be created (optional)
+software_version = modelcatalog.SoftwareVersion() # SoftwareVersion | Information about the SoftwareVersionto be created (optional)
 
 try:
-    # Create a SoftwareVersion
+    # Create one SoftwareVersion
     api_response = api_instance.softwareversions_post(user, software_version=software_version)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **software_version** | [**SoftwareVersion**](SoftwareVersion.md)| A new SoftwareVersionto be created | [optional] 
+ **software_version** | [**SoftwareVersion**](SoftwareVersion.md)| Information about the SoftwareVersionto be created | [optional] 
 
 ### Return type
 

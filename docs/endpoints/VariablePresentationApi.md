@@ -1,22 +1,22 @@
 # modelcatalog.VariablePresentationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**variablepresentations_get**](VariablePresentationApi.md#variablepresentations_get) | **GET** /variablepresentations | List all VariablePresentation entities
-[**variablepresentations_id_delete**](VariablePresentationApi.md#variablepresentations_id_delete) | **DELETE** /variablepresentations/{id} | Delete a VariablePresentation
-[**variablepresentations_id_get**](VariablePresentationApi.md#variablepresentations_id_get) | **GET** /variablepresentations/{id} | Get a VariablePresentation
-[**variablepresentations_id_put**](VariablePresentationApi.md#variablepresentations_id_put) | **PUT** /variablepresentations/{id} | Update a VariablePresentation
-[**variablepresentations_post**](VariablePresentationApi.md#variablepresentations_post) | **POST** /variablepresentations | Create a VariablePresentation
+[**variablepresentations_get**](VariablePresentationApi.md#variablepresentations_get) | **GET** /variablepresentations | List all instances of VariablePresentation
+[**variablepresentations_id_delete**](VariablePresentationApi.md#variablepresentations_id_delete) | **DELETE** /variablepresentations/{id} | Delete an existing VariablePresentation
+[**variablepresentations_id_get**](VariablePresentationApi.md#variablepresentations_id_get) | **GET** /variablepresentations/{id} | Get a single VariablePresentation by its id
+[**variablepresentations_id_put**](VariablePresentationApi.md#variablepresentations_id_put) | **PUT** /variablepresentations/{id} | Update an existing VariablePresentation
+[**variablepresentations_post**](VariablePresentationApi.md#variablepresentations_post) | **POST** /variablepresentations | Create one VariablePresentation
 
 
 # **variablepresentations_get**
-> list[VariablePresentation] variablepresentations_get(username=username, label=label)
+> list[VariablePresentation] variablepresentations_get(username=username, label=label, page=page, per_page=per_page)
 
-List all VariablePresentation entities
+List all instances of VariablePresentation
 
-Gets a list of all VariablePresentation entities
+Gets a list of all instances of VariablePresentation (more information in https://w3id.org/okn/o/sd#VariablePresentation)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.VariablePresentationApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all VariablePresentation entities
-    api_response = api_instance.variablepresentations_get(username=username, label=label)
+    # List all instances of VariablePresentation
+    api_response = api_instance.variablepresentations_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling VariablePresentationApi->variablepresentations_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of VariablePresentation entities. |  -  |
+**200** | Successful response - returns an array with the instances of VariablePresentation. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **variablepresentations_id_delete**
 > variablepresentations_id_delete(id, user)
 
-Delete a VariablePresentation
-
 Delete an existing VariablePresentation
+
+Delete an existing VariablePresentation (more information in https://w3id.org/okn/o/sd#VariablePresentation)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VariablePresentationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the VariablePresentation to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a VariablePresentation
+    # Delete an existing VariablePresentation
     api_instance.variablepresentations_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling VariablePresentationApi->variablepresentations_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the VariablePresentation to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **variablepresentations_id_get**
 > VariablePresentation variablepresentations_id_get(id, username=username)
 
-Get a VariablePresentation
+Get a single VariablePresentation by its id
 
-Gets the details of a single instance of a VariablePresentation
+Gets the details of a given VariablePresentation (more information in https://w3id.org/okn/o/sd#VariablePresentation)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.VariablePresentationApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the VariablePresentation to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a VariablePresentation
+    # Get a single VariablePresentation by its id
     api_response = api_instance.variablepresentations_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the VariablePresentation to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  VariablePresentation |  -  |
+**200** | Gets the details of a given VariablePresentation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **variablepresentations_id_put**
 > VariablePresentation variablepresentations_id_put(id, user, variable_presentation=variable_presentation)
 
-Update a VariablePresentation
+Update an existing VariablePresentation
 
-Updates an existing VariablePresentation
+Updates an existing VariablePresentation (more information in https://w3id.org/okn/o/sd#VariablePresentation)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VariablePresentationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the VariablePresentation to be retrieved
 user = 'user_example' # str | Username
 variable_presentation = modelcatalog.VariablePresentation() # VariablePresentation | An old VariablePresentationto be updated (optional)
 
 try:
-    # Update a VariablePresentation
+    # Update an existing VariablePresentation
     api_response = api_instance.variablepresentations_id_put(id, user, variable_presentation=variable_presentation)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the VariablePresentation to be retrieved | 
  **user** | **str**| Username | 
  **variable_presentation** | [**VariablePresentation**](VariablePresentation.md)| An old VariablePresentationto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **variablepresentations_post**
 > VariablePresentation variablepresentations_post(user, variable_presentation=variable_presentation)
 
-Create a VariablePresentation
+Create one VariablePresentation
 
-Create a new instance of a VariablePresentation
+Create a new instance of VariablePresentation (more information in https://w3id.org/okn/o/sd#VariablePresentation)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VariablePresentationApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-variable_presentation = modelcatalog.VariablePresentation() # VariablePresentation | A new VariablePresentationto be created (optional)
+variable_presentation = modelcatalog.VariablePresentation() # VariablePresentation | Information about the VariablePresentationto be created (optional)
 
 try:
-    # Create a VariablePresentation
+    # Create one VariablePresentation
     api_response = api_instance.variablepresentations_post(user, variable_presentation=variable_presentation)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **variable_presentation** | [**VariablePresentation**](VariablePresentation.md)| A new VariablePresentationto be created | [optional] 
+ **variable_presentation** | [**VariablePresentation**](VariablePresentation.md)| Information about the VariablePresentationto be created | [optional] 
 
 ### Return type
 

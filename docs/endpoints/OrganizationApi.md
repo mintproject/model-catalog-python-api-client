@@ -1,22 +1,22 @@
 # modelcatalog.OrganizationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**organizations_get**](OrganizationApi.md#organizations_get) | **GET** /organizations | List all Organization entities
-[**organizations_id_delete**](OrganizationApi.md#organizations_id_delete) | **DELETE** /organizations/{id} | Delete a Organization
-[**organizations_id_get**](OrganizationApi.md#organizations_id_get) | **GET** /organizations/{id} | Get a Organization
-[**organizations_id_put**](OrganizationApi.md#organizations_id_put) | **PUT** /organizations/{id} | Update a Organization
-[**organizations_post**](OrganizationApi.md#organizations_post) | **POST** /organizations | Create a Organization
+[**organizations_get**](OrganizationApi.md#organizations_get) | **GET** /organizations | List all instances of Organization
+[**organizations_id_delete**](OrganizationApi.md#organizations_id_delete) | **DELETE** /organizations/{id} | Delete an existing Organization
+[**organizations_id_get**](OrganizationApi.md#organizations_id_get) | **GET** /organizations/{id} | Get a single Organization by its id
+[**organizations_id_put**](OrganizationApi.md#organizations_id_put) | **PUT** /organizations/{id} | Update an existing Organization
+[**organizations_post**](OrganizationApi.md#organizations_post) | **POST** /organizations | Create one Organization
 
 
 # **organizations_get**
-> list[Organization] organizations_get(username=username, label=label)
+> list[Organization] organizations_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Organization entities
+List all instances of Organization
 
-Gets a list of all Organization entities
+Gets a list of all instances of Organization (more information in https://w3id.org/okn/o/sd#Organization)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.OrganizationApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Organization entities
-    api_response = api_instance.organizations_get(username=username, label=label)
+    # List all instances of Organization
+    api_response = api_instance.organizations_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling OrganizationApi->organizations_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Organization entities. |  -  |
+**200** | Successful response - returns an array with the instances of Organization. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **organizations_id_delete**
 > organizations_id_delete(id, user)
 
-Delete a Organization
-
 Delete an existing Organization
+
+Delete an existing Organization (more information in https://w3id.org/okn/o/sd#Organization)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.OrganizationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Organization to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Organization
+    # Delete an existing Organization
     api_instance.organizations_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling OrganizationApi->organizations_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Organization to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **organizations_id_get**
 > Organization organizations_id_get(id, username=username)
 
-Get a Organization
+Get a single Organization by its id
 
-Gets the details of a single instance of a Organization
+Gets the details of a given Organization (more information in https://w3id.org/okn/o/sd#Organization)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.OrganizationApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Organization to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Organization
+    # Get a single Organization by its id
     api_response = api_instance.organizations_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Organization to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Organization |  -  |
+**200** | Gets the details of a given Organization |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **organizations_id_put**
 > Organization organizations_id_put(id, user, organization=organization)
 
-Update a Organization
+Update an existing Organization
 
-Updates an existing Organization
+Updates an existing Organization (more information in https://w3id.org/okn/o/sd#Organization)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.OrganizationApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Organization to be retrieved
 user = 'user_example' # str | Username
 organization = modelcatalog.Organization() # Organization | An old Organizationto be updated (optional)
 
 try:
-    # Update a Organization
+    # Update an existing Organization
     api_response = api_instance.organizations_id_put(id, user, organization=organization)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Organization to be retrieved | 
  **user** | **str**| Username | 
  **organization** | [**Organization**](Organization.md)| An old Organizationto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **organizations_post**
 > Organization organizations_post(user, organization=organization)
 
-Create a Organization
+Create one Organization
 
-Create a new instance of a Organization
+Create a new instance of Organization (more information in https://w3id.org/okn/o/sd#Organization)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.OrganizationApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-organization = modelcatalog.Organization() # Organization | A new Organizationto be created (optional)
+organization = modelcatalog.Organization() # Organization | Information about the Organizationto be created (optional)
 
 try:
-    # Create a Organization
+    # Create one Organization
     api_response = api_instance.organizations_post(user, organization=organization)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **organization** | [**Organization**](Organization.md)| A new Organizationto be created | [optional] 
+ **organization** | [**Organization**](Organization.md)| Information about the Organizationto be created | [optional] 
 
 ### Return type
 

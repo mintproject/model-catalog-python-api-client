@@ -1,23 +1,23 @@
 # modelcatalog.ConfigurationSetupApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**configurationsetups_get**](ConfigurationSetupApi.md#configurationsetups_get) | **GET** /configurationsetups | List all ConfigurationSetup entities
-[**configurationsetups_id_delete**](ConfigurationSetupApi.md#configurationsetups_id_delete) | **DELETE** /configurationsetups/{id} | Delete a ConfigurationSetup
-[**configurationsetups_id_get**](ConfigurationSetupApi.md#configurationsetups_id_get) | **GET** /configurationsetups/{id} | Get a ConfigurationSetup
-[**configurationsetups_id_put**](ConfigurationSetupApi.md#configurationsetups_id_put) | **PUT** /configurationsetups/{id} | Update a ConfigurationSetup
-[**configurationsetups_post**](ConfigurationSetupApi.md#configurationsetups_post) | **POST** /configurationsetups | Create a ConfigurationSetup
+[**configurationsetups_get**](ConfigurationSetupApi.md#configurationsetups_get) | **GET** /configurationsetups | List all instances of ConfigurationSetup
+[**configurationsetups_id_delete**](ConfigurationSetupApi.md#configurationsetups_id_delete) | **DELETE** /configurationsetups/{id} | Delete an existing ConfigurationSetup
+[**configurationsetups_id_get**](ConfigurationSetupApi.md#configurationsetups_id_get) | **GET** /configurationsetups/{id} | Get a single ConfigurationSetup by its id
+[**configurationsetups_id_put**](ConfigurationSetupApi.md#configurationsetups_id_put) | **PUT** /configurationsetups/{id} | Update an existing ConfigurationSetup
+[**configurationsetups_post**](ConfigurationSetupApi.md#configurationsetups_post) | **POST** /configurationsetups | Create one ConfigurationSetup
 [**custom_configurationsetups_id_get**](ConfigurationSetupApi.md#custom_configurationsetups_id_get) | **GET** /custom/configurationsetups/{id} | Get a ModelConfigurationSetup
 
 
 # **configurationsetups_get**
-> list[ConfigurationSetup] configurationsetups_get(username=username, label=label)
+> list[ConfigurationSetup] configurationsetups_get(username=username, label=label, page=page, per_page=per_page)
 
-List all ConfigurationSetup entities
+List all instances of ConfigurationSetup
 
-Gets a list of all ConfigurationSetup entities
+Gets a list of all instances of ConfigurationSetup (more information in https://w3id.org/okn/o/sd#ConfigurationSetup)
 
 ### Example
 
@@ -30,12 +30,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all ConfigurationSetup entities
-    api_response = api_instance.configurationsetups_get(username=username, label=label)
+    # List all instances of ConfigurationSetup
+    api_response = api_instance.configurationsetups_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ConfigurationSetupApi->configurationsetups_get: %s\n" % e)
@@ -45,8 +47,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -64,16 +68,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of ConfigurationSetup entities. |  -  |
+**200** | Successful response - returns an array with the instances of ConfigurationSetup. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **configurationsetups_id_delete**
 > configurationsetups_id_delete(id, user)
 
-Delete a ConfigurationSetup
-
 Delete an existing ConfigurationSetup
+
+Delete an existing ConfigurationSetup (more information in https://w3id.org/okn/o/sd#ConfigurationSetup)
 
 ### Example
 
@@ -88,15 +92,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the ConfigurationSetup to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a ConfigurationSetup
+    # Delete an existing ConfigurationSetup
     api_instance.configurationsetups_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling ConfigurationSetupApi->configurationsetups_id_delete: %s\n" % e)
@@ -106,7 +110,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the ConfigurationSetup to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -133,9 +137,9 @@ void (empty response body)
 # **configurationsetups_id_get**
 > ConfigurationSetup configurationsetups_id_get(id, username=username)
 
-Get a ConfigurationSetup
+Get a single ConfigurationSetup by its id
 
-Gets the details of a single instance of a ConfigurationSetup
+Gets the details of a given ConfigurationSetup (more information in https://w3id.org/okn/o/sd#ConfigurationSetup)
 
 ### Example
 
@@ -148,11 +152,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the ConfigurationSetup to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a ConfigurationSetup
+    # Get a single ConfigurationSetup by its id
     api_response = api_instance.configurationsetups_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -163,8 +167,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the ConfigurationSetup to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -182,16 +186,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  ConfigurationSetup |  -  |
+**200** | Gets the details of a given ConfigurationSetup |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **configurationsetups_id_put**
 > ConfigurationSetup configurationsetups_id_put(id, user, configuration_setup=configuration_setup)
 
-Update a ConfigurationSetup
+Update an existing ConfigurationSetup
 
-Updates an existing ConfigurationSetup
+Updates an existing ConfigurationSetup (more information in https://w3id.org/okn/o/sd#ConfigurationSetup)
 
 ### Example
 
@@ -206,16 +210,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the ConfigurationSetup to be retrieved
 user = 'user_example' # str | Username
 configuration_setup = modelcatalog.ConfigurationSetup() # ConfigurationSetup | An old ConfigurationSetupto be updated (optional)
 
 try:
-    # Update a ConfigurationSetup
+    # Update an existing ConfigurationSetup
     api_response = api_instance.configurationsetups_id_put(id, user, configuration_setup=configuration_setup)
     pprint(api_response)
 except ApiException as e:
@@ -226,7 +230,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the ConfigurationSetup to be retrieved | 
  **user** | **str**| Username | 
  **configuration_setup** | [**ConfigurationSetup**](ConfigurationSetup.md)| An old ConfigurationSetupto be updated | [optional] 
 
@@ -254,9 +258,9 @@ Name | Type | Description  | Notes
 # **configurationsetups_post**
 > ConfigurationSetup configurationsetups_post(user, configuration_setup=configuration_setup)
 
-Create a ConfigurationSetup
+Create one ConfigurationSetup
 
-Create a new instance of a ConfigurationSetup
+Create a new instance of ConfigurationSetup (more information in https://w3id.org/okn/o/sd#ConfigurationSetup)
 
 ### Example
 
@@ -271,15 +275,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-configuration_setup = modelcatalog.ConfigurationSetup() # ConfigurationSetup | A new ConfigurationSetupto be created (optional)
+configuration_setup = modelcatalog.ConfigurationSetup() # ConfigurationSetup | Information about the ConfigurationSetupto be created (optional)
 
 try:
-    # Create a ConfigurationSetup
+    # Create one ConfigurationSetup
     api_response = api_instance.configurationsetups_post(user, configuration_setup=configuration_setup)
     pprint(api_response)
 except ApiException as e:
@@ -291,7 +295,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **configuration_setup** | [**ConfigurationSetup**](ConfigurationSetup.md)| A new ConfigurationSetupto be created | [optional] 
+ **configuration_setup** | [**ConfigurationSetup**](ConfigurationSetup.md)| Information about the ConfigurationSetupto be created | [optional] 
 
 ### Return type
 

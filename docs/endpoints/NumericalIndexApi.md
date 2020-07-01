@@ -1,22 +1,22 @@
 # modelcatalog.NumericalIndexApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**numericalindexs_get**](NumericalIndexApi.md#numericalindexs_get) | **GET** /numericalindexs | List all NumericalIndex entities
-[**numericalindexs_id_delete**](NumericalIndexApi.md#numericalindexs_id_delete) | **DELETE** /numericalindexs/{id} | Delete a NumericalIndex
-[**numericalindexs_id_get**](NumericalIndexApi.md#numericalindexs_id_get) | **GET** /numericalindexs/{id} | Get a NumericalIndex
-[**numericalindexs_id_put**](NumericalIndexApi.md#numericalindexs_id_put) | **PUT** /numericalindexs/{id} | Update a NumericalIndex
-[**numericalindexs_post**](NumericalIndexApi.md#numericalindexs_post) | **POST** /numericalindexs | Create a NumericalIndex
+[**numericalindexs_get**](NumericalIndexApi.md#numericalindexs_get) | **GET** /numericalindexs | List all instances of NumericalIndex
+[**numericalindexs_id_delete**](NumericalIndexApi.md#numericalindexs_id_delete) | **DELETE** /numericalindexs/{id} | Delete an existing NumericalIndex
+[**numericalindexs_id_get**](NumericalIndexApi.md#numericalindexs_id_get) | **GET** /numericalindexs/{id} | Get a single NumericalIndex by its id
+[**numericalindexs_id_put**](NumericalIndexApi.md#numericalindexs_id_put) | **PUT** /numericalindexs/{id} | Update an existing NumericalIndex
+[**numericalindexs_post**](NumericalIndexApi.md#numericalindexs_post) | **POST** /numericalindexs | Create one NumericalIndex
 
 
 # **numericalindexs_get**
-> list[NumericalIndex] numericalindexs_get(username=username, label=label)
+> list[NumericalIndex] numericalindexs_get(username=username, label=label, page=page, per_page=per_page)
 
-List all NumericalIndex entities
+List all instances of NumericalIndex
 
-Gets a list of all NumericalIndex entities
+Gets a list of all instances of NumericalIndex (more information in https://w3id.org/okn/o/sd#NumericalIndex)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.NumericalIndexApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all NumericalIndex entities
-    api_response = api_instance.numericalindexs_get(username=username, label=label)
+    # List all instances of NumericalIndex
+    api_response = api_instance.numericalindexs_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NumericalIndexApi->numericalindexs_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of NumericalIndex entities. |  -  |
+**200** | Successful response - returns an array with the instances of NumericalIndex. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **numericalindexs_id_delete**
 > numericalindexs_id_delete(id, user)
 
-Delete a NumericalIndex
-
 Delete an existing NumericalIndex
+
+Delete an existing NumericalIndex (more information in https://w3id.org/okn/o/sd#NumericalIndex)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.NumericalIndexApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the NumericalIndex to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a NumericalIndex
+    # Delete an existing NumericalIndex
     api_instance.numericalindexs_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling NumericalIndexApi->numericalindexs_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the NumericalIndex to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **numericalindexs_id_get**
 > NumericalIndex numericalindexs_id_get(id, username=username)
 
-Get a NumericalIndex
+Get a single NumericalIndex by its id
 
-Gets the details of a single instance of a NumericalIndex
+Gets the details of a given NumericalIndex (more information in https://w3id.org/okn/o/sd#NumericalIndex)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.NumericalIndexApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the NumericalIndex to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a NumericalIndex
+    # Get a single NumericalIndex by its id
     api_response = api_instance.numericalindexs_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the NumericalIndex to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  NumericalIndex |  -  |
+**200** | Gets the details of a given NumericalIndex |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **numericalindexs_id_put**
 > NumericalIndex numericalindexs_id_put(id, user, numerical_index=numerical_index)
 
-Update a NumericalIndex
+Update an existing NumericalIndex
 
-Updates an existing NumericalIndex
+Updates an existing NumericalIndex (more information in https://w3id.org/okn/o/sd#NumericalIndex)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.NumericalIndexApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the NumericalIndex to be retrieved
 user = 'user_example' # str | Username
 numerical_index = modelcatalog.NumericalIndex() # NumericalIndex | An old NumericalIndexto be updated (optional)
 
 try:
-    # Update a NumericalIndex
+    # Update an existing NumericalIndex
     api_response = api_instance.numericalindexs_id_put(id, user, numerical_index=numerical_index)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the NumericalIndex to be retrieved | 
  **user** | **str**| Username | 
  **numerical_index** | [**NumericalIndex**](NumericalIndex.md)| An old NumericalIndexto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **numericalindexs_post**
 > NumericalIndex numericalindexs_post(user, numerical_index=numerical_index)
 
-Create a NumericalIndex
+Create one NumericalIndex
 
-Create a new instance of a NumericalIndex
+Create a new instance of NumericalIndex (more information in https://w3id.org/okn/o/sd#NumericalIndex)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.NumericalIndexApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-numerical_index = modelcatalog.NumericalIndex() # NumericalIndex | A new NumericalIndexto be created (optional)
+numerical_index = modelcatalog.NumericalIndex() # NumericalIndex | Information about the NumericalIndexto be created (optional)
 
 try:
-    # Create a NumericalIndex
+    # Create one NumericalIndex
     api_response = api_instance.numericalindexs_post(user, numerical_index=numerical_index)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **numerical_index** | [**NumericalIndex**](NumericalIndex.md)| A new NumericalIndexto be created | [optional] 
+ **numerical_index** | [**NumericalIndex**](NumericalIndex.md)| Information about the NumericalIndexto be created | [optional] 
 
 ### Return type
 

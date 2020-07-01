@@ -1,14 +1,14 @@
 # modelcatalog.DefaultApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**user_login_get**](DefaultApi.md#user_login_get) | **GET** /user/login | 
+[**user_login_post**](DefaultApi.md#user_login_post) | **POST** /user/login | 
 
 
-# **user_login_get**
-> object user_login_get(username, password)
+# **user_login_post**
+> str user_login_post(user=user)
 
 
 
@@ -25,26 +25,24 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.DefaultApi()
-username = 'username_example' # str | The user name for login
-password = 'password_example' # str | The password for login in clear text
+user = modelcatalog.User() # User | User credentials (optional)
 
 try:
-    api_response = api_instance.user_login_get(username, password)
+    api_response = api_instance.user_login_post(user=user)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->user_login_get: %s\n" % e)
+    print("Exception when calling DefaultApi->user_login_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| The user name for login | 
- **password** | **str**| The password for login in clear text | 
+ **user** | [**User**](User.md)| User credentials | [optional] 
 
 ### Return type
 
-**object**
+**str**
 
 ### Authorization
 
@@ -52,7 +50,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

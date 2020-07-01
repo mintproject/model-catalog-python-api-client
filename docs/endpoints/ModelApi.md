@@ -1,6 +1,6 @@
 # modelcatalog.ModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,11 +9,11 @@ Method | HTTP request | Description
 [**custom_model_region_get**](ModelApi.md#custom_model_region_get) | **GET** /custom/model/region | Get a Model
 [**custom_models_standard_variable_get**](ModelApi.md#custom_models_standard_variable_get) | **GET** /custom/models/standard_variable | Get a list of models
 [**custom_models_variable_get**](ModelApi.md#custom_models_variable_get) | **GET** /custom/models/variable | Get a list of Model
-[**models_get**](ModelApi.md#models_get) | **GET** /models | List all Model entities
-[**models_id_delete**](ModelApi.md#models_id_delete) | **DELETE** /models/{id} | Delete a Model
-[**models_id_get**](ModelApi.md#models_id_get) | **GET** /models/{id} | Get a Model
-[**models_id_put**](ModelApi.md#models_id_put) | **PUT** /models/{id} | Update a Model
-[**models_post**](ModelApi.md#models_post) | **POST** /models | Create a Model
+[**models_get**](ModelApi.md#models_get) | **GET** /models | List all instances of Model
+[**models_id_delete**](ModelApi.md#models_id_delete) | **DELETE** /models/{id} | Delete an existing Model
+[**models_id_get**](ModelApi.md#models_id_get) | **GET** /models/{id} | Get a single Model by its id
+[**models_id_put**](ModelApi.md#models_id_put) | **PUT** /models/{id} | Update an existing Model
+[**models_post**](ModelApi.md#models_post) | **POST** /models | Create one Model
 
 
 # **custom_model_index_get**
@@ -307,11 +307,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_get**
-> list[Model] models_get(username=username, label=label)
+> list[Model] models_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Model entities
+List all instances of Model
 
-Gets a list of all Model entities
+Gets a list of all instances of Model (more information in https://w3id.org/okn/o/sdm#Model)
 
 ### Example
 
@@ -324,12 +324,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Model entities
-    api_response = api_instance.models_get(username=username, label=label)
+    # List all instances of Model
+    api_response = api_instance.models_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ModelApi->models_get: %s\n" % e)
@@ -339,8 +341,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -358,16 +362,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Model entities. |  -  |
+**200** | Successful response - returns an array with the instances of Model. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_id_delete**
 > models_id_delete(id, user)
 
-Delete a Model
-
 Delete an existing Model
+
+Delete an existing Model (more information in https://w3id.org/okn/o/sdm#Model)
 
 ### Example
 
@@ -382,15 +386,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Model to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Model
+    # Delete an existing Model
     api_instance.models_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling ModelApi->models_id_delete: %s\n" % e)
@@ -400,7 +404,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Model to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -427,9 +431,9 @@ void (empty response body)
 # **models_id_get**
 > Model models_id_get(id, username=username)
 
-Get a Model
+Get a single Model by its id
 
-Gets the details of a single instance of a Model
+Gets the details of a given Model (more information in https://w3id.org/okn/o/sdm#Model)
 
 ### Example
 
@@ -442,11 +446,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.ModelApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Model to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Model
+    # Get a single Model by its id
     api_response = api_instance.models_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -457,8 +461,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Model to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -476,16 +480,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Model |  -  |
+**200** | Gets the details of a given Model |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **models_id_put**
 > Model models_id_put(id, user, model=model)
 
-Update a Model
+Update an existing Model
 
-Updates an existing Model
+Updates an existing Model (more information in https://w3id.org/okn/o/sdm#Model)
 
 ### Example
 
@@ -500,16 +504,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Model to be retrieved
 user = 'user_example' # str | Username
 model = modelcatalog.Model() # Model | An old Modelto be updated (optional)
 
 try:
-    # Update a Model
+    # Update an existing Model
     api_response = api_instance.models_id_put(id, user, model=model)
     pprint(api_response)
 except ApiException as e:
@@ -520,7 +524,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Model to be retrieved | 
  **user** | **str**| Username | 
  **model** | [**Model**](Model.md)| An old Modelto be updated | [optional] 
 
@@ -548,9 +552,9 @@ Name | Type | Description  | Notes
 # **models_post**
 > Model models_post(user, model=model)
 
-Create a Model
+Create one Model
 
-Create a new instance of a Model
+Create a new instance of Model (more information in https://w3id.org/okn/o/sdm#Model)
 
 ### Example
 
@@ -565,15 +569,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-model = modelcatalog.Model() # Model | A new Modelto be created (optional)
+model = modelcatalog.Model() # Model | Information about the Modelto be created (optional)
 
 try:
-    # Create a Model
+    # Create one Model
     api_response = api_instance.models_post(user, model=model)
     pprint(api_response)
 except ApiException as e:
@@ -585,7 +589,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **model** | [**Model**](Model.md)| A new Modelto be created | [optional] 
+ **model** | [**Model**](Model.md)| Information about the Modelto be created | [optional] 
 
 ### Return type
 

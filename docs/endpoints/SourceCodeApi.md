@@ -1,22 +1,22 @@
 # modelcatalog.SourceCodeApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**sourcecodes_get**](SourceCodeApi.md#sourcecodes_get) | **GET** /sourcecodes | List all SourceCode entities
-[**sourcecodes_id_delete**](SourceCodeApi.md#sourcecodes_id_delete) | **DELETE** /sourcecodes/{id} | Delete a SourceCode
-[**sourcecodes_id_get**](SourceCodeApi.md#sourcecodes_id_get) | **GET** /sourcecodes/{id} | Get a SourceCode
-[**sourcecodes_id_put**](SourceCodeApi.md#sourcecodes_id_put) | **PUT** /sourcecodes/{id} | Update a SourceCode
-[**sourcecodes_post**](SourceCodeApi.md#sourcecodes_post) | **POST** /sourcecodes | Create a SourceCode
+[**sourcecodes_get**](SourceCodeApi.md#sourcecodes_get) | **GET** /sourcecodes | List all instances of SourceCode
+[**sourcecodes_id_delete**](SourceCodeApi.md#sourcecodes_id_delete) | **DELETE** /sourcecodes/{id} | Delete an existing SourceCode
+[**sourcecodes_id_get**](SourceCodeApi.md#sourcecodes_id_get) | **GET** /sourcecodes/{id} | Get a single SourceCode by its id
+[**sourcecodes_id_put**](SourceCodeApi.md#sourcecodes_id_put) | **PUT** /sourcecodes/{id} | Update an existing SourceCode
+[**sourcecodes_post**](SourceCodeApi.md#sourcecodes_post) | **POST** /sourcecodes | Create one SourceCode
 
 
 # **sourcecodes_get**
-> list[SourceCode] sourcecodes_get(username=username, label=label)
+> list[SourceCode] sourcecodes_get(username=username, label=label, page=page, per_page=per_page)
 
-List all SourceCode entities
+List all instances of SourceCode
 
-Gets a list of all SourceCode entities
+Gets a list of all instances of SourceCode (more information in https://w3id.org/okn/o/sd#SourceCode)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SourceCodeApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all SourceCode entities
-    api_response = api_instance.sourcecodes_get(username=username, label=label)
+    # List all instances of SourceCode
+    api_response = api_instance.sourcecodes_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SourceCodeApi->sourcecodes_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of SourceCode entities. |  -  |
+**200** | Successful response - returns an array with the instances of SourceCode. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sourcecodes_id_delete**
 > sourcecodes_id_delete(id, user)
 
-Delete a SourceCode
-
 Delete an existing SourceCode
+
+Delete an existing SourceCode (more information in https://w3id.org/okn/o/sd#SourceCode)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SourceCodeApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SourceCode to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a SourceCode
+    # Delete an existing SourceCode
     api_instance.sourcecodes_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling SourceCodeApi->sourcecodes_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SourceCode to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **sourcecodes_id_get**
 > SourceCode sourcecodes_id_get(id, username=username)
 
-Get a SourceCode
+Get a single SourceCode by its id
 
-Gets the details of a single instance of a SourceCode
+Gets the details of a given SourceCode (more information in https://w3id.org/okn/o/sd#SourceCode)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SourceCodeApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the SourceCode to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a SourceCode
+    # Get a single SourceCode by its id
     api_response = api_instance.sourcecodes_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the SourceCode to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  SourceCode |  -  |
+**200** | Gets the details of a given SourceCode |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sourcecodes_id_put**
 > SourceCode sourcecodes_id_put(id, user, source_code=source_code)
 
-Update a SourceCode
+Update an existing SourceCode
 
-Updates an existing SourceCode
+Updates an existing SourceCode (more information in https://w3id.org/okn/o/sd#SourceCode)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SourceCodeApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SourceCode to be retrieved
 user = 'user_example' # str | Username
 source_code = modelcatalog.SourceCode() # SourceCode | An old SourceCodeto be updated (optional)
 
 try:
-    # Update a SourceCode
+    # Update an existing SourceCode
     api_response = api_instance.sourcecodes_id_put(id, user, source_code=source_code)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SourceCode to be retrieved | 
  **user** | **str**| Username | 
  **source_code** | [**SourceCode**](SourceCode.md)| An old SourceCodeto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **sourcecodes_post**
 > SourceCode sourcecodes_post(user, source_code=source_code)
 
-Create a SourceCode
+Create one SourceCode
 
-Create a new instance of a SourceCode
+Create a new instance of SourceCode (more information in https://w3id.org/okn/o/sd#SourceCode)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SourceCodeApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-source_code = modelcatalog.SourceCode() # SourceCode | A new SourceCodeto be created (optional)
+source_code = modelcatalog.SourceCode() # SourceCode | Information about the SourceCodeto be created (optional)
 
 try:
-    # Create a SourceCode
+    # Create one SourceCode
     api_response = api_instance.sourcecodes_post(user, source_code=source_code)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **source_code** | [**SourceCode**](SourceCode.md)| A new SourceCodeto be created | [optional] 
+ **source_code** | [**SourceCode**](SourceCode.md)| Information about the SourceCodeto be created | [optional] 
 
 ### Return type
 

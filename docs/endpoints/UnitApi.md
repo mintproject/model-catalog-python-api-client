@@ -1,22 +1,22 @@
 # modelcatalog.UnitApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**units_get**](UnitApi.md#units_get) | **GET** /units | List all Unit entities
-[**units_id_delete**](UnitApi.md#units_id_delete) | **DELETE** /units/{id} | Delete a Unit
-[**units_id_get**](UnitApi.md#units_id_get) | **GET** /units/{id} | Get a Unit
-[**units_id_put**](UnitApi.md#units_id_put) | **PUT** /units/{id} | Update a Unit
-[**units_post**](UnitApi.md#units_post) | **POST** /units | Create a Unit
+[**units_get**](UnitApi.md#units_get) | **GET** /units | List all instances of Unit
+[**units_id_delete**](UnitApi.md#units_id_delete) | **DELETE** /units/{id} | Delete an existing Unit
+[**units_id_get**](UnitApi.md#units_id_get) | **GET** /units/{id} | Get a single Unit by its id
+[**units_id_put**](UnitApi.md#units_id_put) | **PUT** /units/{id} | Update an existing Unit
+[**units_post**](UnitApi.md#units_post) | **POST** /units | Create one Unit
 
 
 # **units_get**
-> list[Unit] units_get(username=username, label=label)
+> list[Unit] units_get(username=username, label=label, page=page, per_page=per_page)
 
-List all Unit entities
+List all instances of Unit
 
-Gets a list of all Unit entities
+Gets a list of all instances of Unit (more information in https://w3id.org/okn/o/sd#Unit)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.UnitApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all Unit entities
-    api_response = api_instance.units_get(username=username, label=label)
+    # List all instances of Unit
+    api_response = api_instance.units_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UnitApi->units_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of Unit entities. |  -  |
+**200** | Successful response - returns an array with the instances of Unit. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **units_id_delete**
 > units_id_delete(id, user)
 
-Delete a Unit
-
 Delete an existing Unit
+
+Delete an existing Unit (more information in https://w3id.org/okn/o/sd#Unit)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.UnitApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Unit to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a Unit
+    # Delete an existing Unit
     api_instance.units_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling UnitApi->units_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Unit to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **units_id_get**
 > Unit units_id_get(id, username=username)
 
-Get a Unit
+Get a single Unit by its id
 
-Gets the details of a single instance of a Unit
+Gets the details of a given Unit (more information in https://w3id.org/okn/o/sd#Unit)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.UnitApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the Unit to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a Unit
+    # Get a single Unit by its id
     api_response = api_instance.units_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the Unit to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  Unit |  -  |
+**200** | Gets the details of a given Unit |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **units_id_put**
 > Unit units_id_put(id, user, unit=unit)
 
-Update a Unit
+Update an existing Unit
 
-Updates an existing Unit
+Updates an existing Unit (more information in https://w3id.org/okn/o/sd#Unit)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.UnitApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the Unit to be retrieved
 user = 'user_example' # str | Username
 unit = modelcatalog.Unit() # Unit | An old Unitto be updated (optional)
 
 try:
-    # Update a Unit
+    # Update an existing Unit
     api_response = api_instance.units_id_put(id, user, unit=unit)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the Unit to be retrieved | 
  **user** | **str**| Username | 
  **unit** | [**Unit**](Unit.md)| An old Unitto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **units_post**
 > Unit units_post(user, unit=unit)
 
-Create a Unit
+Create one Unit
 
-Create a new instance of a Unit
+Create a new instance of Unit (more information in https://w3id.org/okn/o/sd#Unit)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.UnitApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-unit = modelcatalog.Unit() # Unit | A new Unitto be created (optional)
+unit = modelcatalog.Unit() # Unit | Information about the Unitto be created (optional)
 
 try:
-    # Create a Unit
+    # Create one Unit
     api_response = api_instance.units_post(user, unit=unit)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **unit** | [**Unit**](Unit.md)| A new Unitto be created | [optional] 
+ **unit** | [**Unit**](Unit.md)| Information about the Unitto be created | [optional] 
 
 ### Return type
 

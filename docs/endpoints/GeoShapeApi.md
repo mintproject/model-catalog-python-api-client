@@ -1,22 +1,22 @@
 # modelcatalog.GeoShapeApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**geoshapes_get**](GeoShapeApi.md#geoshapes_get) | **GET** /geoshapes | List all GeoShape entities
-[**geoshapes_id_delete**](GeoShapeApi.md#geoshapes_id_delete) | **DELETE** /geoshapes/{id} | Delete a GeoShape
-[**geoshapes_id_get**](GeoShapeApi.md#geoshapes_id_get) | **GET** /geoshapes/{id} | Get a GeoShape
-[**geoshapes_id_put**](GeoShapeApi.md#geoshapes_id_put) | **PUT** /geoshapes/{id} | Update a GeoShape
-[**geoshapes_post**](GeoShapeApi.md#geoshapes_post) | **POST** /geoshapes | Create a GeoShape
+[**geoshapes_get**](GeoShapeApi.md#geoshapes_get) | **GET** /geoshapes | List all instances of GeoShape
+[**geoshapes_id_delete**](GeoShapeApi.md#geoshapes_id_delete) | **DELETE** /geoshapes/{id} | Delete an existing GeoShape
+[**geoshapes_id_get**](GeoShapeApi.md#geoshapes_id_get) | **GET** /geoshapes/{id} | Get a single GeoShape by its id
+[**geoshapes_id_put**](GeoShapeApi.md#geoshapes_id_put) | **PUT** /geoshapes/{id} | Update an existing GeoShape
+[**geoshapes_post**](GeoShapeApi.md#geoshapes_post) | **POST** /geoshapes | Create one GeoShape
 
 
 # **geoshapes_get**
-> list[GeoShape] geoshapes_get(username=username, label=label)
+> list[GeoShape] geoshapes_get(username=username, label=label, page=page, per_page=per_page)
 
-List all GeoShape entities
+List all instances of GeoShape
 
-Gets a list of all GeoShape entities
+Gets a list of all instances of GeoShape (more information in https://w3id.org/okn/o/sdm#GeoShape)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.GeoShapeApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all GeoShape entities
-    api_response = api_instance.geoshapes_get(username=username, label=label)
+    # List all instances of GeoShape
+    api_response = api_instance.geoshapes_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GeoShapeApi->geoshapes_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of GeoShape entities. |  -  |
+**200** | Successful response - returns an array with the instances of GeoShape. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geoshapes_id_delete**
 > geoshapes_id_delete(id, user)
 
-Delete a GeoShape
-
 Delete an existing GeoShape
+
+Delete an existing GeoShape (more information in https://w3id.org/okn/o/sdm#GeoShape)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoShapeApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the GeoShape to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a GeoShape
+    # Delete an existing GeoShape
     api_instance.geoshapes_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling GeoShapeApi->geoshapes_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the GeoShape to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **geoshapes_id_get**
 > GeoShape geoshapes_id_get(id, username=username)
 
-Get a GeoShape
+Get a single GeoShape by its id
 
-Gets the details of a single instance of a GeoShape
+Gets the details of a given GeoShape (more information in https://w3id.org/okn/o/sdm#GeoShape)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.GeoShapeApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the GeoShape to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a GeoShape
+    # Get a single GeoShape by its id
     api_response = api_instance.geoshapes_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the GeoShape to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  GeoShape |  -  |
+**200** | Gets the details of a given GeoShape |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geoshapes_id_put**
 > GeoShape geoshapes_id_put(id, user, geo_shape=geo_shape)
 
-Update a GeoShape
+Update an existing GeoShape
 
-Updates an existing GeoShape
+Updates an existing GeoShape (more information in https://w3id.org/okn/o/sdm#GeoShape)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoShapeApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the GeoShape to be retrieved
 user = 'user_example' # str | Username
 geo_shape = modelcatalog.GeoShape() # GeoShape | An old GeoShapeto be updated (optional)
 
 try:
-    # Update a GeoShape
+    # Update an existing GeoShape
     api_response = api_instance.geoshapes_id_put(id, user, geo_shape=geo_shape)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the GeoShape to be retrieved | 
  **user** | **str**| Username | 
  **geo_shape** | [**GeoShape**](GeoShape.md)| An old GeoShapeto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **geoshapes_post**
 > GeoShape geoshapes_post(user, geo_shape=geo_shape)
 
-Create a GeoShape
+Create one GeoShape
 
-Create a new instance of a GeoShape
+Create a new instance of GeoShape (more information in https://w3id.org/okn/o/sdm#GeoShape)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoShapeApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-geo_shape = modelcatalog.GeoShape() # GeoShape | A new GeoShapeto be created (optional)
+geo_shape = modelcatalog.GeoShape() # GeoShape | Information about the GeoShapeto be created (optional)
 
 try:
-    # Create a GeoShape
+    # Create one GeoShape
     api_response = api_instance.geoshapes_post(user, geo_shape=geo_shape)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **geo_shape** | [**GeoShape**](GeoShape.md)| A new GeoShapeto be created | [optional] 
+ **geo_shape** | [**GeoShape**](GeoShape.md)| Information about the GeoShapeto be created | [optional] 
 
 ### Return type
 

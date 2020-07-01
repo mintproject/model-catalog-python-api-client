@@ -1,22 +1,22 @@
 # modelcatalog.TimeIntervalApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**timeintervals_get**](TimeIntervalApi.md#timeintervals_get) | **GET** /timeintervals | List all TimeInterval entities
-[**timeintervals_id_delete**](TimeIntervalApi.md#timeintervals_id_delete) | **DELETE** /timeintervals/{id} | Delete a TimeInterval
-[**timeintervals_id_get**](TimeIntervalApi.md#timeintervals_id_get) | **GET** /timeintervals/{id} | Get a TimeInterval
-[**timeintervals_id_put**](TimeIntervalApi.md#timeintervals_id_put) | **PUT** /timeintervals/{id} | Update a TimeInterval
-[**timeintervals_post**](TimeIntervalApi.md#timeintervals_post) | **POST** /timeintervals | Create a TimeInterval
+[**timeintervals_get**](TimeIntervalApi.md#timeintervals_get) | **GET** /timeintervals | List all instances of TimeInterval
+[**timeintervals_id_delete**](TimeIntervalApi.md#timeintervals_id_delete) | **DELETE** /timeintervals/{id} | Delete an existing TimeInterval
+[**timeintervals_id_get**](TimeIntervalApi.md#timeintervals_id_get) | **GET** /timeintervals/{id} | Get a single TimeInterval by its id
+[**timeintervals_id_put**](TimeIntervalApi.md#timeintervals_id_put) | **PUT** /timeintervals/{id} | Update an existing TimeInterval
+[**timeintervals_post**](TimeIntervalApi.md#timeintervals_post) | **POST** /timeintervals | Create one TimeInterval
 
 
 # **timeintervals_get**
-> list[TimeInterval] timeintervals_get(username=username, label=label)
+> list[TimeInterval] timeintervals_get(username=username, label=label, page=page, per_page=per_page)
 
-List all TimeInterval entities
+List all instances of TimeInterval
 
-Gets a list of all TimeInterval entities
+Gets a list of all instances of TimeInterval (more information in https://w3id.org/okn/o/sdm#TimeInterval)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.TimeIntervalApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all TimeInterval entities
-    api_response = api_instance.timeintervals_get(username=username, label=label)
+    # List all instances of TimeInterval
+    api_response = api_instance.timeintervals_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TimeIntervalApi->timeintervals_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of TimeInterval entities. |  -  |
+**200** | Successful response - returns an array with the instances of TimeInterval. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **timeintervals_id_delete**
 > timeintervals_id_delete(id, user)
 
-Delete a TimeInterval
-
 Delete an existing TimeInterval
+
+Delete an existing TimeInterval (more information in https://w3id.org/okn/o/sdm#TimeInterval)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.TimeIntervalApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the TimeInterval to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a TimeInterval
+    # Delete an existing TimeInterval
     api_instance.timeintervals_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling TimeIntervalApi->timeintervals_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the TimeInterval to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **timeintervals_id_get**
 > TimeInterval timeintervals_id_get(id, username=username)
 
-Get a TimeInterval
+Get a single TimeInterval by its id
 
-Gets the details of a single instance of a TimeInterval
+Gets the details of a given TimeInterval (more information in https://w3id.org/okn/o/sdm#TimeInterval)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.TimeIntervalApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the TimeInterval to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a TimeInterval
+    # Get a single TimeInterval by its id
     api_response = api_instance.timeintervals_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the TimeInterval to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  TimeInterval |  -  |
+**200** | Gets the details of a given TimeInterval |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **timeintervals_id_put**
 > TimeInterval timeintervals_id_put(id, user, time_interval=time_interval)
 
-Update a TimeInterval
+Update an existing TimeInterval
 
-Updates an existing TimeInterval
+Updates an existing TimeInterval (more information in https://w3id.org/okn/o/sdm#TimeInterval)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.TimeIntervalApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the TimeInterval to be retrieved
 user = 'user_example' # str | Username
 time_interval = modelcatalog.TimeInterval() # TimeInterval | An old TimeIntervalto be updated (optional)
 
 try:
-    # Update a TimeInterval
+    # Update an existing TimeInterval
     api_response = api_instance.timeintervals_id_put(id, user, time_interval=time_interval)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the TimeInterval to be retrieved | 
  **user** | **str**| Username | 
  **time_interval** | [**TimeInterval**](TimeInterval.md)| An old TimeIntervalto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **timeintervals_post**
 > TimeInterval timeintervals_post(user, time_interval=time_interval)
 
-Create a TimeInterval
+Create one TimeInterval
 
-Create a new instance of a TimeInterval
+Create a new instance of TimeInterval (more information in https://w3id.org/okn/o/sdm#TimeInterval)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.TimeIntervalApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-time_interval = modelcatalog.TimeInterval() # TimeInterval | A new TimeIntervalto be created (optional)
+time_interval = modelcatalog.TimeInterval() # TimeInterval | Information about the TimeIntervalto be created (optional)
 
 try:
-    # Create a TimeInterval
+    # Create one TimeInterval
     api_response = api_instance.timeintervals_post(user, time_interval=time_interval)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **time_interval** | [**TimeInterval**](TimeInterval.md)| A new TimeIntervalto be created | [optional] 
+ **time_interval** | [**TimeInterval**](TimeInterval.md)| Information about the TimeIntervalto be created | [optional] 
 
 ### Return type
 

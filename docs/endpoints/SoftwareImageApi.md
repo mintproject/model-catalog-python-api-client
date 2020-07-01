@@ -1,22 +1,22 @@
 # modelcatalog.SoftwareImageApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.4.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**softwareimages_get**](SoftwareImageApi.md#softwareimages_get) | **GET** /softwareimages | List all SoftwareImage entities
-[**softwareimages_id_delete**](SoftwareImageApi.md#softwareimages_id_delete) | **DELETE** /softwareimages/{id} | Delete a SoftwareImage
-[**softwareimages_id_get**](SoftwareImageApi.md#softwareimages_id_get) | **GET** /softwareimages/{id} | Get a SoftwareImage
-[**softwareimages_id_put**](SoftwareImageApi.md#softwareimages_id_put) | **PUT** /softwareimages/{id} | Update a SoftwareImage
-[**softwareimages_post**](SoftwareImageApi.md#softwareimages_post) | **POST** /softwareimages | Create a SoftwareImage
+[**softwareimages_get**](SoftwareImageApi.md#softwareimages_get) | **GET** /softwareimages | List all instances of SoftwareImage
+[**softwareimages_id_delete**](SoftwareImageApi.md#softwareimages_id_delete) | **DELETE** /softwareimages/{id} | Delete an existing SoftwareImage
+[**softwareimages_id_get**](SoftwareImageApi.md#softwareimages_id_get) | **GET** /softwareimages/{id} | Get a single SoftwareImage by its id
+[**softwareimages_id_put**](SoftwareImageApi.md#softwareimages_id_put) | **PUT** /softwareimages/{id} | Update an existing SoftwareImage
+[**softwareimages_post**](SoftwareImageApi.md#softwareimages_post) | **POST** /softwareimages | Create one SoftwareImage
 
 
 # **softwareimages_get**
-> list[SoftwareImage] softwareimages_get(username=username, label=label)
+> list[SoftwareImage] softwareimages_get(username=username, label=label, page=page, per_page=per_page)
 
-List all SoftwareImage entities
+List all instances of SoftwareImage
 
-Gets a list of all SoftwareImage entities
+Gets a list of all instances of SoftwareImage (more information in https://w3id.org/okn/o/sd#SoftwareImage)
 
 ### Example
 
@@ -29,12 +29,14 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareImageApi()
-username = 'username_example' # str | Username to query (optional)
+username = 'username_example' # str | Name of the user graph to query (optional)
 label = 'label_example' # str | Filter by label (optional)
+page = 1 # int | Page number (optional) (default to 1)
+per_page = 100 # int | Items per page (optional) (default to 100)
 
 try:
-    # List all SoftwareImage entities
-    api_response = api_instance.softwareimages_get(username=username, label=label)
+    # List all instances of SoftwareImage
+    api_response = api_instance.softwareimages_get(username=username, label=label, page=page, per_page=per_page)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareImageApi->softwareimages_get: %s\n" % e)
@@ -44,8 +46,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**| Username to query | [optional] 
+ **username** | **str**| Name of the user graph to query | [optional] 
  **label** | **str**| Filter by label | [optional] 
+ **page** | **int**| Page number | [optional] [default to 1]
+ **per_page** | **int**| Items per page | [optional] [default to 100]
 
 ### Return type
 
@@ -63,16 +67,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful response - returns an array of SoftwareImage entities. |  -  |
+**200** | Successful response - returns an array with the instances of SoftwareImage. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareimages_id_delete**
 > softwareimages_id_delete(id, user)
 
-Delete a SoftwareImage
-
 Delete an existing SoftwareImage
+
+Delete an existing SoftwareImage (more information in https://w3id.org/okn/o/sd#SoftwareImage)
 
 ### Example
 
@@ -87,15 +91,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareImageApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SoftwareImage to be retrieved
 user = 'user_example' # str | Username
 
 try:
-    # Delete a SoftwareImage
+    # Delete an existing SoftwareImage
     api_instance.softwareimages_id_delete(id, user)
 except ApiException as e:
     print("Exception when calling SoftwareImageApi->softwareimages_id_delete: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SoftwareImage to be retrieved | 
  **user** | **str**| Username | 
 
 ### Return type
@@ -132,9 +136,9 @@ void (empty response body)
 # **softwareimages_id_get**
 > SoftwareImage softwareimages_id_get(id, username=username)
 
-Get a SoftwareImage
+Get a single SoftwareImage by its id
 
-Gets the details of a single instance of a SoftwareImage
+Gets the details of a given SoftwareImage (more information in https://w3id.org/okn/o/sd#SoftwareImage)
 
 ### Example
 
@@ -147,11 +151,11 @@ from pprint import pprint
 
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareImageApi()
-id = 'id_example' # str | The ID of the resource
-username = 'username_example' # str | Username to query (optional)
+id = 'id_example' # str | The ID of the SoftwareImage to be retrieved
+username = 'username_example' # str | Name of the user graph to query (optional)
 
 try:
-    # Get a SoftwareImage
+    # Get a single SoftwareImage by its id
     api_response = api_instance.softwareimages_id_get(id, username=username)
     pprint(api_response)
 except ApiException as e:
@@ -162,8 +166,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
- **username** | **str**| Username to query | [optional] 
+ **id** | **str**| The ID of the SoftwareImage to be retrieved | 
+ **username** | **str**| Name of the user graph to query | [optional] 
 
 ### Return type
 
@@ -181,16 +185,16 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Gets the details of a single instance of  SoftwareImage |  -  |
+**200** | Gets the details of a given SoftwareImage |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareimages_id_put**
 > SoftwareImage softwareimages_id_put(id, user, software_image=software_image)
 
-Update a SoftwareImage
+Update an existing SoftwareImage
 
-Updates an existing SoftwareImage
+Updates an existing SoftwareImage (more information in https://w3id.org/okn/o/sd#SoftwareImage)
 
 ### Example
 
@@ -205,16 +209,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareImageApi(modelcatalog.ApiClient(configuration))
-id = 'id_example' # str | The ID of the resource
+id = 'id_example' # str | The ID of the SoftwareImage to be retrieved
 user = 'user_example' # str | Username
 software_image = modelcatalog.SoftwareImage() # SoftwareImage | An old SoftwareImageto be updated (optional)
 
 try:
-    # Update a SoftwareImage
+    # Update an existing SoftwareImage
     api_response = api_instance.softwareimages_id_put(id, user, software_image=software_image)
     pprint(api_response)
 except ApiException as e:
@@ -225,7 +229,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| The ID of the resource | 
+ **id** | **str**| The ID of the SoftwareImage to be retrieved | 
  **user** | **str**| Username | 
  **software_image** | [**SoftwareImage**](SoftwareImage.md)| An old SoftwareImageto be updated | [optional] 
 
@@ -253,9 +257,9 @@ Name | Type | Description  | Notes
 # **softwareimages_post**
 > SoftwareImage softwareimages_post(user, software_image=software_image)
 
-Create a SoftwareImage
+Create one SoftwareImage
 
-Create a new instance of a SoftwareImage
+Create a new instance of SoftwareImage (more information in https://w3id.org/okn/o/sd#SoftwareImage)
 
 ### Example
 
@@ -270,15 +274,15 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.4.0
-configuration.host = "https://api.models.mint.isi.edu/v1.4.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.5.0
+configuration.host = "https://api.models.mint.isi.edu/v1.5.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareImageApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username
-software_image = modelcatalog.SoftwareImage() # SoftwareImage | A new SoftwareImageto be created (optional)
+software_image = modelcatalog.SoftwareImage() # SoftwareImage | Information about the SoftwareImageto be created (optional)
 
 try:
-    # Create a SoftwareImage
+    # Create one SoftwareImage
     api_response = api_instance.softwareimages_post(user, software_image=software_image)
     pprint(api_response)
 except ApiException as e:
@@ -290,7 +294,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user** | **str**| Username | 
- **software_image** | [**SoftwareImage**](SoftwareImage.md)| A new SoftwareImageto be created | [optional] 
+ **software_image** | [**SoftwareImage**](SoftwareImage.md)| Information about the SoftwareImageto be created | [optional] 
 
 ### Return type
 

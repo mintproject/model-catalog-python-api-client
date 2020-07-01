@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**description** | **list[str]** |  | [optional] 
-**id** | **str** |  | [optional] 
-**label** | **list[str]** |  | [optional] 
-**type** | **list[str]** |  | [optional] 
-**has_part** | **list[object]** |  | [optional] 
+**has_diagram_part** | **list[object]** | Property that links a causal diagram with its constituent nodes | [optional] 
+**description** | **list[str]** | small description | [optional] 
+**id** | **str** | identifier | [optional] 
+**label** | **list[str]** | short description of the resource | [optional] 
+**type** | **list[str]** | type of the resource | [optional] 
 
 [[Back to Model list]](../#documentation-for-models) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to README]](../)
 
