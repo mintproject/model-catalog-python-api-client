@@ -49,7 +49,7 @@ class SoftwareImage(object):
         'has_build_file': 'list[str]',
         'short_description': 'list[str]',
         'has_execution_command': 'list[str]',
-        'date_published': 'list[str]',
+        'date_published': 'list[datetime]',
         'license': 'list[str]',
         'has_source_code': 'list[SourceCode]',
         'has_example': 'list[str]',
@@ -64,7 +64,7 @@ class SoftwareImage(object):
         'screenshot': 'list[Image]',
         'had_primary_source': 'list[object]',
         'issue_tracker': 'list[str]',
-        'date_created': 'list[str]',
+        'date_created': 'list[datetime]',
         'contributor': 'list[Person]',
         'has_purpose': 'list[str]',
         'has_executable_instructions': 'list[str]',
@@ -660,7 +660,7 @@ class SoftwareImage(object):
         Description not available  # noqa: E501
 
         :return: The date_published of this SoftwareImage.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[datetime]
         """
         return self._date_published
 
@@ -671,7 +671,7 @@ class SoftwareImage(object):
         Description not available  # noqa: E501
 
         :param date_published: The date_published of this SoftwareImage.  # noqa: E501
-        :type: list[str]
+        :type: list[datetime]
         """
 
         self._date_published = date_published
@@ -1005,7 +1005,7 @@ class SoftwareImage(object):
         Description not available  # noqa: E501
 
         :return: The date_created of this SoftwareImage.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[datetime]
         """
         return self._date_created
 
@@ -1016,7 +1016,7 @@ class SoftwareImage(object):
         Description not available  # noqa: E501
 
         :param date_created: The date_created of this SoftwareImage.  # noqa: E501
-        :type: list[str]
+        :type: list[datetime]
         """
 
         self._date_created = date_created

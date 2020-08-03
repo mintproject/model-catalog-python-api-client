@@ -34,8 +34,8 @@ class FundingInformation(object):
         'description': 'list[str]',
         'id': 'str',
         'label': 'list[str]',
-        'type': 'list[str]',
         'funding_source': 'list[Organization]',
+        'type': 'list[str]',
         'funding_grant': 'list[str]'
     }
 
@@ -43,19 +43,19 @@ class FundingInformation(object):
         'description': 'description',
         'id': 'id',
         'label': 'label',
-        'type': 'type',
         'funding_source': 'fundingSource',
+        'type': 'type',
         'funding_grant': 'fundingGrant'
     }
 
-    def __init__(self, description=None, id=None, label=None, type=None, funding_source=None, funding_grant=None):  # noqa: E501
+    def __init__(self, description=None, id=None, label=None, funding_source=None, type=None, funding_grant=None):  # noqa: E501
         """FundingInformation - a model defined in OpenAPI"""  # noqa: E501
 
         self._description = None
         self._id = None
         self._label = None
-        self._type = None
         self._funding_source = None
+        self._type = None
         self._funding_grant = None
         self.discriminator = None
 
@@ -63,8 +63,8 @@ class FundingInformation(object):
         if id is not None:
             self.id = id
         self.label = label
-        self.type = type
         self.funding_source = funding_source
+        self.type = type
         self.funding_grant = funding_grant
 
     @property
@@ -137,29 +137,6 @@ class FundingInformation(object):
         self._label = label
 
     @property
-    def type(self):
-        """Gets the type of this FundingInformation.  # noqa: E501
-
-        type of the resource  # noqa: E501
-
-        :return: The type of this FundingInformation.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this FundingInformation.
-
-        type of the resource  # noqa: E501
-
-        :param type: The type of this FundingInformation.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._type = type
-
-    @property
     def funding_source(self):
         """Gets the funding_source of this FundingInformation.  # noqa: E501
 
@@ -181,6 +158,29 @@ class FundingInformation(object):
         """
 
         self._funding_source = funding_source
+
+    @property
+    def type(self):
+        """Gets the type of this FundingInformation.  # noqa: E501
+
+        type of the resource  # noqa: E501
+
+        :return: The type of this FundingInformation.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this FundingInformation.
+
+        type of the resource  # noqa: E501
+
+        :param type: The type of this FundingInformation.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._type = type
 
     @property
     def funding_grant(self):

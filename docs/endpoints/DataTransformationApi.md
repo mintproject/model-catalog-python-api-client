@@ -4,12 +4,71 @@ All URIs are relative to *https://api.models.mint.isi.edu/v1.5.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**custom_dataspecifications_id_datatransformations_get**](DataTransformationApi.md#custom_dataspecifications_id_datatransformations_get) | **GET** /custom/dataspecifications/{id}/datatransformations | Gets a list of data transformations related a dataset
 [**datatransformations_get**](DataTransformationApi.md#datatransformations_get) | **GET** /datatransformations | List all instances of DataTransformation
 [**datatransformations_id_delete**](DataTransformationApi.md#datatransformations_id_delete) | **DELETE** /datatransformations/{id} | Delete an existing DataTransformation
 [**datatransformations_id_get**](DataTransformationApi.md#datatransformations_id_get) | **GET** /datatransformations/{id} | Get a single DataTransformation by its id
 [**datatransformations_id_put**](DataTransformationApi.md#datatransformations_id_put) | **PUT** /datatransformations/{id} | Update an existing DataTransformation
 [**datatransformations_post**](DataTransformationApi.md#datatransformations_post) | **POST** /datatransformations | Create one DataTransformation
 
+
+# **custom_dataspecifications_id_datatransformations_get**
+> list[DataTransformation] custom_dataspecifications_id_datatransformations_get(id, custom_query_name=custom_query_name, username=username)
+
+Gets a list of data transformations related a dataset
+
+Gets a list of data transformations related a dataset
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import modelcatalog
+from modelcatalog.rest import ApiException
+from pprint import pprint
+
+# Create an instance of the API class
+api_instance = modelcatalog.DataTransformationApi()
+id = 'id_example' # str | The ID of the dataspecification
+custom_query_name = 'custom_datatransformations' # str | Name of the custom query (optional) (default to 'custom_datatransformations')
+username = 'username_example' # str | Username to query (optional)
+
+try:
+    # Gets a list of data transformations related a dataset
+    api_response = api_instance.custom_dataspecifications_id_datatransformations_get(id, custom_query_name=custom_query_name, username=username)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DataTransformationApi->custom_dataspecifications_id_datatransformations_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the dataspecification | 
+ **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_datatransformations&#39;]
+ **username** | **str**| Username to query | [optional] 
+
+### Return type
+
+[**list[DataTransformation]**](DataTransformation.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets a list of data transformations filter related a dataset |  -  |
+
+[[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **datatransformations_get**
 > list[DataTransformation] datatransformations_get(username=username, label=label, page=page, per_page=per_page)

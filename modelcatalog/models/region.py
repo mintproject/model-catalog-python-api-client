@@ -32,8 +32,8 @@ class Region(object):
     """
     openapi_types = {
         'geo': 'list[object]',
-        'description': 'list[str]',
         'part_of': 'list[Region]',
+        'description': 'list[str]',
         'id': 'str',
         'label': 'list[str]',
         'type': 'list[str]'
@@ -41,27 +41,27 @@ class Region(object):
 
     attribute_map = {
         'geo': 'geo',
-        'description': 'description',
         'part_of': 'partOf',
+        'description': 'description',
         'id': 'id',
         'label': 'label',
         'type': 'type'
     }
 
-    def __init__(self, geo=None, description=None, part_of=None, id=None, label=None, type=None):  # noqa: E501
+    def __init__(self, geo=None, part_of=None, description=None, id=None, label=None, type=None):  # noqa: E501
         """Region - a model defined in OpenAPI"""  # noqa: E501
 
         self._geo = None
-        self._description = None
         self._part_of = None
+        self._description = None
         self._id = None
         self._label = None
         self._type = None
         self.discriminator = None
 
         self.geo = geo
-        self.description = description
         self.part_of = part_of
+        self.description = description
         if id is not None:
             self.id = id
         self.label = label
@@ -91,29 +91,6 @@ class Region(object):
         self._geo = geo
 
     @property
-    def description(self):
-        """Gets the description of this Region.  # noqa: E501
-
-        small description  # noqa: E501
-
-        :return: The description of this Region.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Region.
-
-        small description  # noqa: E501
-
-        :param description: The description of this Region.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._description = description
-
-    @property
     def part_of(self):
         """Gets the part_of of this Region.  # noqa: E501
 
@@ -135,6 +112,29 @@ class Region(object):
         """
 
         self._part_of = part_of
+
+    @property
+    def description(self):
+        """Gets the description of this Region.  # noqa: E501
+
+        small description  # noqa: E501
+
+        :return: The description of this Region.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Region.
+
+        small description  # noqa: E501
+
+        :param description: The description of this Region.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._description = description
 
     @property
     def id(self):

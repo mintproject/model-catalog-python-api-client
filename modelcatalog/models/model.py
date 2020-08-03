@@ -49,7 +49,7 @@ class Model(object):
         'author': 'list[object]',
         'has_build_file': 'list[str]',
         'short_description': 'list[str]',
-        'date_published': 'list[str]',
+        'date_published': 'list[datetime]',
         'license': 'list[str]',
         'has_source_code': 'list[SourceCode]',
         'has_explanation_diagram': 'list[Image]',
@@ -66,7 +66,7 @@ class Model(object):
         'has_model_category': 'list[str]',
         'had_primary_source': 'list[object]',
         'issue_tracker': 'list[str]',
-        'date_created': 'list[str]',
+        'date_created': 'list[datetime]',
         'contributor': 'list[Person]',
         'has_purpose': 'list[str]',
         'has_executable_instructions': 'list[str]',
@@ -672,7 +672,7 @@ class Model(object):
         Description not available  # noqa: E501
 
         :return: The date_published of this Model.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[datetime]
         """
         return self._date_published
 
@@ -683,7 +683,7 @@ class Model(object):
         Description not available  # noqa: E501
 
         :param date_published: The date_published of this Model.  # noqa: E501
-        :type: list[str]
+        :type: list[datetime]
         """
 
         self._date_published = date_published
@@ -1063,7 +1063,7 @@ class Model(object):
         Description not available  # noqa: E501
 
         :return: The date_created of this Model.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[datetime]
         """
         return self._date_created
 
@@ -1074,7 +1074,7 @@ class Model(object):
         Description not available  # noqa: E501
 
         :param date_created: The date_created of this Model.  # noqa: E501
-        :type: list[str]
+        :type: list[datetime]
         """
 
         self._date_created = date_created

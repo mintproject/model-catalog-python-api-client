@@ -41,8 +41,8 @@ class VariablePresentation(object):
         'has_long_name': 'list[str]',
         'has_short_name': 'list[str]',
         'has_minimum_accepted_value': 'list[object]',
-        'id': 'str',
         'part_of_dataset': 'list[DatasetSpecification]',
+        'id': 'str',
         'uses_unit': 'list[Unit]'
     }
 
@@ -57,12 +57,12 @@ class VariablePresentation(object):
         'has_long_name': 'hasLongName',
         'has_short_name': 'hasShortName',
         'has_minimum_accepted_value': 'hasMinimumAcceptedValue',
-        'id': 'id',
         'part_of_dataset': 'partOfDataset',
+        'id': 'id',
         'uses_unit': 'usesUnit'
     }
 
-    def __init__(self, has_default_value=None, has_standard_variable=None, has_maximum_accepted_value=None, has_constraint=None, description=None, label=None, type=None, has_long_name=None, has_short_name=None, has_minimum_accepted_value=None, id=None, part_of_dataset=None, uses_unit=None):  # noqa: E501
+    def __init__(self, has_default_value=None, has_standard_variable=None, has_maximum_accepted_value=None, has_constraint=None, description=None, label=None, type=None, has_long_name=None, has_short_name=None, has_minimum_accepted_value=None, part_of_dataset=None, id=None, uses_unit=None):  # noqa: E501
         """VariablePresentation - a model defined in OpenAPI"""  # noqa: E501
 
         self._has_default_value = None
@@ -75,8 +75,8 @@ class VariablePresentation(object):
         self._has_long_name = None
         self._has_short_name = None
         self._has_minimum_accepted_value = None
-        self._id = None
         self._part_of_dataset = None
+        self._id = None
         self._uses_unit = None
         self.discriminator = None
 
@@ -90,9 +90,9 @@ class VariablePresentation(object):
         self.has_long_name = has_long_name
         self.has_short_name = has_short_name
         self.has_minimum_accepted_value = has_minimum_accepted_value
+        self.part_of_dataset = part_of_dataset
         if id is not None:
             self.id = id
-        self.part_of_dataset = part_of_dataset
         self.uses_unit = uses_unit
 
     @property
@@ -326,29 +326,6 @@ class VariablePresentation(object):
         self._has_minimum_accepted_value = has_minimum_accepted_value
 
     @property
-    def id(self):
-        """Gets the id of this VariablePresentation.  # noqa: E501
-
-        identifier  # noqa: E501
-
-        :return: The id of this VariablePresentation.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this VariablePresentation.
-
-        identifier  # noqa: E501
-
-        :param id: The id of this VariablePresentation.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
     def part_of_dataset(self):
         """Gets the part_of_dataset of this VariablePresentation.  # noqa: E501
 
@@ -370,6 +347,29 @@ class VariablePresentation(object):
         """
 
         self._part_of_dataset = part_of_dataset
+
+    @property
+    def id(self):
+        """Gets the id of this VariablePresentation.  # noqa: E501
+
+        identifier  # noqa: E501
+
+        :return: The id of this VariablePresentation.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this VariablePresentation.
+
+        identifier  # noqa: E501
+
+        :param id: The id of this VariablePresentation.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def uses_unit(self):
