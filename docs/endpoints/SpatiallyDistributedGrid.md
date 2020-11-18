@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **has_fixed_resource** | [**list[SampleResource]**](SampleResource.md) | Description not available | [optional] 
 **has_coordinate_system** | **list[str]** | Coordinate system used in a grid | [optional] 
 **has_spatial_resolution** | **list[str]** | Spatial resolution of a grid (e.g., 50m) | [optional] 
+**is_transformed_from** | [**list[DatasetSpecification]**](DatasetSpecification.md) | Description not available | [optional] 
 **has_shape** | **list[str]** | Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc. | [optional] 
 **has_dimension** | **list[str]** | Dimension of the grid (2D, 3D) | [optional] 
 **has_data_transformation_setup** | [**list[DataTransformationSetup]**](DataTransformationSetup.md) | Description not available | [optional] 

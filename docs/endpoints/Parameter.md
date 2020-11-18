@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**has_default_value** | **list[object]** | Default accepted value of a variable presentation (or a parameter) | [optional] 
-**has_maximum_accepted_value** | **list[object]** | Maximum accepted value of a variable presentation (or a parameter) | [optional] 
+**has_default_value** | [**list[AnyOfURIbooleanDateTimefloatintegerstring]**](AnyOfURIbooleanDateTimefloatintegerstring.md) | Default accepted value of a variable presentation (or a parameter) | [optional] 
+**has_maximum_accepted_value** | [**list[AnyOfDateTimefloatinteger]**](AnyOfDateTimefloatinteger.md) | Maximum accepted value of a variable presentation (or a parameter) | [optional] 
 **description** | **list[str]** | small description | [optional] 
 **has_data_type** | **list[str]** | Property that indicates the data type of a parameter | [optional] 
-**has_fixed_value** | **list[object]** | Value of a parameter in a software setup. | [optional] 
+**has_fixed_value** | [**list[AnyOfURIbooleanDateTimefloatintegerstring]**](AnyOfURIbooleanDateTimefloatintegerstring.md) | Value of a parameter in a software setup. | [optional] 
 **has_presentation** | [**list[VariablePresentation]**](VariablePresentation.md) | Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it. | [optional] 
 **label** | **list[str]** | short description of the resource | [optional] 
 **recommended_increment** | **list[float]** | Value that represents how a parameter should be incremented on each iteration of a software component execution. This value is important when preparing execution ensembles automatically, e.g., simulating crop production varying the parameter \&quot;fertilizer amount\&quot; in increments of 10%. | [optional] 
 **type** | **list[str]** | type of the resource | [optional] 
-**has_minimum_accepted_value** | **list[object]** | Minimum accepted value of a variable presentation (or a parameter) | [optional] 
+**has_minimum_accepted_value** | [**list[AnyOfDateTimefloatinteger]**](AnyOfDateTimefloatinteger.md) | Minimum accepted value of a variable presentation (or a parameter) | [optional] 
 **has_accepted_values** | **list[str]** | Property that constraints which values are accepted for a parameter. For example, the name of a crop can only be \&quot;Maize\&quot; or \&quot;Sorghum\&quot; | [optional] 
 **adjusts_variable** | [**list[Variable]**](Variable.md) | Property that links parameter with the variable they adjust. This property can be used when parameters quantify variables without directly representing them. For example, a \&quot;fertilizer percentage adjustment\&quot; parameter can quantify a \&quot;fertilizer price\&quot; variable | [optional] 
 **relevant_for_intervention** | [**list[Intervention]**](Intervention.md) | Description not available | [optional] 

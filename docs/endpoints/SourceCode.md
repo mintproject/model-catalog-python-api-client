@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **license** | **list[str]** | License of a software component or its source code | [optional] 
-**programming_language** | **list[str]** | Description not available | [optional] 
+**programming_language** | **list[str]** | Language used to code a software component | [optional] 
 **description** | **list[str]** | small description | [optional] 
 **code_repository** | **list[str]** | URL to the code repository of a software component | [optional] 
 **id** | **str** | identifier | [optional] 

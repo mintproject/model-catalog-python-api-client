@@ -3,8 +3,10 @@ from __future__ import absolute_import
 # flake8: noqa
 
 # import apis into api package
+from modelcatalog.api.catalog_identifier_api import CatalogIdentifierApi
 from modelcatalog.api.causal_diagram_api import CausalDiagramApi
 from modelcatalog.api.configuration_setup_api import ConfigurationSetupApi
+from modelcatalog.api.coupled_model_api import CoupledModelApi
 from modelcatalog.api.data_transformation_api import DataTransformationApi
 from modelcatalog.api.data_transformation_setup_api import DataTransformationSetupApi
 from modelcatalog.api.dataset_specification_api import DatasetSpecificationApi
@@ -19,6 +21,7 @@ from modelcatalog.api.hybrid_model_api import HybridModelApi
 from modelcatalog.api.image_api import ImageApi
 from modelcatalog.api.intervention_api import InterventionApi
 from modelcatalog.api.model_api import ModelApi
+from modelcatalog.api.model_category_api import ModelCategoryApi
 from modelcatalog.api.model_configuration_api import ModelConfigurationApi
 from modelcatalog.api.model_configuration_setup_api import ModelConfigurationSetupApi
 from modelcatalog.api.numerical_index_api import NumericalIndexApi

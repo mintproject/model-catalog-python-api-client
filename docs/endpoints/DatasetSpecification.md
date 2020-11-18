@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **label** | **list[str]** | short description of the resource | [optional] 
 **type** | **list[str]** | type of the resource | [optional] 
 **has_fixed_resource** | [**list[SampleResource]**](SampleResource.md) | Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region. | [optional] 
+**is_transformed_from** | [**list[DatasetSpecification]**](DatasetSpecification.md) | Property that links a dataset specification from a model configuration or setup to the output from a target data transformation. This occurs when a data transformation produces several outputs, but only one of them is the one needed for a model | [optional] 
 **has_data_transformation_setup** | [**list[DataTransformationSetup]**](DataTransformationSetup.md) | Property to link an input/output dataset to the specific data transformation (with URLs | [optional] 
 **position** | **list[int]** | Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution | [optional] 
 **id** | **str** | identifier | [optional] 
