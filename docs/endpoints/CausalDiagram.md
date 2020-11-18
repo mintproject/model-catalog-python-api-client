@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**has_diagram_part** | **list[object]** | Property that links a causal diagram with its constituent nodes | [optional] 
+**has_diagram_part** | [**list[AnyOfVariablePresentationProcess]**](AnyOfVariablePresentationProcess.md) | Property that links a causal diagram with its constituent nodes | [optional] 
 **description** | **list[str]** | small description | [optional] 
 **id** | **str** | identifier | [optional] 
 **label** | **list[str]** | short description of the resource | [optional] 
