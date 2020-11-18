@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **id** | **str** | identifier | [optional] 
 **label** | **list[str]** | short description of the resource | [optional] 
 **type** | **list[str]** | type of the resource | [optional] 
-**email** | **list[str]** | Description not available | [optional] 
+**email** | **list[str]** | Email of a person | [optional] 
 
 [[Back to Model list]](../#documentation-for-models) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to README]](../)
 
