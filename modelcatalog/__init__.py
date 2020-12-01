@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "5.0.0"
+__version__ = "6.0.0"
 
 # import apis into sdk package
 from modelcatalog.api.catalog_identifier_api import CatalogIdentifierApi
