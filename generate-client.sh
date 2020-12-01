@@ -23,7 +23,7 @@ for file in $(ls *.md); do
 done
 popd
 
-pushd docs/modelcatalog/models/
+pushd modelcatalog/models/
 for file in $(ls *.py); do
     sed -i 's/AnyOf[a-zA-Z]*/object/g' $file
 done
