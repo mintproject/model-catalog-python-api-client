@@ -1,6 +1,6 @@
 # modelcatalog.VisualizationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **visualizations_id_delete**
-> visualizations_id_delete(id, user)
+> visualizations_id_delete(id, user=user)
 
 Delete an existing Visualization
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VisualizationApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Visualization to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing Visualization
-    api_instance.visualizations_id_delete(id, user)
+    api_instance.visualizations_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling VisualizationApi->visualizations_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Visualization to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **visualizations_id_put**
-> Visualization visualizations_id_put(id, user, visualization=visualization)
+> Visualization visualizations_id_put(id, user=user, visualization=visualization)
 
 Update an existing Visualization
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VisualizationApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Visualization to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 visualization = modelcatalog.Visualization() # Visualization | An old Visualizationto be updated (optional)
 
 try:
     # Update an existing Visualization
-    api_response = api_instance.visualizations_id_put(id, user, visualization=visualization)
+    api_response = api_instance.visualizations_id_put(id, user=user, visualization=visualization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling VisualizationApi->visualizations_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Visualization to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **visualization** | [**Visualization**](Visualization.md)| An old Visualizationto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **visualizations_post**
-> Visualization visualizations_post(user, visualization=visualization)
+> Visualization visualizations_post(user=user, visualization=visualization)
 
 Create one Visualization
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.VisualizationApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 visualization = modelcatalog.Visualization() # Visualization | Information about the Visualizationto be created (optional)
 
 try:
     # Create one Visualization
-    api_response = api_instance.visualizations_post(user, visualization=visualization)
+    api_response = api_instance.visualizations_post(user=user, visualization=visualization)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling VisualizationApi->visualizations_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **visualization** | [**Visualization**](Visualization.md)| Information about the Visualizationto be created | [optional] 
 
 ### Return type

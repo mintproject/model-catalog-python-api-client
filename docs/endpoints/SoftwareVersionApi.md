@@ -1,6 +1,6 @@
 # modelcatalog.SoftwareVersionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareversions_id_delete**
-> softwareversions_id_delete(id, user)
+> softwareversions_id_delete(id, user=user)
 
 Delete an existing SoftwareVersion
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareVersionApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SoftwareVersion to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing SoftwareVersion
-    api_instance.softwareversions_id_delete(id, user)
+    api_instance.softwareversions_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling SoftwareVersionApi->softwareversions_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SoftwareVersion to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareversions_id_put**
-> SoftwareVersion softwareversions_id_put(id, user, software_version=software_version)
+> SoftwareVersion softwareversions_id_put(id, user=user, software_version=software_version)
 
 Update an existing SoftwareVersion
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareVersionApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SoftwareVersion to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 software_version = modelcatalog.SoftwareVersion() # SoftwareVersion | An old SoftwareVersionto be updated (optional)
 
 try:
     # Update an existing SoftwareVersion
-    api_response = api_instance.softwareversions_id_put(id, user, software_version=software_version)
+    api_response = api_instance.softwareversions_id_put(id, user=user, software_version=software_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareVersionApi->softwareversions_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SoftwareVersion to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **software_version** | [**SoftwareVersion**](SoftwareVersion.md)| An old SoftwareVersionto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareversions_post**
-> SoftwareVersion softwareversions_post(user, software_version=software_version)
+> SoftwareVersion softwareversions_post(user=user, software_version=software_version)
 
 Create one SoftwareVersion
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareVersionApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 software_version = modelcatalog.SoftwareVersion() # SoftwareVersion | Information about the SoftwareVersionto be created (optional)
 
 try:
     # Create one SoftwareVersion
-    api_response = api_instance.softwareversions_post(user, software_version=software_version)
+    api_response = api_instance.softwareversions_post(user=user, software_version=software_version)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareVersionApi->softwareversions_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **software_version** | [**SoftwareVersion**](SoftwareVersion.md)| Information about the SoftwareVersionto be created | [optional] 
 
 ### Return type

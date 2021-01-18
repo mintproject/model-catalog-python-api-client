@@ -1,6 +1,6 @@
 # modelcatalog.StandardVariableApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **standardvariables_id_delete**
-> standardvariables_id_delete(id, user)
+> standardvariables_id_delete(id, user=user)
 
 Delete an existing StandardVariable
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.StandardVariableApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the StandardVariable to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing StandardVariable
-    api_instance.standardvariables_id_delete(id, user)
+    api_instance.standardvariables_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling StandardVariableApi->standardvariables_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the StandardVariable to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **standardvariables_id_put**
-> StandardVariable standardvariables_id_put(id, user, standard_variable=standard_variable)
+> StandardVariable standardvariables_id_put(id, user=user, standard_variable=standard_variable)
 
 Update an existing StandardVariable
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.StandardVariableApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the StandardVariable to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 standard_variable = modelcatalog.StandardVariable() # StandardVariable | An old StandardVariableto be updated (optional)
 
 try:
     # Update an existing StandardVariable
-    api_response = api_instance.standardvariables_id_put(id, user, standard_variable=standard_variable)
+    api_response = api_instance.standardvariables_id_put(id, user=user, standard_variable=standard_variable)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling StandardVariableApi->standardvariables_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the StandardVariable to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **standard_variable** | [**StandardVariable**](StandardVariable.md)| An old StandardVariableto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **standardvariables_post**
-> StandardVariable standardvariables_post(user, standard_variable=standard_variable)
+> StandardVariable standardvariables_post(user=user, standard_variable=standard_variable)
 
 Create one StandardVariable
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.StandardVariableApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 standard_variable = modelcatalog.StandardVariable() # StandardVariable | Information about the StandardVariableto be created (optional)
 
 try:
     # Create one StandardVariable
-    api_response = api_instance.standardvariables_post(user, standard_variable=standard_variable)
+    api_response = api_instance.standardvariables_post(user=user, standard_variable=standard_variable)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling StandardVariableApi->standardvariables_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **standard_variable** | [**StandardVariable**](StandardVariable.md)| Information about the StandardVariableto be created | [optional] 
 
 ### Return type

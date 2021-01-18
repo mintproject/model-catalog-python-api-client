@@ -1,6 +1,6 @@
 # modelcatalog.EmulatorApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **emulators_id_delete**
-> emulators_id_delete(id, user)
+> emulators_id_delete(id, user=user)
 
 Delete an existing Emulator
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EmulatorApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Emulator to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing Emulator
-    api_instance.emulators_id_delete(id, user)
+    api_instance.emulators_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling EmulatorApi->emulators_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Emulator to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **emulators_id_put**
-> Emulator emulators_id_put(id, user, emulator=emulator)
+> Emulator emulators_id_put(id, user=user, emulator=emulator)
 
 Update an existing Emulator
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EmulatorApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Emulator to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 emulator = modelcatalog.Emulator() # Emulator | An old Emulatorto be updated (optional)
 
 try:
     # Update an existing Emulator
-    api_response = api_instance.emulators_id_put(id, user, emulator=emulator)
+    api_response = api_instance.emulators_id_put(id, user=user, emulator=emulator)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmulatorApi->emulators_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Emulator to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **emulator** | [**Emulator**](Emulator.md)| An old Emulatorto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **emulators_post**
-> Emulator emulators_post(user, emulator=emulator)
+> Emulator emulators_post(user=user, emulator=emulator)
 
 Create one Emulator
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EmulatorApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 emulator = modelcatalog.Emulator() # Emulator | Information about the Emulatorto be created (optional)
 
 try:
     # Create one Emulator
-    api_response = api_instance.emulators_post(user, emulator=emulator)
+    api_response = api_instance.emulators_post(user=user, emulator=emulator)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmulatorApi->emulators_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **emulator** | [**Emulator**](Emulator.md)| Information about the Emulatorto be created | [optional] 
 
 ### Return type

@@ -1,6 +1,6 @@
 # modelcatalog.SampleResourceApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sampleresources_id_delete**
-> sampleresources_id_delete(id, user)
+> sampleresources_id_delete(id, user=user)
 
 Delete an existing SampleResource
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleResourceApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SampleResource to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing SampleResource
-    api_instance.sampleresources_id_delete(id, user)
+    api_instance.sampleresources_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling SampleResourceApi->sampleresources_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SampleResource to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sampleresources_id_put**
-> SampleResource sampleresources_id_put(id, user, sample_resource=sample_resource)
+> SampleResource sampleresources_id_put(id, user=user, sample_resource=sample_resource)
 
 Update an existing SampleResource
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleResourceApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SampleResource to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 sample_resource = modelcatalog.SampleResource() # SampleResource | An old SampleResourceto be updated (optional)
 
 try:
     # Update an existing SampleResource
-    api_response = api_instance.sampleresources_id_put(id, user, sample_resource=sample_resource)
+    api_response = api_instance.sampleresources_id_put(id, user=user, sample_resource=sample_resource)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleResourceApi->sampleresources_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SampleResource to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **sample_resource** | [**SampleResource**](SampleResource.md)| An old SampleResourceto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **sampleresources_post**
-> SampleResource sampleresources_post(user, sample_resource=sample_resource)
+> SampleResource sampleresources_post(user=user, sample_resource=sample_resource)
 
 Create one SampleResource
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleResourceApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 sample_resource = modelcatalog.SampleResource() # SampleResource | Information about the SampleResourceto be created (optional)
 
 try:
     # Create one SampleResource
-    api_response = api_instance.sampleresources_post(user, sample_resource=sample_resource)
+    api_response = api_instance.sampleresources_post(user=user, sample_resource=sample_resource)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleResourceApi->sampleresources_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **sample_resource** | [**SampleResource**](SampleResource.md)| Information about the SampleResourceto be created | [optional] 
 
 ### Return type

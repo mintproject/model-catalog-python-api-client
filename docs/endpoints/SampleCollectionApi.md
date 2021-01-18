@@ -1,6 +1,6 @@
 # modelcatalog.SampleCollectionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **samplecollections_id_delete**
-> samplecollections_id_delete(id, user)
+> samplecollections_id_delete(id, user=user)
 
 Delete an existing SampleCollection
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleCollectionApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SampleCollection to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing SampleCollection
-    api_instance.samplecollections_id_delete(id, user)
+    api_instance.samplecollections_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling SampleCollectionApi->samplecollections_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SampleCollection to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **samplecollections_id_put**
-> SampleCollection samplecollections_id_put(id, user, sample_collection=sample_collection)
+> SampleCollection samplecollections_id_put(id, user=user, sample_collection=sample_collection)
 
 Update an existing SampleCollection
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleCollectionApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SampleCollection to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 sample_collection = modelcatalog.SampleCollection() # SampleCollection | An old SampleCollectionto be updated (optional)
 
 try:
     # Update an existing SampleCollection
-    api_response = api_instance.samplecollections_id_put(id, user, sample_collection=sample_collection)
+    api_response = api_instance.samplecollections_id_put(id, user=user, sample_collection=sample_collection)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleCollectionApi->samplecollections_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SampleCollection to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **sample_collection** | [**SampleCollection**](SampleCollection.md)| An old SampleCollectionto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **samplecollections_post**
-> SampleCollection samplecollections_post(user, sample_collection=sample_collection)
+> SampleCollection samplecollections_post(user=user, sample_collection=sample_collection)
 
 Create one SampleCollection
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SampleCollectionApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 sample_collection = modelcatalog.SampleCollection() # SampleCollection | Information about the SampleCollectionto be created (optional)
 
 try:
     # Create one SampleCollection
-    api_response = api_instance.samplecollections_post(user, sample_collection=sample_collection)
+    api_response = api_instance.samplecollections_post(user=user, sample_collection=sample_collection)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SampleCollectionApi->samplecollections_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **sample_collection** | [**SampleCollection**](SampleCollection.md)| Information about the SampleCollectionto be created | [optional] 
 
 ### Return type

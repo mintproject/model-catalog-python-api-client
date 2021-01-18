@@ -1,6 +1,6 @@
 # modelcatalog.GeoCoordinatesApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geocoordinatess_id_delete**
-> geocoordinatess_id_delete(id, user)
+> geocoordinatess_id_delete(id, user=user)
 
 Delete an existing GeoCoordinates
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoCoordinatesApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the GeoCoordinates to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing GeoCoordinates
-    api_instance.geocoordinatess_id_delete(id, user)
+    api_instance.geocoordinatess_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling GeoCoordinatesApi->geocoordinatess_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the GeoCoordinates to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geocoordinatess_id_put**
-> GeoCoordinates geocoordinatess_id_put(id, user, geo_coordinates=geo_coordinates)
+> GeoCoordinates geocoordinatess_id_put(id, user=user, geo_coordinates=geo_coordinates)
 
 Update an existing GeoCoordinates
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoCoordinatesApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the GeoCoordinates to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 geo_coordinates = modelcatalog.GeoCoordinates() # GeoCoordinates | An old GeoCoordinatesto be updated (optional)
 
 try:
     # Update an existing GeoCoordinates
-    api_response = api_instance.geocoordinatess_id_put(id, user, geo_coordinates=geo_coordinates)
+    api_response = api_instance.geocoordinatess_id_put(id, user=user, geo_coordinates=geo_coordinates)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GeoCoordinatesApi->geocoordinatess_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the GeoCoordinates to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **geo_coordinates** | [**GeoCoordinates**](GeoCoordinates.md)| An old GeoCoordinatesto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geocoordinatess_post**
-> GeoCoordinates geocoordinatess_post(user, geo_coordinates=geo_coordinates)
+> GeoCoordinates geocoordinatess_post(user=user, geo_coordinates=geo_coordinates)
 
 Create one GeoCoordinates
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoCoordinatesApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 geo_coordinates = modelcatalog.GeoCoordinates() # GeoCoordinates | Information about the GeoCoordinatesto be created (optional)
 
 try:
     # Create one GeoCoordinates
-    api_response = api_instance.geocoordinatess_post(user, geo_coordinates=geo_coordinates)
+    api_response = api_instance.geocoordinatess_post(user=user, geo_coordinates=geo_coordinates)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GeoCoordinatesApi->geocoordinatess_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **geo_coordinates** | [**GeoCoordinates**](GeoCoordinates.md)| Information about the GeoCoordinatesto be created | [optional] 
 
 ### Return type

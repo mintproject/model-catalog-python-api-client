@@ -1,6 +1,6 @@
 # modelcatalog.SpatialResolutionApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **spatialresolutions_id_delete**
-> spatialresolutions_id_delete(id, user)
+> spatialresolutions_id_delete(id, user=user)
 
 Delete an existing SpatialResolution
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SpatialResolutionApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SpatialResolution to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing SpatialResolution
-    api_instance.spatialresolutions_id_delete(id, user)
+    api_instance.spatialresolutions_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling SpatialResolutionApi->spatialresolutions_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SpatialResolution to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **spatialresolutions_id_put**
-> SpatialResolution spatialresolutions_id_put(id, user, spatial_resolution=spatial_resolution)
+> SpatialResolution spatialresolutions_id_put(id, user=user, spatial_resolution=spatial_resolution)
 
 Update an existing SpatialResolution
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SpatialResolutionApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SpatialResolution to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 spatial_resolution = modelcatalog.SpatialResolution() # SpatialResolution | An old SpatialResolutionto be updated (optional)
 
 try:
     # Update an existing SpatialResolution
-    api_response = api_instance.spatialresolutions_id_put(id, user, spatial_resolution=spatial_resolution)
+    api_response = api_instance.spatialresolutions_id_put(id, user=user, spatial_resolution=spatial_resolution)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SpatialResolutionApi->spatialresolutions_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SpatialResolution to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **spatial_resolution** | [**SpatialResolution**](SpatialResolution.md)| An old SpatialResolutionto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **spatialresolutions_post**
-> SpatialResolution spatialresolutions_post(user, spatial_resolution=spatial_resolution)
+> SpatialResolution spatialresolutions_post(user=user, spatial_resolution=spatial_resolution)
 
 Create one SpatialResolution
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SpatialResolutionApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 spatial_resolution = modelcatalog.SpatialResolution() # SpatialResolution | Information about the SpatialResolutionto be created (optional)
 
 try:
     # Create one SpatialResolution
-    api_response = api_instance.spatialresolutions_post(user, spatial_resolution=spatial_resolution)
+    api_response = api_instance.spatialresolutions_post(user=user, spatial_resolution=spatial_resolution)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SpatialResolutionApi->spatialresolutions_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **spatial_resolution** | [**SpatialResolution**](SpatialResolution.md)| Information about the SpatialResolutionto be created | [optional] 
 
 ### Return type

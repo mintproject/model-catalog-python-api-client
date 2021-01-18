@@ -1,6 +1,6 @@
 # modelcatalog.FundingInformationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **fundinginformations_id_delete**
-> fundinginformations_id_delete(id, user)
+> fundinginformations_id_delete(id, user=user)
 
 Delete an existing FundingInformation
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.FundingInformationApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the FundingInformation to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing FundingInformation
-    api_instance.fundinginformations_id_delete(id, user)
+    api_instance.fundinginformations_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling FundingInformationApi->fundinginformations_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the FundingInformation to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **fundinginformations_id_put**
-> FundingInformation fundinginformations_id_put(id, user, funding_information=funding_information)
+> FundingInformation fundinginformations_id_put(id, user=user, funding_information=funding_information)
 
 Update an existing FundingInformation
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.FundingInformationApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the FundingInformation to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 funding_information = modelcatalog.FundingInformation() # FundingInformation | An old FundingInformationto be updated (optional)
 
 try:
     # Update an existing FundingInformation
-    api_response = api_instance.fundinginformations_id_put(id, user, funding_information=funding_information)
+    api_response = api_instance.fundinginformations_id_put(id, user=user, funding_information=funding_information)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling FundingInformationApi->fundinginformations_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the FundingInformation to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **funding_information** | [**FundingInformation**](FundingInformation.md)| An old FundingInformationto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **fundinginformations_post**
-> FundingInformation fundinginformations_post(user, funding_information=funding_information)
+> FundingInformation fundinginformations_post(user=user, funding_information=funding_information)
 
 Create one FundingInformation
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.FundingInformationApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 funding_information = modelcatalog.FundingInformation() # FundingInformation | Information about the FundingInformationto be created (optional)
 
 try:
     # Create one FundingInformation
-    api_response = api_instance.fundinginformations_post(user, funding_information=funding_information)
+    api_response = api_instance.fundinginformations_post(user=user, funding_information=funding_information)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling FundingInformationApi->fundinginformations_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **funding_information** | [**FundingInformation**](FundingInformation.md)| Information about the FundingInformationto be created | [optional] 
 
 ### Return type

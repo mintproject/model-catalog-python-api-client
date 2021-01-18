@@ -1,6 +1,6 @@
 # modelcatalog.EmpiricalModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **empiricalmodels_id_delete**
-> empiricalmodels_id_delete(id, user)
+> empiricalmodels_id_delete(id, user=user)
 
 Delete an existing EmpiricalModel
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EmpiricalModelApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the EmpiricalModel to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing EmpiricalModel
-    api_instance.empiricalmodels_id_delete(id, user)
+    api_instance.empiricalmodels_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling EmpiricalModelApi->empiricalmodels_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the EmpiricalModel to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **empiricalmodels_id_put**
-> EmpiricalModel empiricalmodels_id_put(id, user, empirical_model=empirical_model)
+> EmpiricalModel empiricalmodels_id_put(id, user=user, empirical_model=empirical_model)
 
 Update an existing EmpiricalModel
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EmpiricalModelApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the EmpiricalModel to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 empirical_model = modelcatalog.EmpiricalModel() # EmpiricalModel | An old EmpiricalModelto be updated (optional)
 
 try:
     # Update an existing EmpiricalModel
-    api_response = api_instance.empiricalmodels_id_put(id, user, empirical_model=empirical_model)
+    api_response = api_instance.empiricalmodels_id_put(id, user=user, empirical_model=empirical_model)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmpiricalModelApi->empiricalmodels_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the EmpiricalModel to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **empirical_model** | [**EmpiricalModel**](EmpiricalModel.md)| An old EmpiricalModelto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **empiricalmodels_post**
-> EmpiricalModel empiricalmodels_post(user, empirical_model=empirical_model)
+> EmpiricalModel empiricalmodels_post(user=user, empirical_model=empirical_model)
 
 Create one EmpiricalModel
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EmpiricalModelApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 empirical_model = modelcatalog.EmpiricalModel() # EmpiricalModel | Information about the EmpiricalModelto be created (optional)
 
 try:
     # Create one EmpiricalModel
-    api_response = api_instance.empiricalmodels_post(user, empirical_model=empirical_model)
+    api_response = api_instance.empiricalmodels_post(user=user, empirical_model=empirical_model)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EmpiricalModelApi->empiricalmodels_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **empirical_model** | [**EmpiricalModel**](EmpiricalModel.md)| Information about the EmpiricalModelto be created | [optional] 
 
 ### Return type

@@ -1,6 +1,6 @@
 # modelcatalog.GridApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **grids_id_delete**
-> grids_id_delete(id, user)
+> grids_id_delete(id, user=user)
 
 Delete an existing Grid
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GridApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Grid to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing Grid
-    api_instance.grids_id_delete(id, user)
+    api_instance.grids_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling GridApi->grids_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Grid to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **grids_id_put**
-> Grid grids_id_put(id, user, grid=grid)
+> Grid grids_id_put(id, user=user, grid=grid)
 
 Update an existing Grid
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GridApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Grid to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 grid = modelcatalog.Grid() # Grid | An old Gridto be updated (optional)
 
 try:
     # Update an existing Grid
-    api_response = api_instance.grids_id_put(id, user, grid=grid)
+    api_response = api_instance.grids_id_put(id, user=user, grid=grid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GridApi->grids_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Grid to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **grid** | [**Grid**](Grid.md)| An old Gridto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **grids_post**
-> Grid grids_post(user, grid=grid)
+> Grid grids_post(user=user, grid=grid)
 
 Create one Grid
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GridApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 grid = modelcatalog.Grid() # Grid | Information about the Gridto be created (optional)
 
 try:
     # Create one Grid
-    api_response = api_instance.grids_post(user, grid=grid)
+    api_response = api_instance.grids_post(user=user, grid=grid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GridApi->grids_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **grid** | [**Grid**](Grid.md)| Information about the Gridto be created | [optional] 
 
 ### Return type

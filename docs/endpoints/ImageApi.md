@@ -1,6 +1,6 @@
 # modelcatalog.ImageApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **images_id_delete**
-> images_id_delete(id, user)
+> images_id_delete(id, user=user)
 
 Delete an existing Image
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ImageApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Image to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing Image
-    api_instance.images_id_delete(id, user)
+    api_instance.images_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling ImageApi->images_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Image to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **images_id_put**
-> Image images_id_put(id, user, image=image)
+> Image images_id_put(id, user=user, image=image)
 
 Update an existing Image
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ImageApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Image to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 image = modelcatalog.Image() # Image | An old Imageto be updated (optional)
 
 try:
     # Update an existing Image
-    api_response = api_instance.images_id_put(id, user, image=image)
+    api_response = api_instance.images_id_put(id, user=user, image=image)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ImageApi->images_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Image to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **image** | [**Image**](Image.md)| An old Imageto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **images_post**
-> Image images_post(user, image=image)
+> Image images_post(user=user, image=image)
 
 Create one Image
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ImageApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 image = modelcatalog.Image() # Image | Information about the Imageto be created (optional)
 
 try:
     # Create one Image
-    api_response = api_instance.images_post(user, image=image)
+    api_response = api_instance.images_post(user=user, image=image)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ImageApi->images_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **image** | [**Image**](Image.md)| Information about the Imageto be created | [optional] 
 
 ### Return type

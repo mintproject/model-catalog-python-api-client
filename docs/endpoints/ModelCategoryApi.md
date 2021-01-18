@@ -1,6 +1,6 @@
 # modelcatalog.ModelCategoryApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **modelcategorys_id_delete**
-> modelcategorys_id_delete(id, user)
+> modelcategorys_id_delete(id, user=user)
 
 Delete an existing ModelCategory
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelCategoryApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the ModelCategory to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing ModelCategory
-    api_instance.modelcategorys_id_delete(id, user)
+    api_instance.modelcategorys_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling ModelCategoryApi->modelcategorys_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the ModelCategory to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **modelcategorys_id_put**
-> ModelCategory modelcategorys_id_put(id, user, model_category=model_category)
+> ModelCategory modelcategorys_id_put(id, user=user, model_category=model_category)
 
 Update an existing ModelCategory
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelCategoryApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the ModelCategory to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 model_category = modelcatalog.ModelCategory() # ModelCategory | An old ModelCategoryto be updated (optional)
 
 try:
     # Update an existing ModelCategory
-    api_response = api_instance.modelcategorys_id_put(id, user, model_category=model_category)
+    api_response = api_instance.modelcategorys_id_put(id, user=user, model_category=model_category)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ModelCategoryApi->modelcategorys_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the ModelCategory to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **model_category** | [**ModelCategory**](ModelCategory.md)| An old ModelCategoryto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **modelcategorys_post**
-> ModelCategory modelcategorys_post(user, model_category=model_category)
+> ModelCategory modelcategorys_post(user=user, model_category=model_category)
 
 Create one ModelCategory
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ModelCategoryApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 model_category = modelcatalog.ModelCategory() # ModelCategory | Information about the ModelCategoryto be created (optional)
 
 try:
     # Create one ModelCategory
-    api_response = api_instance.modelcategorys_post(user, model_category=model_category)
+    api_response = api_instance.modelcategorys_post(user=user, model_category=model_category)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ModelCategoryApi->modelcategorys_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **model_category** | [**ModelCategory**](ModelCategory.md)| Information about the ModelCategoryto be created | [optional] 
 
 ### Return type

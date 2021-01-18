@@ -1,6 +1,6 @@
 # modelcatalog.UnitApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **units_id_delete**
-> units_id_delete(id, user)
+> units_id_delete(id, user=user)
 
 Delete an existing Unit
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.UnitApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Unit to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing Unit
-    api_instance.units_id_delete(id, user)
+    api_instance.units_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling UnitApi->units_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Unit to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **units_id_put**
-> Unit units_id_put(id, user, unit=unit)
+> Unit units_id_put(id, user=user, unit=unit)
 
 Update an existing Unit
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.UnitApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Unit to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 unit = modelcatalog.Unit() # Unit | An old Unitto be updated (optional)
 
 try:
     # Update an existing Unit
-    api_response = api_instance.units_id_put(id, user, unit=unit)
+    api_response = api_instance.units_id_put(id, user=user, unit=unit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UnitApi->units_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Unit to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **unit** | [**Unit**](Unit.md)| An old Unitto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **units_post**
-> Unit units_post(user, unit=unit)
+> Unit units_post(user=user, unit=unit)
 
 Create one Unit
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.UnitApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 unit = modelcatalog.Unit() # Unit | Information about the Unitto be created (optional)
 
 try:
     # Create one Unit
-    api_response = api_instance.units_post(user, unit=unit)
+    api_response = api_instance.units_post(user=user, unit=unit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UnitApi->units_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **unit** | [**Unit**](Unit.md)| Information about the Unitto be created | [optional] 
 
 ### Return type

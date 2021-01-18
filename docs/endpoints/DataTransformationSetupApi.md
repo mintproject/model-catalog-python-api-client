@@ -1,6 +1,6 @@
 # modelcatalog.DataTransformationSetupApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **datatransformationsetups_id_delete**
-> datatransformationsetups_id_delete(id, user)
+> datatransformationsetups_id_delete(id, user=user)
 
 Delete an existing DataTransformationSetup
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.DataTransformationSetupApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the DataTransformationSetup to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing DataTransformationSetup
-    api_instance.datatransformationsetups_id_delete(id, user)
+    api_instance.datatransformationsetups_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling DataTransformationSetupApi->datatransformationsetups_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the DataTransformationSetup to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **datatransformationsetups_id_put**
-> DataTransformationSetup datatransformationsetups_id_put(id, user, data_transformation_setup=data_transformation_setup)
+> DataTransformationSetup datatransformationsetups_id_put(id, user=user, data_transformation_setup=data_transformation_setup)
 
 Update an existing DataTransformationSetup
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.DataTransformationSetupApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the DataTransformationSetup to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 data_transformation_setup = modelcatalog.DataTransformationSetup() # DataTransformationSetup | An old DataTransformationSetupto be updated (optional)
 
 try:
     # Update an existing DataTransformationSetup
-    api_response = api_instance.datatransformationsetups_id_put(id, user, data_transformation_setup=data_transformation_setup)
+    api_response = api_instance.datatransformationsetups_id_put(id, user=user, data_transformation_setup=data_transformation_setup)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataTransformationSetupApi->datatransformationsetups_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the DataTransformationSetup to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **data_transformation_setup** | [**DataTransformationSetup**](DataTransformationSetup.md)| An old DataTransformationSetupto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **datatransformationsetups_post**
-> DataTransformationSetup datatransformationsetups_post(user, data_transformation_setup=data_transformation_setup)
+> DataTransformationSetup datatransformationsetups_post(user=user, data_transformation_setup=data_transformation_setup)
 
 Create one DataTransformationSetup
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.DataTransformationSetupApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 data_transformation_setup = modelcatalog.DataTransformationSetup() # DataTransformationSetup | Information about the DataTransformationSetupto be created (optional)
 
 try:
     # Create one DataTransformationSetup
-    api_response = api_instance.datatransformationsetups_post(user, data_transformation_setup=data_transformation_setup)
+    api_response = api_instance.datatransformationsetups_post(user=user, data_transformation_setup=data_transformation_setup)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DataTransformationSetupApi->datatransformationsetups_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **data_transformation_setup** | [**DataTransformationSetup**](DataTransformationSetup.md)| Information about the DataTransformationSetupto be created | [optional] 
 
 ### Return type

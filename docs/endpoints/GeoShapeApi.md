@@ -1,6 +1,6 @@
 # modelcatalog.GeoShapeApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geoshapes_id_delete**
-> geoshapes_id_delete(id, user)
+> geoshapes_id_delete(id, user=user)
 
 Delete an existing GeoShape
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoShapeApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the GeoShape to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing GeoShape
-    api_instance.geoshapes_id_delete(id, user)
+    api_instance.geoshapes_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling GeoShapeApi->geoshapes_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the GeoShape to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geoshapes_id_put**
-> GeoShape geoshapes_id_put(id, user, geo_shape=geo_shape)
+> GeoShape geoshapes_id_put(id, user=user, geo_shape=geo_shape)
 
 Update an existing GeoShape
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoShapeApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the GeoShape to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 geo_shape = modelcatalog.GeoShape() # GeoShape | An old GeoShapeto be updated (optional)
 
 try:
     # Update an existing GeoShape
-    api_response = api_instance.geoshapes_id_put(id, user, geo_shape=geo_shape)
+    api_response = api_instance.geoshapes_id_put(id, user=user, geo_shape=geo_shape)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GeoShapeApi->geoshapes_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the GeoShape to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **geo_shape** | [**GeoShape**](GeoShape.md)| An old GeoShapeto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **geoshapes_post**
-> GeoShape geoshapes_post(user, geo_shape=geo_shape)
+> GeoShape geoshapes_post(user=user, geo_shape=geo_shape)
 
 Create one GeoShape
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.GeoShapeApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 geo_shape = modelcatalog.GeoShape() # GeoShape | Information about the GeoShapeto be created (optional)
 
 try:
     # Create one GeoShape
-    api_response = api_instance.geoshapes_post(user, geo_shape=geo_shape)
+    api_response = api_instance.geoshapes_post(user=user, geo_shape=geo_shape)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling GeoShapeApi->geoshapes_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **geo_shape** | [**GeoShape**](GeoShape.md)| Information about the GeoShapeto be created | [optional] 
 
 ### Return type

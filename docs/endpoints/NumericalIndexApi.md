@@ -1,6 +1,6 @@
 # modelcatalog.NumericalIndexApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **numericalindexs_id_delete**
-> numericalindexs_id_delete(id, user)
+> numericalindexs_id_delete(id, user=user)
 
 Delete an existing NumericalIndex
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.NumericalIndexApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the NumericalIndex to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing NumericalIndex
-    api_instance.numericalindexs_id_delete(id, user)
+    api_instance.numericalindexs_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling NumericalIndexApi->numericalindexs_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the NumericalIndex to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **numericalindexs_id_put**
-> NumericalIndex numericalindexs_id_put(id, user, numerical_index=numerical_index)
+> NumericalIndex numericalindexs_id_put(id, user=user, numerical_index=numerical_index)
 
 Update an existing NumericalIndex
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.NumericalIndexApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the NumericalIndex to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 numerical_index = modelcatalog.NumericalIndex() # NumericalIndex | An old NumericalIndexto be updated (optional)
 
 try:
     # Update an existing NumericalIndex
-    api_response = api_instance.numericalindexs_id_put(id, user, numerical_index=numerical_index)
+    api_response = api_instance.numericalindexs_id_put(id, user=user, numerical_index=numerical_index)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NumericalIndexApi->numericalindexs_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the NumericalIndex to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **numerical_index** | [**NumericalIndex**](NumericalIndex.md)| An old NumericalIndexto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **numericalindexs_post**
-> NumericalIndex numericalindexs_post(user, numerical_index=numerical_index)
+> NumericalIndex numericalindexs_post(user=user, numerical_index=numerical_index)
 
 Create one NumericalIndex
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.NumericalIndexApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 numerical_index = modelcatalog.NumericalIndex() # NumericalIndex | Information about the NumericalIndexto be created (optional)
 
 try:
     # Create one NumericalIndex
-    api_response = api_instance.numericalindexs_post(user, numerical_index=numerical_index)
+    api_response = api_instance.numericalindexs_post(user=user, numerical_index=numerical_index)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling NumericalIndexApi->numericalindexs_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **numerical_index** | [**NumericalIndex**](NumericalIndex.md)| Information about the NumericalIndexto be created | [optional] 
 
 ### Return type

@@ -1,6 +1,6 @@
 # modelcatalog.SoftwareConfigurationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareconfigurations_id_delete**
-> softwareconfigurations_id_delete(id, user)
+> softwareconfigurations_id_delete(id, user=user)
 
 Delete an existing SoftwareConfiguration
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareConfigurationApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SoftwareConfiguration to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing SoftwareConfiguration
-    api_instance.softwareconfigurations_id_delete(id, user)
+    api_instance.softwareconfigurations_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling SoftwareConfigurationApi->softwareconfigurations_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SoftwareConfiguration to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareconfigurations_id_put**
-> SoftwareConfiguration softwareconfigurations_id_put(id, user, software_configuration=software_configuration)
+> SoftwareConfiguration softwareconfigurations_id_put(id, user=user, software_configuration=software_configuration)
 
 Update an existing SoftwareConfiguration
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareConfigurationApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SoftwareConfiguration to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 software_configuration = modelcatalog.SoftwareConfiguration() # SoftwareConfiguration | An old SoftwareConfigurationto be updated (optional)
 
 try:
     # Update an existing SoftwareConfiguration
-    api_response = api_instance.softwareconfigurations_id_put(id, user, software_configuration=software_configuration)
+    api_response = api_instance.softwareconfigurations_id_put(id, user=user, software_configuration=software_configuration)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareConfigurationApi->softwareconfigurations_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SoftwareConfiguration to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **software_configuration** | [**SoftwareConfiguration**](SoftwareConfiguration.md)| An old SoftwareConfigurationto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **softwareconfigurations_post**
-> SoftwareConfiguration softwareconfigurations_post(user, software_configuration=software_configuration)
+> SoftwareConfiguration softwareconfigurations_post(user=user, software_configuration=software_configuration)
 
 Create one SoftwareConfiguration
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SoftwareConfigurationApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 software_configuration = modelcatalog.SoftwareConfiguration() # SoftwareConfiguration | Information about the SoftwareConfigurationto be created (optional)
 
 try:
     # Create one SoftwareConfiguration
-    api_response = api_instance.softwareconfigurations_post(user, software_configuration=software_configuration)
+    api_response = api_instance.softwareconfigurations_post(user=user, software_configuration=software_configuration)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SoftwareConfigurationApi->softwareconfigurations_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **software_configuration** | [**SoftwareConfiguration**](SoftwareConfiguration.md)| Information about the SoftwareConfigurationto be created | [optional] 
 
 ### Return type

@@ -1,6 +1,6 @@
 # modelcatalog.TheoryGuidedModelApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **theory_guidedmodels_id_delete**
-> theory_guidedmodels_id_delete(id, user)
+> theory_guidedmodels_id_delete(id, user=user)
 
 Delete an existing Theory-GuidedModel
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.TheoryGuidedModelApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Theory-GuidedModel to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing Theory-GuidedModel
-    api_instance.theory_guidedmodels_id_delete(id, user)
+    api_instance.theory_guidedmodels_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling TheoryGuidedModelApi->theory_guidedmodels_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Theory-GuidedModel to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **theory_guidedmodels_id_put**
-> TheoryGuidedModel theory_guidedmodels_id_put(id, user, theory_guided_model=theory_guided_model)
+> TheoryGuidedModel theory_guidedmodels_id_put(id, user=user, theory_guided_model=theory_guided_model)
 
 Update an existing Theory-GuidedModel
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.TheoryGuidedModelApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Theory-GuidedModel to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 theory_guided_model = modelcatalog.TheoryGuidedModel() # TheoryGuidedModel | An old Theory-GuidedModelto be updated (optional)
 
 try:
     # Update an existing Theory-GuidedModel
-    api_response = api_instance.theory_guidedmodels_id_put(id, user, theory_guided_model=theory_guided_model)
+    api_response = api_instance.theory_guidedmodels_id_put(id, user=user, theory_guided_model=theory_guided_model)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TheoryGuidedModelApi->theory_guidedmodels_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Theory-GuidedModel to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **theory_guided_model** | [**TheoryGuidedModel**](TheoryGuidedModel.md)| An old Theory-GuidedModelto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **theory_guidedmodels_post**
-> TheoryGuidedModel theory_guidedmodels_post(user, theory_guided_model=theory_guided_model)
+> TheoryGuidedModel theory_guidedmodels_post(user=user, theory_guided_model=theory_guided_model)
 
 Create one Theory-GuidedModel
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.TheoryGuidedModelApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 theory_guided_model = modelcatalog.TheoryGuidedModel() # TheoryGuidedModel | Information about the Theory-GuidedModelto be created (optional)
 
 try:
     # Create one Theory-GuidedModel
-    api_response = api_instance.theory_guidedmodels_post(user, theory_guided_model=theory_guided_model)
+    api_response = api_instance.theory_guidedmodels_post(user=user, theory_guided_model=theory_guided_model)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TheoryGuidedModelApi->theory_guidedmodels_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **theory_guided_model** | [**TheoryGuidedModel**](TheoryGuidedModel.md)| Information about the Theory-GuidedModelto be created | [optional] 
 
 ### Return type

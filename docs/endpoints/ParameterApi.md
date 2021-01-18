@@ -1,6 +1,6 @@
 # modelcatalog.ParameterApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **parameters_id_delete**
-> parameters_id_delete(id, user)
+> parameters_id_delete(id, user=user)
 
 Delete an existing Parameter
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ParameterApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Parameter to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing Parameter
-    api_instance.parameters_id_delete(id, user)
+    api_instance.parameters_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling ParameterApi->parameters_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Parameter to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **parameters_id_put**
-> Parameter parameters_id_put(id, user, parameter=parameter)
+> Parameter parameters_id_put(id, user=user, parameter=parameter)
 
 Update an existing Parameter
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ParameterApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Parameter to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 parameter = modelcatalog.Parameter() # Parameter | An old Parameterto be updated (optional)
 
 try:
     # Update an existing Parameter
-    api_response = api_instance.parameters_id_put(id, user, parameter=parameter)
+    api_response = api_instance.parameters_id_put(id, user=user, parameter=parameter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ParameterApi->parameters_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Parameter to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **parameter** | [**Parameter**](Parameter.md)| An old Parameterto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **parameters_post**
-> Parameter parameters_post(user, parameter=parameter)
+> Parameter parameters_post(user=user, parameter=parameter)
 
 Create one Parameter
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ParameterApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 parameter = modelcatalog.Parameter() # Parameter | Information about the Parameterto be created (optional)
 
 try:
     # Create one Parameter
-    api_response = api_instance.parameters_post(user, parameter=parameter)
+    api_response = api_instance.parameters_post(user=user, parameter=parameter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ParameterApi->parameters_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **parameter** | [**Parameter**](Parameter.md)| Information about the Parameterto be created | [optional] 
 
 ### Return type

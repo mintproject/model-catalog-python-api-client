@@ -1,6 +1,6 @@
 # modelcatalog.SpatiallyDistributedGridApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **spatiallydistributedgrids_id_delete**
-> spatiallydistributedgrids_id_delete(id, user)
+> spatiallydistributedgrids_id_delete(id, user=user)
 
 Delete an existing SpatiallyDistributedGrid
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SpatiallyDistributedGridApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SpatiallyDistributedGrid to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing SpatiallyDistributedGrid
-    api_instance.spatiallydistributedgrids_id_delete(id, user)
+    api_instance.spatiallydistributedgrids_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling SpatiallyDistributedGridApi->spatiallydistributedgrids_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SpatiallyDistributedGrid to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **spatiallydistributedgrids_id_put**
-> SpatiallyDistributedGrid spatiallydistributedgrids_id_put(id, user, spatially_distributed_grid=spatially_distributed_grid)
+> SpatiallyDistributedGrid spatiallydistributedgrids_id_put(id, user=user, spatially_distributed_grid=spatially_distributed_grid)
 
 Update an existing SpatiallyDistributedGrid
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SpatiallyDistributedGridApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the SpatiallyDistributedGrid to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 spatially_distributed_grid = modelcatalog.SpatiallyDistributedGrid() # SpatiallyDistributedGrid | An old SpatiallyDistributedGridto be updated (optional)
 
 try:
     # Update an existing SpatiallyDistributedGrid
-    api_response = api_instance.spatiallydistributedgrids_id_put(id, user, spatially_distributed_grid=spatially_distributed_grid)
+    api_response = api_instance.spatiallydistributedgrids_id_put(id, user=user, spatially_distributed_grid=spatially_distributed_grid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SpatiallyDistributedGridApi->spatiallydistributedgrids_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the SpatiallyDistributedGrid to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **spatially_distributed_grid** | [**SpatiallyDistributedGrid**](SpatiallyDistributedGrid.md)| An old SpatiallyDistributedGridto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **spatiallydistributedgrids_post**
-> SpatiallyDistributedGrid spatiallydistributedgrids_post(user, spatially_distributed_grid=spatially_distributed_grid)
+> SpatiallyDistributedGrid spatiallydistributedgrids_post(user=user, spatially_distributed_grid=spatially_distributed_grid)
 
 Create one SpatiallyDistributedGrid
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.SpatiallyDistributedGridApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 spatially_distributed_grid = modelcatalog.SpatiallyDistributedGrid() # SpatiallyDistributedGrid | Information about the SpatiallyDistributedGridto be created (optional)
 
 try:
     # Create one SpatiallyDistributedGrid
-    api_response = api_instance.spatiallydistributedgrids_post(user, spatially_distributed_grid=spatially_distributed_grid)
+    api_response = api_instance.spatiallydistributedgrids_post(user=user, spatially_distributed_grid=spatially_distributed_grid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SpatiallyDistributedGridApi->spatiallydistributedgrids_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **spatially_distributed_grid** | [**SpatiallyDistributedGrid**](SpatiallyDistributedGrid.md)| Information about the SpatiallyDistributedGridto be created | [optional] 
 
 ### Return type

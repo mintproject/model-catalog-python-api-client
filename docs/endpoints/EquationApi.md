@@ -1,6 +1,6 @@
 # modelcatalog.EquationApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.6.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -72,7 +72,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **equations_id_delete**
-> equations_id_delete(id, user)
+> equations_id_delete(id, user=user)
 
 Delete an existing Equation
 
@@ -91,16 +91,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EquationApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Equation to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 
 try:
     # Delete an existing Equation
-    api_instance.equations_id_delete(id, user)
+    api_instance.equations_id_delete(id, user=user)
 except ApiException as e:
     print("Exception when calling EquationApi->equations_id_delete: %s\n" % e)
 ```
@@ -110,7 +110,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Equation to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
 
 ### Return type
 
@@ -190,7 +190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **equations_id_put**
-> Equation equations_id_put(id, user, equation=equation)
+> Equation equations_id_put(id, user=user, equation=equation)
 
 Update an existing Equation
 
@@ -209,17 +209,17 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EquationApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the Equation to be retrieved
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 equation = modelcatalog.Equation() # Equation | An old Equationto be updated (optional)
 
 try:
     # Update an existing Equation
-    api_response = api_instance.equations_id_put(id, user, equation=equation)
+    api_response = api_instance.equations_id_put(id, user=user, equation=equation)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EquationApi->equations_id_put: %s\n" % e)
@@ -230,7 +230,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID of the Equation to be retrieved | 
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **equation** | [**Equation**](Equation.md)| An old Equationto be updated | [optional] 
 
 ### Return type
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **equations_post**
-> Equation equations_post(user, equation=equation)
+> Equation equations_post(user=user, equation=equation)
 
 Create one Equation
 
@@ -274,16 +274,16 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.6.0
-configuration.host = "https://api.models.mint.isi.edu/v1.6.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
+configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
 # Create an instance of the API class
 api_instance = modelcatalog.EquationApi(modelcatalog.ApiClient(configuration))
-user = 'user_example' # str | Username
+user = 'user_example' # str | Username (optional)
 equation = modelcatalog.Equation() # Equation | Information about the Equationto be created (optional)
 
 try:
     # Create one Equation
-    api_response = api_instance.equations_post(user, equation=equation)
+    api_response = api_instance.equations_post(user=user, equation=equation)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EquationApi->equations_post: %s\n" % e)
@@ -293,7 +293,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | **str**| Username | 
+ **user** | **str**| Username | [optional] 
  **equation** | [**Equation**](Equation.md)| Information about the Equationto be created | [optional] 
 
 ### Return type
