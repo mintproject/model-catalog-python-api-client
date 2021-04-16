@@ -31,87 +31,41 @@ class Organization(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'identifier': 'list[str]',
-        'website': 'list[str]',
         'description': 'list[str]',
         'id': 'str',
+        'identifier': 'list[str]',
         'label': 'list[str]',
-        'type': 'list[str]'
+        'type': 'list[str]',
+        'website': 'list[str]'
     }
 
     attribute_map = {
-        'identifier': 'identifier',
-        'website': 'website',
         'description': 'description',
         'id': 'id',
+        'identifier': 'identifier',
         'label': 'label',
-        'type': 'type'
+        'type': 'type',
+        'website': 'website'
     }
 
-    def __init__(self, identifier=None, website=None, description=None, id=None, label=None, type=None):  # noqa: E501
+    def __init__(self, description=None, id=None, identifier=None, label=None, type=None, website=None):  # noqa: E501
         """Organization - a model defined in OpenAPI"""  # noqa: E501
 
-        self._identifier = None
-        self._website = None
         self._description = None
         self._id = None
+        self._identifier = None
         self._label = None
         self._type = None
+        self._website = None
         self.discriminator = None
 
-        self.identifier = identifier
-        self.website = website
         self.description = description
         if id is not None:
             self.id = id
+        self.identifier = identifier
         self.label = label
         self.type = type
-
-    @property
-    def identifier(self):
-        """Gets the identifier of this Organization.  # noqa: E501
-
-        Identifier of the resource being described  # noqa: E501
-
-        :return: The identifier of this Organization.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._identifier
-
-    @identifier.setter
-    def identifier(self, identifier):
-        """Sets the identifier of this Organization.
-
-        Identifier of the resource being described  # noqa: E501
-
-        :param identifier: The identifier of this Organization.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._identifier = identifier
-
-    @property
-    def website(self):
-        """Gets the website of this Organization.  # noqa: E501
-
-        Website of the software  # noqa: E501
-
-        :return: The website of this Organization.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._website
-
-    @website.setter
-    def website(self, website):
-        """Sets the website of this Organization.
-
-        Website of the software  # noqa: E501
-
-        :param website: The website of this Organization.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._website = website
+        self.website = website
 
     @property
     def description(self):
@@ -160,6 +114,29 @@ class Organization(object):
         self._id = id
 
     @property
+    def identifier(self):
+        """Gets the identifier of this Organization.  # noqa: E501
+
+        Identifier of the resource being described  # noqa: E501
+
+        :return: The identifier of this Organization.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this Organization.
+
+        Identifier of the resource being described  # noqa: E501
+
+        :param identifier: The identifier of this Organization.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._identifier = identifier
+
+    @property
     def label(self):
         """Gets the label of this Organization.  # noqa: E501
 
@@ -204,6 +181,29 @@ class Organization(object):
         """
 
         self._type = type
+
+    @property
+    def website(self):
+        """Gets the website of this Organization.  # noqa: E501
+
+        Website of the software  # noqa: E501
+
+        :return: The website of this Organization.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._website
+
+    @website.setter
+    def website(self, website):
+        """Sets the website of this Organization.
+
+        Website of the software  # noqa: E501
+
+        :param website: The website of this Organization.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._website = website
 
     def to_dict(self):
         """Returns the model properties as a dict"""

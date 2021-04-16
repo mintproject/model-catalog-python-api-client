@@ -31,60 +31,37 @@ class Process(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'influences': 'list[Process]',
         'description': 'list[str]',
         'id': 'str',
+        'influences': 'list[Process]',
         'label': 'list[str]',
         'type': 'list[str]'
     }
 
     attribute_map = {
-        'influences': 'influences',
         'description': 'description',
         'id': 'id',
+        'influences': 'influences',
         'label': 'label',
         'type': 'type'
     }
 
-    def __init__(self, influences=None, description=None, id=None, label=None, type=None):  # noqa: E501
+    def __init__(self, description=None, id=None, influences=None, label=None, type=None):  # noqa: E501
         """Process - a model defined in OpenAPI"""  # noqa: E501
 
-        self._influences = None
         self._description = None
         self._id = None
+        self._influences = None
         self._label = None
         self._type = None
         self.discriminator = None
 
-        self.influences = influences
         self.description = description
         if id is not None:
             self.id = id
+        self.influences = influences
         self.label = label
         self.type = type
-
-    @property
-    def influences(self):
-        """Gets the influences of this Process.  # noqa: E501
-
-        Property that captures if a physical process influences another process  # noqa: E501
-
-        :return: The influences of this Process.  # noqa: E501
-        :rtype: list[Process]
-        """
-        return self._influences
-
-    @influences.setter
-    def influences(self, influences):
-        """Sets the influences of this Process.
-
-        Property that captures if a physical process influences another process  # noqa: E501
-
-        :param influences: The influences of this Process.  # noqa: E501
-        :type: list[Process]
-        """
-
-        self._influences = influences
 
     @property
     def description(self):
@@ -131,6 +108,29 @@ class Process(object):
         """
 
         self._id = id
+
+    @property
+    def influences(self):
+        """Gets the influences of this Process.  # noqa: E501
+
+        Property that captures if a physical process influences another process  # noqa: E501
+
+        :return: The influences of this Process.  # noqa: E501
+        :rtype: list[Process]
+        """
+        return self._influences
+
+    @influences.setter
+    def influences(self, influences):
+        """Sets the influences of this Process.
+
+        Property that captures if a physical process influences another process  # noqa: E501
+
+        :param influences: The influences of this Process.  # noqa: E501
+        :type: list[Process]
+        """
+
+        self._influences = influences
 
     @property
     def label(self):

@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data_catalog_identifier** | **list[str]** | An identifier for resources with metadata entries in a data catalog | [optional] 
-**has_part** | [**list[SampleResource]**](SampleResource.md) | Property designed to reference the elements included in a sample collection. | [optional] 
 **description** | **list[str]** | small description | [optional] 
+**has_part** | [**list[SampleResource]**](SampleResource.md) | Property designed to reference the elements included in a sample collection. | [optional] 
 **id** | **str** | identifier | [optional] 
 **label** | **list[str]** | short description of the resource | [optional] 
 **type** | **list[str]** | type of the resource | [optional] 

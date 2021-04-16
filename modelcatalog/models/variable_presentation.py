@@ -31,161 +31,69 @@ class VariablePresentation(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_default_value': 'list[object]',
-        'has_standard_variable': 'list[StandardVariable]',
-        'has_maximum_accepted_value': 'list[object]',
-        'has_constraint': 'list[str]',
         'description': 'list[str]',
-        'label': 'list[str]',
-        'type': 'list[str]',
+        'has_constraint': 'list[str]',
+        'has_default_value': 'list[object]',
         'has_long_name': 'list[str]',
-        'has_short_name': 'list[str]',
+        'has_maximum_accepted_value': 'list[object]',
         'has_minimum_accepted_value': 'list[object]',
-        'part_of_dataset': 'list[DatasetSpecification]',
+        'has_short_name': 'list[str]',
+        'has_standard_variable': 'list[StandardVariable]',
         'id': 'str',
+        'label': 'list[str]',
+        'part_of_dataset': 'list[DatasetSpecification]',
+        'type': 'list[str]',
         'uses_unit': 'list[Unit]'
     }
 
     attribute_map = {
-        'has_default_value': 'hasDefaultValue',
-        'has_standard_variable': 'hasStandardVariable',
-        'has_maximum_accepted_value': 'hasMaximumAcceptedValue',
-        'has_constraint': 'hasConstraint',
         'description': 'description',
-        'label': 'label',
-        'type': 'type',
+        'has_constraint': 'hasConstraint',
+        'has_default_value': 'hasDefaultValue',
         'has_long_name': 'hasLongName',
-        'has_short_name': 'hasShortName',
+        'has_maximum_accepted_value': 'hasMaximumAcceptedValue',
         'has_minimum_accepted_value': 'hasMinimumAcceptedValue',
-        'part_of_dataset': 'partOfDataset',
+        'has_short_name': 'hasShortName',
+        'has_standard_variable': 'hasStandardVariable',
         'id': 'id',
+        'label': 'label',
+        'part_of_dataset': 'partOfDataset',
+        'type': 'type',
         'uses_unit': 'usesUnit'
     }
 
-    def __init__(self, has_default_value=None, has_standard_variable=None, has_maximum_accepted_value=None, has_constraint=None, description=None, label=None, type=None, has_long_name=None, has_short_name=None, has_minimum_accepted_value=None, part_of_dataset=None, id=None, uses_unit=None):  # noqa: E501
+    def __init__(self, description=None, has_constraint=None, has_default_value=None, has_long_name=None, has_maximum_accepted_value=None, has_minimum_accepted_value=None, has_short_name=None, has_standard_variable=None, id=None, label=None, part_of_dataset=None, type=None, uses_unit=None):  # noqa: E501
         """VariablePresentation - a model defined in OpenAPI"""  # noqa: E501
 
-        self._has_default_value = None
-        self._has_standard_variable = None
-        self._has_maximum_accepted_value = None
-        self._has_constraint = None
         self._description = None
-        self._label = None
-        self._type = None
+        self._has_constraint = None
+        self._has_default_value = None
         self._has_long_name = None
-        self._has_short_name = None
+        self._has_maximum_accepted_value = None
         self._has_minimum_accepted_value = None
-        self._part_of_dataset = None
+        self._has_short_name = None
+        self._has_standard_variable = None
         self._id = None
+        self._label = None
+        self._part_of_dataset = None
+        self._type = None
         self._uses_unit = None
         self.discriminator = None
 
-        self.has_default_value = has_default_value
-        self.has_standard_variable = has_standard_variable
-        self.has_maximum_accepted_value = has_maximum_accepted_value
-        self.has_constraint = has_constraint
         self.description = description
-        self.label = label
-        self.type = type
+        self.has_constraint = has_constraint
+        self.has_default_value = has_default_value
         self.has_long_name = has_long_name
-        self.has_short_name = has_short_name
+        self.has_maximum_accepted_value = has_maximum_accepted_value
         self.has_minimum_accepted_value = has_minimum_accepted_value
-        self.part_of_dataset = part_of_dataset
+        self.has_short_name = has_short_name
+        self.has_standard_variable = has_standard_variable
         if id is not None:
             self.id = id
+        self.label = label
+        self.part_of_dataset = part_of_dataset
+        self.type = type
         self.uses_unit = uses_unit
-
-    @property
-    def has_default_value(self):
-        """Gets the has_default_value of this VariablePresentation.  # noqa: E501
-
-        Default accepted value of a variable presentation (or a parameter)  # noqa: E501
-
-        :return: The has_default_value of this VariablePresentation.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._has_default_value
-
-    @has_default_value.setter
-    def has_default_value(self, has_default_value):
-        """Sets the has_default_value of this VariablePresentation.
-
-        Default accepted value of a variable presentation (or a parameter)  # noqa: E501
-
-        :param has_default_value: The has_default_value of this VariablePresentation.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._has_default_value = has_default_value
-
-    @property
-    def has_standard_variable(self):
-        """Gets the has_standard_variable of this VariablePresentation.  # noqa: E501
-
-        the standard name of a variable  # noqa: E501
-
-        :return: The has_standard_variable of this VariablePresentation.  # noqa: E501
-        :rtype: list[StandardVariable]
-        """
-        return self._has_standard_variable
-
-    @has_standard_variable.setter
-    def has_standard_variable(self, has_standard_variable):
-        """Sets the has_standard_variable of this VariablePresentation.
-
-        the standard name of a variable  # noqa: E501
-
-        :param has_standard_variable: The has_standard_variable of this VariablePresentation.  # noqa: E501
-        :type: list[StandardVariable]
-        """
-
-        self._has_standard_variable = has_standard_variable
-
-    @property
-    def has_maximum_accepted_value(self):
-        """Gets the has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
-
-        Maximum accepted value of a variable presentation (or a parameter)  # noqa: E501
-
-        :return: The has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._has_maximum_accepted_value
-
-    @has_maximum_accepted_value.setter
-    def has_maximum_accepted_value(self, has_maximum_accepted_value):
-        """Sets the has_maximum_accepted_value of this VariablePresentation.
-
-        Maximum accepted value of a variable presentation (or a parameter)  # noqa: E501
-
-        :param has_maximum_accepted_value: The has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._has_maximum_accepted_value = has_maximum_accepted_value
-
-    @property
-    def has_constraint(self):
-        """Gets the has_constraint of this VariablePresentation.  # noqa: E501
-
-        Constraint or rule associated to a  variable or software configuration. For example: \"This model accepts only monthly data\", or \"all inputs of this model configuration must share the same location\". More structured restrictions, such as Jena rules or SWRL rules may also be captured with this property  # noqa: E501
-
-        :return: The has_constraint of this VariablePresentation.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_constraint
-
-    @has_constraint.setter
-    def has_constraint(self, has_constraint):
-        """Sets the has_constraint of this VariablePresentation.
-
-        Constraint or rule associated to a  variable or software configuration. For example: \"This model accepts only monthly data\", or \"all inputs of this model configuration must share the same location\". More structured restrictions, such as Jena rules or SWRL rules may also be captured with this property  # noqa: E501
-
-        :param has_constraint: The has_constraint of this VariablePresentation.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_constraint = has_constraint
 
     @property
     def description(self):
@@ -211,50 +119,50 @@ class VariablePresentation(object):
         self._description = description
 
     @property
-    def label(self):
-        """Gets the label of this VariablePresentation.  # noqa: E501
+    def has_constraint(self):
+        """Gets the has_constraint of this VariablePresentation.  # noqa: E501
 
-        short description of the resource  # noqa: E501
+        Constraint or rule associated to a  variable or software configuration. For example: \"This model accepts only monthly data\", or \"all inputs of this model configuration must share the same location\". More structured restrictions, such as Jena rules or SWRL rules may also be captured with this property  # noqa: E501
 
-        :return: The label of this VariablePresentation.  # noqa: E501
+        :return: The has_constraint of this VariablePresentation.  # noqa: E501
         :rtype: list[str]
         """
-        return self._label
+        return self._has_constraint
 
-    @label.setter
-    def label(self, label):
-        """Sets the label of this VariablePresentation.
+    @has_constraint.setter
+    def has_constraint(self, has_constraint):
+        """Sets the has_constraint of this VariablePresentation.
 
-        short description of the resource  # noqa: E501
+        Constraint or rule associated to a  variable or software configuration. For example: \"This model accepts only monthly data\", or \"all inputs of this model configuration must share the same location\". More structured restrictions, such as Jena rules or SWRL rules may also be captured with this property  # noqa: E501
 
-        :param label: The label of this VariablePresentation.  # noqa: E501
+        :param has_constraint: The has_constraint of this VariablePresentation.  # noqa: E501
         :type: list[str]
         """
 
-        self._label = label
+        self._has_constraint = has_constraint
 
     @property
-    def type(self):
-        """Gets the type of this VariablePresentation.  # noqa: E501
+    def has_default_value(self):
+        """Gets the has_default_value of this VariablePresentation.  # noqa: E501
 
-        type of the resource  # noqa: E501
+        Default accepted value of a variable presentation (or a parameter)  # noqa: E501
 
-        :return: The type of this VariablePresentation.  # noqa: E501
-        :rtype: list[str]
+        :return: The has_default_value of this VariablePresentation.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._type
+        return self._has_default_value
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this VariablePresentation.
+    @has_default_value.setter
+    def has_default_value(self, has_default_value):
+        """Sets the has_default_value of this VariablePresentation.
 
-        type of the resource  # noqa: E501
+        Default accepted value of a variable presentation (or a parameter)  # noqa: E501
 
-        :param type: The type of this VariablePresentation.  # noqa: E501
-        :type: list[str]
+        :param has_default_value: The has_default_value of this VariablePresentation.  # noqa: E501
+        :type: list[object]
         """
 
-        self._type = type
+        self._has_default_value = has_default_value
 
     @property
     def has_long_name(self):
@@ -280,27 +188,27 @@ class VariablePresentation(object):
         self._has_long_name = has_long_name
 
     @property
-    def has_short_name(self):
-        """Gets the has_short_name of this VariablePresentation.  # noqa: E501
+    def has_maximum_accepted_value(self):
+        """Gets the has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
 
-        A short name (e.g., temperature) capturing the high-level concept of the variable  # noqa: E501
+        Maximum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
-        :return: The has_short_name of this VariablePresentation.  # noqa: E501
-        :rtype: list[str]
+        :return: The has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
+        :rtype: list[object]
         """
-        return self._has_short_name
+        return self._has_maximum_accepted_value
 
-    @has_short_name.setter
-    def has_short_name(self, has_short_name):
-        """Sets the has_short_name of this VariablePresentation.
+    @has_maximum_accepted_value.setter
+    def has_maximum_accepted_value(self, has_maximum_accepted_value):
+        """Sets the has_maximum_accepted_value of this VariablePresentation.
 
-        A short name (e.g., temperature) capturing the high-level concept of the variable  # noqa: E501
+        Maximum accepted value of a variable presentation (or a parameter)  # noqa: E501
 
-        :param has_short_name: The has_short_name of this VariablePresentation.  # noqa: E501
-        :type: list[str]
+        :param has_maximum_accepted_value: The has_maximum_accepted_value of this VariablePresentation.  # noqa: E501
+        :type: list[object]
         """
 
-        self._has_short_name = has_short_name
+        self._has_maximum_accepted_value = has_maximum_accepted_value
 
     @property
     def has_minimum_accepted_value(self):
@@ -326,27 +234,50 @@ class VariablePresentation(object):
         self._has_minimum_accepted_value = has_minimum_accepted_value
 
     @property
-    def part_of_dataset(self):
-        """Gets the part_of_dataset of this VariablePresentation.  # noqa: E501
+    def has_short_name(self):
+        """Gets the has_short_name of this VariablePresentation.  # noqa: E501
 
-        Associates a presentation with a dataset where the presentation occurs  # noqa: E501
+        A short name (e.g., temperature) capturing the high-level concept of the variable  # noqa: E501
 
-        :return: The part_of_dataset of this VariablePresentation.  # noqa: E501
-        :rtype: list[DatasetSpecification]
+        :return: The has_short_name of this VariablePresentation.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._part_of_dataset
+        return self._has_short_name
 
-    @part_of_dataset.setter
-    def part_of_dataset(self, part_of_dataset):
-        """Sets the part_of_dataset of this VariablePresentation.
+    @has_short_name.setter
+    def has_short_name(self, has_short_name):
+        """Sets the has_short_name of this VariablePresentation.
 
-        Associates a presentation with a dataset where the presentation occurs  # noqa: E501
+        A short name (e.g., temperature) capturing the high-level concept of the variable  # noqa: E501
 
-        :param part_of_dataset: The part_of_dataset of this VariablePresentation.  # noqa: E501
-        :type: list[DatasetSpecification]
+        :param has_short_name: The has_short_name of this VariablePresentation.  # noqa: E501
+        :type: list[str]
         """
 
-        self._part_of_dataset = part_of_dataset
+        self._has_short_name = has_short_name
+
+    @property
+    def has_standard_variable(self):
+        """Gets the has_standard_variable of this VariablePresentation.  # noqa: E501
+
+        the standard name of a variable  # noqa: E501
+
+        :return: The has_standard_variable of this VariablePresentation.  # noqa: E501
+        :rtype: list[StandardVariable]
+        """
+        return self._has_standard_variable
+
+    @has_standard_variable.setter
+    def has_standard_variable(self, has_standard_variable):
+        """Sets the has_standard_variable of this VariablePresentation.
+
+        the standard name of a variable  # noqa: E501
+
+        :param has_standard_variable: The has_standard_variable of this VariablePresentation.  # noqa: E501
+        :type: list[StandardVariable]
+        """
+
+        self._has_standard_variable = has_standard_variable
 
     @property
     def id(self):
@@ -370,6 +301,75 @@ class VariablePresentation(object):
         """
 
         self._id = id
+
+    @property
+    def label(self):
+        """Gets the label of this VariablePresentation.  # noqa: E501
+
+        short description of the resource  # noqa: E501
+
+        :return: The label of this VariablePresentation.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._label
+
+    @label.setter
+    def label(self, label):
+        """Sets the label of this VariablePresentation.
+
+        short description of the resource  # noqa: E501
+
+        :param label: The label of this VariablePresentation.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._label = label
+
+    @property
+    def part_of_dataset(self):
+        """Gets the part_of_dataset of this VariablePresentation.  # noqa: E501
+
+        Associates a presentation with a dataset where the presentation occurs  # noqa: E501
+
+        :return: The part_of_dataset of this VariablePresentation.  # noqa: E501
+        :rtype: list[DatasetSpecification]
+        """
+        return self._part_of_dataset
+
+    @part_of_dataset.setter
+    def part_of_dataset(self, part_of_dataset):
+        """Sets the part_of_dataset of this VariablePresentation.
+
+        Associates a presentation with a dataset where the presentation occurs  # noqa: E501
+
+        :param part_of_dataset: The part_of_dataset of this VariablePresentation.  # noqa: E501
+        :type: list[DatasetSpecification]
+        """
+
+        self._part_of_dataset = part_of_dataset
+
+    @property
+    def type(self):
+        """Gets the type of this VariablePresentation.  # noqa: E501
+
+        type of the resource  # noqa: E501
+
+        :return: The type of this VariablePresentation.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this VariablePresentation.
+
+        type of the resource  # noqa: E501
+
+        :param type: The type of this VariablePresentation.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._type = type
 
     @property
     def uses_unit(self):

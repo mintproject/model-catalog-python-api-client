@@ -31,60 +31,37 @@ class CausalDiagram(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_diagram_part': 'list[object]',
         'description': 'list[str]',
+        'has_diagram_part': 'list[object]',
         'id': 'str',
         'label': 'list[str]',
         'type': 'list[str]'
     }
 
     attribute_map = {
-        'has_diagram_part': 'hasDiagramPart',
         'description': 'description',
+        'has_diagram_part': 'hasDiagramPart',
         'id': 'id',
         'label': 'label',
         'type': 'type'
     }
 
-    def __init__(self, has_diagram_part=None, description=None, id=None, label=None, type=None):  # noqa: E501
+    def __init__(self, description=None, has_diagram_part=None, id=None, label=None, type=None):  # noqa: E501
         """CausalDiagram - a model defined in OpenAPI"""  # noqa: E501
 
-        self._has_diagram_part = None
         self._description = None
+        self._has_diagram_part = None
         self._id = None
         self._label = None
         self._type = None
         self.discriminator = None
 
-        self.has_diagram_part = has_diagram_part
         self.description = description
+        self.has_diagram_part = has_diagram_part
         if id is not None:
             self.id = id
         self.label = label
         self.type = type
-
-    @property
-    def has_diagram_part(self):
-        """Gets the has_diagram_part of this CausalDiagram.  # noqa: E501
-
-        Property that links a causal diagram with its constituent nodes  # noqa: E501
-
-        :return: The has_diagram_part of this CausalDiagram.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._has_diagram_part
-
-    @has_diagram_part.setter
-    def has_diagram_part(self, has_diagram_part):
-        """Sets the has_diagram_part of this CausalDiagram.
-
-        Property that links a causal diagram with its constituent nodes  # noqa: E501
-
-        :param has_diagram_part: The has_diagram_part of this CausalDiagram.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._has_diagram_part = has_diagram_part
 
     @property
     def description(self):
@@ -108,6 +85,29 @@ class CausalDiagram(object):
         """
 
         self._description = description
+
+    @property
+    def has_diagram_part(self):
+        """Gets the has_diagram_part of this CausalDiagram.  # noqa: E501
+
+        Property that links a causal diagram with its constituent nodes  # noqa: E501
+
+        :return: The has_diagram_part of this CausalDiagram.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_diagram_part
+
+    @has_diagram_part.setter
+    def has_diagram_part(self, has_diagram_part):
+        """Sets the has_diagram_part of this CausalDiagram.
+
+        Property that links a causal diagram with its constituent nodes  # noqa: E501
+
+        :param has_diagram_part: The has_diagram_part of this CausalDiagram.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_diagram_part = has_diagram_part
 
     @property
     def id(self):

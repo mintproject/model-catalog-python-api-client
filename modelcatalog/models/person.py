@@ -31,91 +31,45 @@ class Person(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'identifier': 'list[str]',
-        'website': 'list[str]',
         'description': 'list[str]',
+        'email': 'list[str]',
         'id': 'str',
+        'identifier': 'list[str]',
         'label': 'list[str]',
         'type': 'list[str]',
-        'email': 'list[str]'
+        'website': 'list[str]'
     }
 
     attribute_map = {
-        'identifier': 'identifier',
-        'website': 'website',
         'description': 'description',
+        'email': 'email',
         'id': 'id',
+        'identifier': 'identifier',
         'label': 'label',
         'type': 'type',
-        'email': 'email'
+        'website': 'website'
     }
 
-    def __init__(self, identifier=None, website=None, description=None, id=None, label=None, type=None, email=None):  # noqa: E501
+    def __init__(self, description=None, email=None, id=None, identifier=None, label=None, type=None, website=None):  # noqa: E501
         """Person - a model defined in OpenAPI"""  # noqa: E501
 
-        self._identifier = None
-        self._website = None
         self._description = None
+        self._email = None
         self._id = None
+        self._identifier = None
         self._label = None
         self._type = None
-        self._email = None
+        self._website = None
         self.discriminator = None
 
-        self.identifier = identifier
-        self.website = website
         self.description = description
+        self.email = email
         if id is not None:
             self.id = id
+        self.identifier = identifier
         self.label = label
         self.type = type
-        self.email = email
-
-    @property
-    def identifier(self):
-        """Gets the identifier of this Person.  # noqa: E501
-
-        Identifier of the resource being described  # noqa: E501
-
-        :return: The identifier of this Person.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._identifier
-
-    @identifier.setter
-    def identifier(self, identifier):
-        """Sets the identifier of this Person.
-
-        Identifier of the resource being described  # noqa: E501
-
-        :param identifier: The identifier of this Person.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._identifier = identifier
-
-    @property
-    def website(self):
-        """Gets the website of this Person.  # noqa: E501
-
-        Website of the software  # noqa: E501
-
-        :return: The website of this Person.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._website
-
-    @website.setter
-    def website(self, website):
-        """Sets the website of this Person.
-
-        Website of the software  # noqa: E501
-
-        :param website: The website of this Person.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._website = website
+        self.website = website
 
     @property
     def description(self):
@@ -141,6 +95,29 @@ class Person(object):
         self._description = description
 
     @property
+    def email(self):
+        """Gets the email of this Person.  # noqa: E501
+
+        Email of a person  # noqa: E501
+
+        :return: The email of this Person.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this Person.
+
+        Email of a person  # noqa: E501
+
+        :param email: The email of this Person.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._email = email
+
+    @property
     def id(self):
         """Gets the id of this Person.  # noqa: E501
 
@@ -162,6 +139,29 @@ class Person(object):
         """
 
         self._id = id
+
+    @property
+    def identifier(self):
+        """Gets the identifier of this Person.  # noqa: E501
+
+        Identifier of the resource being described  # noqa: E501
+
+        :return: The identifier of this Person.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._identifier
+
+    @identifier.setter
+    def identifier(self, identifier):
+        """Sets the identifier of this Person.
+
+        Identifier of the resource being described  # noqa: E501
+
+        :param identifier: The identifier of this Person.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._identifier = identifier
 
     @property
     def label(self):
@@ -210,27 +210,27 @@ class Person(object):
         self._type = type
 
     @property
-    def email(self):
-        """Gets the email of this Person.  # noqa: E501
+    def website(self):
+        """Gets the website of this Person.  # noqa: E501
 
-        Email of a person  # noqa: E501
+        Website of the software  # noqa: E501
 
-        :return: The email of this Person.  # noqa: E501
+        :return: The website of this Person.  # noqa: E501
         :rtype: list[str]
         """
-        return self._email
+        return self._website
 
-    @email.setter
-    def email(self, email):
-        """Sets the email of this Person.
+    @website.setter
+    def website(self, website):
+        """Sets the website of this Person.
 
-        Email of a person  # noqa: E501
+        Website of the software  # noqa: E501
 
-        :param email: The email of this Person.  # noqa: E501
+        :param website: The website of this Person.  # noqa: E501
         :type: list[str]
         """
 
-        self._email = email
+        self._website = website
 
     def to_dict(self):
         """Returns the model properties as a dict"""

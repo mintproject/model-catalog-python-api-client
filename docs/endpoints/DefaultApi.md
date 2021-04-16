@@ -56,7 +56,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | successful operation |  * X-Rate-Limit - calls per hour allowed by the user <br>  * X-Expires-After - date in UTC when token expires <br>  |
+**200** | successful operation |  * X-Expires-After - date in UTC when token expires <br>  * X-Rate-Limit - calls per hour allowed by the user <br>  |
 **400** | unsuccessful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)

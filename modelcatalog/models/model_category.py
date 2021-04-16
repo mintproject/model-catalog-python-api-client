@@ -34,6 +34,7 @@ class ModelCategory(object):
         'description': 'list[str]',
         'id': 'str',
         'label': 'list[str]',
+        'parent_category': 'list[ModelCategory]',
         'type': 'list[str]'
     }
 
@@ -41,15 +42,17 @@ class ModelCategory(object):
         'description': 'description',
         'id': 'id',
         'label': 'label',
+        'parent_category': 'parentCategory',
         'type': 'type'
     }
 
-    def __init__(self, description=None, id=None, label=None, type=None):  # noqa: E501
+    def __init__(self, description=None, id=None, label=None, parent_category=None, type=None):  # noqa: E501
         """ModelCategory - a model defined in OpenAPI"""  # noqa: E501
 
         self._description = None
         self._id = None
         self._label = None
+        self._parent_category = None
         self._type = None
         self.discriminator = None
 
@@ -57,6 +60,7 @@ class ModelCategory(object):
         if id is not None:
             self.id = id
         self.label = label
+        self.parent_category = parent_category
         self.type = type
 
     @property
@@ -127,6 +131,29 @@ class ModelCategory(object):
         """
 
         self._label = label
+
+    @property
+    def parent_category(self):
+        """Gets the parent_category of this ModelCategory.  # noqa: E501
+
+        Indicates this subcategory parent category  # noqa: E501
+
+        :return: The parent_category of this ModelCategory.  # noqa: E501
+        :rtype: list[ModelCategory]
+        """
+        return self._parent_category
+
+    @parent_category.setter
+    def parent_category(self, parent_category):
+        """Sets the parent_category of this ModelCategory.
+
+        Indicates this subcategory parent category  # noqa: E501
+
+        :param parent_category: The parent_category of this ModelCategory.  # noqa: E501
+        :type: list[ModelCategory]
+        """
+
+        self._parent_category = parent_category
 
     @property
     def type(self):

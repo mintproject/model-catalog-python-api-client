@@ -32,8 +32,8 @@ class SampleCollection(object):
     """
     openapi_types = {
         'data_catalog_identifier': 'list[str]',
-        'has_part': 'list[SampleResource]',
         'description': 'list[str]',
+        'has_part': 'list[SampleResource]',
         'id': 'str',
         'label': 'list[str]',
         'type': 'list[str]',
@@ -42,20 +42,20 @@ class SampleCollection(object):
 
     attribute_map = {
         'data_catalog_identifier': 'dataCatalogIdentifier',
-        'has_part': 'hasPart',
         'description': 'description',
+        'has_part': 'hasPart',
         'id': 'id',
         'label': 'label',
         'type': 'type',
         'value': 'value'
     }
 
-    def __init__(self, data_catalog_identifier=None, has_part=None, description=None, id=None, label=None, type=None, value=None):  # noqa: E501
+    def __init__(self, data_catalog_identifier=None, description=None, has_part=None, id=None, label=None, type=None, value=None):  # noqa: E501
         """SampleCollection - a model defined in OpenAPI"""  # noqa: E501
 
         self._data_catalog_identifier = None
-        self._has_part = None
         self._description = None
+        self._has_part = None
         self._id = None
         self._label = None
         self._type = None
@@ -63,8 +63,8 @@ class SampleCollection(object):
         self.discriminator = None
 
         self.data_catalog_identifier = data_catalog_identifier
-        self.has_part = has_part
         self.description = description
+        self.has_part = has_part
         if id is not None:
             self.id = id
         self.label = label
@@ -95,29 +95,6 @@ class SampleCollection(object):
         self._data_catalog_identifier = data_catalog_identifier
 
     @property
-    def has_part(self):
-        """Gets the has_part of this SampleCollection.  # noqa: E501
-
-        Property designed to reference the elements included in a sample collection.  # noqa: E501
-
-        :return: The has_part of this SampleCollection.  # noqa: E501
-        :rtype: list[SampleResource]
-        """
-        return self._has_part
-
-    @has_part.setter
-    def has_part(self, has_part):
-        """Sets the has_part of this SampleCollection.
-
-        Property designed to reference the elements included in a sample collection.  # noqa: E501
-
-        :param has_part: The has_part of this SampleCollection.  # noqa: E501
-        :type: list[SampleResource]
-        """
-
-        self._has_part = has_part
-
-    @property
     def description(self):
         """Gets the description of this SampleCollection.  # noqa: E501
 
@@ -139,6 +116,29 @@ class SampleCollection(object):
         """
 
         self._description = description
+
+    @property
+    def has_part(self):
+        """Gets the has_part of this SampleCollection.  # noqa: E501
+
+        Property designed to reference the elements included in a sample collection.  # noqa: E501
+
+        :return: The has_part of this SampleCollection.  # noqa: E501
+        :rtype: list[SampleResource]
+        """
+        return self._has_part
+
+    @has_part.setter
+    def has_part(self, has_part):
+        """Sets the has_part of this SampleCollection.
+
+        Property designed to reference the elements included in a sample collection.  # noqa: E501
+
+        :param has_part: The has_part of this SampleCollection.  # noqa: E501
+        :type: list[SampleResource]
+        """
+
+        self._has_part = has_part
 
     @property
     def id(self):

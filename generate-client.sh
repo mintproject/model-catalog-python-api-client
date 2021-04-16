@@ -2,11 +2,12 @@ set -e
 dir=${PWD}
 parentdir="$(dirname "$dir")"
 
-REPO_TAG=$1
-FILE=https://raw.githubusercontent.com/mintproject/model-catalog-api/$REPO_TAG/openapi.yaml
+URL=$1
+
+
 docker run -ti --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v4.1.2 \
      generate  \
-     -i $FILE \
+     -i $URL \
      -g python  \
      -o /local/ \
      -c /local/openapi-config.json \

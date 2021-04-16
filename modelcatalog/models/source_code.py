@@ -31,114 +31,45 @@ class SourceCode(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'license': 'list[str]',
-        'programming_language': 'list[str]',
-        'description': 'list[str]',
         'code_repository': 'list[str]',
+        'description': 'list[str]',
         'id': 'str',
         'label': 'list[str]',
+        'license': 'list[str]',
+        'programming_language': 'list[str]',
         'type': 'list[str]'
     }
 
     attribute_map = {
-        'license': 'license',
-        'programming_language': 'programmingLanguage',
-        'description': 'description',
         'code_repository': 'codeRepository',
+        'description': 'description',
         'id': 'id',
         'label': 'label',
+        'license': 'license',
+        'programming_language': 'programmingLanguage',
         'type': 'type'
     }
 
-    def __init__(self, license=None, programming_language=None, description=None, code_repository=None, id=None, label=None, type=None):  # noqa: E501
+    def __init__(self, code_repository=None, description=None, id=None, label=None, license=None, programming_language=None, type=None):  # noqa: E501
         """SourceCode - a model defined in OpenAPI"""  # noqa: E501
 
-        self._license = None
-        self._programming_language = None
-        self._description = None
         self._code_repository = None
+        self._description = None
         self._id = None
         self._label = None
+        self._license = None
+        self._programming_language = None
         self._type = None
         self.discriminator = None
 
-        self.license = license
-        self.programming_language = programming_language
-        self.description = description
         self.code_repository = code_repository
+        self.description = description
         if id is not None:
             self.id = id
         self.label = label
+        self.license = license
+        self.programming_language = programming_language
         self.type = type
-
-    @property
-    def license(self):
-        """Gets the license of this SourceCode.  # noqa: E501
-
-        License of a software component or its source code  # noqa: E501
-
-        :return: The license of this SourceCode.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._license
-
-    @license.setter
-    def license(self, license):
-        """Sets the license of this SourceCode.
-
-        License of a software component or its source code  # noqa: E501
-
-        :param license: The license of this SourceCode.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._license = license
-
-    @property
-    def programming_language(self):
-        """Gets the programming_language of this SourceCode.  # noqa: E501
-
-        Language used to code a software component  # noqa: E501
-
-        :return: The programming_language of this SourceCode.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._programming_language
-
-    @programming_language.setter
-    def programming_language(self, programming_language):
-        """Sets the programming_language of this SourceCode.
-
-        Language used to code a software component  # noqa: E501
-
-        :param programming_language: The programming_language of this SourceCode.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._programming_language = programming_language
-
-    @property
-    def description(self):
-        """Gets the description of this SourceCode.  # noqa: E501
-
-        small description  # noqa: E501
-
-        :return: The description of this SourceCode.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this SourceCode.
-
-        small description  # noqa: E501
-
-        :param description: The description of this SourceCode.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._description = description
 
     @property
     def code_repository(self):
@@ -162,6 +93,29 @@ class SourceCode(object):
         """
 
         self._code_repository = code_repository
+
+    @property
+    def description(self):
+        """Gets the description of this SourceCode.  # noqa: E501
+
+        small description  # noqa: E501
+
+        :return: The description of this SourceCode.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this SourceCode.
+
+        small description  # noqa: E501
+
+        :param description: The description of this SourceCode.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._description = description
 
     @property
     def id(self):
@@ -208,6 +162,52 @@ class SourceCode(object):
         """
 
         self._label = label
+
+    @property
+    def license(self):
+        """Gets the license of this SourceCode.  # noqa: E501
+
+        License of a software component or its source code  # noqa: E501
+
+        :return: The license of this SourceCode.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._license
+
+    @license.setter
+    def license(self, license):
+        """Sets the license of this SourceCode.
+
+        License of a software component or its source code  # noqa: E501
+
+        :param license: The license of this SourceCode.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._license = license
+
+    @property
+    def programming_language(self):
+        """Gets the programming_language of this SourceCode.  # noqa: E501
+
+        Language used to code a software component  # noqa: E501
+
+        :return: The programming_language of this SourceCode.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._programming_language
+
+    @programming_language.setter
+    def programming_language(self, programming_language):
+        """Sets the programming_language of this SourceCode.
+
+        Language used to code a software component  # noqa: E501
+
+        :param programming_language: The programming_language of this SourceCode.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._programming_language = programming_language
 
     @property
     def type(self):

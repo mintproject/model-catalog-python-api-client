@@ -31,413 +31,303 @@ class CoupledModel(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_download_instructions': 'list[str]',
-        'keywords': 'list[str]',
-        'has_documentation': 'list[str]',
-        'has_grid': 'list[Grid]',
-        'software_requirements': 'list[str]',
-        'has_download_url': 'list[str]',
-        'type': 'list[str]',
-        'has_installation_instructions': 'list[str]',
+        'author': 'list[object]',
+        'citation': 'list[str]',
         'compatible_visualization_software': 'list[Software]',
+        'contributor': 'list[Person]',
         'copyright_holder': 'list[object]',
-        'has_faq': 'list[str]',
-        'logo': 'list[Image]',
+        'date_created': 'list[str]',
+        'date_published': 'list[str]',
+        'description': 'list[str]',
+        'doi': 'list[str]',
+        'had_primary_source': 'list[object]',
+        'has_assumption': 'list[str]',
+        'has_build_file': 'list[str]',
         'has_contact_person': 'list[object]',
+        'has_documentation': 'list[str]',
+        'has_download_instructions': 'list[str]',
+        'has_download_url': 'list[str]',
+        'has_equation': 'list[Equation]',
+        'has_example': 'list[str]',
+        'has_executable_instructions': 'list[str]',
+        'has_executable_notebook': 'list[str]',
+        'has_explanation_diagram': 'list[Image]',
+        'has_faq': 'list[str]',
+        'has_funding': 'list[FundingInformation]',
+        'has_grid': 'list[Grid]',
+        'has_input_variable': 'list[VariablePresentation]',
+        'has_installation_instructions': 'list[str]',
+        'has_model_category': 'list[ModelCategory]',
+        'has_output_variable': 'list[VariablePresentation]',
+        'has_process': 'list[Process]',
+        'has_purpose': 'list[str]',
+        'has_sample_visualization': 'list[Visualization]',
+        'has_source_code': 'list[SourceCode]',
+        'has_typical_data_source': 'list[str]',
+        'has_usage_notes': 'list[str]',
+        'has_version': 'list[SoftwareVersion]',
         'id': 'str',
         'identifier': 'list[str]',
-        'author': 'list[object]',
-        'has_build_file': 'list[str]',
-        'short_description': 'list[str]',
-        'date_published': 'list[str]',
-        'license': 'list[str]',
-        'has_source_code': 'list[SourceCode]',
-        'has_explanation_diagram': 'list[Image]',
-        'has_example': 'list[str]',
-        'publisher': 'list[object]',
-        'doi': 'list[str]',
-        'has_funding': 'list[FundingInformation]',
-        'support_details': 'list[str]',
-        'has_version': 'list[SoftwareVersion]',
-        'has_typical_data_source': 'list[str]',
-        'description': 'list[str]',
-        'reference_publication': 'list[str]',
-        'screenshot': 'list[Image]',
-        'uses_model': 'list[Model]',
-        'has_model_category': 'list[ModelCategory]',
-        'had_primary_source': 'list[object]',
         'issue_tracker': 'list[str]',
-        'date_created': 'list[str]',
-        'contributor': 'list[Person]',
-        'has_purpose': 'list[str]',
-        'has_executable_instructions': 'list[str]',
-        'has_sample_visualization': 'list[Visualization]',
-        'memory_requirements': 'list[str]',
-        'website': 'list[str]',
-        'citation': 'list[str]',
-        'processor_requirements': 'list[str]',
-        'has_usage_notes': 'list[str]',
-        'readme': 'list[str]',
+        'keywords': 'list[str]',
         'label': 'list[str]',
-        'has_assumption': 'list[str]',
+        'license': 'list[str]',
+        'limitations': 'list[str]',
+        'logo': 'list[Image]',
+        'memory_requirements': 'list[str]',
         'operating_systems': 'list[str]',
-        'has_executable_notebook': 'list[str]',
-        'has_equation': 'list[Equation]',
-        'useful_for_calculating_index': 'list[NumericalIndex]'
+        'parameterization': 'list[str]',
+        'processor_requirements': 'list[str]',
+        'publisher': 'list[object]',
+        'readme': 'list[str]',
+        'reference_publication': 'list[str]',
+        'runtime_estimation': 'list[str]',
+        'screenshot': 'list[Image]',
+        'short_description': 'list[str]',
+        'software_requirements': 'list[str]',
+        'support_details': 'list[str]',
+        'theoretical_basis': 'list[str]',
+        'type': 'list[str]',
+        'useful_for_calculating_index': 'list[NumericalIndex]',
+        'uses_model': 'list[Model]',
+        'website': 'list[str]'
     }
 
     attribute_map = {
-        'has_download_instructions': 'hasDownloadInstructions',
-        'keywords': 'keywords',
-        'has_documentation': 'hasDocumentation',
-        'has_grid': 'hasGrid',
-        'software_requirements': 'softwareRequirements',
-        'has_download_url': 'hasDownloadURL',
-        'type': 'type',
-        'has_installation_instructions': 'hasInstallationInstructions',
+        'author': 'author',
+        'citation': 'citation',
         'compatible_visualization_software': 'compatibleVisualizationSoftware',
+        'contributor': 'contributor',
         'copyright_holder': 'copyrightHolder',
-        'has_faq': 'hasFAQ',
-        'logo': 'logo',
+        'date_created': 'dateCreated',
+        'date_published': 'datePublished',
+        'description': 'description',
+        'doi': 'doi',
+        'had_primary_source': 'hadPrimarySource',
+        'has_assumption': 'hasAssumption',
+        'has_build_file': 'hasBuildFile',
         'has_contact_person': 'hasContactPerson',
+        'has_documentation': 'hasDocumentation',
+        'has_download_instructions': 'hasDownloadInstructions',
+        'has_download_url': 'hasDownloadURL',
+        'has_equation': 'hasEquation',
+        'has_example': 'hasExample',
+        'has_executable_instructions': 'hasExecutableInstructions',
+        'has_executable_notebook': 'hasExecutableNotebook',
+        'has_explanation_diagram': 'hasExplanationDiagram',
+        'has_faq': 'hasFAQ',
+        'has_funding': 'hasFunding',
+        'has_grid': 'hasGrid',
+        'has_input_variable': 'hasInputVariable',
+        'has_installation_instructions': 'hasInstallationInstructions',
+        'has_model_category': 'hasModelCategory',
+        'has_output_variable': 'hasOutputVariable',
+        'has_process': 'hasProcess',
+        'has_purpose': 'hasPurpose',
+        'has_sample_visualization': 'hasSampleVisualization',
+        'has_source_code': 'hasSourceCode',
+        'has_typical_data_source': 'hasTypicalDataSource',
+        'has_usage_notes': 'hasUsageNotes',
+        'has_version': 'hasVersion',
         'id': 'id',
         'identifier': 'identifier',
-        'author': 'author',
-        'has_build_file': 'hasBuildFile',
-        'short_description': 'shortDescription',
-        'date_published': 'datePublished',
-        'license': 'license',
-        'has_source_code': 'hasSourceCode',
-        'has_explanation_diagram': 'hasExplanationDiagram',
-        'has_example': 'hasExample',
-        'publisher': 'publisher',
-        'doi': 'doi',
-        'has_funding': 'hasFunding',
-        'support_details': 'supportDetails',
-        'has_version': 'hasVersion',
-        'has_typical_data_source': 'hasTypicalDataSource',
-        'description': 'description',
-        'reference_publication': 'referencePublication',
-        'screenshot': 'screenshot',
-        'uses_model': 'usesModel',
-        'has_model_category': 'hasModelCategory',
-        'had_primary_source': 'hadPrimarySource',
         'issue_tracker': 'issueTracker',
-        'date_created': 'dateCreated',
-        'contributor': 'contributor',
-        'has_purpose': 'hasPurpose',
-        'has_executable_instructions': 'hasExecutableInstructions',
-        'has_sample_visualization': 'hasSampleVisualization',
-        'memory_requirements': 'memoryRequirements',
-        'website': 'website',
-        'citation': 'citation',
-        'processor_requirements': 'processorRequirements',
-        'has_usage_notes': 'hasUsageNotes',
-        'readme': 'readme',
+        'keywords': 'keywords',
         'label': 'label',
-        'has_assumption': 'hasAssumption',
+        'license': 'license',
+        'limitations': 'limitations',
+        'logo': 'logo',
+        'memory_requirements': 'memoryRequirements',
         'operating_systems': 'operatingSystems',
-        'has_executable_notebook': 'hasExecutableNotebook',
-        'has_equation': 'hasEquation',
-        'useful_for_calculating_index': 'usefulForCalculatingIndex'
+        'parameterization': 'parameterization',
+        'processor_requirements': 'processorRequirements',
+        'publisher': 'publisher',
+        'readme': 'readme',
+        'reference_publication': 'referencePublication',
+        'runtime_estimation': 'runtimeEstimation',
+        'screenshot': 'screenshot',
+        'short_description': 'shortDescription',
+        'software_requirements': 'softwareRequirements',
+        'support_details': 'supportDetails',
+        'theoretical_basis': 'theoreticalBasis',
+        'type': 'type',
+        'useful_for_calculating_index': 'usefulForCalculatingIndex',
+        'uses_model': 'usesModel',
+        'website': 'website'
     }
 
-    def __init__(self, has_download_instructions=None, keywords=None, has_documentation=None, has_grid=None, software_requirements=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, copyright_holder=None, has_faq=None, logo=None, has_contact_person=None, id=None, identifier=None, author=None, has_build_file=None, short_description=None, date_published=None, license=None, has_source_code=None, has_explanation_diagram=None, has_example=None, publisher=None, doi=None, has_funding=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, uses_model=None, has_model_category=None, had_primary_source=None, issue_tracker=None, date_created=None, contributor=None, has_purpose=None, has_executable_instructions=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, has_usage_notes=None, readme=None, label=None, has_assumption=None, operating_systems=None, has_executable_notebook=None, has_equation=None, useful_for_calculating_index=None):  # noqa: E501
+    def __init__(self, author=None, citation=None, compatible_visualization_software=None, contributor=None, copyright_holder=None, date_created=None, date_published=None, description=None, doi=None, had_primary_source=None, has_assumption=None, has_build_file=None, has_contact_person=None, has_documentation=None, has_download_instructions=None, has_download_url=None, has_equation=None, has_example=None, has_executable_instructions=None, has_executable_notebook=None, has_explanation_diagram=None, has_faq=None, has_funding=None, has_grid=None, has_input_variable=None, has_installation_instructions=None, has_model_category=None, has_output_variable=None, has_process=None, has_purpose=None, has_sample_visualization=None, has_source_code=None, has_typical_data_source=None, has_usage_notes=None, has_version=None, id=None, identifier=None, issue_tracker=None, keywords=None, label=None, license=None, limitations=None, logo=None, memory_requirements=None, operating_systems=None, parameterization=None, processor_requirements=None, publisher=None, readme=None, reference_publication=None, runtime_estimation=None, screenshot=None, short_description=None, software_requirements=None, support_details=None, theoretical_basis=None, type=None, useful_for_calculating_index=None, uses_model=None, website=None):  # noqa: E501
         """CoupledModel - a model defined in OpenAPI"""  # noqa: E501
 
-        self._has_download_instructions = None
-        self._keywords = None
-        self._has_documentation = None
-        self._has_grid = None
-        self._software_requirements = None
-        self._has_download_url = None
-        self._type = None
-        self._has_installation_instructions = None
+        self._author = None
+        self._citation = None
         self._compatible_visualization_software = None
+        self._contributor = None
         self._copyright_holder = None
-        self._has_faq = None
-        self._logo = None
+        self._date_created = None
+        self._date_published = None
+        self._description = None
+        self._doi = None
+        self._had_primary_source = None
+        self._has_assumption = None
+        self._has_build_file = None
         self._has_contact_person = None
+        self._has_documentation = None
+        self._has_download_instructions = None
+        self._has_download_url = None
+        self._has_equation = None
+        self._has_example = None
+        self._has_executable_instructions = None
+        self._has_executable_notebook = None
+        self._has_explanation_diagram = None
+        self._has_faq = None
+        self._has_funding = None
+        self._has_grid = None
+        self._has_input_variable = None
+        self._has_installation_instructions = None
+        self._has_model_category = None
+        self._has_output_variable = None
+        self._has_process = None
+        self._has_purpose = None
+        self._has_sample_visualization = None
+        self._has_source_code = None
+        self._has_typical_data_source = None
+        self._has_usage_notes = None
+        self._has_version = None
         self._id = None
         self._identifier = None
-        self._author = None
-        self._has_build_file = None
-        self._short_description = None
-        self._date_published = None
-        self._license = None
-        self._has_source_code = None
-        self._has_explanation_diagram = None
-        self._has_example = None
-        self._publisher = None
-        self._doi = None
-        self._has_funding = None
-        self._support_details = None
-        self._has_version = None
-        self._has_typical_data_source = None
-        self._description = None
-        self._reference_publication = None
-        self._screenshot = None
-        self._uses_model = None
-        self._has_model_category = None
-        self._had_primary_source = None
         self._issue_tracker = None
-        self._date_created = None
-        self._contributor = None
-        self._has_purpose = None
-        self._has_executable_instructions = None
-        self._has_sample_visualization = None
-        self._memory_requirements = None
-        self._website = None
-        self._citation = None
-        self._processor_requirements = None
-        self._has_usage_notes = None
-        self._readme = None
+        self._keywords = None
         self._label = None
-        self._has_assumption = None
+        self._license = None
+        self._limitations = None
+        self._logo = None
+        self._memory_requirements = None
         self._operating_systems = None
-        self._has_executable_notebook = None
-        self._has_equation = None
+        self._parameterization = None
+        self._processor_requirements = None
+        self._publisher = None
+        self._readme = None
+        self._reference_publication = None
+        self._runtime_estimation = None
+        self._screenshot = None
+        self._short_description = None
+        self._software_requirements = None
+        self._support_details = None
+        self._theoretical_basis = None
+        self._type = None
         self._useful_for_calculating_index = None
+        self._uses_model = None
+        self._website = None
         self.discriminator = None
 
-        self.has_download_instructions = has_download_instructions
-        self.keywords = keywords
-        self.has_documentation = has_documentation
-        self.has_grid = has_grid
-        self.software_requirements = software_requirements
-        self.has_download_url = has_download_url
-        self.type = type
-        self.has_installation_instructions = has_installation_instructions
+        self.author = author
+        self.citation = citation
         self.compatible_visualization_software = compatible_visualization_software
+        self.contributor = contributor
         self.copyright_holder = copyright_holder
-        self.has_faq = has_faq
-        self.logo = logo
+        self.date_created = date_created
+        self.date_published = date_published
+        self.description = description
+        self.doi = doi
+        self.had_primary_source = had_primary_source
+        self.has_assumption = has_assumption
+        self.has_build_file = has_build_file
         self.has_contact_person = has_contact_person
+        self.has_documentation = has_documentation
+        self.has_download_instructions = has_download_instructions
+        self.has_download_url = has_download_url
+        self.has_equation = has_equation
+        self.has_example = has_example
+        self.has_executable_instructions = has_executable_instructions
+        self.has_executable_notebook = has_executable_notebook
+        self.has_explanation_diagram = has_explanation_diagram
+        self.has_faq = has_faq
+        self.has_funding = has_funding
+        self.has_grid = has_grid
+        self.has_input_variable = has_input_variable
+        self.has_installation_instructions = has_installation_instructions
+        self.has_model_category = has_model_category
+        self.has_output_variable = has_output_variable
+        self.has_process = has_process
+        self.has_purpose = has_purpose
+        self.has_sample_visualization = has_sample_visualization
+        self.has_source_code = has_source_code
+        self.has_typical_data_source = has_typical_data_source
+        self.has_usage_notes = has_usage_notes
+        self.has_version = has_version
         if id is not None:
             self.id = id
         self.identifier = identifier
-        self.author = author
-        self.has_build_file = has_build_file
-        self.short_description = short_description
-        self.date_published = date_published
-        self.license = license
-        self.has_source_code = has_source_code
-        self.has_explanation_diagram = has_explanation_diagram
-        self.has_example = has_example
-        self.publisher = publisher
-        self.doi = doi
-        self.has_funding = has_funding
-        self.support_details = support_details
-        self.has_version = has_version
-        self.has_typical_data_source = has_typical_data_source
-        self.description = description
-        self.reference_publication = reference_publication
-        self.screenshot = screenshot
-        self.uses_model = uses_model
-        self.has_model_category = has_model_category
-        self.had_primary_source = had_primary_source
         self.issue_tracker = issue_tracker
-        self.date_created = date_created
-        self.contributor = contributor
-        self.has_purpose = has_purpose
-        self.has_executable_instructions = has_executable_instructions
-        self.has_sample_visualization = has_sample_visualization
-        self.memory_requirements = memory_requirements
-        self.website = website
-        self.citation = citation
-        self.processor_requirements = processor_requirements
-        self.has_usage_notes = has_usage_notes
-        self.readme = readme
+        self.keywords = keywords
         self.label = label
-        self.has_assumption = has_assumption
+        self.license = license
+        self.limitations = limitations
+        self.logo = logo
+        self.memory_requirements = memory_requirements
         self.operating_systems = operating_systems
-        self.has_executable_notebook = has_executable_notebook
-        self.has_equation = has_equation
+        self.parameterization = parameterization
+        self.processor_requirements = processor_requirements
+        self.publisher = publisher
+        self.readme = readme
+        self.reference_publication = reference_publication
+        self.runtime_estimation = runtime_estimation
+        self.screenshot = screenshot
+        self.short_description = short_description
+        self.software_requirements = software_requirements
+        self.support_details = support_details
+        self.theoretical_basis = theoretical_basis
+        self.type = type
         self.useful_for_calculating_index = useful_for_calculating_index
+        self.uses_model = uses_model
+        self.website = website
 
     @property
-    def has_download_instructions(self):
-        """Gets the has_download_instructions of this CoupledModel.  # noqa: E501
+    def author(self):
+        """Gets the author of this CoupledModel.  # noqa: E501
 
         Description not available  # noqa: E501
 
-        :return: The has_download_instructions of this CoupledModel.  # noqa: E501
+        :return: The author of this CoupledModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._author
+
+    @author.setter
+    def author(self, author):
+        """Sets the author of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param author: The author of this CoupledModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._author = author
+
+    @property
+    def citation(self):
+        """Gets the citation of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The citation of this CoupledModel.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_download_instructions
+        return self._citation
 
-    @has_download_instructions.setter
-    def has_download_instructions(self, has_download_instructions):
-        """Sets the has_download_instructions of this CoupledModel.
+    @citation.setter
+    def citation(self, citation):
+        """Sets the citation of this CoupledModel.
 
         Description not available  # noqa: E501
 
-        :param has_download_instructions: The has_download_instructions of this CoupledModel.  # noqa: E501
+        :param citation: The citation of this CoupledModel.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_download_instructions = has_download_instructions
-
-    @property
-    def keywords(self):
-        """Gets the keywords of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The keywords of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._keywords
-
-    @keywords.setter
-    def keywords(self, keywords):
-        """Sets the keywords of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param keywords: The keywords of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._keywords = keywords
-
-    @property
-    def has_documentation(self):
-        """Gets the has_documentation of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_documentation of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_documentation: The has_documentation of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
-
-    @property
-    def has_grid(self):
-        """Gets the has_grid of this CoupledModel.  # noqa: E501
-
-        Grid information about the model  # noqa: E501
-
-        :return: The has_grid of this CoupledModel.  # noqa: E501
-        :rtype: list[Grid]
-        """
-        return self._has_grid
-
-    @has_grid.setter
-    def has_grid(self, has_grid):
-        """Sets the has_grid of this CoupledModel.
-
-        Grid information about the model  # noqa: E501
-
-        :param has_grid: The has_grid of this CoupledModel.  # noqa: E501
-        :type: list[Grid]
-        """
-
-        self._has_grid = has_grid
-
-    @property
-    def software_requirements(self):
-        """Gets the software_requirements of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The software_requirements of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._software_requirements
-
-    @software_requirements.setter
-    def software_requirements(self, software_requirements):
-        """Sets the software_requirements of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param software_requirements: The software_requirements of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._software_requirements = software_requirements
-
-    @property
-    def has_download_url(self):
-        """Gets the has_download_url of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_download_url of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_download_url
-
-    @has_download_url.setter
-    def has_download_url(self, has_download_url):
-        """Sets the has_download_url of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_download_url: The has_download_url of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_download_url = has_download_url
-
-    @property
-    def type(self):
-        """Gets the type of this CoupledModel.  # noqa: E501
-
-        type of the resource  # noqa: E501
-
-        :return: The type of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this CoupledModel.
-
-        type of the resource  # noqa: E501
-
-        :param type: The type of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._type = type
-
-    @property
-    def has_installation_instructions(self):
-        """Gets the has_installation_instructions of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_installation_instructions of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_installation_instructions
-
-    @has_installation_instructions.setter
-    def has_installation_instructions(self, has_installation_instructions):
-        """Sets the has_installation_instructions of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_installation_instructions: The has_installation_instructions of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_installation_instructions = has_installation_instructions
+        self._citation = citation
 
     @property
     def compatible_visualization_software(self):
@@ -463,6 +353,29 @@ class CoupledModel(object):
         self._compatible_visualization_software = compatible_visualization_software
 
     @property
+    def contributor(self):
+        """Gets the contributor of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The contributor of this CoupledModel.  # noqa: E501
+        :rtype: list[Person]
+        """
+        return self._contributor
+
+    @contributor.setter
+    def contributor(self, contributor):
+        """Sets the contributor of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param contributor: The contributor of this CoupledModel.  # noqa: E501
+        :type: list[Person]
+        """
+
+        self._contributor = contributor
+
+    @property
     def copyright_holder(self):
         """Gets the copyright_holder of this CoupledModel.  # noqa: E501
 
@@ -484,6 +397,374 @@ class CoupledModel(object):
         """
 
         self._copyright_holder = copyright_holder
+
+    @property
+    def date_created(self):
+        """Gets the date_created of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The date_created of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._date_created
+
+    @date_created.setter
+    def date_created(self, date_created):
+        """Sets the date_created of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param date_created: The date_created of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._date_created = date_created
+
+    @property
+    def date_published(self):
+        """Gets the date_published of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The date_published of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._date_published
+
+    @date_published.setter
+    def date_published(self, date_published):
+        """Sets the date_published of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param date_published: The date_published of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._date_published = date_published
+
+    @property
+    def description(self):
+        """Gets the description of this CoupledModel.  # noqa: E501
+
+        small description  # noqa: E501
+
+        :return: The description of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this CoupledModel.
+
+        small description  # noqa: E501
+
+        :param description: The description of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._description = description
+
+    @property
+    def doi(self):
+        """Gets the doi of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The doi of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._doi
+
+    @doi.setter
+    def doi(self, doi):
+        """Sets the doi of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param doi: The doi of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._doi = doi
+
+    @property
+    def had_primary_source(self):
+        """Gets the had_primary_source of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The had_primary_source of this CoupledModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._had_primary_source
+
+    @had_primary_source.setter
+    def had_primary_source(self, had_primary_source):
+        """Sets the had_primary_source of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param had_primary_source: The had_primary_source of this CoupledModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._had_primary_source = had_primary_source
+
+    @property
+    def has_assumption(self):
+        """Gets the has_assumption of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_assumption of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_assumption
+
+    @has_assumption.setter
+    def has_assumption(self, has_assumption):
+        """Sets the has_assumption of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_assumption: The has_assumption of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_assumption = has_assumption
+
+    @property
+    def has_build_file(self):
+        """Gets the has_build_file of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_build_file of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_build_file
+
+    @has_build_file.setter
+    def has_build_file(self, has_build_file):
+        """Sets the has_build_file of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_build_file: The has_build_file of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_build_file = has_build_file
+
+    @property
+    def has_contact_person(self):
+        """Gets the has_contact_person of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_contact_person of this CoupledModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_contact_person
+
+    @has_contact_person.setter
+    def has_contact_person(self, has_contact_person):
+        """Sets the has_contact_person of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_contact_person: The has_contact_person of this CoupledModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_contact_person = has_contact_person
+
+    @property
+    def has_documentation(self):
+        """Gets the has_documentation of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_documentation of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_documentation
+
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_documentation: The has_documentation of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_documentation = has_documentation
+
+    @property
+    def has_download_instructions(self):
+        """Gets the has_download_instructions of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_download_instructions of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_download_instructions
+
+    @has_download_instructions.setter
+    def has_download_instructions(self, has_download_instructions):
+        """Sets the has_download_instructions of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_download_instructions: The has_download_instructions of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_download_instructions = has_download_instructions
+
+    @property
+    def has_download_url(self):
+        """Gets the has_download_url of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_download_url of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_download_url
+
+    @has_download_url.setter
+    def has_download_url(self, has_download_url):
+        """Sets the has_download_url of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_download_url: The has_download_url of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_download_url = has_download_url
+
+    @property
+    def has_equation(self):
+        """Gets the has_equation of this CoupledModel.  # noqa: E501
+
+        Equations used in the model  # noqa: E501
+
+        :return: The has_equation of this CoupledModel.  # noqa: E501
+        :rtype: list[Equation]
+        """
+        return self._has_equation
+
+    @has_equation.setter
+    def has_equation(self, has_equation):
+        """Sets the has_equation of this CoupledModel.
+
+        Equations used in the model  # noqa: E501
+
+        :param has_equation: The has_equation of this CoupledModel.  # noqa: E501
+        :type: list[Equation]
+        """
+
+        self._has_equation = has_equation
+
+    @property
+    def has_example(self):
+        """Gets the has_example of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_example of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_example
+
+    @has_example.setter
+    def has_example(self, has_example):
+        """Sets the has_example of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_example: The has_example of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_example = has_example
+
+    @property
+    def has_executable_instructions(self):
+        """Gets the has_executable_instructions of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_executable_instructions of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_executable_instructions
+
+    @has_executable_instructions.setter
+    def has_executable_instructions(self, has_executable_instructions):
+        """Sets the has_executable_instructions of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_executable_instructions: The has_executable_instructions of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_executable_instructions = has_executable_instructions
+
+    @property
+    def has_executable_notebook(self):
+        """Gets the has_executable_notebook of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_executable_notebook of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_executable_notebook
+
+    @has_executable_notebook.setter
+    def has_executable_notebook(self, has_executable_notebook):
+        """Sets the has_executable_notebook of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_executable_notebook: The has_executable_notebook of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_executable_notebook = has_executable_notebook
+
+    @property
+    def has_explanation_diagram(self):
+        """Gets the has_explanation_diagram of this CoupledModel.  # noqa: E501
+
+        Diagram used to explain the behavior of the model  # noqa: E501
+
+        :return: The has_explanation_diagram of this CoupledModel.  # noqa: E501
+        :rtype: list[Image]
+        """
+        return self._has_explanation_diagram
+
+    @has_explanation_diagram.setter
+    def has_explanation_diagram(self, has_explanation_diagram):
+        """Sets the has_explanation_diagram of this CoupledModel.
+
+        Diagram used to explain the behavior of the model  # noqa: E501
+
+        :param has_explanation_diagram: The has_explanation_diagram of this CoupledModel.  # noqa: E501
+        :type: list[Image]
+        """
+
+        self._has_explanation_diagram = has_explanation_diagram
 
     @property
     def has_faq(self):
@@ -509,50 +790,303 @@ class CoupledModel(object):
         self._has_faq = has_faq
 
     @property
-    def logo(self):
-        """Gets the logo of this CoupledModel.  # noqa: E501
+    def has_funding(self):
+        """Gets the has_funding of this CoupledModel.  # noqa: E501
 
         Description not available  # noqa: E501
 
-        :return: The logo of this CoupledModel.  # noqa: E501
-        :rtype: list[Image]
+        :return: The has_funding of this CoupledModel.  # noqa: E501
+        :rtype: list[FundingInformation]
         """
-        return self._logo
+        return self._has_funding
 
-    @logo.setter
-    def logo(self, logo):
-        """Sets the logo of this CoupledModel.
+    @has_funding.setter
+    def has_funding(self, has_funding):
+        """Sets the has_funding of this CoupledModel.
 
         Description not available  # noqa: E501
 
-        :param logo: The logo of this CoupledModel.  # noqa: E501
-        :type: list[Image]
+        :param has_funding: The has_funding of this CoupledModel.  # noqa: E501
+        :type: list[FundingInformation]
         """
 
-        self._logo = logo
+        self._has_funding = has_funding
 
     @property
-    def has_contact_person(self):
-        """Gets the has_contact_person of this CoupledModel.  # noqa: E501
+    def has_grid(self):
+        """Gets the has_grid of this CoupledModel.  # noqa: E501
+
+        Grid information about the model  # noqa: E501
+
+        :return: The has_grid of this CoupledModel.  # noqa: E501
+        :rtype: list[Grid]
+        """
+        return self._has_grid
+
+    @has_grid.setter
+    def has_grid(self, has_grid):
+        """Sets the has_grid of this CoupledModel.
+
+        Grid information about the model  # noqa: E501
+
+        :param has_grid: The has_grid of this CoupledModel.  # noqa: E501
+        :type: list[Grid]
+        """
+
+        self._has_grid = has_grid
+
+    @property
+    def has_input_variable(self):
+        """Gets the has_input_variable of this CoupledModel.  # noqa: E501
+
+        Variable that is used as input for this model  # noqa: E501
+
+        :return: The has_input_variable of this CoupledModel.  # noqa: E501
+        :rtype: list[VariablePresentation]
+        """
+        return self._has_input_variable
+
+    @has_input_variable.setter
+    def has_input_variable(self, has_input_variable):
+        """Sets the has_input_variable of this CoupledModel.
+
+        Variable that is used as input for this model  # noqa: E501
+
+        :param has_input_variable: The has_input_variable of this CoupledModel.  # noqa: E501
+        :type: list[VariablePresentation]
+        """
+
+        self._has_input_variable = has_input_variable
+
+    @property
+    def has_installation_instructions(self):
+        """Gets the has_installation_instructions of this CoupledModel.  # noqa: E501
 
         Description not available  # noqa: E501
 
-        :return: The has_contact_person of this CoupledModel.  # noqa: E501
-        :rtype: list[object]
+        :return: The has_installation_instructions of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._has_contact_person
+        return self._has_installation_instructions
 
-    @has_contact_person.setter
-    def has_contact_person(self, has_contact_person):
-        """Sets the has_contact_person of this CoupledModel.
+    @has_installation_instructions.setter
+    def has_installation_instructions(self, has_installation_instructions):
+        """Sets the has_installation_instructions of this CoupledModel.
 
         Description not available  # noqa: E501
 
-        :param has_contact_person: The has_contact_person of this CoupledModel.  # noqa: E501
-        :type: list[object]
+        :param has_installation_instructions: The has_installation_instructions of this CoupledModel.  # noqa: E501
+        :type: list[str]
         """
 
-        self._has_contact_person = has_contact_person
+        self._has_installation_instructions = has_installation_instructions
+
+    @property
+    def has_model_category(self):
+        """Gets the has_model_category of this CoupledModel.  # noqa: E501
+
+        Category associated with a model (e.g., Hydrology, etc.)  # noqa: E501
+
+        :return: The has_model_category of this CoupledModel.  # noqa: E501
+        :rtype: list[ModelCategory]
+        """
+        return self._has_model_category
+
+    @has_model_category.setter
+    def has_model_category(self, has_model_category):
+        """Sets the has_model_category of this CoupledModel.
+
+        Category associated with a model (e.g., Hydrology, etc.)  # noqa: E501
+
+        :param has_model_category: The has_model_category of this CoupledModel.  # noqa: E501
+        :type: list[ModelCategory]
+        """
+
+        self._has_model_category = has_model_category
+
+    @property
+    def has_output_variable(self):
+        """Gets the has_output_variable of this CoupledModel.  # noqa: E501
+
+        Variable that is used as output for this model  # noqa: E501
+
+        :return: The has_output_variable of this CoupledModel.  # noqa: E501
+        :rtype: list[VariablePresentation]
+        """
+        return self._has_output_variable
+
+    @has_output_variable.setter
+    def has_output_variable(self, has_output_variable):
+        """Sets the has_output_variable of this CoupledModel.
+
+        Variable that is used as output for this model  # noqa: E501
+
+        :param has_output_variable: The has_output_variable of this CoupledModel.  # noqa: E501
+        :type: list[VariablePresentation]
+        """
+
+        self._has_output_variable = has_output_variable
+
+    @property
+    def has_process(self):
+        """Gets the has_process of this CoupledModel.  # noqa: E501
+
+        Property that indicates which physical processes (if any) are associated with a model  # noqa: E501
+
+        :return: The has_process of this CoupledModel.  # noqa: E501
+        :rtype: list[Process]
+        """
+        return self._has_process
+
+    @has_process.setter
+    def has_process(self, has_process):
+        """Sets the has_process of this CoupledModel.
+
+        Property that indicates which physical processes (if any) are associated with a model  # noqa: E501
+
+        :param has_process: The has_process of this CoupledModel.  # noqa: E501
+        :type: list[Process]
+        """
+
+        self._has_process = has_process
+
+    @property
+    def has_purpose(self):
+        """Gets the has_purpose of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_purpose of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_purpose
+
+    @has_purpose.setter
+    def has_purpose(self, has_purpose):
+        """Sets the has_purpose of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_purpose: The has_purpose of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_purpose = has_purpose
+
+    @property
+    def has_sample_visualization(self):
+        """Gets the has_sample_visualization of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_sample_visualization of this CoupledModel.  # noqa: E501
+        :rtype: list[Visualization]
+        """
+        return self._has_sample_visualization
+
+    @has_sample_visualization.setter
+    def has_sample_visualization(self, has_sample_visualization):
+        """Sets the has_sample_visualization of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_sample_visualization: The has_sample_visualization of this CoupledModel.  # noqa: E501
+        :type: list[Visualization]
+        """
+
+        self._has_sample_visualization = has_sample_visualization
+
+    @property
+    def has_source_code(self):
+        """Gets the has_source_code of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_source_code of this CoupledModel.  # noqa: E501
+        :rtype: list[SourceCode]
+        """
+        return self._has_source_code
+
+    @has_source_code.setter
+    def has_source_code(self, has_source_code):
+        """Sets the has_source_code of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_source_code: The has_source_code of this CoupledModel.  # noqa: E501
+        :type: list[SourceCode]
+        """
+
+        self._has_source_code = has_source_code
+
+    @property
+    def has_typical_data_source(self):
+        """Gets the has_typical_data_source of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_typical_data_source of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_typical_data_source
+
+    @has_typical_data_source.setter
+    def has_typical_data_source(self, has_typical_data_source):
+        """Sets the has_typical_data_source of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_typical_data_source: The has_typical_data_source of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_typical_data_source = has_typical_data_source
+
+    @property
+    def has_usage_notes(self):
+        """Gets the has_usage_notes of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_usage_notes of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_usage_notes
+
+    @has_usage_notes.setter
+    def has_usage_notes(self, has_usage_notes):
+        """Sets the has_usage_notes of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_usage_notes: The has_usage_notes of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_usage_notes = has_usage_notes
+
+    @property
+    def has_version(self):
+        """Gets the has_version of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_version of this CoupledModel.  # noqa: E501
+        :rtype: list[SoftwareVersion]
+        """
+        return self._has_version
+
+    @has_version.setter
+    def has_version(self, has_version):
+        """Sets the has_version of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param has_version: The has_version of this CoupledModel.  # noqa: E501
+        :type: list[SoftwareVersion]
+        """
+
+        self._has_version = has_version
 
     @property
     def id(self):
@@ -601,466 +1135,6 @@ class CoupledModel(object):
         self._identifier = identifier
 
     @property
-    def author(self):
-        """Gets the author of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The author of this CoupledModel.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._author
-
-    @author.setter
-    def author(self, author):
-        """Sets the author of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param author: The author of this CoupledModel.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._author = author
-
-    @property
-    def has_build_file(self):
-        """Gets the has_build_file of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_build_file of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_build_file
-
-    @has_build_file.setter
-    def has_build_file(self, has_build_file):
-        """Sets the has_build_file of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_build_file: The has_build_file of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_build_file = has_build_file
-
-    @property
-    def short_description(self):
-        """Gets the short_description of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The short_description of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._short_description
-
-    @short_description.setter
-    def short_description(self, short_description):
-        """Sets the short_description of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param short_description: The short_description of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._short_description = short_description
-
-    @property
-    def date_published(self):
-        """Gets the date_published of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The date_published of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._date_published
-
-    @date_published.setter
-    def date_published(self, date_published):
-        """Sets the date_published of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param date_published: The date_published of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._date_published = date_published
-
-    @property
-    def license(self):
-        """Gets the license of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The license of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._license
-
-    @license.setter
-    def license(self, license):
-        """Sets the license of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param license: The license of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._license = license
-
-    @property
-    def has_source_code(self):
-        """Gets the has_source_code of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_source_code of this CoupledModel.  # noqa: E501
-        :rtype: list[SourceCode]
-        """
-        return self._has_source_code
-
-    @has_source_code.setter
-    def has_source_code(self, has_source_code):
-        """Sets the has_source_code of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_source_code: The has_source_code of this CoupledModel.  # noqa: E501
-        :type: list[SourceCode]
-        """
-
-        self._has_source_code = has_source_code
-
-    @property
-    def has_explanation_diagram(self):
-        """Gets the has_explanation_diagram of this CoupledModel.  # noqa: E501
-
-        Diagram used to explain the behavior of the model  # noqa: E501
-
-        :return: The has_explanation_diagram of this CoupledModel.  # noqa: E501
-        :rtype: list[Image]
-        """
-        return self._has_explanation_diagram
-
-    @has_explanation_diagram.setter
-    def has_explanation_diagram(self, has_explanation_diagram):
-        """Sets the has_explanation_diagram of this CoupledModel.
-
-        Diagram used to explain the behavior of the model  # noqa: E501
-
-        :param has_explanation_diagram: The has_explanation_diagram of this CoupledModel.  # noqa: E501
-        :type: list[Image]
-        """
-
-        self._has_explanation_diagram = has_explanation_diagram
-
-    @property
-    def has_example(self):
-        """Gets the has_example of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_example of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_example
-
-    @has_example.setter
-    def has_example(self, has_example):
-        """Sets the has_example of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_example: The has_example of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_example = has_example
-
-    @property
-    def publisher(self):
-        """Gets the publisher of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The publisher of this CoupledModel.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._publisher
-
-    @publisher.setter
-    def publisher(self, publisher):
-        """Sets the publisher of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param publisher: The publisher of this CoupledModel.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._publisher = publisher
-
-    @property
-    def doi(self):
-        """Gets the doi of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The doi of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._doi
-
-    @doi.setter
-    def doi(self, doi):
-        """Sets the doi of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param doi: The doi of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._doi = doi
-
-    @property
-    def has_funding(self):
-        """Gets the has_funding of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_funding of this CoupledModel.  # noqa: E501
-        :rtype: list[FundingInformation]
-        """
-        return self._has_funding
-
-    @has_funding.setter
-    def has_funding(self, has_funding):
-        """Sets the has_funding of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_funding: The has_funding of this CoupledModel.  # noqa: E501
-        :type: list[FundingInformation]
-        """
-
-        self._has_funding = has_funding
-
-    @property
-    def support_details(self):
-        """Gets the support_details of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The support_details of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._support_details
-
-    @support_details.setter
-    def support_details(self, support_details):
-        """Sets the support_details of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param support_details: The support_details of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._support_details = support_details
-
-    @property
-    def has_version(self):
-        """Gets the has_version of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_version of this CoupledModel.  # noqa: E501
-        :rtype: list[SoftwareVersion]
-        """
-        return self._has_version
-
-    @has_version.setter
-    def has_version(self, has_version):
-        """Sets the has_version of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_version: The has_version of this CoupledModel.  # noqa: E501
-        :type: list[SoftwareVersion]
-        """
-
-        self._has_version = has_version
-
-    @property
-    def has_typical_data_source(self):
-        """Gets the has_typical_data_source of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_typical_data_source of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_typical_data_source
-
-    @has_typical_data_source.setter
-    def has_typical_data_source(self, has_typical_data_source):
-        """Sets the has_typical_data_source of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_typical_data_source: The has_typical_data_source of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_typical_data_source = has_typical_data_source
-
-    @property
-    def description(self):
-        """Gets the description of this CoupledModel.  # noqa: E501
-
-        small description  # noqa: E501
-
-        :return: The description of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this CoupledModel.
-
-        small description  # noqa: E501
-
-        :param description: The description of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._description = description
-
-    @property
-    def reference_publication(self):
-        """Gets the reference_publication of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The reference_publication of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._reference_publication
-
-    @reference_publication.setter
-    def reference_publication(self, reference_publication):
-        """Sets the reference_publication of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param reference_publication: The reference_publication of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._reference_publication = reference_publication
-
-    @property
-    def screenshot(self):
-        """Gets the screenshot of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The screenshot of this CoupledModel.  # noqa: E501
-        :rtype: list[Image]
-        """
-        return self._screenshot
-
-    @screenshot.setter
-    def screenshot(self, screenshot):
-        """Sets the screenshot of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param screenshot: The screenshot of this CoupledModel.  # noqa: E501
-        :type: list[Image]
-        """
-
-        self._screenshot = screenshot
-
-    @property
-    def uses_model(self):
-        """Gets the uses_model of this CoupledModel.  # noqa: E501
-
-        Property that describes which models are used by a coupled model  # noqa: E501
-
-        :return: The uses_model of this CoupledModel.  # noqa: E501
-        :rtype: list[Model]
-        """
-        return self._uses_model
-
-    @uses_model.setter
-    def uses_model(self, uses_model):
-        """Sets the uses_model of this CoupledModel.
-
-        Property that describes which models are used by a coupled model  # noqa: E501
-
-        :param uses_model: The uses_model of this CoupledModel.  # noqa: E501
-        :type: list[Model]
-        """
-
-        self._uses_model = uses_model
-
-    @property
-    def has_model_category(self):
-        """Gets the has_model_category of this CoupledModel.  # noqa: E501
-
-        Category associated with a model (e.g., Hydrology, etc.)  # noqa: E501
-
-        :return: The has_model_category of this CoupledModel.  # noqa: E501
-        :rtype: list[ModelCategory]
-        """
-        return self._has_model_category
-
-    @has_model_category.setter
-    def has_model_category(self, has_model_category):
-        """Sets the has_model_category of this CoupledModel.
-
-        Category associated with a model (e.g., Hydrology, etc.)  # noqa: E501
-
-        :param has_model_category: The has_model_category of this CoupledModel.  # noqa: E501
-        :type: list[ModelCategory]
-        """
-
-        self._has_model_category = has_model_category
-
-    @property
-    def had_primary_source(self):
-        """Gets the had_primary_source of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The had_primary_source of this CoupledModel.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._had_primary_source
-
-    @had_primary_source.setter
-    def had_primary_source(self, had_primary_source):
-        """Sets the had_primary_source of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param had_primary_source: The had_primary_source of this CoupledModel.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._had_primary_source = had_primary_source
-
-    @property
     def issue_tracker(self):
         """Gets the issue_tracker of this CoupledModel.  # noqa: E501
 
@@ -1084,257 +1158,27 @@ class CoupledModel(object):
         self._issue_tracker = issue_tracker
 
     @property
-    def date_created(self):
-        """Gets the date_created of this CoupledModel.  # noqa: E501
+    def keywords(self):
+        """Gets the keywords of this CoupledModel.  # noqa: E501
 
         Description not available  # noqa: E501
 
-        :return: The date_created of this CoupledModel.  # noqa: E501
+        :return: The keywords of this CoupledModel.  # noqa: E501
         :rtype: list[str]
         """
-        return self._date_created
+        return self._keywords
 
-    @date_created.setter
-    def date_created(self, date_created):
-        """Sets the date_created of this CoupledModel.
+    @keywords.setter
+    def keywords(self, keywords):
+        """Sets the keywords of this CoupledModel.
 
         Description not available  # noqa: E501
 
-        :param date_created: The date_created of this CoupledModel.  # noqa: E501
+        :param keywords: The keywords of this CoupledModel.  # noqa: E501
         :type: list[str]
         """
 
-        self._date_created = date_created
-
-    @property
-    def contributor(self):
-        """Gets the contributor of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The contributor of this CoupledModel.  # noqa: E501
-        :rtype: list[Person]
-        """
-        return self._contributor
-
-    @contributor.setter
-    def contributor(self, contributor):
-        """Sets the contributor of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param contributor: The contributor of this CoupledModel.  # noqa: E501
-        :type: list[Person]
-        """
-
-        self._contributor = contributor
-
-    @property
-    def has_purpose(self):
-        """Gets the has_purpose of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_purpose of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_purpose
-
-    @has_purpose.setter
-    def has_purpose(self, has_purpose):
-        """Sets the has_purpose of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_purpose: The has_purpose of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_purpose = has_purpose
-
-    @property
-    def has_executable_instructions(self):
-        """Gets the has_executable_instructions of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_executable_instructions of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_executable_instructions
-
-    @has_executable_instructions.setter
-    def has_executable_instructions(self, has_executable_instructions):
-        """Sets the has_executable_instructions of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_executable_instructions: The has_executable_instructions of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_executable_instructions = has_executable_instructions
-
-    @property
-    def has_sample_visualization(self):
-        """Gets the has_sample_visualization of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_sample_visualization of this CoupledModel.  # noqa: E501
-        :rtype: list[Visualization]
-        """
-        return self._has_sample_visualization
-
-    @has_sample_visualization.setter
-    def has_sample_visualization(self, has_sample_visualization):
-        """Sets the has_sample_visualization of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_sample_visualization: The has_sample_visualization of this CoupledModel.  # noqa: E501
-        :type: list[Visualization]
-        """
-
-        self._has_sample_visualization = has_sample_visualization
-
-    @property
-    def memory_requirements(self):
-        """Gets the memory_requirements of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The memory_requirements of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._memory_requirements
-
-    @memory_requirements.setter
-    def memory_requirements(self, memory_requirements):
-        """Sets the memory_requirements of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param memory_requirements: The memory_requirements of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._memory_requirements = memory_requirements
-
-    @property
-    def website(self):
-        """Gets the website of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The website of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._website
-
-    @website.setter
-    def website(self, website):
-        """Sets the website of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param website: The website of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._website = website
-
-    @property
-    def citation(self):
-        """Gets the citation of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The citation of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._citation
-
-    @citation.setter
-    def citation(self, citation):
-        """Sets the citation of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param citation: The citation of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._citation = citation
-
-    @property
-    def processor_requirements(self):
-        """Gets the processor_requirements of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The processor_requirements of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._processor_requirements
-
-    @processor_requirements.setter
-    def processor_requirements(self, processor_requirements):
-        """Sets the processor_requirements of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param processor_requirements: The processor_requirements of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._processor_requirements = processor_requirements
-
-    @property
-    def has_usage_notes(self):
-        """Gets the has_usage_notes of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_usage_notes of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_usage_notes
-
-    @has_usage_notes.setter
-    def has_usage_notes(self, has_usage_notes):
-        """Sets the has_usage_notes of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param has_usage_notes: The has_usage_notes of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_usage_notes = has_usage_notes
-
-    @property
-    def readme(self):
-        """Gets the readme of this CoupledModel.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The readme of this CoupledModel.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._readme
-
-    @readme.setter
-    def readme(self, readme):
-        """Sets the readme of this CoupledModel.
-
-        Description not available  # noqa: E501
-
-        :param readme: The readme of this CoupledModel.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._readme = readme
+        self._keywords = keywords
 
     @property
     def label(self):
@@ -1360,27 +1204,96 @@ class CoupledModel(object):
         self._label = label
 
     @property
-    def has_assumption(self):
-        """Gets the has_assumption of this CoupledModel.  # noqa: E501
+    def license(self):
+        """Gets the license of this CoupledModel.  # noqa: E501
 
         Description not available  # noqa: E501
 
-        :return: The has_assumption of this CoupledModel.  # noqa: E501
+        :return: The license of this CoupledModel.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_assumption
+        return self._license
 
-    @has_assumption.setter
-    def has_assumption(self, has_assumption):
-        """Sets the has_assumption of this CoupledModel.
+    @license.setter
+    def license(self, license):
+        """Sets the license of this CoupledModel.
 
         Description not available  # noqa: E501
 
-        :param has_assumption: The has_assumption of this CoupledModel.  # noqa: E501
+        :param license: The license of this CoupledModel.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_assumption = has_assumption
+        self._license = license
+
+    @property
+    def limitations(self):
+        """Gets the limitations of this CoupledModel.  # noqa: E501
+
+        Known restrictions (i.e. cases where the model is known not to be reliable or shouldn't be used)  # noqa: E501
+
+        :return: The limitations of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._limitations
+
+    @limitations.setter
+    def limitations(self, limitations):
+        """Sets the limitations of this CoupledModel.
+
+        Known restrictions (i.e. cases where the model is known not to be reliable or shouldn't be used)  # noqa: E501
+
+        :param limitations: The limitations of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._limitations = limitations
+
+    @property
+    def logo(self):
+        """Gets the logo of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The logo of this CoupledModel.  # noqa: E501
+        :rtype: list[Image]
+        """
+        return self._logo
+
+    @logo.setter
+    def logo(self, logo):
+        """Sets the logo of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param logo: The logo of this CoupledModel.  # noqa: E501
+        :type: list[Image]
+        """
+
+        self._logo = logo
+
+    @property
+    def memory_requirements(self):
+        """Gets the memory_requirements of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The memory_requirements of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._memory_requirements
+
+    @memory_requirements.setter
+    def memory_requirements(self, memory_requirements):
+        """Sets the memory_requirements of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param memory_requirements: The memory_requirements of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._memory_requirements = memory_requirements
 
     @property
     def operating_systems(self):
@@ -1406,50 +1319,280 @@ class CoupledModel(object):
         self._operating_systems = operating_systems
 
     @property
-    def has_executable_notebook(self):
-        """Gets the has_executable_notebook of this CoupledModel.  # noqa: E501
+    def parameterization(self):
+        """Gets the parameterization of this CoupledModel.  # noqa: E501
 
-        Description not available  # noqa: E501
+        Were there any simplifications made to processes to make the model more efficient  # noqa: E501
 
-        :return: The has_executable_notebook of this CoupledModel.  # noqa: E501
+        :return: The parameterization of this CoupledModel.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_executable_notebook
+        return self._parameterization
 
-    @has_executable_notebook.setter
-    def has_executable_notebook(self, has_executable_notebook):
-        """Sets the has_executable_notebook of this CoupledModel.
+    @parameterization.setter
+    def parameterization(self, parameterization):
+        """Sets the parameterization of this CoupledModel.
 
-        Description not available  # noqa: E501
+        Were there any simplifications made to processes to make the model more efficient  # noqa: E501
 
-        :param has_executable_notebook: The has_executable_notebook of this CoupledModel.  # noqa: E501
+        :param parameterization: The parameterization of this CoupledModel.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_executable_notebook = has_executable_notebook
+        self._parameterization = parameterization
 
     @property
-    def has_equation(self):
-        """Gets the has_equation of this CoupledModel.  # noqa: E501
+    def processor_requirements(self):
+        """Gets the processor_requirements of this CoupledModel.  # noqa: E501
 
-        Equations used in the model  # noqa: E501
+        Description not available  # noqa: E501
 
-        :return: The has_equation of this CoupledModel.  # noqa: E501
-        :rtype: list[Equation]
+        :return: The processor_requirements of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._has_equation
+        return self._processor_requirements
 
-    @has_equation.setter
-    def has_equation(self, has_equation):
-        """Sets the has_equation of this CoupledModel.
+    @processor_requirements.setter
+    def processor_requirements(self, processor_requirements):
+        """Sets the processor_requirements of this CoupledModel.
 
-        Equations used in the model  # noqa: E501
+        Description not available  # noqa: E501
 
-        :param has_equation: The has_equation of this CoupledModel.  # noqa: E501
-        :type: list[Equation]
+        :param processor_requirements: The processor_requirements of this CoupledModel.  # noqa: E501
+        :type: list[str]
         """
 
-        self._has_equation = has_equation
+        self._processor_requirements = processor_requirements
+
+    @property
+    def publisher(self):
+        """Gets the publisher of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The publisher of this CoupledModel.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._publisher
+
+    @publisher.setter
+    def publisher(self, publisher):
+        """Sets the publisher of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param publisher: The publisher of this CoupledModel.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._publisher = publisher
+
+    @property
+    def readme(self):
+        """Gets the readme of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The readme of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._readme
+
+    @readme.setter
+    def readme(self, readme):
+        """Sets the readme of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param readme: The readme of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._readme = readme
+
+    @property
+    def reference_publication(self):
+        """Gets the reference_publication of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The reference_publication of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._reference_publication
+
+    @reference_publication.setter
+    def reference_publication(self, reference_publication):
+        """Sets the reference_publication of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param reference_publication: The reference_publication of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._reference_publication = reference_publication
+
+    @property
+    def runtime_estimation(self):
+        """Gets the runtime_estimation of this CoupledModel.  # noqa: E501
+
+        An estimate of the time required to run example codes or other known configurations  # noqa: E501
+
+        :return: The runtime_estimation of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._runtime_estimation
+
+    @runtime_estimation.setter
+    def runtime_estimation(self, runtime_estimation):
+        """Sets the runtime_estimation of this CoupledModel.
+
+        An estimate of the time required to run example codes or other known configurations  # noqa: E501
+
+        :param runtime_estimation: The runtime_estimation of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._runtime_estimation = runtime_estimation
+
+    @property
+    def screenshot(self):
+        """Gets the screenshot of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The screenshot of this CoupledModel.  # noqa: E501
+        :rtype: list[Image]
+        """
+        return self._screenshot
+
+    @screenshot.setter
+    def screenshot(self, screenshot):
+        """Sets the screenshot of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param screenshot: The screenshot of this CoupledModel.  # noqa: E501
+        :type: list[Image]
+        """
+
+        self._screenshot = screenshot
+
+    @property
+    def short_description(self):
+        """Gets the short_description of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The short_description of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._short_description
+
+    @short_description.setter
+    def short_description(self, short_description):
+        """Sets the short_description of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param short_description: The short_description of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._short_description = short_description
+
+    @property
+    def software_requirements(self):
+        """Gets the software_requirements of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The software_requirements of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._software_requirements
+
+    @software_requirements.setter
+    def software_requirements(self, software_requirements):
+        """Sets the software_requirements of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param software_requirements: The software_requirements of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._software_requirements = software_requirements
+
+    @property
+    def support_details(self):
+        """Gets the support_details of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The support_details of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._support_details
+
+    @support_details.setter
+    def support_details(self, support_details):
+        """Sets the support_details of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param support_details: The support_details of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._support_details = support_details
+
+    @property
+    def theoretical_basis(self):
+        """Gets the theoretical_basis of this CoupledModel.  # noqa: E501
+
+        What is the theory behind the processes described in the model  # noqa: E501
+
+        :return: The theoretical_basis of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._theoretical_basis
+
+    @theoretical_basis.setter
+    def theoretical_basis(self, theoretical_basis):
+        """Sets the theoretical_basis of this CoupledModel.
+
+        What is the theory behind the processes described in the model  # noqa: E501
+
+        :param theoretical_basis: The theoretical_basis of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._theoretical_basis = theoretical_basis
+
+    @property
+    def type(self):
+        """Gets the type of this CoupledModel.  # noqa: E501
+
+        type of the resource  # noqa: E501
+
+        :return: The type of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this CoupledModel.
+
+        type of the resource  # noqa: E501
+
+        :param type: The type of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._type = type
 
     @property
     def useful_for_calculating_index(self):
@@ -1473,6 +1616,52 @@ class CoupledModel(object):
         """
 
         self._useful_for_calculating_index = useful_for_calculating_index
+
+    @property
+    def uses_model(self):
+        """Gets the uses_model of this CoupledModel.  # noqa: E501
+
+        Property that describes which models are used by a coupled model  # noqa: E501
+
+        :return: The uses_model of this CoupledModel.  # noqa: E501
+        :rtype: list[Model]
+        """
+        return self._uses_model
+
+    @uses_model.setter
+    def uses_model(self, uses_model):
+        """Sets the uses_model of this CoupledModel.
+
+        Property that describes which models are used by a coupled model  # noqa: E501
+
+        :param uses_model: The uses_model of this CoupledModel.  # noqa: E501
+        :type: list[Model]
+        """
+
+        self._uses_model = uses_model
+
+    @property
+    def website(self):
+        """Gets the website of this CoupledModel.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The website of this CoupledModel.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._website
+
+    @website.setter
+    def website(self, website):
+        """Sets the website of this CoupledModel.
+
+        Description not available  # noqa: E501
+
+        :param website: The website of this CoupledModel.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._website = website
 
     def to_dict(self):
         """Returns the model properties as a dict"""

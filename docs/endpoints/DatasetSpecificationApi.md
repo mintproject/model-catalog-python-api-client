@@ -4,12 +4,130 @@ All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**custom_configuration_id_inputs_get**](DatasetSpecificationApi.md#custom_configuration_id_inputs_get) | **GET** /custom/configuration/{id}/inputs | Gets all inputs of a configuration
+[**custom_datasetspecifications_get**](DatasetSpecificationApi.md#custom_datasetspecifications_get) | **GET** /custom/datasetspecifications | Gets all inputs of a configuration
 [**datasetspecifications_get**](DatasetSpecificationApi.md#datasetspecifications_get) | **GET** /datasetspecifications | List all instances of DatasetSpecification
 [**datasetspecifications_id_delete**](DatasetSpecificationApi.md#datasetspecifications_id_delete) | **DELETE** /datasetspecifications/{id} | Delete an existing DatasetSpecification
 [**datasetspecifications_id_get**](DatasetSpecificationApi.md#datasetspecifications_id_get) | **GET** /datasetspecifications/{id} | Get a single DatasetSpecification by its id
 [**datasetspecifications_id_put**](DatasetSpecificationApi.md#datasetspecifications_id_put) | **PUT** /datasetspecifications/{id} | Update an existing DatasetSpecification
 [**datasetspecifications_post**](DatasetSpecificationApi.md#datasetspecifications_post) | **POST** /datasetspecifications | Create one DatasetSpecification
 
+
+# **custom_configuration_id_inputs_get**
+> list[DatasetSpecification] custom_configuration_id_inputs_get(id, username=username, custom_query_name=custom_query_name)
+
+Gets all inputs of a configuration
+
+Gets all inputs of a configuration
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import modelcatalog
+from modelcatalog.rest import ApiException
+from pprint import pprint
+
+# Create an instance of the API class
+api_instance = modelcatalog.DatasetSpecificationApi()
+id = 'id_example' # str | The ID of the resource
+username = 'username_example' # str | Username to query (optional)
+custom_query_name = 'search_datasetspecification_by_configurationid' # str | Name of the custom query (optional) (default to 'search_datasetspecification_by_configurationid')
+
+try:
+    # Gets all inputs of a configuration
+    api_response = api_instance.custom_configuration_id_inputs_get(id, username=username, custom_query_name=custom_query_name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DatasetSpecificationApi->custom_configuration_id_inputs_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| The ID of the resource | 
+ **username** | **str**| Username to query | [optional] 
+ **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;search_datasetspecification_by_configurationid&#39;]
+
+### Return type
+
+[**list[DatasetSpecification]**](DatasetSpecification.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets all inputs of a configuration |  -  |
+
+[[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
+
+# **custom_datasetspecifications_get**
+> list[DatasetSpecification] custom_datasetspecifications_get(configurationid, username=username, custom_query_name=custom_query_name)
+
+Gets all inputs of a configuration
+
+Gets all inputs of a configuration
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import modelcatalog
+from modelcatalog.rest import ApiException
+from pprint import pprint
+
+# Create an instance of the API class
+api_instance = modelcatalog.DatasetSpecificationApi()
+configurationid = 'configurationid_example' # str | The ID of the configuration
+username = 'username_example' # str | Username to query (optional)
+custom_query_name = 'custom_allinputs' # str | Name of the custom query (optional) (default to 'custom_allinputs')
+
+try:
+    # Gets all inputs of a configuration
+    api_response = api_instance.custom_datasetspecifications_get(configurationid, username=username, custom_query_name=custom_query_name)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DatasetSpecificationApi->custom_datasetspecifications_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **configurationid** | **str**| The ID of the configuration | 
+ **username** | **str**| Username to query | [optional] 
+ **custom_query_name** | **str**| Name of the custom query | [optional] [default to &#39;custom_allinputs&#39;]
+
+### Return type
+
+[**list[DatasetSpecification]**](DatasetSpecification.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Gets all inputs of a configuration |  -  |
+
+[[Back to top]](#) [[Back to API list]](../#documentation-for-api-endpoints) [[Back to Model list]](../#documentation-for-models) [[Back to README]](../)
 
 # **datasetspecifications_get**
 > list[DatasetSpecification] datasetspecifications_get(username=username, label=label, page=page, per_page=per_page)

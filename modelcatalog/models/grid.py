@@ -31,181 +31,89 @@ class Grid(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_dimensionality': 'list[int]',
-        'has_format': 'list[str]',
-        'path_location': 'list[str]',
-        'has_file_structure': 'list[object]',
         'description': 'list[str]',
-        'has_data_transformation': 'list[DataTransformation]',
-        'has_presentation': 'list[VariablePresentation]',
-        'label': 'list[str]',
-        'type': 'list[str]',
-        'has_fixed_resource': 'list[SampleResource]',
         'has_coordinate_system': 'list[str]',
-        'has_spatial_resolution': 'list[str]',
-        'is_transformed_from': 'list[DatasetSpecification]',
-        'has_shape': 'list[str]',
-        'has_dimension': 'list[str]',
+        'has_data_transformation': 'list[DataTransformation]',
         'has_data_transformation_setup': 'list[DataTransformationSetup]',
+        'has_dimension': 'list[str]',
+        'has_dimensionality': 'list[int]',
+        'has_file_structure': 'list[object]',
+        'has_fixed_resource': 'list[SampleResource]',
+        'has_format': 'list[str]',
+        'has_presentation': 'list[VariablePresentation]',
+        'has_shape': 'list[str]',
+        'has_spatial_resolution': 'list[str]',
+        'id': 'str',
+        'is_transformed_from': 'list[DatasetSpecification]',
+        'label': 'list[str]',
+        'path_location': 'list[str]',
         'position': 'list[int]',
-        'id': 'str'
+        'type': 'list[str]'
     }
 
     attribute_map = {
-        'has_dimensionality': 'hasDimensionality',
-        'has_format': 'hasFormat',
-        'path_location': 'pathLocation',
-        'has_file_structure': 'hasFileStructure',
         'description': 'description',
-        'has_data_transformation': 'hasDataTransformation',
-        'has_presentation': 'hasPresentation',
-        'label': 'label',
-        'type': 'type',
-        'has_fixed_resource': 'hasFixedResource',
         'has_coordinate_system': 'hasCoordinateSystem',
-        'has_spatial_resolution': 'hasSpatialResolution',
-        'is_transformed_from': 'isTransformedFrom',
-        'has_shape': 'hasShape',
-        'has_dimension': 'hasDimension',
+        'has_data_transformation': 'hasDataTransformation',
         'has_data_transformation_setup': 'hasDataTransformationSetup',
+        'has_dimension': 'hasDimension',
+        'has_dimensionality': 'hasDimensionality',
+        'has_file_structure': 'hasFileStructure',
+        'has_fixed_resource': 'hasFixedResource',
+        'has_format': 'hasFormat',
+        'has_presentation': 'hasPresentation',
+        'has_shape': 'hasShape',
+        'has_spatial_resolution': 'hasSpatialResolution',
+        'id': 'id',
+        'is_transformed_from': 'isTransformedFrom',
+        'label': 'label',
+        'path_location': 'pathLocation',
         'position': 'position',
-        'id': 'id'
+        'type': 'type'
     }
 
-    def __init__(self, has_dimensionality=None, has_format=None, path_location=None, has_file_structure=None, description=None, has_data_transformation=None, has_presentation=None, label=None, type=None, has_fixed_resource=None, has_coordinate_system=None, has_spatial_resolution=None, is_transformed_from=None, has_shape=None, has_dimension=None, has_data_transformation_setup=None, position=None, id=None):  # noqa: E501
+    def __init__(self, description=None, has_coordinate_system=None, has_data_transformation=None, has_data_transformation_setup=None, has_dimension=None, has_dimensionality=None, has_file_structure=None, has_fixed_resource=None, has_format=None, has_presentation=None, has_shape=None, has_spatial_resolution=None, id=None, is_transformed_from=None, label=None, path_location=None, position=None, type=None):  # noqa: E501
         """Grid - a model defined in OpenAPI"""  # noqa: E501
 
-        self._has_dimensionality = None
-        self._has_format = None
-        self._path_location = None
-        self._has_file_structure = None
         self._description = None
-        self._has_data_transformation = None
-        self._has_presentation = None
-        self._label = None
-        self._type = None
-        self._has_fixed_resource = None
         self._has_coordinate_system = None
-        self._has_spatial_resolution = None
-        self._is_transformed_from = None
-        self._has_shape = None
-        self._has_dimension = None
+        self._has_data_transformation = None
         self._has_data_transformation_setup = None
-        self._position = None
+        self._has_dimension = None
+        self._has_dimensionality = None
+        self._has_file_structure = None
+        self._has_fixed_resource = None
+        self._has_format = None
+        self._has_presentation = None
+        self._has_shape = None
+        self._has_spatial_resolution = None
         self._id = None
+        self._is_transformed_from = None
+        self._label = None
+        self._path_location = None
+        self._position = None
+        self._type = None
         self.discriminator = None
 
-        self.has_dimensionality = has_dimensionality
-        self.has_format = has_format
-        self.path_location = path_location
-        self.has_file_structure = has_file_structure
         self.description = description
-        self.has_data_transformation = has_data_transformation
-        self.has_presentation = has_presentation
-        self.label = label
-        self.type = type
-        self.has_fixed_resource = has_fixed_resource
         self.has_coordinate_system = has_coordinate_system
-        self.has_spatial_resolution = has_spatial_resolution
-        self.is_transformed_from = is_transformed_from
-        self.has_shape = has_shape
-        self.has_dimension = has_dimension
+        self.has_data_transformation = has_data_transformation
         self.has_data_transformation_setup = has_data_transformation_setup
-        self.position = position
+        self.has_dimension = has_dimension
+        self.has_dimensionality = has_dimensionality
+        self.has_file_structure = has_file_structure
+        self.has_fixed_resource = has_fixed_resource
+        self.has_format = has_format
+        self.has_presentation = has_presentation
+        self.has_shape = has_shape
+        self.has_spatial_resolution = has_spatial_resolution
         if id is not None:
             self.id = id
-
-    @property
-    def has_dimensionality(self):
-        """Gets the has_dimensionality of this Grid.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_dimensionality of this Grid.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._has_dimensionality
-
-    @has_dimensionality.setter
-    def has_dimensionality(self, has_dimensionality):
-        """Sets the has_dimensionality of this Grid.
-
-        Description not available  # noqa: E501
-
-        :param has_dimensionality: The has_dimensionality of this Grid.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._has_dimensionality = has_dimensionality
-
-    @property
-    def has_format(self):
-        """Gets the has_format of this Grid.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_format of this Grid.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_format
-
-    @has_format.setter
-    def has_format(self, has_format):
-        """Sets the has_format of this Grid.
-
-        Description not available  # noqa: E501
-
-        :param has_format: The has_format of this Grid.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_format = has_format
-
-    @property
-    def path_location(self):
-        """Gets the path_location of this Grid.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The path_location of this Grid.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._path_location
-
-    @path_location.setter
-    def path_location(self, path_location):
-        """Sets the path_location of this Grid.
-
-        Description not available  # noqa: E501
-
-        :param path_location: The path_location of this Grid.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._path_location = path_location
-
-    @property
-    def has_file_structure(self):
-        """Gets the has_file_structure of this Grid.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_file_structure of this Grid.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._has_file_structure
-
-    @has_file_structure.setter
-    def has_file_structure(self, has_file_structure):
-        """Sets the has_file_structure of this Grid.
-
-        Description not available  # noqa: E501
-
-        :param has_file_structure: The has_file_structure of this Grid.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._has_file_structure = has_file_structure
+        self.is_transformed_from = is_transformed_from
+        self.label = label
+        self.path_location = path_location
+        self.position = position
+        self.type = type
 
     @property
     def description(self):
@@ -231,121 +139,6 @@ class Grid(object):
         self._description = description
 
     @property
-    def has_data_transformation(self):
-        """Gets the has_data_transformation of this Grid.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_data_transformation of this Grid.  # noqa: E501
-        :rtype: list[DataTransformation]
-        """
-        return self._has_data_transformation
-
-    @has_data_transformation.setter
-    def has_data_transformation(self, has_data_transformation):
-        """Sets the has_data_transformation of this Grid.
-
-        Description not available  # noqa: E501
-
-        :param has_data_transformation: The has_data_transformation of this Grid.  # noqa: E501
-        :type: list[DataTransformation]
-        """
-
-        self._has_data_transformation = has_data_transformation
-
-    @property
-    def has_presentation(self):
-        """Gets the has_presentation of this Grid.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_presentation of this Grid.  # noqa: E501
-        :rtype: list[VariablePresentation]
-        """
-        return self._has_presentation
-
-    @has_presentation.setter
-    def has_presentation(self, has_presentation):
-        """Sets the has_presentation of this Grid.
-
-        Description not available  # noqa: E501
-
-        :param has_presentation: The has_presentation of this Grid.  # noqa: E501
-        :type: list[VariablePresentation]
-        """
-
-        self._has_presentation = has_presentation
-
-    @property
-    def label(self):
-        """Gets the label of this Grid.  # noqa: E501
-
-        short description of the resource  # noqa: E501
-
-        :return: The label of this Grid.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._label
-
-    @label.setter
-    def label(self, label):
-        """Sets the label of this Grid.
-
-        short description of the resource  # noqa: E501
-
-        :param label: The label of this Grid.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._label = label
-
-    @property
-    def type(self):
-        """Gets the type of this Grid.  # noqa: E501
-
-        type of the resource  # noqa: E501
-
-        :return: The type of this Grid.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this Grid.
-
-        type of the resource  # noqa: E501
-
-        :param type: The type of this Grid.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._type = type
-
-    @property
-    def has_fixed_resource(self):
-        """Gets the has_fixed_resource of this Grid.  # noqa: E501
-
-        Description not available  # noqa: E501
-
-        :return: The has_fixed_resource of this Grid.  # noqa: E501
-        :rtype: list[SampleResource]
-        """
-        return self._has_fixed_resource
-
-    @has_fixed_resource.setter
-    def has_fixed_resource(self, has_fixed_resource):
-        """Sets the has_fixed_resource of this Grid.
-
-        Description not available  # noqa: E501
-
-        :param has_fixed_resource: The has_fixed_resource of this Grid.  # noqa: E501
-        :type: list[SampleResource]
-        """
-
-        self._has_fixed_resource = has_fixed_resource
-
-    @property
     def has_coordinate_system(self):
         """Gets the has_coordinate_system of this Grid.  # noqa: E501
 
@@ -369,96 +162,27 @@ class Grid(object):
         self._has_coordinate_system = has_coordinate_system
 
     @property
-    def has_spatial_resolution(self):
-        """Gets the has_spatial_resolution of this Grid.  # noqa: E501
-
-        Spatial resolution of a grid (e.g., 50m)  # noqa: E501
-
-        :return: The has_spatial_resolution of this Grid.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_spatial_resolution
-
-    @has_spatial_resolution.setter
-    def has_spatial_resolution(self, has_spatial_resolution):
-        """Sets the has_spatial_resolution of this Grid.
-
-        Spatial resolution of a grid (e.g., 50m)  # noqa: E501
-
-        :param has_spatial_resolution: The has_spatial_resolution of this Grid.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_spatial_resolution = has_spatial_resolution
-
-    @property
-    def is_transformed_from(self):
-        """Gets the is_transformed_from of this Grid.  # noqa: E501
+    def has_data_transformation(self):
+        """Gets the has_data_transformation of this Grid.  # noqa: E501
 
         Description not available  # noqa: E501
 
-        :return: The is_transformed_from of this Grid.  # noqa: E501
-        :rtype: list[DatasetSpecification]
+        :return: The has_data_transformation of this Grid.  # noqa: E501
+        :rtype: list[DataTransformation]
         """
-        return self._is_transformed_from
+        return self._has_data_transformation
 
-    @is_transformed_from.setter
-    def is_transformed_from(self, is_transformed_from):
-        """Sets the is_transformed_from of this Grid.
+    @has_data_transformation.setter
+    def has_data_transformation(self, has_data_transformation):
+        """Sets the has_data_transformation of this Grid.
 
         Description not available  # noqa: E501
 
-        :param is_transformed_from: The is_transformed_from of this Grid.  # noqa: E501
-        :type: list[DatasetSpecification]
+        :param has_data_transformation: The has_data_transformation of this Grid.  # noqa: E501
+        :type: list[DataTransformation]
         """
 
-        self._is_transformed_from = is_transformed_from
-
-    @property
-    def has_shape(self):
-        """Gets the has_shape of this Grid.  # noqa: E501
-
-        Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc.  # noqa: E501
-
-        :return: The has_shape of this Grid.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_shape
-
-    @has_shape.setter
-    def has_shape(self, has_shape):
-        """Sets the has_shape of this Grid.
-
-        Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc.  # noqa: E501
-
-        :param has_shape: The has_shape of this Grid.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_shape = has_shape
-
-    @property
-    def has_dimension(self):
-        """Gets the has_dimension of this Grid.  # noqa: E501
-
-        Dimension of the grid (2D, 3D)  # noqa: E501
-
-        :return: The has_dimension of this Grid.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_dimension
-
-    @has_dimension.setter
-    def has_dimension(self, has_dimension):
-        """Sets the has_dimension of this Grid.
-
-        Dimension of the grid (2D, 3D)  # noqa: E501
-
-        :param has_dimension: The has_dimension of this Grid.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_dimension = has_dimension
+        self._has_data_transformation = has_data_transformation
 
     @property
     def has_data_transformation_setup(self):
@@ -484,27 +208,188 @@ class Grid(object):
         self._has_data_transformation_setup = has_data_transformation_setup
 
     @property
-    def position(self):
-        """Gets the position of this Grid.  # noqa: E501
+    def has_dimension(self):
+        """Gets the has_dimension of this Grid.  # noqa: E501
+
+        Dimension of the grid (2D, 3D)  # noqa: E501
+
+        :return: The has_dimension of this Grid.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_dimension
+
+    @has_dimension.setter
+    def has_dimension(self, has_dimension):
+        """Sets the has_dimension of this Grid.
+
+        Dimension of the grid (2D, 3D)  # noqa: E501
+
+        :param has_dimension: The has_dimension of this Grid.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_dimension = has_dimension
+
+    @property
+    def has_dimensionality(self):
+        """Gets the has_dimensionality of this Grid.  # noqa: E501
 
         Description not available  # noqa: E501
 
-        :return: The position of this Grid.  # noqa: E501
+        :return: The has_dimensionality of this Grid.  # noqa: E501
         :rtype: list[int]
         """
-        return self._position
+        return self._has_dimensionality
 
-    @position.setter
-    def position(self, position):
-        """Sets the position of this Grid.
+    @has_dimensionality.setter
+    def has_dimensionality(self, has_dimensionality):
+        """Sets the has_dimensionality of this Grid.
 
         Description not available  # noqa: E501
 
-        :param position: The position of this Grid.  # noqa: E501
+        :param has_dimensionality: The has_dimensionality of this Grid.  # noqa: E501
         :type: list[int]
         """
 
-        self._position = position
+        self._has_dimensionality = has_dimensionality
+
+    @property
+    def has_file_structure(self):
+        """Gets the has_file_structure of this Grid.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_file_structure of this Grid.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._has_file_structure
+
+    @has_file_structure.setter
+    def has_file_structure(self, has_file_structure):
+        """Sets the has_file_structure of this Grid.
+
+        Description not available  # noqa: E501
+
+        :param has_file_structure: The has_file_structure of this Grid.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._has_file_structure = has_file_structure
+
+    @property
+    def has_fixed_resource(self):
+        """Gets the has_fixed_resource of this Grid.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_fixed_resource of this Grid.  # noqa: E501
+        :rtype: list[SampleResource]
+        """
+        return self._has_fixed_resource
+
+    @has_fixed_resource.setter
+    def has_fixed_resource(self, has_fixed_resource):
+        """Sets the has_fixed_resource of this Grid.
+
+        Description not available  # noqa: E501
+
+        :param has_fixed_resource: The has_fixed_resource of this Grid.  # noqa: E501
+        :type: list[SampleResource]
+        """
+
+        self._has_fixed_resource = has_fixed_resource
+
+    @property
+    def has_format(self):
+        """Gets the has_format of this Grid.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_format of this Grid.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_format
+
+    @has_format.setter
+    def has_format(self, has_format):
+        """Sets the has_format of this Grid.
+
+        Description not available  # noqa: E501
+
+        :param has_format: The has_format of this Grid.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_format = has_format
+
+    @property
+    def has_presentation(self):
+        """Gets the has_presentation of this Grid.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The has_presentation of this Grid.  # noqa: E501
+        :rtype: list[VariablePresentation]
+        """
+        return self._has_presentation
+
+    @has_presentation.setter
+    def has_presentation(self, has_presentation):
+        """Sets the has_presentation of this Grid.
+
+        Description not available  # noqa: E501
+
+        :param has_presentation: The has_presentation of this Grid.  # noqa: E501
+        :type: list[VariablePresentation]
+        """
+
+        self._has_presentation = has_presentation
+
+    @property
+    def has_shape(self):
+        """Gets the has_shape of this Grid.  # noqa: E501
+
+        Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc.  # noqa: E501
+
+        :return: The has_shape of this Grid.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_shape
+
+    @has_shape.setter
+    def has_shape(self, has_shape):
+        """Sets the has_shape of this Grid.
+
+        Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc.  # noqa: E501
+
+        :param has_shape: The has_shape of this Grid.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_shape = has_shape
+
+    @property
+    def has_spatial_resolution(self):
+        """Gets the has_spatial_resolution of this Grid.  # noqa: E501
+
+        Spatial resolution of a grid (e.g., 50m)  # noqa: E501
+
+        :return: The has_spatial_resolution of this Grid.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_spatial_resolution
+
+    @has_spatial_resolution.setter
+    def has_spatial_resolution(self, has_spatial_resolution):
+        """Sets the has_spatial_resolution of this Grid.
+
+        Spatial resolution of a grid (e.g., 50m)  # noqa: E501
+
+        :param has_spatial_resolution: The has_spatial_resolution of this Grid.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_spatial_resolution = has_spatial_resolution
 
     @property
     def id(self):
@@ -528,6 +413,121 @@ class Grid(object):
         """
 
         self._id = id
+
+    @property
+    def is_transformed_from(self):
+        """Gets the is_transformed_from of this Grid.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The is_transformed_from of this Grid.  # noqa: E501
+        :rtype: list[DatasetSpecification]
+        """
+        return self._is_transformed_from
+
+    @is_transformed_from.setter
+    def is_transformed_from(self, is_transformed_from):
+        """Sets the is_transformed_from of this Grid.
+
+        Description not available  # noqa: E501
+
+        :param is_transformed_from: The is_transformed_from of this Grid.  # noqa: E501
+        :type: list[DatasetSpecification]
+        """
+
+        self._is_transformed_from = is_transformed_from
+
+    @property
+    def label(self):
+        """Gets the label of this Grid.  # noqa: E501
+
+        short description of the resource  # noqa: E501
+
+        :return: The label of this Grid.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._label
+
+    @label.setter
+    def label(self, label):
+        """Sets the label of this Grid.
+
+        short description of the resource  # noqa: E501
+
+        :param label: The label of this Grid.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._label = label
+
+    @property
+    def path_location(self):
+        """Gets the path_location of this Grid.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The path_location of this Grid.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._path_location
+
+    @path_location.setter
+    def path_location(self, path_location):
+        """Sets the path_location of this Grid.
+
+        Description not available  # noqa: E501
+
+        :param path_location: The path_location of this Grid.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._path_location = path_location
+
+    @property
+    def position(self):
+        """Gets the position of this Grid.  # noqa: E501
+
+        Description not available  # noqa: E501
+
+        :return: The position of this Grid.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._position
+
+    @position.setter
+    def position(self, position):
+        """Sets the position of this Grid.
+
+        Description not available  # noqa: E501
+
+        :param position: The position of this Grid.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._position = position
+
+    @property
+    def type(self):
+        """Gets the type of this Grid.  # noqa: E501
+
+        type of the resource  # noqa: E501
+
+        :return: The type of this Grid.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Grid.
+
+        type of the resource  # noqa: E501
+
+        :param type: The type of this Grid.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

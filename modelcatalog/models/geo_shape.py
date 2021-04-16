@@ -31,95 +31,72 @@ class GeoShape(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'elevation': 'list[str]',
-        'latitude': 'list[str]',
-        'description': 'list[str]',
         'box': 'list[str]',
+        'description': 'list[str]',
+        'elevation': 'list[str]',
         'id': 'str',
         'label': 'list[str]',
-        'type': 'list[str]',
-        'longitude': 'list[str]'
+        'latitude': 'list[str]',
+        'longitude': 'list[str]',
+        'type': 'list[str]'
     }
 
     attribute_map = {
-        'elevation': 'elevation',
-        'latitude': 'latitude',
-        'description': 'description',
         'box': 'box',
+        'description': 'description',
+        'elevation': 'elevation',
         'id': 'id',
         'label': 'label',
-        'type': 'type',
-        'longitude': 'longitude'
+        'latitude': 'latitude',
+        'longitude': 'longitude',
+        'type': 'type'
     }
 
-    def __init__(self, elevation=None, latitude=None, description=None, box=None, id=None, label=None, type=None, longitude=None):  # noqa: E501
+    def __init__(self, box=None, description=None, elevation=None, id=None, label=None, latitude=None, longitude=None, type=None):  # noqa: E501
         """GeoShape - a model defined in OpenAPI"""  # noqa: E501
 
-        self._elevation = None
-        self._latitude = None
-        self._description = None
         self._box = None
+        self._description = None
+        self._elevation = None
         self._id = None
         self._label = None
-        self._type = None
+        self._latitude = None
         self._longitude = None
+        self._type = None
         self.discriminator = None
 
-        self.elevation = elevation
-        self.latitude = latitude
-        self.description = description
         self.box = box
+        self.description = description
+        self.elevation = elevation
         if id is not None:
             self.id = id
         self.label = label
-        self.type = type
+        self.latitude = latitude
         self.longitude = longitude
+        self.type = type
 
     @property
-    def elevation(self):
-        """Gets the elevation of this GeoShape.  # noqa: E501
+    def box(self):
+        """Gets the box of this GeoShape.  # noqa: E501
 
-        Elevation of a location (WGS84)  # noqa: E501
+        Description not available  # noqa: E501
 
-        :return: The elevation of this GeoShape.  # noqa: E501
+        :return: The box of this GeoShape.  # noqa: E501
         :rtype: list[str]
         """
-        return self._elevation
+        return self._box
 
-    @elevation.setter
-    def elevation(self, elevation):
-        """Sets the elevation of this GeoShape.
+    @box.setter
+    def box(self, box):
+        """Sets the box of this GeoShape.
 
-        Elevation of a location (WGS84)  # noqa: E501
+        Description not available  # noqa: E501
 
-        :param elevation: The elevation of this GeoShape.  # noqa: E501
+        :param box: The box of this GeoShape.  # noqa: E501
         :type: list[str]
         """
 
-        self._elevation = elevation
-
-    @property
-    def latitude(self):
-        """Gets the latitude of this GeoShape.  # noqa: E501
-
-        Latitude (coordinates) of a location (WGS84)  # noqa: E501
-
-        :return: The latitude of this GeoShape.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._latitude
-
-    @latitude.setter
-    def latitude(self, latitude):
-        """Sets the latitude of this GeoShape.
-
-        Latitude (coordinates) of a location (WGS84)  # noqa: E501
-
-        :param latitude: The latitude of this GeoShape.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._latitude = latitude
+        self._box = box
 
     @property
     def description(self):
@@ -145,27 +122,27 @@ class GeoShape(object):
         self._description = description
 
     @property
-    def box(self):
-        """Gets the box of this GeoShape.  # noqa: E501
+    def elevation(self):
+        """Gets the elevation of this GeoShape.  # noqa: E501
 
-        Description not available  # noqa: E501
+        Elevation of a location (WGS84)  # noqa: E501
 
-        :return: The box of this GeoShape.  # noqa: E501
+        :return: The elevation of this GeoShape.  # noqa: E501
         :rtype: list[str]
         """
-        return self._box
+        return self._elevation
 
-    @box.setter
-    def box(self, box):
-        """Sets the box of this GeoShape.
+    @elevation.setter
+    def elevation(self, elevation):
+        """Sets the elevation of this GeoShape.
 
-        Description not available  # noqa: E501
+        Elevation of a location (WGS84)  # noqa: E501
 
-        :param box: The box of this GeoShape.  # noqa: E501
+        :param elevation: The elevation of this GeoShape.  # noqa: E501
         :type: list[str]
         """
 
-        self._box = box
+        self._elevation = elevation
 
     @property
     def id(self):
@@ -214,27 +191,27 @@ class GeoShape(object):
         self._label = label
 
     @property
-    def type(self):
-        """Gets the type of this GeoShape.  # noqa: E501
+    def latitude(self):
+        """Gets the latitude of this GeoShape.  # noqa: E501
 
-        type of the resource  # noqa: E501
+        Latitude (coordinates) of a location (WGS84)  # noqa: E501
 
-        :return: The type of this GeoShape.  # noqa: E501
+        :return: The latitude of this GeoShape.  # noqa: E501
         :rtype: list[str]
         """
-        return self._type
+        return self._latitude
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this GeoShape.
+    @latitude.setter
+    def latitude(self, latitude):
+        """Sets the latitude of this GeoShape.
 
-        type of the resource  # noqa: E501
+        Latitude (coordinates) of a location (WGS84)  # noqa: E501
 
-        :param type: The type of this GeoShape.  # noqa: E501
+        :param latitude: The latitude of this GeoShape.  # noqa: E501
         :type: list[str]
         """
 
-        self._type = type
+        self._latitude = latitude
 
     @property
     def longitude(self):
@@ -258,6 +235,29 @@ class GeoShape(object):
         """
 
         self._longitude = longitude
+
+    @property
+    def type(self):
+        """Gets the type of this GeoShape.  # noqa: E501
+
+        type of the resource  # noqa: E501
+
+        :return: The type of this GeoShape.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this GeoShape.
+
+        type of the resource  # noqa: E501
+
+        :param type: The type of this GeoShape.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

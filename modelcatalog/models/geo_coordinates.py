@@ -31,91 +31,45 @@ class GeoCoordinates(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'elevation': 'list[str]',
-        'latitude': 'list[str]',
         'description': 'list[str]',
+        'elevation': 'list[str]',
         'id': 'str',
         'label': 'list[str]',
-        'type': 'list[str]',
-        'longitude': 'list[str]'
+        'latitude': 'list[str]',
+        'longitude': 'list[str]',
+        'type': 'list[str]'
     }
 
     attribute_map = {
-        'elevation': 'elevation',
-        'latitude': 'latitude',
         'description': 'description',
+        'elevation': 'elevation',
         'id': 'id',
         'label': 'label',
-        'type': 'type',
-        'longitude': 'longitude'
+        'latitude': 'latitude',
+        'longitude': 'longitude',
+        'type': 'type'
     }
 
-    def __init__(self, elevation=None, latitude=None, description=None, id=None, label=None, type=None, longitude=None):  # noqa: E501
+    def __init__(self, description=None, elevation=None, id=None, label=None, latitude=None, longitude=None, type=None):  # noqa: E501
         """GeoCoordinates - a model defined in OpenAPI"""  # noqa: E501
 
-        self._elevation = None
-        self._latitude = None
         self._description = None
+        self._elevation = None
         self._id = None
         self._label = None
-        self._type = None
+        self._latitude = None
         self._longitude = None
+        self._type = None
         self.discriminator = None
 
-        self.elevation = elevation
-        self.latitude = latitude
         self.description = description
+        self.elevation = elevation
         if id is not None:
             self.id = id
         self.label = label
-        self.type = type
+        self.latitude = latitude
         self.longitude = longitude
-
-    @property
-    def elevation(self):
-        """Gets the elevation of this GeoCoordinates.  # noqa: E501
-
-        Elevation of a location (WGS84)  # noqa: E501
-
-        :return: The elevation of this GeoCoordinates.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._elevation
-
-    @elevation.setter
-    def elevation(self, elevation):
-        """Sets the elevation of this GeoCoordinates.
-
-        Elevation of a location (WGS84)  # noqa: E501
-
-        :param elevation: The elevation of this GeoCoordinates.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._elevation = elevation
-
-    @property
-    def latitude(self):
-        """Gets the latitude of this GeoCoordinates.  # noqa: E501
-
-        Latitude (coordinates) of a location (WGS84)  # noqa: E501
-
-        :return: The latitude of this GeoCoordinates.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._latitude
-
-    @latitude.setter
-    def latitude(self, latitude):
-        """Sets the latitude of this GeoCoordinates.
-
-        Latitude (coordinates) of a location (WGS84)  # noqa: E501
-
-        :param latitude: The latitude of this GeoCoordinates.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._latitude = latitude
+        self.type = type
 
     @property
     def description(self):
@@ -139,6 +93,29 @@ class GeoCoordinates(object):
         """
 
         self._description = description
+
+    @property
+    def elevation(self):
+        """Gets the elevation of this GeoCoordinates.  # noqa: E501
+
+        Elevation of a location (WGS84)  # noqa: E501
+
+        :return: The elevation of this GeoCoordinates.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._elevation
+
+    @elevation.setter
+    def elevation(self, elevation):
+        """Sets the elevation of this GeoCoordinates.
+
+        Elevation of a location (WGS84)  # noqa: E501
+
+        :param elevation: The elevation of this GeoCoordinates.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._elevation = elevation
 
     @property
     def id(self):
@@ -187,27 +164,27 @@ class GeoCoordinates(object):
         self._label = label
 
     @property
-    def type(self):
-        """Gets the type of this GeoCoordinates.  # noqa: E501
+    def latitude(self):
+        """Gets the latitude of this GeoCoordinates.  # noqa: E501
 
-        type of the resource  # noqa: E501
+        Latitude (coordinates) of a location (WGS84)  # noqa: E501
 
-        :return: The type of this GeoCoordinates.  # noqa: E501
+        :return: The latitude of this GeoCoordinates.  # noqa: E501
         :rtype: list[str]
         """
-        return self._type
+        return self._latitude
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this GeoCoordinates.
+    @latitude.setter
+    def latitude(self, latitude):
+        """Sets the latitude of this GeoCoordinates.
 
-        type of the resource  # noqa: E501
+        Latitude (coordinates) of a location (WGS84)  # noqa: E501
 
-        :param type: The type of this GeoCoordinates.  # noqa: E501
+        :param latitude: The latitude of this GeoCoordinates.  # noqa: E501
         :type: list[str]
         """
 
-        self._type = type
+        self._latitude = latitude
 
     @property
     def longitude(self):
@@ -231,6 +208,29 @@ class GeoCoordinates(object):
         """
 
         self._longitude = longitude
+
+    @property
+    def type(self):
+        """Gets the type of this GeoCoordinates.  # noqa: E501
+
+        type of the resource  # noqa: E501
+
+        :return: The type of this GeoCoordinates.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this GeoCoordinates.
+
+        type of the resource  # noqa: E501
+
+        :param type: The type of this GeoCoordinates.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

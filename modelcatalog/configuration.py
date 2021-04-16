@@ -274,7 +274,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: v1.7.0\n"\
-               "SDK Package Version: 7.0.0".\
+               "SDK Package Version: 7.1.0".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
@@ -288,11 +288,11 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                 'description': "No description provided",
             },
             {
-                'url': "https://dev.api.models.mint.isi.edu/v1.7.0",
+                'url': "http://localhost:8080/v1.7.0",
                 'description': "No description provided",
             },
             {
-                'url': "http://localhost:8080/v1.7.0",
+                'url': "https://api.models.wildfire.mint.isi.edu/v1.7.0",
                 'description': "No description provided",
             }
         ]

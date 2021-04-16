@@ -31,87 +31,41 @@ class Region(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'geo': 'list[object]',
-        'part_of': 'list[Region]',
         'description': 'list[str]',
+        'geo': 'list[object]',
         'id': 'str',
         'label': 'list[str]',
+        'part_of': 'list[Region]',
         'type': 'list[str]'
     }
 
     attribute_map = {
-        'geo': 'geo',
-        'part_of': 'partOf',
         'description': 'description',
+        'geo': 'geo',
         'id': 'id',
         'label': 'label',
+        'part_of': 'partOf',
         'type': 'type'
     }
 
-    def __init__(self, geo=None, part_of=None, description=None, id=None, label=None, type=None):  # noqa: E501
+    def __init__(self, description=None, geo=None, id=None, label=None, part_of=None, type=None):  # noqa: E501
         """Region - a model defined in OpenAPI"""  # noqa: E501
 
-        self._geo = None
-        self._part_of = None
         self._description = None
+        self._geo = None
         self._id = None
         self._label = None
+        self._part_of = None
         self._type = None
         self.discriminator = None
 
-        self.geo = geo
-        self.part_of = part_of
         self.description = description
+        self.geo = geo
         if id is not None:
             self.id = id
         self.label = label
+        self.part_of = part_of
         self.type = type
-
-    @property
-    def geo(self):
-        """Gets the geo of this Region.  # noqa: E501
-
-        Specific coordinates or shape associated with a region  # noqa: E501
-
-        :return: The geo of this Region.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._geo
-
-    @geo.setter
-    def geo(self, geo):
-        """Sets the geo of this Region.
-
-        Specific coordinates or shape associated with a region  # noqa: E501
-
-        :param geo: The geo of this Region.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._geo = geo
-
-    @property
-    def part_of(self):
-        """Gets the part_of of this Region.  # noqa: E501
-
-        Indicates whether a region is part of another region  # noqa: E501
-
-        :return: The part_of of this Region.  # noqa: E501
-        :rtype: list[Region]
-        """
-        return self._part_of
-
-    @part_of.setter
-    def part_of(self, part_of):
-        """Sets the part_of of this Region.
-
-        Indicates whether a region is part of another region  # noqa: E501
-
-        :param part_of: The part_of of this Region.  # noqa: E501
-        :type: list[Region]
-        """
-
-        self._part_of = part_of
 
     @property
     def description(self):
@@ -135,6 +89,29 @@ class Region(object):
         """
 
         self._description = description
+
+    @property
+    def geo(self):
+        """Gets the geo of this Region.  # noqa: E501
+
+        Specific coordinates or shape associated with a region  # noqa: E501
+
+        :return: The geo of this Region.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._geo
+
+    @geo.setter
+    def geo(self, geo):
+        """Sets the geo of this Region.
+
+        Specific coordinates or shape associated with a region  # noqa: E501
+
+        :param geo: The geo of this Region.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._geo = geo
 
     @property
     def id(self):
@@ -181,6 +158,29 @@ class Region(object):
         """
 
         self._label = label
+
+    @property
+    def part_of(self):
+        """Gets the part_of of this Region.  # noqa: E501
+
+        Indicates whether a region is part of another region  # noqa: E501
+
+        :return: The part_of of this Region.  # noqa: E501
+        :rtype: list[Region]
+        """
+        return self._part_of
+
+    @part_of.setter
+    def part_of(self, part_of):
+        """Sets the part_of of this Region.
+
+        Indicates whether a region is part of another region  # noqa: E501
+
+        :param part_of: The part_of of this Region.  # noqa: E501
+        :type: list[Region]
+        """
+
+        self._part_of = part_of
 
     @property
     def type(self):

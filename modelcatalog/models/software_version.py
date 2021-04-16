@@ -31,382 +31,267 @@ class SoftwareVersion(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'has_download_instructions': 'list[str]',
-        'keywords': 'list[str]',
-        'has_documentation': 'list[str]',
-        'software_requirements': 'list[str]',
-        'has_download_url': 'list[str]',
-        'type': 'list[str]',
-        'has_installation_instructions': 'list[str]',
+        'author': 'list[object]',
+        'citation': 'list[str]',
         'compatible_visualization_software': 'list[Software]',
+        'contributor': 'list[Person]',
         'copyright_holder': 'list[object]',
-        'has_faq': 'list[str]',
-        'logo': 'list[Image]',
+        'date_created': 'list[str]',
+        'date_published': 'list[str]',
+        'description': 'list[str]',
+        'doi': 'list[str]',
+        'had_primary_source': 'list[object]',
+        'has_assumption': 'list[str]',
+        'has_build_file': 'list[str]',
+        'has_configuration': 'list[SoftwareConfiguration]',
         'has_contact_person': 'list[object]',
-        'tag': 'list[str]',
+        'has_documentation': 'list[str]',
+        'has_download_instructions': 'list[str]',
+        'has_download_url': 'list[str]',
+        'has_example': 'list[str]',
+        'has_executable_instructions': 'list[str]',
+        'has_executable_notebook': 'list[str]',
+        'has_faq': 'list[str]',
+        'has_funding': 'list[FundingInformation]',
+        'has_installation_instructions': 'list[str]',
+        'has_purpose': 'list[str]',
+        'has_sample_visualization': 'list[Visualization]',
+        'has_source_code': 'list[SourceCode]',
+        'has_typical_data_source': 'list[str]',
+        'has_usage_notes': 'list[str]',
+        'has_version': 'list[SoftwareVersion]',
+        'has_version_id': 'list[str]',
         'id': 'str',
         'identifier': 'list[str]',
-        'has_configuration': 'list[SoftwareConfiguration]',
-        'author': 'list[object]',
-        'has_build_file': 'list[str]',
-        'short_description': 'list[str]',
-        'date_published': 'list[str]',
+        'issue_tracker': 'list[str]',
+        'keywords': 'list[str]',
+        'label': 'list[str]',
         'license': 'list[str]',
-        'has_source_code': 'list[SourceCode]',
-        'has_example': 'list[str]',
+        'logo': 'list[Image]',
+        'memory_requirements': 'list[str]',
+        'operating_systems': 'list[str]',
+        'processor_requirements': 'list[str]',
         'publisher': 'list[object]',
-        'doi': 'list[str]',
-        'has_funding': 'list[FundingInformation]',
-        'support_details': 'list[str]',
-        'has_version': 'list[SoftwareVersion]',
-        'has_typical_data_source': 'list[str]',
-        'description': 'list[str]',
+        'readme': 'list[str]',
         'reference_publication': 'list[str]',
         'screenshot': 'list[Image]',
-        'had_primary_source': 'list[object]',
-        'issue_tracker': 'list[str]',
-        'date_created': 'list[str]',
-        'contributor': 'list[Person]',
-        'has_purpose': 'list[str]',
-        'has_executable_instructions': 'list[str]',
-        'has_sample_visualization': 'list[Visualization]',
-        'memory_requirements': 'list[str]',
-        'website': 'list[str]',
-        'citation': 'list[str]',
-        'processor_requirements': 'list[str]',
-        'has_usage_notes': 'list[str]',
-        'readme': 'list[str]',
-        'label': 'list[str]',
-        'has_assumption': 'list[str]',
-        'operating_systems': 'list[str]',
-        'has_executable_notebook': 'list[str]',
+        'short_description': 'list[str]',
+        'software_requirements': 'list[str]',
+        'support_details': 'list[str]',
+        'tag': 'list[str]',
+        'type': 'list[str]',
         'useful_for_calculating_index': 'list[NumericalIndex]',
-        'has_version_id': 'list[str]'
+        'website': 'list[str]'
     }
 
     attribute_map = {
-        'has_download_instructions': 'hasDownloadInstructions',
-        'keywords': 'keywords',
-        'has_documentation': 'hasDocumentation',
-        'software_requirements': 'softwareRequirements',
-        'has_download_url': 'hasDownloadURL',
-        'type': 'type',
-        'has_installation_instructions': 'hasInstallationInstructions',
+        'author': 'author',
+        'citation': 'citation',
         'compatible_visualization_software': 'compatibleVisualizationSoftware',
+        'contributor': 'contributor',
         'copyright_holder': 'copyrightHolder',
-        'has_faq': 'hasFAQ',
-        'logo': 'logo',
+        'date_created': 'dateCreated',
+        'date_published': 'datePublished',
+        'description': 'description',
+        'doi': 'doi',
+        'had_primary_source': 'hadPrimarySource',
+        'has_assumption': 'hasAssumption',
+        'has_build_file': 'hasBuildFile',
+        'has_configuration': 'hasConfiguration',
         'has_contact_person': 'hasContactPerson',
-        'tag': 'tag',
+        'has_documentation': 'hasDocumentation',
+        'has_download_instructions': 'hasDownloadInstructions',
+        'has_download_url': 'hasDownloadURL',
+        'has_example': 'hasExample',
+        'has_executable_instructions': 'hasExecutableInstructions',
+        'has_executable_notebook': 'hasExecutableNotebook',
+        'has_faq': 'hasFAQ',
+        'has_funding': 'hasFunding',
+        'has_installation_instructions': 'hasInstallationInstructions',
+        'has_purpose': 'hasPurpose',
+        'has_sample_visualization': 'hasSampleVisualization',
+        'has_source_code': 'hasSourceCode',
+        'has_typical_data_source': 'hasTypicalDataSource',
+        'has_usage_notes': 'hasUsageNotes',
+        'has_version': 'hasVersion',
+        'has_version_id': 'hasVersionId',
         'id': 'id',
         'identifier': 'identifier',
-        'has_configuration': 'hasConfiguration',
-        'author': 'author',
-        'has_build_file': 'hasBuildFile',
-        'short_description': 'shortDescription',
-        'date_published': 'datePublished',
+        'issue_tracker': 'issueTracker',
+        'keywords': 'keywords',
+        'label': 'label',
         'license': 'license',
-        'has_source_code': 'hasSourceCode',
-        'has_example': 'hasExample',
+        'logo': 'logo',
+        'memory_requirements': 'memoryRequirements',
+        'operating_systems': 'operatingSystems',
+        'processor_requirements': 'processorRequirements',
         'publisher': 'publisher',
-        'doi': 'doi',
-        'has_funding': 'hasFunding',
-        'support_details': 'supportDetails',
-        'has_version': 'hasVersion',
-        'has_typical_data_source': 'hasTypicalDataSource',
-        'description': 'description',
+        'readme': 'readme',
         'reference_publication': 'referencePublication',
         'screenshot': 'screenshot',
-        'had_primary_source': 'hadPrimarySource',
-        'issue_tracker': 'issueTracker',
-        'date_created': 'dateCreated',
-        'contributor': 'contributor',
-        'has_purpose': 'hasPurpose',
-        'has_executable_instructions': 'hasExecutableInstructions',
-        'has_sample_visualization': 'hasSampleVisualization',
-        'memory_requirements': 'memoryRequirements',
-        'website': 'website',
-        'citation': 'citation',
-        'processor_requirements': 'processorRequirements',
-        'has_usage_notes': 'hasUsageNotes',
-        'readme': 'readme',
-        'label': 'label',
-        'has_assumption': 'hasAssumption',
-        'operating_systems': 'operatingSystems',
-        'has_executable_notebook': 'hasExecutableNotebook',
+        'short_description': 'shortDescription',
+        'software_requirements': 'softwareRequirements',
+        'support_details': 'supportDetails',
+        'tag': 'tag',
+        'type': 'type',
         'useful_for_calculating_index': 'usefulForCalculatingIndex',
-        'has_version_id': 'hasVersionId'
+        'website': 'website'
     }
 
-    def __init__(self, has_download_instructions=None, keywords=None, has_documentation=None, software_requirements=None, has_download_url=None, type=None, has_installation_instructions=None, compatible_visualization_software=None, copyright_holder=None, has_faq=None, logo=None, has_contact_person=None, tag=None, id=None, identifier=None, has_configuration=None, author=None, has_build_file=None, short_description=None, date_published=None, license=None, has_source_code=None, has_example=None, publisher=None, doi=None, has_funding=None, support_details=None, has_version=None, has_typical_data_source=None, description=None, reference_publication=None, screenshot=None, had_primary_source=None, issue_tracker=None, date_created=None, contributor=None, has_purpose=None, has_executable_instructions=None, has_sample_visualization=None, memory_requirements=None, website=None, citation=None, processor_requirements=None, has_usage_notes=None, readme=None, label=None, has_assumption=None, operating_systems=None, has_executable_notebook=None, useful_for_calculating_index=None, has_version_id=None):  # noqa: E501
+    def __init__(self, author=None, citation=None, compatible_visualization_software=None, contributor=None, copyright_holder=None, date_created=None, date_published=None, description=None, doi=None, had_primary_source=None, has_assumption=None, has_build_file=None, has_configuration=None, has_contact_person=None, has_documentation=None, has_download_instructions=None, has_download_url=None, has_example=None, has_executable_instructions=None, has_executable_notebook=None, has_faq=None, has_funding=None, has_installation_instructions=None, has_purpose=None, has_sample_visualization=None, has_source_code=None, has_typical_data_source=None, has_usage_notes=None, has_version=None, has_version_id=None, id=None, identifier=None, issue_tracker=None, keywords=None, label=None, license=None, logo=None, memory_requirements=None, operating_systems=None, processor_requirements=None, publisher=None, readme=None, reference_publication=None, screenshot=None, short_description=None, software_requirements=None, support_details=None, tag=None, type=None, useful_for_calculating_index=None, website=None):  # noqa: E501
         """SoftwareVersion - a model defined in OpenAPI"""  # noqa: E501
 
-        self._has_download_instructions = None
-        self._keywords = None
-        self._has_documentation = None
-        self._software_requirements = None
-        self._has_download_url = None
-        self._type = None
-        self._has_installation_instructions = None
+        self._author = None
+        self._citation = None
         self._compatible_visualization_software = None
+        self._contributor = None
         self._copyright_holder = None
-        self._has_faq = None
-        self._logo = None
+        self._date_created = None
+        self._date_published = None
+        self._description = None
+        self._doi = None
+        self._had_primary_source = None
+        self._has_assumption = None
+        self._has_build_file = None
+        self._has_configuration = None
         self._has_contact_person = None
-        self._tag = None
+        self._has_documentation = None
+        self._has_download_instructions = None
+        self._has_download_url = None
+        self._has_example = None
+        self._has_executable_instructions = None
+        self._has_executable_notebook = None
+        self._has_faq = None
+        self._has_funding = None
+        self._has_installation_instructions = None
+        self._has_purpose = None
+        self._has_sample_visualization = None
+        self._has_source_code = None
+        self._has_typical_data_source = None
+        self._has_usage_notes = None
+        self._has_version = None
+        self._has_version_id = None
         self._id = None
         self._identifier = None
-        self._has_configuration = None
-        self._author = None
-        self._has_build_file = None
-        self._short_description = None
-        self._date_published = None
+        self._issue_tracker = None
+        self._keywords = None
+        self._label = None
         self._license = None
-        self._has_source_code = None
-        self._has_example = None
+        self._logo = None
+        self._memory_requirements = None
+        self._operating_systems = None
+        self._processor_requirements = None
         self._publisher = None
-        self._doi = None
-        self._has_funding = None
-        self._support_details = None
-        self._has_version = None
-        self._has_typical_data_source = None
-        self._description = None
+        self._readme = None
         self._reference_publication = None
         self._screenshot = None
-        self._had_primary_source = None
-        self._issue_tracker = None
-        self._date_created = None
-        self._contributor = None
-        self._has_purpose = None
-        self._has_executable_instructions = None
-        self._has_sample_visualization = None
-        self._memory_requirements = None
-        self._website = None
-        self._citation = None
-        self._processor_requirements = None
-        self._has_usage_notes = None
-        self._readme = None
-        self._label = None
-        self._has_assumption = None
-        self._operating_systems = None
-        self._has_executable_notebook = None
+        self._short_description = None
+        self._software_requirements = None
+        self._support_details = None
+        self._tag = None
+        self._type = None
         self._useful_for_calculating_index = None
-        self._has_version_id = None
+        self._website = None
         self.discriminator = None
 
-        self.has_download_instructions = has_download_instructions
-        self.keywords = keywords
-        self.has_documentation = has_documentation
-        self.software_requirements = software_requirements
-        self.has_download_url = has_download_url
-        self.type = type
-        self.has_installation_instructions = has_installation_instructions
+        self.author = author
+        self.citation = citation
         self.compatible_visualization_software = compatible_visualization_software
+        self.contributor = contributor
         self.copyright_holder = copyright_holder
-        self.has_faq = has_faq
-        self.logo = logo
+        self.date_created = date_created
+        self.date_published = date_published
+        self.description = description
+        self.doi = doi
+        self.had_primary_source = had_primary_source
+        self.has_assumption = has_assumption
+        self.has_build_file = has_build_file
+        self.has_configuration = has_configuration
         self.has_contact_person = has_contact_person
-        self.tag = tag
+        self.has_documentation = has_documentation
+        self.has_download_instructions = has_download_instructions
+        self.has_download_url = has_download_url
+        self.has_example = has_example
+        self.has_executable_instructions = has_executable_instructions
+        self.has_executable_notebook = has_executable_notebook
+        self.has_faq = has_faq
+        self.has_funding = has_funding
+        self.has_installation_instructions = has_installation_instructions
+        self.has_purpose = has_purpose
+        self.has_sample_visualization = has_sample_visualization
+        self.has_source_code = has_source_code
+        self.has_typical_data_source = has_typical_data_source
+        self.has_usage_notes = has_usage_notes
+        self.has_version = has_version
+        self.has_version_id = has_version_id
         if id is not None:
             self.id = id
         self.identifier = identifier
-        self.has_configuration = has_configuration
-        self.author = author
-        self.has_build_file = has_build_file
-        self.short_description = short_description
-        self.date_published = date_published
+        self.issue_tracker = issue_tracker
+        self.keywords = keywords
+        self.label = label
         self.license = license
-        self.has_source_code = has_source_code
-        self.has_example = has_example
+        self.logo = logo
+        self.memory_requirements = memory_requirements
+        self.operating_systems = operating_systems
+        self.processor_requirements = processor_requirements
         self.publisher = publisher
-        self.doi = doi
-        self.has_funding = has_funding
-        self.support_details = support_details
-        self.has_version = has_version
-        self.has_typical_data_source = has_typical_data_source
-        self.description = description
+        self.readme = readme
         self.reference_publication = reference_publication
         self.screenshot = screenshot
-        self.had_primary_source = had_primary_source
-        self.issue_tracker = issue_tracker
-        self.date_created = date_created
-        self.contributor = contributor
-        self.has_purpose = has_purpose
-        self.has_executable_instructions = has_executable_instructions
-        self.has_sample_visualization = has_sample_visualization
-        self.memory_requirements = memory_requirements
-        self.website = website
-        self.citation = citation
-        self.processor_requirements = processor_requirements
-        self.has_usage_notes = has_usage_notes
-        self.readme = readme
-        self.label = label
-        self.has_assumption = has_assumption
-        self.operating_systems = operating_systems
-        self.has_executable_notebook = has_executable_notebook
+        self.short_description = short_description
+        self.software_requirements = software_requirements
+        self.support_details = support_details
+        self.tag = tag
+        self.type = type
         self.useful_for_calculating_index = useful_for_calculating_index
-        self.has_version_id = has_version_id
+        self.website = website
 
     @property
-    def has_download_instructions(self):
-        """Gets the has_download_instructions of this SoftwareVersion.  # noqa: E501
+    def author(self):
+        """Gets the author of this SoftwareVersion.  # noqa: E501
 
-        Instructions needed to download a software component. The difference with `hasDownloadURL` is that this property captures the human readable instructions required to download software. For example, sometimes an authentication is needed, users need to fill in a form, etc.  # noqa: E501
+        The creator of a software component  # noqa: E501
 
-        :return: The has_download_instructions of this SoftwareVersion.  # noqa: E501
+        :return: The author of this SoftwareVersion.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._author
+
+    @author.setter
+    def author(self, author):
+        """Sets the author of this SoftwareVersion.
+
+        The creator of a software component  # noqa: E501
+
+        :param author: The author of this SoftwareVersion.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._author = author
+
+    @property
+    def citation(self):
+        """Gets the citation of this SoftwareVersion.  # noqa: E501
+
+        How to cite this software  # noqa: E501
+
+        :return: The citation of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_download_instructions
+        return self._citation
 
-    @has_download_instructions.setter
-    def has_download_instructions(self, has_download_instructions):
-        """Sets the has_download_instructions of this SoftwareVersion.
+    @citation.setter
+    def citation(self, citation):
+        """Sets the citation of this SoftwareVersion.
 
-        Instructions needed to download a software component. The difference with `hasDownloadURL` is that this property captures the human readable instructions required to download software. For example, sometimes an authentication is needed, users need to fill in a form, etc.  # noqa: E501
+        How to cite this software  # noqa: E501
 
-        :param has_download_instructions: The has_download_instructions of this SoftwareVersion.  # noqa: E501
+        :param citation: The citation of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_download_instructions = has_download_instructions
-
-    @property
-    def keywords(self):
-        """Gets the keywords of this SoftwareVersion.  # noqa: E501
-
-        Keywords associated with a software component  # noqa: E501
-
-        :return: The keywords of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._keywords
-
-    @keywords.setter
-    def keywords(self, keywords):
-        """Sets the keywords of this SoftwareVersion.
-
-        Keywords associated with a software component  # noqa: E501
-
-        :param keywords: The keywords of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._keywords = keywords
-
-    @property
-    def has_documentation(self):
-        """Gets the has_documentation of this SoftwareVersion.  # noqa: E501
-
-        Pointer to the documentation of the model  # noqa: E501
-
-        :return: The has_documentation of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_documentation
-
-    @has_documentation.setter
-    def has_documentation(self, has_documentation):
-        """Sets the has_documentation of this SoftwareVersion.
-
-        Pointer to the documentation of the model  # noqa: E501
-
-        :param has_documentation: The has_documentation of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_documentation = has_documentation
-
-    @property
-    def software_requirements(self):
-        """Gets the software_requirements of this SoftwareVersion.  # noqa: E501
-
-        Software requirements needed to install a software component  # noqa: E501
-
-        :return: The software_requirements of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._software_requirements
-
-    @software_requirements.setter
-    def software_requirements(self, software_requirements):
-        """Sets the software_requirements of this SoftwareVersion.
-
-        Software requirements needed to install a software component  # noqa: E501
-
-        :param software_requirements: The software_requirements of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._software_requirements = software_requirements
-
-    @property
-    def has_download_url(self):
-        """Gets the has_download_url of this SoftwareVersion.  # noqa: E501
-
-        Download URL where to obtain the source/executable of the software  # noqa: E501
-
-        :return: The has_download_url of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_download_url
-
-    @has_download_url.setter
-    def has_download_url(self, has_download_url):
-        """Sets the has_download_url of this SoftwareVersion.
-
-        Download URL where to obtain the source/executable of the software  # noqa: E501
-
-        :param has_download_url: The has_download_url of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_download_url = has_download_url
-
-    @property
-    def type(self):
-        """Gets the type of this SoftwareVersion.  # noqa: E501
-
-        type of the resource  # noqa: E501
-
-        :return: The type of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this SoftwareVersion.
-
-        type of the resource  # noqa: E501
-
-        :param type: The type of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._type = type
-
-    @property
-    def has_installation_instructions(self):
-        """Gets the has_installation_instructions of this SoftwareVersion.  # noqa: E501
-
-        Instructions required to install this particular piece of software. Installation instructions usually are available in a human-readable manner.  # noqa: E501
-
-        :return: The has_installation_instructions of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_installation_instructions
-
-    @has_installation_instructions.setter
-    def has_installation_instructions(self, has_installation_instructions):
-        """Sets the has_installation_instructions of this SoftwareVersion.
-
-        Instructions required to install this particular piece of software. Installation instructions usually are available in a human-readable manner.  # noqa: E501
-
-        :param has_installation_instructions: The has_installation_instructions of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_installation_instructions = has_installation_instructions
+        self._citation = citation
 
     @property
     def compatible_visualization_software(self):
@@ -432,6 +317,29 @@ class SoftwareVersion(object):
         self._compatible_visualization_software = compatible_visualization_software
 
     @property
+    def contributor(self):
+        """Gets the contributor of this SoftwareVersion.  # noqa: E501
+
+        Contributor to a software component  # noqa: E501
+
+        :return: The contributor of this SoftwareVersion.  # noqa: E501
+        :rtype: list[Person]
+        """
+        return self._contributor
+
+    @contributor.setter
+    def contributor(self, contributor):
+        """Sets the contributor of this SoftwareVersion.
+
+        Contributor to a software component  # noqa: E501
+
+        :param contributor: The contributor of this SoftwareVersion.  # noqa: E501
+        :type: list[Person]
+        """
+
+        self._contributor = contributor
+
+    @property
     def copyright_holder(self):
         """Gets the copyright_holder of this SoftwareVersion.  # noqa: E501
 
@@ -455,50 +363,188 @@ class SoftwareVersion(object):
         self._copyright_holder = copyright_holder
 
     @property
-    def has_faq(self):
-        """Gets the has_faq of this SoftwareVersion.  # noqa: E501
+    def date_created(self):
+        """Gets the date_created of this SoftwareVersion.  # noqa: E501
 
-        Frequently asked questions about a software  # noqa: E501
+        Date when a software component was created  # noqa: E501
 
-        :return: The has_faq of this SoftwareVersion.  # noqa: E501
+        :return: The date_created of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_faq
+        return self._date_created
 
-    @has_faq.setter
-    def has_faq(self, has_faq):
-        """Sets the has_faq of this SoftwareVersion.
+    @date_created.setter
+    def date_created(self, date_created):
+        """Sets the date_created of this SoftwareVersion.
 
-        Frequently asked questions about a software  # noqa: E501
+        Date when a software component was created  # noqa: E501
 
-        :param has_faq: The has_faq of this SoftwareVersion.  # noqa: E501
+        :param date_created: The date_created of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_faq = has_faq
+        self._date_created = date_created
 
     @property
-    def logo(self):
-        """Gets the logo of this SoftwareVersion.  # noqa: E501
+    def date_published(self):
+        """Gets the date_published of this SoftwareVersion.  # noqa: E501
 
-        Property that links to the image used as logo for a software component  # noqa: E501
+        Date when a software component was published  # noqa: E501
 
-        :return: The logo of this SoftwareVersion.  # noqa: E501
-        :rtype: list[Image]
+        :return: The date_published of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._logo
+        return self._date_published
 
-    @logo.setter
-    def logo(self, logo):
-        """Sets the logo of this SoftwareVersion.
+    @date_published.setter
+    def date_published(self, date_published):
+        """Sets the date_published of this SoftwareVersion.
 
-        Property that links to the image used as logo for a software component  # noqa: E501
+        Date when a software component was published  # noqa: E501
 
-        :param logo: The logo of this SoftwareVersion.  # noqa: E501
-        :type: list[Image]
+        :param date_published: The date_published of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
         """
 
-        self._logo = logo
+        self._date_published = date_published
+
+    @property
+    def description(self):
+        """Gets the description of this SoftwareVersion.  # noqa: E501
+
+        small description  # noqa: E501
+
+        :return: The description of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this SoftwareVersion.
+
+        small description  # noqa: E501
+
+        :param description: The description of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._description = description
+
+    @property
+    def doi(self):
+        """Gets the doi of this SoftwareVersion.  # noqa: E501
+
+        Digital Object Identifier associated with a software component  # noqa: E501
+
+        :return: The doi of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._doi
+
+    @doi.setter
+    def doi(self, doi):
+        """Sets the doi of this SoftwareVersion.
+
+        Digital Object Identifier associated with a software component  # noqa: E501
+
+        :param doi: The doi of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._doi = doi
+
+    @property
+    def had_primary_source(self):
+        """Gets the had_primary_source of this SoftwareVersion.  # noqa: E501
+
+        Property to identify the original source of the information of the annotated resource. It could be a web page, an organization, a person, some experiment notes, etc.  # noqa: E501
+
+        :return: The had_primary_source of this SoftwareVersion.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._had_primary_source
+
+    @had_primary_source.setter
+    def had_primary_source(self, had_primary_source):
+        """Sets the had_primary_source of this SoftwareVersion.
+
+        Property to identify the original source of the information of the annotated resource. It could be a web page, an organization, a person, some experiment notes, etc.  # noqa: E501
+
+        :param had_primary_source: The had_primary_source of this SoftwareVersion.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._had_primary_source = had_primary_source
+
+    @property
+    def has_assumption(self):
+        """Gets the has_assumption of this SoftwareVersion.  # noqa: E501
+
+        Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc.  # noqa: E501
+
+        :return: The has_assumption of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_assumption
+
+    @has_assumption.setter
+    def has_assumption(self, has_assumption):
+        """Sets the has_assumption of this SoftwareVersion.
+
+        Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc.  # noqa: E501
+
+        :param has_assumption: The has_assumption of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_assumption = has_assumption
+
+    @property
+    def has_build_file(self):
+        """Gets the has_build_file of this SoftwareVersion.  # noqa: E501
+
+        A file (e.g., Dockerfile) with executable instructions indicating how a Software Image or a Software component is built  # noqa: E501
+
+        :return: The has_build_file of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_build_file
+
+    @has_build_file.setter
+    def has_build_file(self, has_build_file):
+        """Sets the has_build_file of this SoftwareVersion.
+
+        A file (e.g., Dockerfile) with executable instructions indicating how a Software Image or a Software component is built  # noqa: E501
+
+        :param has_build_file: The has_build_file of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_build_file = has_build_file
+
+    @property
+    def has_configuration(self):
+        """Gets the has_configuration of this SoftwareVersion.  # noqa: E501
+
+        Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses.  # noqa: E501
+
+        :return: The has_configuration of this SoftwareVersion.  # noqa: E501
+        :rtype: list[SoftwareConfiguration]
+        """
+        return self._has_configuration
+
+    @has_configuration.setter
+    def has_configuration(self, has_configuration):
+        """Sets the has_configuration of this SoftwareVersion.
+
+        Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses.  # noqa: E501
+
+        :param has_configuration: The has_configuration of this SoftwareVersion.  # noqa: E501
+        :type: list[SoftwareConfiguration]
+        """
+
+        self._has_configuration = has_configuration
 
     @property
     def has_contact_person(self):
@@ -524,27 +570,372 @@ class SoftwareVersion(object):
         self._has_contact_person = has_contact_person
 
     @property
-    def tag(self):
-        """Gets the tag of this SoftwareVersion.  # noqa: E501
+    def has_documentation(self):
+        """Gets the has_documentation of this SoftwareVersion.  # noqa: E501
 
-        Tag used to annotate a version or a software configuration. This annotation is useful to show which version is the latest, or which version is deprecated. Supported tags are: \"latest\", \"deprecated\"  # noqa: E501
+        Pointer to the documentation of the model  # noqa: E501
 
-        :return: The tag of this SoftwareVersion.  # noqa: E501
+        :return: The has_documentation of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._tag
+        return self._has_documentation
 
-    @tag.setter
-    def tag(self, tag):
-        """Sets the tag of this SoftwareVersion.
+    @has_documentation.setter
+    def has_documentation(self, has_documentation):
+        """Sets the has_documentation of this SoftwareVersion.
 
-        Tag used to annotate a version or a software configuration. This annotation is useful to show which version is the latest, or which version is deprecated. Supported tags are: \"latest\", \"deprecated\"  # noqa: E501
+        Pointer to the documentation of the model  # noqa: E501
 
-        :param tag: The tag of this SoftwareVersion.  # noqa: E501
+        :param has_documentation: The has_documentation of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._tag = tag
+        self._has_documentation = has_documentation
+
+    @property
+    def has_download_instructions(self):
+        """Gets the has_download_instructions of this SoftwareVersion.  # noqa: E501
+
+        Instructions needed to download a software component. The difference with `hasDownloadURL` is that this property captures the human readable instructions required to download software. For example, sometimes an authentication is needed, users need to fill in a form, etc.  # noqa: E501
+
+        :return: The has_download_instructions of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_download_instructions
+
+    @has_download_instructions.setter
+    def has_download_instructions(self, has_download_instructions):
+        """Sets the has_download_instructions of this SoftwareVersion.
+
+        Instructions needed to download a software component. The difference with `hasDownloadURL` is that this property captures the human readable instructions required to download software. For example, sometimes an authentication is needed, users need to fill in a form, etc.  # noqa: E501
+
+        :param has_download_instructions: The has_download_instructions of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_download_instructions = has_download_instructions
+
+    @property
+    def has_download_url(self):
+        """Gets the has_download_url of this SoftwareVersion.  # noqa: E501
+
+        Download URL where to obtain the source/executable of the software  # noqa: E501
+
+        :return: The has_download_url of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_download_url
+
+    @has_download_url.setter
+    def has_download_url(self, has_download_url):
+        """Sets the has_download_url of this SoftwareVersion.
+
+        Download URL where to obtain the source/executable of the software  # noqa: E501
+
+        :param has_download_url: The has_download_url of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_download_url = has_download_url
+
+    @property
+    def has_example(self):
+        """Gets the has_example of this SoftwareVersion.  # noqa: E501
+
+        An example explaining a scenario where the software component was used in plain language.  # noqa: E501
+
+        :return: The has_example of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_example
+
+    @has_example.setter
+    def has_example(self, has_example):
+        """Sets the has_example of this SoftwareVersion.
+
+        An example explaining a scenario where the software component was used in plain language.  # noqa: E501
+
+        :param has_example: The has_example of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_example = has_example
+
+    @property
+    def has_executable_instructions(self):
+        """Gets the has_executable_instructions of this SoftwareVersion.  # noqa: E501
+
+        Instructions that indicate how a software component should be executed. The difference with `hasExecutionCommand` is that the execution instructions aim to be human-readable, and have explanations between the different commands and instructions  # noqa: E501
+
+        :return: The has_executable_instructions of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_executable_instructions
+
+    @has_executable_instructions.setter
+    def has_executable_instructions(self, has_executable_instructions):
+        """Sets the has_executable_instructions of this SoftwareVersion.
+
+        Instructions that indicate how a software component should be executed. The difference with `hasExecutionCommand` is that the execution instructions aim to be human-readable, and have explanations between the different commands and instructions  # noqa: E501
+
+        :param has_executable_instructions: The has_executable_instructions of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_executable_instructions = has_executable_instructions
+
+    @property
+    def has_executable_notebook(self):
+        """Gets the has_executable_notebook of this SoftwareVersion.  # noqa: E501
+
+        Property that links a software component with an executable notebook (e.g., Jupyter notebook) that illustrates how to use it in an executable manner.  # noqa: E501
+
+        :return: The has_executable_notebook of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_executable_notebook
+
+    @has_executable_notebook.setter
+    def has_executable_notebook(self, has_executable_notebook):
+        """Sets the has_executable_notebook of this SoftwareVersion.
+
+        Property that links a software component with an executable notebook (e.g., Jupyter notebook) that illustrates how to use it in an executable manner.  # noqa: E501
+
+        :param has_executable_notebook: The has_executable_notebook of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_executable_notebook = has_executable_notebook
+
+    @property
+    def has_faq(self):
+        """Gets the has_faq of this SoftwareVersion.  # noqa: E501
+
+        Frequently asked questions about a software  # noqa: E501
+
+        :return: The has_faq of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_faq
+
+    @has_faq.setter
+    def has_faq(self, has_faq):
+        """Sets the has_faq of this SoftwareVersion.
+
+        Frequently asked questions about a software  # noqa: E501
+
+        :param has_faq: The has_faq of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_faq = has_faq
+
+    @property
+    def has_funding(self):
+        """Gets the has_funding of this SoftwareVersion.  # noqa: E501
+
+        Property that links a software project to its funding information  # noqa: E501
+
+        :return: The has_funding of this SoftwareVersion.  # noqa: E501
+        :rtype: list[FundingInformation]
+        """
+        return self._has_funding
+
+    @has_funding.setter
+    def has_funding(self, has_funding):
+        """Sets the has_funding of this SoftwareVersion.
+
+        Property that links a software project to its funding information  # noqa: E501
+
+        :param has_funding: The has_funding of this SoftwareVersion.  # noqa: E501
+        :type: list[FundingInformation]
+        """
+
+        self._has_funding = has_funding
+
+    @property
+    def has_installation_instructions(self):
+        """Gets the has_installation_instructions of this SoftwareVersion.  # noqa: E501
+
+        Instructions required to install this particular piece of software. Installation instructions usually are available in a human-readable manner.  # noqa: E501
+
+        :return: The has_installation_instructions of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_installation_instructions
+
+    @has_installation_instructions.setter
+    def has_installation_instructions(self, has_installation_instructions):
+        """Sets the has_installation_instructions of this SoftwareVersion.
+
+        Instructions required to install this particular piece of software. Installation instructions usually are available in a human-readable manner.  # noqa: E501
+
+        :param has_installation_instructions: The has_installation_instructions of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_installation_instructions = has_installation_instructions
+
+    @property
+    def has_purpose(self):
+        """Gets the has_purpose of this SoftwareVersion.  # noqa: E501
+
+        Objective or main functionality that can be achieved by running this software  # noqa: E501
+
+        :return: The has_purpose of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_purpose
+
+    @has_purpose.setter
+    def has_purpose(self, has_purpose):
+        """Sets the has_purpose of this SoftwareVersion.
+
+        Objective or main functionality that can be achieved by running this software  # noqa: E501
+
+        :param has_purpose: The has_purpose of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_purpose = has_purpose
+
+    @property
+    def has_sample_visualization(self):
+        """Gets the has_sample_visualization of this SoftwareVersion.  # noqa: E501
+
+        A typical sample visualization of the softwware outputs  # noqa: E501
+
+        :return: The has_sample_visualization of this SoftwareVersion.  # noqa: E501
+        :rtype: list[Visualization]
+        """
+        return self._has_sample_visualization
+
+    @has_sample_visualization.setter
+    def has_sample_visualization(self, has_sample_visualization):
+        """Sets the has_sample_visualization of this SoftwareVersion.
+
+        A typical sample visualization of the softwware outputs  # noqa: E501
+
+        :param has_sample_visualization: The has_sample_visualization of this SoftwareVersion.  # noqa: E501
+        :type: list[Visualization]
+        """
+
+        self._has_sample_visualization = has_sample_visualization
+
+    @property
+    def has_source_code(self):
+        """Gets the has_source_code of this SoftwareVersion.  # noqa: E501
+
+        Property designed to link a software with its software source code (which may reside in a code repository such as GitHub)  # noqa: E501
+
+        :return: The has_source_code of this SoftwareVersion.  # noqa: E501
+        :rtype: list[SourceCode]
+        """
+        return self._has_source_code
+
+    @has_source_code.setter
+    def has_source_code(self, has_source_code):
+        """Sets the has_source_code of this SoftwareVersion.
+
+        Property designed to link a software with its software source code (which may reside in a code repository such as GitHub)  # noqa: E501
+
+        :param has_source_code: The has_source_code of this SoftwareVersion.  # noqa: E501
+        :type: list[SourceCode]
+        """
+
+        self._has_source_code = has_source_code
+
+    @property
+    def has_typical_data_source(self):
+        """Gets the has_typical_data_source of this SoftwareVersion.  # noqa: E501
+
+        Typical data sources that are used by a software component  # noqa: E501
+
+        :return: The has_typical_data_source of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_typical_data_source
+
+    @has_typical_data_source.setter
+    def has_typical_data_source(self, has_typical_data_source):
+        """Sets the has_typical_data_source of this SoftwareVersion.
+
+        Typical data sources that are used by a software component  # noqa: E501
+
+        :param has_typical_data_source: The has_typical_data_source of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_typical_data_source = has_typical_data_source
+
+    @property
+    def has_usage_notes(self):
+        """Gets the has_usage_notes of this SoftwareVersion.  # noqa: E501
+
+        Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc.  # noqa: E501
+
+        :return: The has_usage_notes of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_usage_notes
+
+    @has_usage_notes.setter
+    def has_usage_notes(self, has_usage_notes):
+        """Sets the has_usage_notes of this SoftwareVersion.
+
+        Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc.  # noqa: E501
+
+        :param has_usage_notes: The has_usage_notes of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_usage_notes = has_usage_notes
+
+    @property
+    def has_version(self):
+        """Gets the has_version of this SoftwareVersion.  # noqa: E501
+
+        Property designed to link a software component with its corresponding versions  # noqa: E501
+
+        :return: The has_version of this SoftwareVersion.  # noqa: E501
+        :rtype: list[SoftwareVersion]
+        """
+        return self._has_version
+
+    @has_version.setter
+    def has_version(self, has_version):
+        """Sets the has_version of this SoftwareVersion.
+
+        Property designed to link a software component with its corresponding versions  # noqa: E501
+
+        :param has_version: The has_version of this SoftwareVersion.  # noqa: E501
+        :type: list[SoftwareVersion]
+        """
+
+        self._has_version = has_version
+
+    @property
+    def has_version_id(self):
+        """Gets the has_version_id of this SoftwareVersion.  # noqa: E501
+
+        Identifier of the version of this software  # noqa: E501
+
+        :return: The has_version_id of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._has_version_id
+
+    @has_version_id.setter
+    def has_version_id(self, has_version_id):
+        """Sets the has_version_id of this SoftwareVersion.
+
+        Identifier of the version of this software  # noqa: E501
+
+        :param has_version_id: The has_version_id of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._has_version_id = has_version_id
 
     @property
     def id(self):
@@ -593,119 +984,73 @@ class SoftwareVersion(object):
         self._identifier = identifier
 
     @property
-    def has_configuration(self):
-        """Gets the has_configuration of this SoftwareVersion.  # noqa: E501
+    def issue_tracker(self):
+        """Gets the issue_tracker of this SoftwareVersion.  # noqa: E501
 
-        Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses.  # noqa: E501
+        Pointer to the issue tracker of a software component  # noqa: E501
 
-        :return: The has_configuration of this SoftwareVersion.  # noqa: E501
-        :rtype: list[SoftwareConfiguration]
-        """
-        return self._has_configuration
-
-    @has_configuration.setter
-    def has_configuration(self, has_configuration):
-        """Sets the has_configuration of this SoftwareVersion.
-
-        Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses.  # noqa: E501
-
-        :param has_configuration: The has_configuration of this SoftwareVersion.  # noqa: E501
-        :type: list[SoftwareConfiguration]
-        """
-
-        self._has_configuration = has_configuration
-
-    @property
-    def author(self):
-        """Gets the author of this SoftwareVersion.  # noqa: E501
-
-        The creator of a software component  # noqa: E501
-
-        :return: The author of this SoftwareVersion.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._author
-
-    @author.setter
-    def author(self, author):
-        """Sets the author of this SoftwareVersion.
-
-        The creator of a software component  # noqa: E501
-
-        :param author: The author of this SoftwareVersion.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._author = author
-
-    @property
-    def has_build_file(self):
-        """Gets the has_build_file of this SoftwareVersion.  # noqa: E501
-
-        A file (e.g., Dockerfile) with executable instructions indicating how a Software Image or a Software component is built  # noqa: E501
-
-        :return: The has_build_file of this SoftwareVersion.  # noqa: E501
+        :return: The issue_tracker of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_build_file
+        return self._issue_tracker
 
-    @has_build_file.setter
-    def has_build_file(self, has_build_file):
-        """Sets the has_build_file of this SoftwareVersion.
+    @issue_tracker.setter
+    def issue_tracker(self, issue_tracker):
+        """Sets the issue_tracker of this SoftwareVersion.
 
-        A file (e.g., Dockerfile) with executable instructions indicating how a Software Image or a Software component is built  # noqa: E501
+        Pointer to the issue tracker of a software component  # noqa: E501
 
-        :param has_build_file: The has_build_file of this SoftwareVersion.  # noqa: E501
+        :param issue_tracker: The issue_tracker of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_build_file = has_build_file
+        self._issue_tracker = issue_tracker
 
     @property
-    def short_description(self):
-        """Gets the short_description of this SoftwareVersion.  # noqa: E501
+    def keywords(self):
+        """Gets the keywords of this SoftwareVersion.  # noqa: E501
 
-        A summarized description of the resource  # noqa: E501
+        Keywords associated with a software component  # noqa: E501
 
-        :return: The short_description of this SoftwareVersion.  # noqa: E501
+        :return: The keywords of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._short_description
+        return self._keywords
 
-    @short_description.setter
-    def short_description(self, short_description):
-        """Sets the short_description of this SoftwareVersion.
+    @keywords.setter
+    def keywords(self, keywords):
+        """Sets the keywords of this SoftwareVersion.
 
-        A summarized description of the resource  # noqa: E501
+        Keywords associated with a software component  # noqa: E501
 
-        :param short_description: The short_description of this SoftwareVersion.  # noqa: E501
+        :param keywords: The keywords of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._short_description = short_description
+        self._keywords = keywords
 
     @property
-    def date_published(self):
-        """Gets the date_published of this SoftwareVersion.  # noqa: E501
+    def label(self):
+        """Gets the label of this SoftwareVersion.  # noqa: E501
 
-        Date when a software component was published  # noqa: E501
+        short description of the resource  # noqa: E501
 
-        :return: The date_published of this SoftwareVersion.  # noqa: E501
+        :return: The label of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._date_published
+        return self._label
 
-    @date_published.setter
-    def date_published(self, date_published):
-        """Sets the date_published of this SoftwareVersion.
+    @label.setter
+    def label(self, label):
+        """Sets the label of this SoftwareVersion.
 
-        Date when a software component was published  # noqa: E501
+        short description of the resource  # noqa: E501
 
-        :param date_published: The date_published of this SoftwareVersion.  # noqa: E501
+        :param label: The label of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._date_published = date_published
+        self._label = label
 
     @property
     def license(self):
@@ -731,50 +1076,96 @@ class SoftwareVersion(object):
         self._license = license
 
     @property
-    def has_source_code(self):
-        """Gets the has_source_code of this SoftwareVersion.  # noqa: E501
+    def logo(self):
+        """Gets the logo of this SoftwareVersion.  # noqa: E501
 
-        Property designed to link a software with its software source code (which may reside in a code repository such as GitHub)  # noqa: E501
+        Property that links to the image used as logo for a software component  # noqa: E501
 
-        :return: The has_source_code of this SoftwareVersion.  # noqa: E501
-        :rtype: list[SourceCode]
+        :return: The logo of this SoftwareVersion.  # noqa: E501
+        :rtype: list[Image]
         """
-        return self._has_source_code
+        return self._logo
 
-    @has_source_code.setter
-    def has_source_code(self, has_source_code):
-        """Sets the has_source_code of this SoftwareVersion.
+    @logo.setter
+    def logo(self, logo):
+        """Sets the logo of this SoftwareVersion.
 
-        Property designed to link a software with its software source code (which may reside in a code repository such as GitHub)  # noqa: E501
+        Property that links to the image used as logo for a software component  # noqa: E501
 
-        :param has_source_code: The has_source_code of this SoftwareVersion.  # noqa: E501
-        :type: list[SourceCode]
+        :param logo: The logo of this SoftwareVersion.  # noqa: E501
+        :type: list[Image]
         """
 
-        self._has_source_code = has_source_code
+        self._logo = logo
 
     @property
-    def has_example(self):
-        """Gets the has_example of this SoftwareVersion.  # noqa: E501
+    def memory_requirements(self):
+        """Gets the memory_requirements of this SoftwareVersion.  # noqa: E501
 
-        An example explaining a scenario where the software component was used in plain language.  # noqa: E501
+        Memory requirements of a software  # noqa: E501
 
-        :return: The has_example of this SoftwareVersion.  # noqa: E501
+        :return: The memory_requirements of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_example
+        return self._memory_requirements
 
-    @has_example.setter
-    def has_example(self, has_example):
-        """Sets the has_example of this SoftwareVersion.
+    @memory_requirements.setter
+    def memory_requirements(self, memory_requirements):
+        """Sets the memory_requirements of this SoftwareVersion.
 
-        An example explaining a scenario where the software component was used in plain language.  # noqa: E501
+        Memory requirements of a software  # noqa: E501
 
-        :param has_example: The has_example of this SoftwareVersion.  # noqa: E501
+        :param memory_requirements: The memory_requirements of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_example = has_example
+        self._memory_requirements = memory_requirements
+
+    @property
+    def operating_systems(self):
+        """Gets the operating_systems of this SoftwareVersion.  # noqa: E501
+
+        Operating systems under which a software component can operate  # noqa: E501
+
+        :return: The operating_systems of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._operating_systems
+
+    @operating_systems.setter
+    def operating_systems(self, operating_systems):
+        """Sets the operating_systems of this SoftwareVersion.
+
+        Operating systems under which a software component can operate  # noqa: E501
+
+        :param operating_systems: The operating_systems of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._operating_systems = operating_systems
+
+    @property
+    def processor_requirements(self):
+        """Gets the processor_requirements of this SoftwareVersion.  # noqa: E501
+
+        Processor requirements of a software component  # noqa: E501
+
+        :return: The processor_requirements of this SoftwareVersion.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._processor_requirements
+
+    @processor_requirements.setter
+    def processor_requirements(self, processor_requirements):
+        """Sets the processor_requirements of this SoftwareVersion.
+
+        Processor requirements of a software component  # noqa: E501
+
+        :param processor_requirements: The processor_requirements of this SoftwareVersion.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._processor_requirements = processor_requirements
 
     @property
     def publisher(self):
@@ -800,142 +1191,27 @@ class SoftwareVersion(object):
         self._publisher = publisher
 
     @property
-    def doi(self):
-        """Gets the doi of this SoftwareVersion.  # noqa: E501
+    def readme(self):
+        """Gets the readme of this SoftwareVersion.  # noqa: E501
 
-        Digital Object Identifier associated with a software component  # noqa: E501
+        URl to the readme file of a software component  # noqa: E501
 
-        :return: The doi of this SoftwareVersion.  # noqa: E501
+        :return: The readme of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._doi
+        return self._readme
 
-    @doi.setter
-    def doi(self, doi):
-        """Sets the doi of this SoftwareVersion.
+    @readme.setter
+    def readme(self, readme):
+        """Sets the readme of this SoftwareVersion.
 
-        Digital Object Identifier associated with a software component  # noqa: E501
+        URl to the readme file of a software component  # noqa: E501
 
-        :param doi: The doi of this SoftwareVersion.  # noqa: E501
+        :param readme: The readme of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._doi = doi
-
-    @property
-    def has_funding(self):
-        """Gets the has_funding of this SoftwareVersion.  # noqa: E501
-
-        Property that links a software project to its funding information  # noqa: E501
-
-        :return: The has_funding of this SoftwareVersion.  # noqa: E501
-        :rtype: list[FundingInformation]
-        """
-        return self._has_funding
-
-    @has_funding.setter
-    def has_funding(self, has_funding):
-        """Sets the has_funding of this SoftwareVersion.
-
-        Property that links a software project to its funding information  # noqa: E501
-
-        :param has_funding: The has_funding of this SoftwareVersion.  # noqa: E501
-        :type: list[FundingInformation]
-        """
-
-        self._has_funding = has_funding
-
-    @property
-    def support_details(self):
-        """Gets the support_details of this SoftwareVersion.  # noqa: E501
-
-        Property to link details, such as mailing lists in case a contact person is not provided  # noqa: E501
-
-        :return: The support_details of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._support_details
-
-    @support_details.setter
-    def support_details(self, support_details):
-        """Sets the support_details of this SoftwareVersion.
-
-        Property to link details, such as mailing lists in case a contact person is not provided  # noqa: E501
-
-        :param support_details: The support_details of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._support_details = support_details
-
-    @property
-    def has_version(self):
-        """Gets the has_version of this SoftwareVersion.  # noqa: E501
-
-        Property designed to link a software component with its corresponding versions  # noqa: E501
-
-        :return: The has_version of this SoftwareVersion.  # noqa: E501
-        :rtype: list[SoftwareVersion]
-        """
-        return self._has_version
-
-    @has_version.setter
-    def has_version(self, has_version):
-        """Sets the has_version of this SoftwareVersion.
-
-        Property designed to link a software component with its corresponding versions  # noqa: E501
-
-        :param has_version: The has_version of this SoftwareVersion.  # noqa: E501
-        :type: list[SoftwareVersion]
-        """
-
-        self._has_version = has_version
-
-    @property
-    def has_typical_data_source(self):
-        """Gets the has_typical_data_source of this SoftwareVersion.  # noqa: E501
-
-        Typical data sources that are used by a software component  # noqa: E501
-
-        :return: The has_typical_data_source of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_typical_data_source
-
-    @has_typical_data_source.setter
-    def has_typical_data_source(self, has_typical_data_source):
-        """Sets the has_typical_data_source of this SoftwareVersion.
-
-        Typical data sources that are used by a software component  # noqa: E501
-
-        :param has_typical_data_source: The has_typical_data_source of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_typical_data_source = has_typical_data_source
-
-    @property
-    def description(self):
-        """Gets the description of this SoftwareVersion.  # noqa: E501
-
-        small description  # noqa: E501
-
-        :return: The description of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this SoftwareVersion.
-
-        small description  # noqa: E501
-
-        :param description: The description of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._description = description
+        self._readme = readme
 
     @property
     def reference_publication(self):
@@ -984,395 +1260,119 @@ class SoftwareVersion(object):
         self._screenshot = screenshot
 
     @property
-    def had_primary_source(self):
-        """Gets the had_primary_source of this SoftwareVersion.  # noqa: E501
+    def short_description(self):
+        """Gets the short_description of this SoftwareVersion.  # noqa: E501
 
-        Property to identify the original source of the information of the annotated resource. It could be a web page, an organization, a person, some experiment notes, etc.  # noqa: E501
+        A summarized description of the resource  # noqa: E501
 
-        :return: The had_primary_source of this SoftwareVersion.  # noqa: E501
-        :rtype: list[object]
-        """
-        return self._had_primary_source
-
-    @had_primary_source.setter
-    def had_primary_source(self, had_primary_source):
-        """Sets the had_primary_source of this SoftwareVersion.
-
-        Property to identify the original source of the information of the annotated resource. It could be a web page, an organization, a person, some experiment notes, etc.  # noqa: E501
-
-        :param had_primary_source: The had_primary_source of this SoftwareVersion.  # noqa: E501
-        :type: list[object]
-        """
-
-        self._had_primary_source = had_primary_source
-
-    @property
-    def issue_tracker(self):
-        """Gets the issue_tracker of this SoftwareVersion.  # noqa: E501
-
-        Pointer to the issue tracker of a software component  # noqa: E501
-
-        :return: The issue_tracker of this SoftwareVersion.  # noqa: E501
+        :return: The short_description of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._issue_tracker
+        return self._short_description
 
-    @issue_tracker.setter
-    def issue_tracker(self, issue_tracker):
-        """Sets the issue_tracker of this SoftwareVersion.
+    @short_description.setter
+    def short_description(self, short_description):
+        """Sets the short_description of this SoftwareVersion.
 
-        Pointer to the issue tracker of a software component  # noqa: E501
+        A summarized description of the resource  # noqa: E501
 
-        :param issue_tracker: The issue_tracker of this SoftwareVersion.  # noqa: E501
+        :param short_description: The short_description of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._issue_tracker = issue_tracker
+        self._short_description = short_description
 
     @property
-    def date_created(self):
-        """Gets the date_created of this SoftwareVersion.  # noqa: E501
+    def software_requirements(self):
+        """Gets the software_requirements of this SoftwareVersion.  # noqa: E501
 
-        Date when a software component was created  # noqa: E501
+        Software requirements needed to install a software component  # noqa: E501
 
-        :return: The date_created of this SoftwareVersion.  # noqa: E501
+        :return: The software_requirements of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._date_created
+        return self._software_requirements
 
-    @date_created.setter
-    def date_created(self, date_created):
-        """Sets the date_created of this SoftwareVersion.
+    @software_requirements.setter
+    def software_requirements(self, software_requirements):
+        """Sets the software_requirements of this SoftwareVersion.
 
-        Date when a software component was created  # noqa: E501
+        Software requirements needed to install a software component  # noqa: E501
 
-        :param date_created: The date_created of this SoftwareVersion.  # noqa: E501
+        :param software_requirements: The software_requirements of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._date_created = date_created
+        self._software_requirements = software_requirements
 
     @property
-    def contributor(self):
-        """Gets the contributor of this SoftwareVersion.  # noqa: E501
+    def support_details(self):
+        """Gets the support_details of this SoftwareVersion.  # noqa: E501
 
-        Contributor to a software component  # noqa: E501
+        Property to link details, such as mailing lists in case a contact person is not provided  # noqa: E501
 
-        :return: The contributor of this SoftwareVersion.  # noqa: E501
-        :rtype: list[Person]
-        """
-        return self._contributor
-
-    @contributor.setter
-    def contributor(self, contributor):
-        """Sets the contributor of this SoftwareVersion.
-
-        Contributor to a software component  # noqa: E501
-
-        :param contributor: The contributor of this SoftwareVersion.  # noqa: E501
-        :type: list[Person]
-        """
-
-        self._contributor = contributor
-
-    @property
-    def has_purpose(self):
-        """Gets the has_purpose of this SoftwareVersion.  # noqa: E501
-
-        Objective or main functionality that can be achieved by running this software  # noqa: E501
-
-        :return: The has_purpose of this SoftwareVersion.  # noqa: E501
+        :return: The support_details of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_purpose
+        return self._support_details
 
-    @has_purpose.setter
-    def has_purpose(self, has_purpose):
-        """Sets the has_purpose of this SoftwareVersion.
+    @support_details.setter
+    def support_details(self, support_details):
+        """Sets the support_details of this SoftwareVersion.
 
-        Objective or main functionality that can be achieved by running this software  # noqa: E501
+        Property to link details, such as mailing lists in case a contact person is not provided  # noqa: E501
 
-        :param has_purpose: The has_purpose of this SoftwareVersion.  # noqa: E501
+        :param support_details: The support_details of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_purpose = has_purpose
+        self._support_details = support_details
 
     @property
-    def has_executable_instructions(self):
-        """Gets the has_executable_instructions of this SoftwareVersion.  # noqa: E501
+    def tag(self):
+        """Gets the tag of this SoftwareVersion.  # noqa: E501
 
-        Instructions that indicate how a software component should be executed. The difference with `hasExecutionCommand` is that the execution instructions aim to be human-readable, and have explanations between the different commands and instructions  # noqa: E501
+        Tag used to annotate a version or a software configuration. This annotation is useful to show which version is the latest, or which version is deprecated. Supported tags are: \"latest\", \"deprecated\"  # noqa: E501
 
-        :return: The has_executable_instructions of this SoftwareVersion.  # noqa: E501
+        :return: The tag of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_executable_instructions
+        return self._tag
 
-    @has_executable_instructions.setter
-    def has_executable_instructions(self, has_executable_instructions):
-        """Sets the has_executable_instructions of this SoftwareVersion.
+    @tag.setter
+    def tag(self, tag):
+        """Sets the tag of this SoftwareVersion.
 
-        Instructions that indicate how a software component should be executed. The difference with `hasExecutionCommand` is that the execution instructions aim to be human-readable, and have explanations between the different commands and instructions  # noqa: E501
+        Tag used to annotate a version or a software configuration. This annotation is useful to show which version is the latest, or which version is deprecated. Supported tags are: \"latest\", \"deprecated\"  # noqa: E501
 
-        :param has_executable_instructions: The has_executable_instructions of this SoftwareVersion.  # noqa: E501
+        :param tag: The tag of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_executable_instructions = has_executable_instructions
+        self._tag = tag
 
     @property
-    def has_sample_visualization(self):
-        """Gets the has_sample_visualization of this SoftwareVersion.  # noqa: E501
+    def type(self):
+        """Gets the type of this SoftwareVersion.  # noqa: E501
 
-        A typical sample visualization of the softwware outputs  # noqa: E501
+        type of the resource  # noqa: E501
 
-        :return: The has_sample_visualization of this SoftwareVersion.  # noqa: E501
-        :rtype: list[Visualization]
-        """
-        return self._has_sample_visualization
-
-    @has_sample_visualization.setter
-    def has_sample_visualization(self, has_sample_visualization):
-        """Sets the has_sample_visualization of this SoftwareVersion.
-
-        A typical sample visualization of the softwware outputs  # noqa: E501
-
-        :param has_sample_visualization: The has_sample_visualization of this SoftwareVersion.  # noqa: E501
-        :type: list[Visualization]
-        """
-
-        self._has_sample_visualization = has_sample_visualization
-
-    @property
-    def memory_requirements(self):
-        """Gets the memory_requirements of this SoftwareVersion.  # noqa: E501
-
-        Memory requirements of a software  # noqa: E501
-
-        :return: The memory_requirements of this SoftwareVersion.  # noqa: E501
+        :return: The type of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._memory_requirements
+        return self._type
 
-    @memory_requirements.setter
-    def memory_requirements(self, memory_requirements):
-        """Sets the memory_requirements of this SoftwareVersion.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this SoftwareVersion.
 
-        Memory requirements of a software  # noqa: E501
+        type of the resource  # noqa: E501
 
-        :param memory_requirements: The memory_requirements of this SoftwareVersion.  # noqa: E501
+        :param type: The type of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._memory_requirements = memory_requirements
-
-    @property
-    def website(self):
-        """Gets the website of this SoftwareVersion.  # noqa: E501
-
-        Website of the software  # noqa: E501
-
-        :return: The website of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._website
-
-    @website.setter
-    def website(self, website):
-        """Sets the website of this SoftwareVersion.
-
-        Website of the software  # noqa: E501
-
-        :param website: The website of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._website = website
-
-    @property
-    def citation(self):
-        """Gets the citation of this SoftwareVersion.  # noqa: E501
-
-        How to cite this software  # noqa: E501
-
-        :return: The citation of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._citation
-
-    @citation.setter
-    def citation(self, citation):
-        """Sets the citation of this SoftwareVersion.
-
-        How to cite this software  # noqa: E501
-
-        :param citation: The citation of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._citation = citation
-
-    @property
-    def processor_requirements(self):
-        """Gets the processor_requirements of this SoftwareVersion.  # noqa: E501
-
-        Processor requirements of a software component  # noqa: E501
-
-        :return: The processor_requirements of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._processor_requirements
-
-    @processor_requirements.setter
-    def processor_requirements(self, processor_requirements):
-        """Sets the processor_requirements of this SoftwareVersion.
-
-        Processor requirements of a software component  # noqa: E501
-
-        :param processor_requirements: The processor_requirements of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._processor_requirements = processor_requirements
-
-    @property
-    def has_usage_notes(self):
-        """Gets the has_usage_notes of this SoftwareVersion.  # noqa: E501
-
-        Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc.  # noqa: E501
-
-        :return: The has_usage_notes of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_usage_notes
-
-    @has_usage_notes.setter
-    def has_usage_notes(self, has_usage_notes):
-        """Sets the has_usage_notes of this SoftwareVersion.
-
-        Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc.  # noqa: E501
-
-        :param has_usage_notes: The has_usage_notes of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_usage_notes = has_usage_notes
-
-    @property
-    def readme(self):
-        """Gets the readme of this SoftwareVersion.  # noqa: E501
-
-        URl to the readme file of a software component  # noqa: E501
-
-        :return: The readme of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._readme
-
-    @readme.setter
-    def readme(self, readme):
-        """Sets the readme of this SoftwareVersion.
-
-        URl to the readme file of a software component  # noqa: E501
-
-        :param readme: The readme of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._readme = readme
-
-    @property
-    def label(self):
-        """Gets the label of this SoftwareVersion.  # noqa: E501
-
-        short description of the resource  # noqa: E501
-
-        :return: The label of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._label
-
-    @label.setter
-    def label(self, label):
-        """Sets the label of this SoftwareVersion.
-
-        short description of the resource  # noqa: E501
-
-        :param label: The label of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._label = label
-
-    @property
-    def has_assumption(self):
-        """Gets the has_assumption of this SoftwareVersion.  # noqa: E501
-
-        Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc.  # noqa: E501
-
-        :return: The has_assumption of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_assumption
-
-    @has_assumption.setter
-    def has_assumption(self, has_assumption):
-        """Sets the has_assumption of this SoftwareVersion.
-
-        Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc.  # noqa: E501
-
-        :param has_assumption: The has_assumption of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_assumption = has_assumption
-
-    @property
-    def operating_systems(self):
-        """Gets the operating_systems of this SoftwareVersion.  # noqa: E501
-
-        Operating systems under which a software component can operate  # noqa: E501
-
-        :return: The operating_systems of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._operating_systems
-
-    @operating_systems.setter
-    def operating_systems(self, operating_systems):
-        """Sets the operating_systems of this SoftwareVersion.
-
-        Operating systems under which a software component can operate  # noqa: E501
-
-        :param operating_systems: The operating_systems of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._operating_systems = operating_systems
-
-    @property
-    def has_executable_notebook(self):
-        """Gets the has_executable_notebook of this SoftwareVersion.  # noqa: E501
-
-        Property that links a software component with an executable notebook (e.g., Jupyter notebook) that illustrates how to use it in an executable manner.  # noqa: E501
-
-        :return: The has_executable_notebook of this SoftwareVersion.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._has_executable_notebook
-
-    @has_executable_notebook.setter
-    def has_executable_notebook(self, has_executable_notebook):
-        """Sets the has_executable_notebook of this SoftwareVersion.
-
-        Property that links a software component with an executable notebook (e.g., Jupyter notebook) that illustrates how to use it in an executable manner.  # noqa: E501
-
-        :param has_executable_notebook: The has_executable_notebook of this SoftwareVersion.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._has_executable_notebook = has_executable_notebook
+        self._type = type
 
     @property
     def useful_for_calculating_index(self):
@@ -1398,27 +1398,27 @@ class SoftwareVersion(object):
         self._useful_for_calculating_index = useful_for_calculating_index
 
     @property
-    def has_version_id(self):
-        """Gets the has_version_id of this SoftwareVersion.  # noqa: E501
+    def website(self):
+        """Gets the website of this SoftwareVersion.  # noqa: E501
 
-        Identifier of the version of this software  # noqa: E501
+        Website of the software  # noqa: E501
 
-        :return: The has_version_id of this SoftwareVersion.  # noqa: E501
+        :return: The website of this SoftwareVersion.  # noqa: E501
         :rtype: list[str]
         """
-        return self._has_version_id
+        return self._website
 
-    @has_version_id.setter
-    def has_version_id(self, has_version_id):
-        """Sets the has_version_id of this SoftwareVersion.
+    @website.setter
+    def website(self, website):
+        """Sets the website of this SoftwareVersion.
 
-        Identifier of the version of this software  # noqa: E501
+        Website of the software  # noqa: E501
 
-        :param has_version_id: The has_version_id of this SoftwareVersion.  # noqa: E501
+        :param website: The website of this SoftwareVersion.  # noqa: E501
         :type: list[str]
         """
 
-        self._has_version_id = has_version_id
+        self._website = website
 
     def to_dict(self):
         """Returns the model properties as a dict"""
