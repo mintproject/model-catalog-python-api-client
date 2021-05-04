@@ -6,6 +6,7 @@ from __future__ import absolute_import
 from modelcatalog.api.catalog_identifier_api import CatalogIdentifierApi
 from modelcatalog.api.causal_diagram_api import CausalDiagramApi
 from modelcatalog.api.configuration_setup_api import ConfigurationSetupApi
+from modelcatalog.api.constraint_api import ConstraintApi
 from modelcatalog.api.coupled_model_api import CoupledModelApi
 from modelcatalog.api.data_transformation_api import DataTransformationApi
 from modelcatalog.api.data_transformation_setup_api import DataTransformationSetupApi

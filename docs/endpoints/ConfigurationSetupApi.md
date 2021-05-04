@@ -1,6 +1,6 @@
 # modelcatalog.ConfigurationSetupApi
 
-All URIs are relative to *https://api.models.mint.isi.edu/v1.7.0*
+All URIs are relative to *https://api.models.mint.isi.edu/v1.8.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -92,8 +92,8 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
-configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.8.0
+configuration.host = "https://api.models.mint.isi.edu/v1.8.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the ConfigurationSetup to be retrieved
@@ -210,8 +210,8 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
-configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.8.0
+configuration.host = "https://api.models.mint.isi.edu/v1.8.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
 id = 'id_example' # str | The ID of the ConfigurationSetup to be retrieved
@@ -275,8 +275,8 @@ configuration = modelcatalog.Configuration()
 # Configure Bearer authorization (JWT): BearerAuth
 configuration.access_token = 'YOUR_BEARER_TOKEN'
 
-# Defining host is optional and default to https://api.models.mint.isi.edu/v1.7.0
-configuration.host = "https://api.models.mint.isi.edu/v1.7.0"
+# Defining host is optional and default to https://api.models.mint.isi.edu/v1.8.0
+configuration.host = "https://api.models.mint.isi.edu/v1.8.0"
 # Create an instance of the API class
 api_instance = modelcatalog.ConfigurationSetupApi(modelcatalog.ApiClient(configuration))
 user = 'user_example' # str | Username (optional)
